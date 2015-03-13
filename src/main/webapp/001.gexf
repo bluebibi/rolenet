@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.2draft" version="1.2" xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
+  <meta lastmodifieddate="2015-02-26">
+    <creator>Gephi 0.8.1</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="value_vtx" title="value_vtx" type="integer"></attribute>
+      <attribute id="eccentricity" title="Eccentricity" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="closnesscentrality" title="Closeness Centrality" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="betweenesscentrality" title="Betweenness Centrality" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="clustering" title="Clustering Coefficient" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="Triangles" title="Number of triangles" type="integer">
+        <default>0</default>
+      </attribute>
+      <attribute id="modularity_class" title="Modularity Class" type="integer">
+        <default>0</default>
+      </attribute>
+      <attribute id="degree" title="Degree" type="integer">
+        <default>0</default>
+      </attribute>
+    </attributes>
+    <nodes>
+      <node id="1" label="수지">
+        <attvalues>
+          <attvalue for="value_vtx" value="328"></attvalue>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.2857142857142858"></attvalue>
+          <attvalue for="betweenesscentrality" value="33.85000000000001"></attvalue>
+          <attvalue for="clustering" value="0.38095238095238093"></attvalue>
+          <attvalue for="Triangles" value="40"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+          <attvalue for="degree" value="15"></attvalue>
+        </attvalues>
+        <viz:size value="80.0"></viz:size>
+        <viz:position x="181.3852" y="-28.57277" z="0.0"></viz:position>
+        <viz:color r="255" g="117" b="117"></viz:color>
+      </node>
+      <node id="2" label="재준">
+        <attvalues>
+          <attvalue for="value_vtx" value="300"></attvalue>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.1904761904761905"></attvalue>
+          <attvalue for="betweenesscentrality" value="49.050000000000004"></attvalue>
+          <attvalue for="clustering" value="0.3161764705882353"></attvalue>
+          <attvalue for="Triangles" value="43"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+          <attvalue for="degree" value="17"></attvalue>
+        </attvalues>
+        <viz:size value="74.79876"></viz:size>
+        <viz:position x="41.90061" y="193.63136" z="0.0"></viz:position>
+        <viz:color r="26" g="110" b="255"></viz:color>
+      </node>
+      <node id="3" label="원석">
+        <attvalues>
+          <attvalue for="value_vtx" value="196"></attvalue>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.2857142857142858"></attvalue>
+          <attvalue for="betweenesscentrality" value="44.06666666666666"></attvalue>
+          <attvalue for="clustering" value="0.34285714285714286"></attvalue>
+          <attvalue for="Triangles" value="36"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+          <attvalue for="degree" value="15"></attvalue>
+        </attvalues>
+        <viz:size value="55.479874"></viz:size>
+        <viz:position x="-182.97778" y="156.96333" z="0.0"></viz:position>
+        <viz:color r="26" g="110" b="255"></viz:color>
+      </node>
+      <node id="4" label="홍팀장">
+        <attvalues>
+          <attvalue for="value_vtx" value="151"></attvalue>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.380952380952381"></attvalue>
+          <attvalue for="betweenesscentrality" value="20.516666666666666"></attvalue>
+          <attvalue for="clustering" value="0.44871794871794873"></attvalue>
+          <attvalue for="Triangles" value="35"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+          <attvalue for="degree" value="13"></attvalue>
+        </attvalues>
+        <viz:size value="47.120743"></viz:size>
+        <viz:position x="-25.044237" y="-66.55101" z="0.0"></viz:position>
+        <viz:color r="255" g="117" b="117"></viz:color>
+      </node>
+      <node id="5" label="조부장">
+        <attvalues>
+          <attvalue for="value_vtx" value="47"></attvalue>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.6666666666666667"></attvalue>
+          <attvalue for="betweenesscentrality" value="1.4833333333333334"></attvalue>
+          <attvalue for="clustering" value="0.7619047619047619"></attvalue>
+          <attvalue for="Triangles" value="16"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+          <attvalue for="degree" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="27.801857"></viz:size>
+        <viz:position x="19.947123" y="-224.45949" z="0.0"></viz:position>
+        <viz:color r="255" g="117" b="117"></viz:color>
+      </node>
+      <node id="6" label="상봉">
+        <attvalues>
+          <attvalue for="value_vtx" value="45"></attvalue>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.5238095238095237"></attvalue>
+          <attvalue for="betweenesscentrality" value="15.666666666666668"></attvalue>
+          <attvalue for="clustering" value="0.4888888888888889"></attvalue>
+          <attvalue for="Triangles" value="22"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+          <attvalue for="degree" value="10"></attvalue>
+        </attvalues>
+        <viz:size value="27.43034"></viz:size>
+        <viz:position x="160.15216" y="-279.4868" z="0.0"></viz:position>
+        <viz:color r="255" g="117" b="117"></viz:color>
+      </node>
+      <node id="7" label="삼성맨">
+        <attvalues>
+          <attvalue for="value_vtx" value="33"></attvalue>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.7619047619047619"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.4"></attvalue>
+          <attvalue for="clustering" value="0.9"></attvalue>
+          <attvalue for="Triangles" value="9"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+          <attvalue for="degree" value="5"></attvalue>
+        </attvalues>
+        <viz:size value="25.201239"></viz:size>
+        <viz:position x="341.31567" y="142.74403" z="0.0"></viz:position>
+        <viz:color r="255" g="117" b="117"></viz:color>
+      </node>
+      <node id="8" label="세균">
+        <attvalues>
+          <attvalue for="value_vtx" value="26"></attvalue>
+          <attvalue for="eccentricity" value="3.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.8095238095238095"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.2"></attvalue>
+          <attvalue for="clustering" value="0.9"></attvalue>
+          <attvalue for="Triangles" value="9"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+          <attvalue for="degree" value="5"></attvalue>
+        </attvalues>
+        <viz:size value="23.900928"></viz:size>
+        <viz:position x="-223.14632" y="-98.92457" z="0.0"></viz:position>
+        <viz:color r="255" g="117" b="117"></viz:color>
+      </node>
+      <node id="9" label="오실장">
+        <attvalues>
+          <attvalue for="value_vtx" value="23"></attvalue>
+          <attvalue for="eccentricity" value="3.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.9523809523809523"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="clustering" value="1.0"></attvalue>
+          <attvalue for="Triangles" value="3"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+          <attvalue for="degree" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="23.343653"></viz:size>
+        <viz:position x="-192.29636" y="390.0188" z="0.0"></viz:position>
+        <viz:color r="26" g="110" b="255"></viz:color>
+      </node>
+      <node id="10" label="노박사">
+        <attvalues>
+          <attvalue for="value_vtx" value="22"></attvalue>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.6666666666666667"></attvalue>
+          <attvalue for="betweenesscentrality" value="2.1666666666666665"></attvalue>
+          <attvalue for="clustering" value="0.7619047619047619"></attvalue>
+          <attvalue for="Triangles" value="16"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+          <attvalue for="degree" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="23.157894"></viz:size>
+        <viz:position x="348.94473" y="-235.10251" z="0.0"></viz:position>
+        <viz:color r="255" g="117" b="117"></viz:color>
+      </node>
+      <node id="11" label="빅또르">
+        <attvalues>
+          <attvalue for="value_vtx" value="19"></attvalue>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.619047619047619"></attvalue>
+          <attvalue for="betweenesscentrality" value="2.6666666666666665"></attvalue>
+          <attvalue for="clustering" value="0.6785714285714286"></attvalue>
+          <attvalue for="Triangles" value="19"></attvalue>
+          <attvalue for="modularity_class" value="2"></attvalue>
+          <attvalue for="degree" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="22.600618"></viz:size>
+        <viz:position x="-190.07149" y="-339.11816" z="0.0"></viz:position>
+        <viz:color r="92" g="255" b="103"></viz:color>
+      </node>
+      <node id="12" label="감찰반">
+        <attvalues>
+          <attvalue for="value_vtx" value="15"></attvalue>
+          <attvalue for="eccentricity" value="3.0"></attvalue>
+          <attvalue for="closnesscentrality" value="2.238095238095238"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="clustering" value="0.0"></attvalue>
+          <attvalue for="Triangles" value="0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+          <attvalue for="degree" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="21.857586"></viz:size>
+        <viz:position x="-465.58847" y="326.98416" z="0.0"></viz:position>
+        <viz:color r="26" g="110" b="255"></viz:color>
+      </node>
+      <node id="13" label="동료">
+        <attvalues>
+          <attvalue for="value_vtx" value="16"></attvalue>
+          <attvalue for="eccentricity" value="3.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.9047619047619047"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.16666666666666666"></attvalue>
+          <attvalue for="clustering" value="0.8333333333333334"></attvalue>
+          <attvalue for="Triangles" value="5"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+          <attvalue for="degree" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="22.043344"></viz:size>
+        <viz:position x="-402.44162" y="36.232853" z="0.0"></viz:position>
+        <viz:color r="26" g="110" b="255"></viz:color>
+      </node>
+      <node id="14" label="나타샤">
+        <attvalues>
+          <attvalue for="value_vtx" value="13"></attvalue>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.8095238095238095"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="clustering" value="1.0"></attvalue>
+          <attvalue for="Triangles" value="6"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+          <attvalue for="degree" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="21.486069"></viz:size>
+        <viz:position x="163.6035" y="405.48212" z="0.0"></viz:position>
+        <viz:color r="26" g="110" b="255"></viz:color>
+      </node>
+      <node id="15" label="유리">
+        <attvalues>
+          <attvalue for="value_vtx" value="15"></attvalue>
+          <attvalue for="eccentricity" value="3.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.9523809523809523"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="clustering" value="1.0"></attvalue>
+          <attvalue for="Triangles" value="3"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+          <attvalue for="degree" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="21.857586"></viz:size>
+        <viz:position x="541.44055" y="-14.019299" z="0.0"></viz:position>
+        <viz:color r="255" g="117" b="117"></viz:color>
+      </node>
+      <node id="16" label="장순경">
+        <attvalues>
+          <attvalue for="value_vtx" value="15"></attvalue>
+          <attvalue for="eccentricity" value="3.0"></attvalue>
+          <attvalue for="closnesscentrality" value="2.0"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="clustering" value="1.0"></attvalue>
+          <attvalue for="Triangles" value="1"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+          <attvalue for="degree" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="21.857586"></viz:size>
+        <viz:position x="285.39832" y="260.69904" z="0.0"></viz:position>
+        <viz:color r="26" g="110" b="255"></viz:color>
+      </node>
+      <node id="17" label="해병복">
+        <attvalues>
+          <attvalue for="value_vtx" value="11"></attvalue>
+          <attvalue for="eccentricity" value="3.0"></attvalue>
+          <attvalue for="closnesscentrality" value="2.0"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="clustering" value="1.0"></attvalue>
+          <attvalue for="Triangles" value="1"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+          <attvalue for="degree" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="21.114552"></viz:size>
+        <viz:position x="-170.84245" y="540.47144" z="0.0"></viz:position>
+        <viz:color r="26" g="110" b="255"></viz:color>
+      </node>
+      <node id="18" label="미카엘">
+        <attvalues>
+          <attvalue for="value_vtx" value="10"></attvalue>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.7142857142857142"></attvalue>
+          <attvalue for="betweenesscentrality" value="1.6666666666666663"></attvalue>
+          <attvalue for="clustering" value="0.6666666666666666"></attvalue>
+          <attvalue for="Triangles" value="10"></attvalue>
+          <attvalue for="modularity_class" value="2"></attvalue>
+          <attvalue for="degree" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="20.928793"></viz:size>
+        <viz:position x="-346.0884" y="-408.05905" z="0.0"></viz:position>
+        <viz:color r="92" g="255" b="103"></viz:color>
+      </node>
+      <node id="19" label="남학생1">
+        <attvalues>
+          <attvalue for="value_vtx" value="5"></attvalue>
+          <attvalue for="eccentricity" value="3.0"></attvalue>
+          <attvalue for="closnesscentrality" value="2.0952380952380953"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="clustering" value="1.0"></attvalue>
+          <attvalue for="Triangles" value="1"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+          <attvalue for="degree" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="507.32855" y="-444.724" z="0.0"></viz:position>
+        <viz:color r="255" g="117" b="117"></viz:color>
+      </node>
+      <node id="20" label="무전">
+        <attvalues>
+          <attvalue for="value_vtx" value="7"></attvalue>
+          <attvalue for="eccentricity" value="3.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.7619047619047619"></attvalue>
+          <attvalue for="betweenesscentrality" value="1.0333333333333332"></attvalue>
+          <attvalue for="clustering" value="0.6666666666666666"></attvalue>
+          <attvalue for="Triangles" value="10"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+          <attvalue for="degree" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="20.371517"></viz:size>
+        <viz:position x="38.92478" y="-495.4156" z="0.0"></viz:position>
+        <viz:color r="255" g="117" b="117"></viz:color>
+      </node>
+      <node id="21" label="시어머니">
+        <attvalues>
+          <attvalue for="value_vtx" value="5"></attvalue>
+          <attvalue for="eccentricity" value="3.0"></attvalue>
+          <attvalue for="closnesscentrality" value="2.1904761904761907"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="clustering" value="1.0"></attvalue>
+          <attvalue for="Triangles" value="1"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+          <attvalue for="degree" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="-434.09427" y="-289.58908" z="0.0"></viz:position>
+        <viz:color r="255" g="117" b="117"></viz:color>
+      </node>
+      <node id="22" label="자막">
+        <attvalues>
+          <attvalue for="value_vtx" value="7"></attvalue>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.7619047619047619"></attvalue>
+          <attvalue for="betweenesscentrality" value="1.0666666666666667"></attvalue>
+          <attvalue for="clustering" value="0.8"></attvalue>
+          <attvalue for="Triangles" value="8"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+          <attvalue for="degree" value="5"></attvalue>
+        </attvalues>
+        <viz:size value="20.371517"></viz:size>
+        <viz:position x="2.033851" y="470.27084" z="0.0"></viz:position>
+        <viz:color r="26" g="110" b="255"></viz:color>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="1" target="3" weight="6.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1" target="4" weight="32.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1" target="5" weight="8.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1" target="6" weight="7.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1" target="8">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1" target="11">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1" target="15" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1" target="16" weight="3.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1" target="18">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1" target="19">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1" target="20" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1" target="22" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="1" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="3" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="4" weight="9.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="5" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="6" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="7" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="8" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="9" weight="3.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="10">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="11">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="13" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="15">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="16" weight="3.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="17" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="20">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="2" target="22" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="3" target="5">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="3" target="9" weight="4.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="3" target="10">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="3" target="11" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="3" target="12" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="3" target="13" weight="4.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="3" target="18">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="4" target="3" weight="8.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="4" target="11">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="4" target="18">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="4" target="22">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="5" target="4" weight="9.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="5" target="6" weight="4.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="5" target="20">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="6" target="3">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="6" target="4" weight="6.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="6" target="19">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="6" target="20" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="6" target="21">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="7" target="1" weight="5.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="7" target="3">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="7" target="4">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="7" target="8">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="8" target="4" weight="3.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="8" target="5">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="10" target="1" weight="3.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="10" target="4" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="10" target="6">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="10" target="15">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="11" target="10" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="11" target="18" weight="3.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="13" target="11">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="13" target="18">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="14" target="2" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="14" target="3" weight="2.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="14" target="4">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="14" target="6">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="17" target="3">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="20" target="11">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="20" target="18">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="21" target="4">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="22" target="3">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="22" target="9">
+        <attvalues></attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
