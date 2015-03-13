@@ -76,7 +76,7 @@ public class HelloController {
 	/////////////////////////////////////////////영화리스트보기
 	@RequestMapping(value="/movielist")
 	public String MovieList(ModelMap model){
-		return "movie/Tab_movielist.html";
+		return "movie/Tab_movielist.jsp";
 	}
 	
 	@RequestMapping(value="/movielist2/**")

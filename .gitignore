@@ -11,8 +11,11 @@ Thumbs.db
 .springBeans
 .externalToolBuilders
 .project
-.idea/
+.idea/*
 /src/main/resources/dev/config.properties
 /src/main/resources/dev/log4j.xml
 /src/main/java/rebel.xml
 *.iml
+*.war
+rebel.xml
+workspace.xml
