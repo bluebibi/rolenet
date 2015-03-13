@@ -29,7 +29,6 @@ public class HelloController {
 	@RequestMapping("/")
 	public String printWelcome(ModelMap model) {
 		return "home/index.jsp";
-		
 	}
 
 	//개시판을 위함 테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트

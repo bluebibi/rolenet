@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: seo
+Build-Jdk: 1.7.0_71
+Built-By: yhhan
 Created-By: IntelliJ IDEA
-Build-Jdk: 1.8.0_25
 
