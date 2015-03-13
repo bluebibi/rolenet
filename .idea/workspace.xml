@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.3655914" vertical-offset="6666" max-vertical-offset="14565">
-              <caret line="458" column="59" selection-start-line="458" selection-start-column="59" selection-end-line="458" selection-end-column="59" />
+              <caret line="458" column="50" selection-start-line="458" selection-start-column="50" selection-end-line="458" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -890,12 +890,12 @@
       <workItem from="1420780056287" duration="2648000" />
       <workItem from="1426245727079" duration="106000" />
       <workItem from="1426245925385" duration="108000" />
-      <workItem from="1426259877515" duration="657000" />
+      <workItem from="1426259877515" duration="705000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15287000" />
+    <option name="totallyTimeSpent" value="15335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="31" width="1793" height="973" extended-state="0" />
@@ -1188,7 +1188,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3655914" vertical-offset="6666" max-vertical-offset="14565">
-          <caret line="458" column="59" selection-start-line="458" selection-start-column="59" selection-end-line="458" selection-end-column="59" />
+          <caret line="458" column="50" selection-start-line="458" selection-start-column="50" selection-end-line="458" selection-end-column="50" />
           <folding />
         </state>
       </provider>
