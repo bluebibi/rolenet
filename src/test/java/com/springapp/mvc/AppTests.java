@@ -1,5 +1,5 @@
 package com.springapp.mvc;
-
+//예영이 소스트리 테스트
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
