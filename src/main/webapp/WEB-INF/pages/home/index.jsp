@@ -98,7 +98,7 @@
 					<div id="title_search" class="homebox">
 						<br> <br> <br> <br>
 						<h1 align="center">
-							Movietween <small>Scripts & Graphs!!!!</small>
+							Movietween <small>Scripts & Graphs!!!!!!!!!!!</small>
 						</h1>
 						<div class="container">
 							<form class="search-form" action="extra_search.html" method="GET">
