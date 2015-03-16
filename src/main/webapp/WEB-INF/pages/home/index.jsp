@@ -249,106 +249,106 @@
 <!-- END SIGMA IMPORTS -->
 <script src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/gexf-parser.js"></script>
 <script src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/sigma.parsers.gexf.js"></script>
-										<script>
-											sigma.classes.graph
-													.addMethod(
-															'neighbors',
-															function(nodeId) {
-																var k, neighbors = {}, index = this.allNeighborsIndex[nodeId]
-																		|| {};
-																for (k in index)
-																	neighbors[k] = this.nodesIndex[k];
-																return neighbors;
+<script>
+	sigma.classes.graph
+			.addMethod(
+					'neighbors',
+					function(nodeId) {
+						var k, neighbors = {}, index = this.allNeighborsIndex[nodeId]
+								|| {};
+						for (k in index)
+							neighbors[k] = this.nodesIndex[k];
+						return neighbors;
 
+					});
+
+	sigma.parsers
+			.gexf(
+					'http://218.150.181.131/assets/gexf/051.gexf',
+					{
+						container : 'container_jang'
+					},
+					function(s) {
+						s.graph
+								.nodes()
+								.forEach(
+										function(
+												n) {
+											n.originalColor = n.color;
+										});
+						s.graph
+								.edges()
+								.forEach(
+										function(
+												e) {
+											e.originalColor = e.color;
+										});
+						s
+								.bind(
+										'clickNode',
+										function(
+												e) {
+											var nodeId = e.data.node.id, toKeep = s.graph
+													.neighbors(nodeId);
+											toKeep[nodeId] = e.data.node;
+
+											s.graph
+													.nodes()
+													.forEach(
+															function(
+																	n) {
+																if (toKeep[n.id])
+																	n.color = n.originalColor;
+																else
+																	n.color = '#eee';
+															});
+											s.graph
+													.edges()
+													.forEach(
+															function(
+																	e) {
+																if (toKeep[e.source]
+																		&& toKeep[e.target])
+																	e.color = e.originalColor;
+																else
+																	e.color = '#eee';
+															});
+											// Since the data has been modified, we need to
+											// call the refresh method to make the colors
+											// update effective.
+											s
+													.refresh();
+										});
+
+						// When the stage is clicked, we just color each
+						// node and edge with its original color.
+						s
+								.bind(
+										'clickStage',
+										function(
+												e) {
+											s.graph
+													.nodes()
+													.forEach(
+															function(
+																	n) {
+																n.color = n.originalColor;
 															});
 
-											sigma.parsers
-													.gexf(
-															'http://218.150.181.131/assets/gexf/051.gexf',
-															{
-																container : 'container_jang'
-															},
-															function(s) {
-																s.graph
-																		.nodes()
-																		.forEach(
-																				function(
-																						n) {
-																					n.originalColor = n.color;
-																				});
-																s.graph
-																		.edges()
-																		.forEach(
-																				function(
-																						e) {
-																					e.originalColor = e.color;
-																				});
-																s
-																		.bind(
-																				'clickNode',
-																				function(
-																						e) {
-																					var nodeId = e.data.node.id, toKeep = s.graph
-																							.neighbors(nodeId);
-																					toKeep[nodeId] = e.data.node;
-
-																					s.graph
-																							.nodes()
-																							.forEach(
-																									function(
-																											n) {
-																										if (toKeep[n.id])
-																											n.color = n.originalColor;
-																										else
-																											n.color = '#eee';
-																									});
-																					s.graph
-																							.edges()
-																							.forEach(
-																									function(
-																											e) {
-																										if (toKeep[e.source]
-																												&& toKeep[e.target])
-																											e.color = e.originalColor;
-																										else
-																											e.color = '#eee';
-																									});
-																					// Since the data has been modified, we need to
-																					// call the refresh method to make the colors
-																					// update effective.
-																					s
-																							.refresh();
-																				});
-
-																// When the stage is clicked, we just color each
-																// node and edge with its original color.
-																s
-																		.bind(
-																				'clickStage',
-																				function(
-																						e) {
-																					s.graph
-																							.nodes()
-																							.forEach(
-																									function(
-																											n) {
-																										n.color = n.originalColor;
-																									});
-
-																					s.graph
-																							.edges()
-																							.forEach(
-																									function(
-																											e) {
-																										e.color = e.originalColor;
-																									});
-
-																					// Same as in the previous event:
-																					s
-																							.refresh();
-																				});
+											s.graph
+													.edges()
+													.forEach(
+															function(
+																	e) {
+																e.color = e.originalColor;
 															});
-										</script>
+
+											// Same as in the previous event:
+											s
+													.refresh();
+										});
+					});
+</script>
 										<!-- END GRAPH -->
 									</div>
 								</div>
@@ -362,7 +362,7 @@
 									<div class="caption caption-md">
 										<i class="icon-bar-chart theme-font hide"></i> <span
 											class="caption-subject theme-font bold uppercase">Updated
-											Movie</span> <span class="caption-helper hide">weekly
+											Movies</span> <span class="caption-helper hide">weekly
 											stats...</span>
 									</div>
 									<div class="actions">
