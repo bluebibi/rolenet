@@ -598,8 +598,13 @@
 <!-- END SIGMA IMPORTS -->
 <script src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/gexf-parser.js"></script>
 <script src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/sigma.parsers.gexf.js"></script>
-						<script>
+<script>
+
+
     function init() {
+
+        //addmethod()첫번째파라미터는 함수이름, 두번째 파라미터는 해당 함수정의이다.
+        //neighbors란 노드로들어오거나 나가는 선들을 말한다. 이 edge 들에 대한 정보를 가진 함수를 정의함.
         sigma.classes.graph.addMethod('neighbors', function (nodeId) {
             var k, neighbors = {}, index = this.allNeighborsIndex[nodeId]
                     || {};
@@ -607,74 +612,106 @@
                 neighbors[k] = this.nodesIndex[k];
             return neighbors;
         });
-        sigma.parsers.gexf('http://218.150.181.131/assets/gexf/051.gexf', {container: 'graph-container'}, function (s) {
 
-            s.graph.nodes().forEach(
-                    function (n) {
-                        n.originalColor = n.color;
-                    });
-            s.graph.edges().forEach(
-                    function (e) {
-                        e.originalColor = e.color;
-                    });
 
-            s.settings({
-                defaultLabelColor: '#777',
-                defaultLabelSize: 12,
-                defaultLabelBGColor: '#777',
-                defaultLabelHoverColor: '#555',
-                labelThreshold: 2,
-                defaultEdgeType: 'straight',
-                minNodeSize: 1,
-                maxNodeSize: 6,
-                minEdgeSize: 1,
-                maxEdgeSize: 2,
-                maxRatio: 1,
-                mouseEnabled: false
-            });
-            s.refresh();
+        //sigmajs 인스턴스 생성
+        var sigInst = new sigma(document.getElementById('graph-container'));
 
-            s.bind('clickNode', function (e) {
-                var nodeId = e.data.node.id, toKeep = s.graph.neighbors(nodeId);
-                toKeep[nodeId] = e.data.node;
+        //gexf 파일 파싱해서 위에서 만든 시그마인스턴스에 객체내용 집어넣음.
+        sigma.parsers.gexf(
+                'http://218.150.181.131/assets/gexf/051.gexf'
+                , sigInst
+                , function (t) {
+                    //그래프의 색깔을 기존 gexf에 있던 색 그대로 사용함.
+                    sigInst.graph.nodes().forEach(
+                            function (n) {
+                                n.originalColor = n.color;
+                            });
+                    sigInst.graph.edges().forEach(
+                            function (e) {
+                                e.originalColor = e.color;
+                            });
 
-                s.graph.nodes().forEach(
-                        function (n) {
-                            if (toKeep[n.id])
-                                n.color = n.originalColor;
-                            else
-                                n.color = '#eee';
-                        });
-                s.graph.edges().forEach(
-                        function (e) {
-                            if (toKeep[e.source]
-                                    && toKeep[e.target])
-                                e.color = e.originalColor;
-                            else
-                                e.color = '#eee';
-                        });
-                // Since the data has been modified, we need to
-                // call the refresh method to make the colors
-                // update effective.
-                s.refresh();
+                    sigInst.refresh();
+                    // gexf-parsers.js 안의 메소드 이용법을 잘 모르것음.
+                    //console.log(t.Graph('nodes')._nodes(sigInst));
+                }
+        );
 
-            });
 
-            // When the stage is clicked, we just color each
-            // node and edge with its original color.
-            s.bind('clickStage', function (e) {
-                s.graph.nodes().forEach(
-                        function (n) {
-                            n.color = n.originalColor;
-                        });
-                s.graph.edges().forEach(
-                        function (e) {
-                            e.color = e.originalColor;
-                        });
-                // Same as in the previous event:
-                s.refresh();
-            });
+        //그래프의 초기 셋팅 과정임. 각 속성마다 원하는 내용 지정.
+        sigInst.settings({
+            defaultLabelColor: '#777',
+            defaultLabelSize: 12,
+            defaultLabelHoverColor: '#555',  //마우스 호버시 레이블 글자색
+            defaultHoverLabelBGColor: '#fff',  //마우스 호버시 레이블 배경색
+            hoverFontStyle: 'bold',
+            fontStyle: 'bold',
+            labelThreshold: 2,
+            defaultEdgeType: 'straight',
+            minNodeSize: 1,
+            maxNodeSize: 10,
+            minEdgeSize: 1,
+            maxEdgeSize: 3,
+            maxRatio: 1,
+            mouseEnabled: true,
+            zoomingRatio: 1.0 //do not mouse wheel zoom -->1.0
         });
+
+
+        //노드를 클릭했을때 정의
+        sigInst.bind('overNode', function (e) {
+            var nodeId = e.data.node.id, toKeep = sigInst.graph.neighbors(nodeId);
+            toKeep[nodeId] = e.data.node;
+
+            console.log(e.data.node.closnesscentrality);  //overnode 된 노드의 id 값.
+            //console.log(sigInst.Graph('http://218.150.181.131/assets/gexf/051.gexf'));
+
+
+            sigInst.graph.nodes().forEach(
+                    function (n) {
+                        if (toKeep[n.id]) {
+                            n.color = n.originalColor;
+
+                        }
+                        else {
+                            n.color = '#eee';
+                        }
+                    });
+            sigInst.graph.edges().forEach(
+                    function (e) {
+                        if (toKeep[e.source]
+                                && toKeep[e.target]) {
+                            e.color = e.originalColor;
+                        }
+                        else {
+                            e.color = '#eee';
+                        }
+                    });
+            // Since the data has been modified, we need to
+            // call the refresh method to make the colors
+            // update effective.
+            sigInst.refresh();
+
+        });
+
+
+        //스테이지를 클릭했을때 함수 정의
+        // When the stage is clicked, we just color each
+        // node and edge with its original color.
+        sigInst.bind('outNode', function (e) {
+            sigInst.graph.nodes().forEach(
+                    function (n) {
+                        n.color = n.originalColor;
+                    });
+            sigInst.graph.edges().forEach(
+                    function (e) {
+                        e.color = e.originalColor;
+                    });
+            // Same as in the previous event:
+            sigInst.refresh();
+        });
+
     }
 
     if (document.addEventListener) {
