@@ -561,7 +561,7 @@
 					<!-- BEGIN PORTLET-->
 					<div class="portlet light ">
 						<div id="graph-container"></div>
-						<!-- <script src="/js/sigmajs/jquery-2.1.1.min.js"></script> -->
+						<script src="http://218.150.181.131/sigma.js-1.0.3/jquery-2.1.1.min.js"></script>
 						<!-- START SIGMA IMPORTS -->
 <script src="http://218.150.181.131/sigma.js-1.0.3/src/sigma.core.js"></script>
 <script src="http://218.150.181.131/sigma.js-1.0.3/src/conrad.js"></script>
@@ -599,7 +599,6 @@
 <script src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/gexf-parser.js"></script>
 <script src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/sigma.parsers.gexf.js"></script>
 						<script>
-
     function init() {
         sigma.classes.graph.addMethod('neighbors', function (nodeId) {
             var k, neighbors = {}, index = this.allNeighborsIndex[nodeId]
