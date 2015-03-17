@@ -573,10 +573,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="tile" style="float: left; width: 20%;">
 								<div class="indexentry">
 									<div style="margin: 0 auto;">
-										<a href="/movies/660-Pulp-Fiction"></a> 
-										<a href="/Tab_movielistdetail.do"></a>
-											<img src="http://media.moviegalaxies.com/img/nolabelnotitle160/660_.png"></img>
-									
+										<a href="/movies/660-Pulp-Fiction"> <a
+												href="/Tab_movielistdetail.do"><img
+													src="http://media.moviegalaxies.com/img/nolabelnotitle160/660_.png"></img></a>
+											</a>
 
 
 									</div>
