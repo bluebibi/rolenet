@@ -16,7 +16,6 @@ public class MovieListServiceImpl implements MovieListService {
 
 	@Override
 	public List<MovieList> list() {
-		// TODO Auto-generated method stub
 		return movieListMapper.list();
 	}
 	
@@ -27,7 +26,6 @@ public class MovieListServiceImpl implements MovieListService {
 	
 	@Override
 	public MovieList selectMovieByName(String name){
-		System.out.println(name + "한글깨짐??");
 		return movieListMapper.selectMovieByName(name);
 	}
 }

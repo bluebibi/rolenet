@@ -7,7 +7,36 @@ public class MovieList {
     int year;
     String director;
     String synopsis;
-    public String getSynopsis() {
+    double diameter;
+    double pathlength;
+    double clustering;
+    double density;
+    
+    public double getDiameter() {
+		return diameter;
+	}
+	public void setDiameter(double diameter) {
+		this.diameter = diameter;
+	}
+	public double getPathlength() {
+		return pathlength;
+	}
+	public void setPathlength(double pathlength) {
+		this.pathlength = pathlength;
+	}
+	public double getClustering() {
+		return clustering;
+	}
+	public void setClustering(double clustering) {
+		this.clustering = clustering;
+	}
+	public double getDensity() {
+		return density;
+	}
+	public void setDensity(double density) {
+		this.density = density;
+	}
+	public String getSynopsis() {
 		return synopsis;
 	}
 	public void setSynopsis(String synopsis) {

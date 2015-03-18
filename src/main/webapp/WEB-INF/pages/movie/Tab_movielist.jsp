@@ -241,11 +241,15 @@
 										<thead>
 											<tr>
 												<th width="5%">No.</th>
-												<th width="25%">그래프</th>
-												<th width="25%">영화</th>
-												<th width="15%">연도</th>
-												<th width="15%">감독</th>
-												<th width="15%">관객수</th>
+												<th width="15%">그래프</th>
+												<th width="10%">영화</th>
+												<th width="10%">연도</th>
+												<th width="10%">감독</th>
+												<th width="10%">관객수</th>
+												<th width="10%">diameter</th>
+												<th width="10%">pathlength</th>
+												<th width="10%">clustering</th>
+												<th width="10%">density</th>
 											</tr>
 										</thead>
 
@@ -258,6 +262,10 @@
 													<td>${m.year}</td>
 													<td>${m.director}</td>
 													<td>${m.spectators}</td>
+													<td>${m.diameter}</td>
+													<td>${m.pathlength}</td>
+													<td>${m.clustering}</td>
+													<td>${m.density}</td>
 												</tr>
 											</c:forEach>
 										</tbody>

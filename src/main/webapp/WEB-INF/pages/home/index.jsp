@@ -90,10 +90,11 @@
 							<form class="search-form"  method="GET">
 								<div class="input-group">
 									<input id="movieName"type="text" class="form-control"
-										placeholder="Search for Movies" name="query" > 
+										placeholder="Search for Movies" name="query" 
+										onkeydown="javascript:if(event.keyCode==13){getName();}"> 
 										<span class="input-group-btn">
 										
-										<i onkeydown="javascript:if(event.keyCode==13){getName();}" onclick="getName()" class="icon-magnifier"></i>
+										<i onclick="getName()" class="icon-magnifier"></i>
 									</span>
 								</div>
 							</form>
@@ -541,12 +542,14 @@
 		function getName(){
 			
 			var tmp = document.getElementById("movieName");
-
+			
 			var name = tmp.value;
 
 			name = encodeURIComponent(name);
-			location.href="search.do?name="  + name;
-	
+			name = "search.do?name="+name;
+		
+			location.href=name;
+			
 		}
 		</script>
 		<!-- END JAVASCRIPTS -->
