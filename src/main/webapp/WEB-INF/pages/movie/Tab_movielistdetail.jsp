@@ -226,7 +226,10 @@
 <script src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/gexf-parser.js"></script>
 <script src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/sigma.parsers.gexf.js"></script>
 <script>
-
+var id = ${n.id};
+var preurl = 'http://218.150.181.131/assets/gexf/'
+var last = '.gexf';
+var url = preurl + id + last;
 
     function init() {
 
@@ -246,7 +249,7 @@
 
         //gexf 파일 파싱해서 위에서 만든 시그마인스턴스에 객체내용 집어넣음.
         sigma.parsers.gexf(
-                'http://218.150.181.131/assets/gexf/051.gexf'
+        		url
                 , sigInst
                 , function (t) {
                     //그래프의 색깔을 기존 gexf에 있던 색 그대로 사용함.
