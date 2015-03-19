@@ -17,6 +17,7 @@ Thumbs.db
 *.iml
 rebel.xml
 workspace.xml
+./idea
 
 *.class
 
