@@ -373,7 +373,7 @@
 								</div>
 								<div class="portlet-body">
 									<div class="row number-stats margin-bottom-30">
-										<div class="col-md-6 col-sm-6 col-xs-6">
+										<div class="col-md-7 col-sm-6 col-xs-6">
 											<div class="stat-left">
 												<div class="stat-chart">
 													<!-- do not line break "sparkline_bar" div. sparkline chart has an issue when the container div has line break -->
@@ -381,19 +381,7 @@
 												</div>
 												<div class="stat-number">
 													<div class="title">Total</div>
-													<div class="number">500개</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-6 col-sm-6 col-xs-6">
-											<div class="stat-right">
-												<div class="stat-chart">
-													<!-- do not line break "sparkline_bar" div. sparkline chart has an issue when the container div has line break -->
-													<div id="sparkline_bar2"></div>
-												</div>
-												<div class="stat-number">
-													<div class="title">New</div>
-													<div class="number">27개</div>
+													<div class="number">${count}개</div>
 												</div>
 											</div>
 										</div>
@@ -402,45 +390,22 @@
 										<table class="table table-hover table-light">
 											<thead>
 												<tr class="font-grey-mint font-sm">
+													<th>No.</th>
 													<th>Movie</th>
 													<th>Year</th>
-													<th>Actor</th>
 													<th>Director</th>
-													<th>Clicked</th>
 												</tr>
 											</thead>
-											<tr>
-												<td><a href="javascript:;" class="primary-link">오늘의연애</a>
-												</td>
-												<td>2015</td>
-												<td>문채원</td>
-												<td>몰라</td>
-												<td><span class="bold theme-font">999</span></td>
-											</tr>
-											<tr>
-												<td><a href="javascript:;" class="primary-link">오늘의연애</a>
-												</td>
-												<td>2015</td>
-												<td>문채원</td>
-												<td>몰라</td>
-												<td><span class="bold theme-font">999</span></td>
-											</tr>
-											<tr>
-												<td><a href="javascript:;" class="primary-link">오늘의연애</a>
-												</td>
-												<td>2015</td>
-												<td>문채원</td>
-												<td>몰라</td>
-												<td><span class="bold theme-font">999</span></td>
-											</tr>
-											<tr>
-												<td><a href="javascript:;" class="primary-link">오늘의연애</a>
-												</td>
-												<td>2015</td>
-												<td>문채원</td>
-												<td>몰라</td>
-												<td><span class="bold theme-font">999</span></td>
-											</tr>
+											<tbody>
+											<c:forEach var="m" items="${last}">
+												<tr onclick="document.location = 'Tab_movielistdetail.do?id=${m.id}';">
+													<td id="id">${m.id}</td>
+													<td>${m.name}</td>
+													<td>${m.year}</td>
+													<td>${m.director}</td>
+												</tr>
+											</c:forEach>
+										</tbody>
 
 										</table>
 									</div>

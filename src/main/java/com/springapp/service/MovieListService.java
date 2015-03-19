@@ -9,4 +9,6 @@ public interface MovieListService {
 	List<MovieList> list();
 	public MovieList selectMovieById(int id);
 	public MovieList selectMovieByName(String name);
+	public List<MovieList> LastList();
+	public int movieCount();
 }

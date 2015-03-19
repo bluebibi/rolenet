@@ -28,4 +28,12 @@ public class MovieListServiceImpl implements MovieListService {
 	public MovieList selectMovieByName(String name){
 		return movieListMapper.selectMovieByName(name);
 	}
+	@Override
+	public List<MovieList> LastList(){
+		return movieListMapper.LastList();
+	}
+	@Override
+	public int movieCount(){
+		return movieListMapper.movieCount();
+	}
 }

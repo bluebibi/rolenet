@@ -28,13 +28,15 @@ public class HelloController {
 	private MovieListService movieListService;
 	@Autowired
 	private MovieListMapper movieListMapper;
-	/////////////////////////////////////////////홈
+	/////////////////////////////////////////////��
 	@RequestMapping("/")
 	public String printWelcome(ModelMap model) {
+		model.addAttribute("last", movieListService.LastList());
+		model.addAttribute("count", movieListMapper.movieCount());
 		return "home/index.jsp";
 	}
 
-	//개시판을 위함 테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트
+	//媛������� ���� ���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ��
 	@RequestMapping(value="/addContact.do", method=RequestMethod.POST)
 	public ModelAndView addContact(@ModelAttribute("contact") BoardList boardlist, BindingResult result){
 		System.out.println("authortname : "+boardlist.getUauthor());
@@ -44,13 +46,13 @@ public class HelloController {
 	@RequestMapping("/contacts.do")
 	public ModelAndView showContacts(){
 		BoardList c = new BoardList();
-		c.setUtitle("제목");
-		c.setUcontent("글내용");
-		c.setUauthor("작성자");
+		c.setUtitle("��紐�");
+		c.setUcontent("湲��댁��");
+		c.setUauthor("���깆��");
 
 		return new ModelAndView("contact.jsp","command",c);
 	}
-	////테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트
+	////���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ��
 
 
 
@@ -63,20 +65,20 @@ public class HelloController {
 		return "movie/Tab_movielistdetail.jsp";
 	}
 
-	/////////////////////////////////////////////게시판 리스트
+	/////////////////////////////////////////////寃����� 由ъ�ㅽ��
 	@RequestMapping(value = "/Tab_boardlist.do", method = RequestMethod.GET)
 	public String BoardList(ModelMap model) {
 		model.addAttribute("list", boardListService.list());
 		return "community/Tab_boardlist.jsp";
 	}
-	//게시판 글쓰기
+	//寃����� 湲��곌린
 	@RequestMapping(value="/Tab_boardwriting.do")
 	public String BoardWriting(ModelMap model){
 
 		return "community/Tab_boardwriting.jsp";
 	}
 
-	//게시판 자세히보기
+	//寃����� ���명��蹂닿린
 	@RequestMapping(value="/Tab_boarddetail.do")
 	public String BoardDetail(ModelMap model,int uId){
 		BoardList boarddetailentity = boardListService.selectAllBoardContents(uId);
@@ -84,7 +86,7 @@ public class HelloController {
 		return "community/Tab_boarddetail.jsp";
 	}
 
-	/////////////////////////////////////////////영화리스트보기
+	/////////////////////////////////////////////����由ъ�ㅽ�몃낫湲�
 	@RequestMapping(value = "/Tab_movielist.do", method = RequestMethod.GET)
 	public String MovieList(ModelMap model) {
 		model.addAttribute("list2",movieListService.list());
@@ -96,7 +98,7 @@ public class HelloController {
 		System.out.println("!!!!!!");
 	}
 
-	//영화 그래프자세히보기
+	//���� 洹몃�������명��蹂닿린
 	@RequestMapping(value="/Tab_movielistdetail.do")
 	public String MovieListDetail(ModelMap model,int id){
 
@@ -109,22 +111,22 @@ public class HelloController {
 
 
 
-	/////////////////////////////////////////////마이페이지
+	/////////////////////////////////////////////留��댄���댁�
 	@RequestMapping(value="/Tab_mypage.do")
 	public String MyPage(ModelMap model){
 		return "mypage/Tab_mypage.jsp";
 	}
-	//정보수정
+	//��蹂댁����
 	@RequestMapping(value="/Tab_editprofile.do")
 	public String EditProfile(ModelMap model){
 		return "mypage/Tab_editprofile.jsp";
 	}
-	//그래프보기
+	//洹몃����蹂닿린
 	@RequestMapping(value="/Tab_mygraph.do")
 	public String MyGraph(ModelMap model){
 		return "mypage/Tab_mygraph.jsp";
 	}
-	//금액충전
+	//湲��≪땐��
 	@RequestMapping(value="/Tab_charge.do")
 	public String MyCharge(ModelMap model){
 		return "mypage/Tab_charge.jsp";
@@ -132,7 +134,7 @@ public class HelloController {
 
 
 
-	/////////////////////////////////////////////어바웃
+	/////////////////////////////////////////////�대���
 	@RequestMapping(value="/Tab_about.do")
 	public String About(ModelMap model){
 		return "about/Tab_about.jsp";
