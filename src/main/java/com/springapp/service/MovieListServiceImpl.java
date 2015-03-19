@@ -10,7 +10,7 @@ import com.springapp.entity.MovieList;
 
 @Service
 public class MovieListServiceImpl implements MovieListService {
-	
+
 	@Autowired
 	private MovieListMapper movieListMapper;
 
@@ -18,22 +18,39 @@ public class MovieListServiceImpl implements MovieListService {
 	public List<MovieList> list() {
 		return movieListMapper.list();
 	}
-	
+
 	@Override
-	public MovieList selectMovieById(int id){
+	public MovieList selectMovieById(int id) {
 		return movieListMapper.selectMovieContentsByID(id);
 	}
-	
+
 	@Override
-	public MovieList selectMovieByName(String name){
+	public MovieList selectMovieByName(String name) {
 		return movieListMapper.selectMovieByName(name);
 	}
+
 	@Override
-	public List<MovieList> LastList(){
+	public List<MovieList> LastList() {
 		return movieListMapper.LastList();
 	}
+
 	@Override
-	public int movieCount(){
+	public int movieCount() {
 		return movieListMapper.movieCount();
+	}
+
+	@Override
+	public void addHit(int id) {
+		movieListMapper.addHit(id);
+	}
+	
+	@Override
+	public void addHitByName(String name){
+		movieListMapper.addHitByName(name);
+	}
+	
+	@Override
+	public MovieList selectMovieByHit(){
+		return movieListMapper.selectMovieByHit();
 	}
 }

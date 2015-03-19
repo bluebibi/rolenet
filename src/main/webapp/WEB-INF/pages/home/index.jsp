@@ -150,19 +150,19 @@
 										<div class="col-md-3 col-sm-3 col-xs-6">
 											<div class="font-grey-mint font-sm">Movie Name</div>
 											<div class="uppercase font-hg font-red-flamingo">
-												다시만나 <span class="font-lg font-grey-mint"></span>
+												${hit.name} <span class="font-lg font-grey-mint"></span>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-3 col-xs-6">
 											<div class="font-grey-mint font-sm">Year</div>
 											<div class="uppercase font-hg theme-font">
-												2004 <span class="font-lg font-grey-mint"></span>
+												${hit.year} <span class="font-lg font-grey-mint"></span>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-3 col-xs-6">
 											<div class="font-grey-mint font-sm">Director</div>
 											<div class="uppercase font-hg font-purple">
-												이경성 <span class="font-lg font-grey-mint"></span>
+												${hit.director} <span class="font-lg font-grey-mint"></span>
 											</div>
 										</div>
 
@@ -238,6 +238,10 @@
 <script src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/gexf-parser.js"></script>
 <script src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/sigma.parsers.gexf.js"></script>
 										<script>
+										var id = ${hit.id};
+										var preurl = 'http://218.150.181.131/assets/gexf/'
+										var last = '.gexf';
+										var url = preurl + id + last;
 											sigma.classes.graph
 													.addMethod(
 															'neighbors',
@@ -252,7 +256,7 @@
 
 											sigma.parsers
 													.gexf(
-															'http://218.150.181.131/assets/gexf/051.gexf',
+															url,
 															{
 																container : 'container_jang'
 															},

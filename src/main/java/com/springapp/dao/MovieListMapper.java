@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import com.springapp.entity.MovieList;
 
@@ -23,4 +24,13 @@ public interface MovieListMapper {
 	
 	@Select("select count(*) from movies")
 	public int movieCount();
+	
+	@Select("select * from movies order by hit desc limit 1")
+	public MovieList selectMovieByHit();
+	
+	@Update("UPDATE movies SET hit= hit + 1 where id = #{id}")
+	public void addHit(@Param("id") int id);
+	
+	@Update("UPDATE movies SET hit= hit + 1 where id = #{name}")
+	public void addHitByName(@Param("name") String name);
 }

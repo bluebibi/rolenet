@@ -11,8 +11,15 @@ public class MovieList {
     double pathlength;
     double clustering;
     double density;
+    int hit;
     
-    public double getDiameter() {
+    public int getHit() {
+		return hit;
+	}
+	public void setHit(int hit) {
+		this.hit = hit;
+	}
+	public double getDiameter() {
 		return diameter;
 	}
 	public void setDiameter(double diameter) {
