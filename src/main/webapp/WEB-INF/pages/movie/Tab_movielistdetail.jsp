@@ -294,8 +294,11 @@ var url = preurl + id + last;
             var nodeId = e.data.node.id, toKeep = sigInst.graph.neighbors(nodeId);
             toKeep[nodeId] = e.data.node;
 
-            console.log(e.data.node.closnesscentrality);  //overnode 된 노드의 id 값.
-            //console.log(sigInst.Graph('http://218.150.181.131/assets/gexf/051.gexf'));
+            alert("Label : " + e.data.node.label + "\n"
+            		+"degree : " + e.data.node.attributes.degree+ "\n"
+            	+ "Cluster : " + e.data.node.attributes.closnesscentrality + "\n"
+            	+ "Between : " + e.data.node.attributes.betweenesscentrality);  //overnode 된 노드의 id 값.
+           
 
 
             sigInst.graph.nodes().forEach(
@@ -341,7 +344,7 @@ var url = preurl + id + last;
             // Same as in the previous event:
             sigInst.refresh();
         });
-
+		
     }
 
     if (document.addEventListener) {
