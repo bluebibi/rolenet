@@ -32,6 +32,9 @@
 <link href="http://218.150.181.131/assets/admin/layout3/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color">
 <link href="http://218.150.181.131/assets/admin/layout3/css/custom.css" rel="stylesheet" type="text/css">
 <!-- END THEME STYLES -->
+<!-- BEGIN CUSTOM_CSS STYLES -->
+<link type="text/css" rel="stylesheet" href="http://218.150.181.131/css/movietween.css" />
+<!-- END CUSTOM_CSS STYLES -->
 <link rel="shortcut icon" href="favicon.ico">
 <style>
 #graph-container {
@@ -233,6 +236,11 @@ var url = preurl + id + last;
 
     function init() {
 
+        var mousePositionX, mousePositionY;  //마우스 위치
+        console.log(mousePositionX +', '+ mousePositionY);
+        var degree_var, cluster_var, between_var; //degree, cluster, between 값들의 변수
+
+
         //addmethod()첫번째파라미터는 함수이름, 두번째 파라미터는 해당 함수정의이다.
         //neighbors란 노드로들어오거나 나가는 선들을 말한다. 이 edge 들에 대한 정보를 가진 함수를 정의함.
         sigma.classes.graph.addMethod('neighbors', function (nodeId) {
@@ -289,16 +297,26 @@ var url = preurl + id + last;
         });
 
 
-        //노드를 클릭했을때 정의
+        //노드 위에 마우스 올라왔을때 정의
         sigInst.bind('overNode', function (e) {
             var nodeId = e.data.node.id, toKeep = sigInst.graph.neighbors(nodeId);
             toKeep[nodeId] = e.data.node;
 
-            alert("Label : " + e.data.node.label + "\n"
-            		+"degree : " + e.data.node.attributes.degree+ "\n"
-            	+ "Cluster : " + e.data.node.attributes.closnesscentrality + "\n"
-            	+ "Between : " + e.data.node.attributes.betweenesscentrality);  //overnode 된 노드의 id 값.
-           
+            //현재 마우스의 위치를 구하는 jquery문
+            $(document).ready(function(){
+                $(document).mousemove(function(e){
+                    mousePositionX = e.pageX;
+                    mousePositionY = e.pageY;
+                });
+            });
+
+
+            degree_var =  e.data.node.attributes.degree;
+            cluster_var = e.data.node.attributes.modularity_class;
+            between_var = e.data.node.attributes.betweenesscentrality;
+
+            //console.log(e.data.node.attributes);
+            //console.log("y축 : "+mousePositionY);
 
 
             sigInst.graph.nodes().forEach(
@@ -329,7 +347,7 @@ var url = preurl + id + last;
         });
 
 
-        //스테이지를 클릭했을때 함수 정의
+        //마우스가 스테이지로 나왔을때 함수 정의
         // When the stage is clicked, we just color each
         // node and edge with its original color.
         sigInst.bind('outNode', function (e) {
@@ -344,7 +362,54 @@ var url = preurl + id + last;
             // Same as in the previous event:
             sigInst.refresh();
         });
-		
+
+        (function () {
+
+            var popUp;
+
+            function attributesToString() {
+                return '<ul style="list-style-type:none; padding:0px; margin:0px; position:relative; left:-6px;">'+
+                        '<li style="font-size:12px!important;">'+'degree : '+degree_var +'<br/>'+'cluster : '+cluster_var+'<br/>'+'between : '+between_var +'</li>' +
+                        '</ul>';
+            }
+
+            function showNodeInfo(event) {
+                popUp && popUp.remove();
+
+                var node = event.data.node;
+
+                popUp = $(
+                        '<div class="node-info-popup"></div>'
+                ).append(
+                        attributesToString()
+                ).css({
+                            'display': 'inline-block',
+                            'border-radius': 2,
+                            'padding': 4,
+                            'background': 'white',
+                            'width': '130',
+                            'color': '#777',
+                            'z-index': '99999',
+                            'border': '1px solid #eee',
+                            'position': 'absolute',
+                            'left': mousePositionX,
+                            'top': mousePositionY + 10
+                        });
+
+                $('ul', popUp).css('margin', '0 0 0 10px');
+
+                $('#graph-container').append(popUp);
+            }
+
+            function hideNodeInfo(event) {
+                popUp && popUp.remove();
+                popUp = false;
+            }
+
+            sigInst.bind('overNode', showNodeInfo).bind('outNode', hideNodeInfo).refresh();
+        })();
+
+
     }
 
     if (document.addEventListener) {
