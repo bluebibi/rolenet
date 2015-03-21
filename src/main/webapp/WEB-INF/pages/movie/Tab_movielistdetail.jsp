@@ -236,8 +236,8 @@ var url = preurl + id + last;
 
     function init() {
 
-        var mousePositionX, mousePositionY;  //마우스 위치
-        console.log(mousePositionX +', '+ mousePositionY);
+       	var posx = 0; // x 좌표값
+    	var posy = 0; // y 좌표값
         var degree_var, cluster_var, between_var; //degree, cluster, between 값들의 변수
 
 
@@ -303,14 +303,24 @@ var url = preurl + id + last;
             toKeep[nodeId] = e.data.node;
 
             //현재 마우스의 위치를 구하는 jquery문
-            $(document).ready(function(){
-                $(document).mousemove(function(e){
-                    mousePositionX = e.pageX;
-                    mousePositionY = e.pageY;
-                });
-            });
+            //익스플로어 예외처리해야함.
+            function doSomething(e) {
+            	
 
-
+            	if (!e) var e = window.event;
+            	if (e.pageX || e.pageY) {
+            	posx = e.pageX;
+            	posy = e.pageY;
+            	} else if (e.clientX || e.clientY) {
+            	posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+            	posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+            	}
+            	// posx and posy contain the mouse position relative to the document
+            	// Do something with this information
+            	
+            	
+            	}
+            doSomething(event)
             degree_var =  e.data.node.attributes.degree;
             cluster_var = e.data.node.attributes.modularity_class;
             between_var = e.data.node.attributes.betweenesscentrality;
@@ -392,8 +402,8 @@ var url = preurl + id + last;
                             'z-index': '99999',
                             'border': '1px solid #eee',
                             'position': 'absolute',
-                            'left': mousePositionX,
-                            'top': mousePositionY + 10
+                            'left': posx,
+                            'top': posy + 10
                         });
 
                 $('ul', popUp).css('margin', '0 0 0 10px');
