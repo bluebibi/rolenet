@@ -356,6 +356,10 @@ var url = preurl + id + last;
 </script>
 
 					</div>
+					
+					<div>
+					
+					</div>
 					<!-- END PORTLET-->
 				</div>
 				<div class="row"></div>
