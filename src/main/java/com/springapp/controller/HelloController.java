@@ -18,7 +18,7 @@ import com.springapp.service.MovieListService;
 
 @Controller
 public class HelloController {
-
+//git test
 	@Autowired
 	private BoardListService boardListService;
 
