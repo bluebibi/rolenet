@@ -113,34 +113,35 @@
 					<div class="row margin-bottom-30">
 						<div class="col-md-6">
 							<p>
-								 ���대Ъ怨� 諛깅���곗�� 留�瑜닿� �노��濡� �������� 蹂댁�고���� �곕━���쇰��� 臾닿��� �쇱�由� ���ㅺ��� �����щ�� �����쇰� 湲몄�대낫������.
-								 異⑸�� 泥����� ���④뎄 蹂�泥�硫� 媛���由� ��援�湲곗��援��〓����援� 4怨듯��愿� B�� 103�� LINK LAB 9湲� ����援�
+								<big>Movietween을 만들기까지 얼마나 힘들었던가...<br>
+								충남 천안시 동남구 병천면 가전리 한국기술교육대학교<br> 4공학관 B동 103호 LINK LAB 9기 난닝구<br><br>
 
 							</p>
 							<ul class="list-unstyled margin-top-10 margin-bottom-10">
 								<li>
-									<i class="fa fa-check icon-default"></i> ���� : ���μ��
+									<span class="glyphicon glyphicon-thumbs-up"></span> 팀명 : 난닝구 (I'm Link 9th)
 								</li>
 								<li>
-									<i class="fa fa-check icon-success"></i> ���� : 源�����, �댁����, ��二쇱��
+									<span class="glyphicon glyphicon-user"></span> 팀장 : 서장원 
+									<!-- <i class="fa fa-check icon-default"></i> 팀장 : 서장원  -->
 								</li>
 								<li>
-									<i class="fa fa-check icon-info"></i> ��紐� : ����援� (I'm Link 9th)
+									<span class="glyphicon glyphicon-user"></span> 팀원 : 김태형, 이예영, 허주성 
 								</li>
 								<li>
-									<i class="fa fa-check icon-danger"></i> 吏���援����� : ���고��
+									<span class="glyphicon glyphicon-user"></span> 지도교수님 : 한연희 
 								</li>
 								<li>
-									<i class="fa fa-check icon-warning"></i> ���댄��
+									<span class="glyphicon glyphicon-heart-empty"></span>  Plz contact us! thank you.
 								</li>
 							</ul>
-							<!-- Blockquotes -->
+							<!-- Blockquotes 
 							<blockquote class="hero">
 								<p>
-									 臾대�媛ㅻ���� �곗���� 臾대��몄�� �곗����������������媛�����������!!!!!!!!!!!!!!!!!!!!
+									 Movietween
 								</p>
-								<small>��二쇱��</small>
-							</blockquote>
+								<small>허주성</small>
+							</blockquote>-->
 						</div>
 						<div class="col-md-6">
 							<iframe src="http://player.vimeo.com/video/22439234" style="width:100%; height:327px;border:0" allowfullscreen>
@@ -148,18 +149,19 @@
 						</div>
 					</div>
 					<!--/row-->
+					
 					<!-- Meer Our Team -->
 					<div class="headline">
-						<h3>Meet Our Team</h3>
+						<h3 class="bold">Meet Our Team</h3>
 					</div>
 					<div class="row thumbnails">
 						<div class="col-md-3">
 							<div class="meet-our-team">
-								<h3>���μ�� <small>���� �ㅽ��留�/珥�愿�</small></h3>
-								<img src="http://218.150.181.131/assets/img/2.png" alt="" class="img-responsive"/>
+								<h3> 서장원  <small>팀장 스프링/총괄 </small></h3>
+								<img src="http://218.150.181.131/assets/img/profile/1.png" alt="" class="img-responsive"/>
 								<div class="team-info">
 									<p>
-										�⑹�� ���� �뱁�� ��硫� 醫�寃���.
+										랩장 팀장 특허되면 좋겠다..
 									</p>
 									<ul class="social-icons pull-right">
 										<li>
@@ -167,7 +169,8 @@
 											</a>
 										</li>
 										<li>
-											<a href="javascript:;" data-original-title="facebook" class="facebook">
+											<a href="https://www.facebook.com/profile.php?id=100001914456950&fref=ts" 
+											data-original-title="facebook" class="facebook">
 											</a>
 										</li>
 										<li>
@@ -188,11 +191,11 @@
 						</div>
 						<div class="col-md-3">
 							<div class="meet-our-team">
-								<h3>�댁���� <small> ������</small></h3>
-								<img src="http://218.150.181.131/assets/img.pngpg" alt="" class="img-responsive"/>
+								<h3>이예영 <small> 디자인 css jsp</small></h3>
+								<img src="http://218.150.181.131/assets/img/profile/2.png" alt="" class="img-responsive"/>
 								<div class="team-info">
 									<p>
-										�ъ���怨� �ㅻ�
+										사진하고 다름 
 									</p>
 									<ul class="social-icons pull-right">
 										<li>
@@ -200,7 +203,8 @@
 											</a>
 										</li>
 										<li>
-											<a href="javascript:;" data-original-title="facebook" class="facebook">
+											<a href="https://www.facebook.com/profile.php?id=100006500989177" 
+											data-original-title="facebook" class="facebook">
 											</a>
 										</li>
 										<li>
@@ -221,11 +225,11 @@
 						</div>
 						<div class="col-md-3">
 							<div class="meet-our-team">
-								<h3>源����� <small>硫��몄��� / ��..</small></h3>
-								<img src="http://218.150.181.131/assets/img/2.png" alt="" class="img-responsive"/>
+								<h3>김태형 <small>메인 코더 </small></h3>
+								<img src="http://218.150.181.131/assets/img/profile/3.png" alt="" class="img-responsive"/>
 								<div class="team-info">
 									<p>
-										 ����3, 濡�, �쇳�� �깅��
+										 디아3, 롤, 피파 등등 
 									</p>
 									<ul class="social-icons pull-right">
 										<li>
@@ -233,7 +237,8 @@
 											</a>
 										</li>
 										<li>
-											<a href="javascript:;" data-original-title="facebook" class="facebook">
+											<a href="https://www.facebook.com/profile.php?id=100004185751696&fref=ts" 
+											data-original-title="facebook" class="facebook">
 											</a>
 										</li>
 										<li>
@@ -254,11 +259,11 @@
 						</div>
 						<div class="col-md-3">
 							<div class="meet-our-team">
-								<h3>��二쇱�� <small>��二쇱��</small></h3>
-								<img src="http://218.150.181.131/assets/img/3.png" alt="" class="img-responsive"/>
+								<h3>허주성 <small>서버 tomcat </small></h3>
+								<img src="http://218.150.181.131/assets/img/profile/4.png" alt="" class="img-responsive"/>
 								<div class="team-info">
 									<p>
-										 ��二쇱��
+										알바 맨날함 
 									</p>
 									<ul class="social-icons pull-right">
 										<li>
@@ -266,7 +271,8 @@
 											</a>
 										</li>
 										<li>
-											<a href="javascript:;" data-original-title="facebook" class="facebook">
+											<a href="https://www.facebook.com/profile.php?id=100002351765737&fref=ts" 
+											data-original-title="facebook" class="facebook">
 											</a>
 										</li>
 										<li>
