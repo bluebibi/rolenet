@@ -18,10 +18,9 @@ import com.springapp.service.MovieListService;
 
 @Controller
 public class HelloController {
-//git t156sadfgasd
+
 	@Autowired
 	private BoardListService boardListService;
-
 	@Autowired
 	private BoardListMapper boardListMapper;
 	@Autowired
@@ -29,7 +28,7 @@ public class HelloController {
 	@Autowired
 	private MovieListMapper movieListMapper;
 
-	// ///////////////////////////////////////////������
+	// ///////////////////////////////////////////인덱스페이지
 	@RequestMapping("/")
 	public String printWelcome(ModelMap model) {
 		model.addAttribute("hit", movieListMapper.selectMovieByHit());
@@ -38,29 +37,29 @@ public class HelloController {
 		return "home/index.jsp";
 	}
 
-	// ������������������������ ������������
-	// ������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������
-	@RequestMapping(value = "/addContact.do", method = RequestMethod.POST)
+	// 게시판 글쓰기를 위한 테스트테스트
+	// 테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트
+	@RequestMapping(value = "/movietween/addContact.do", method = RequestMethod.POST)
 	public ModelAndView addContact(
 			@ModelAttribute("contact") BoardList boardlist, BindingResult result) {
 		System.out.println("authortname : " + boardlist.getUauthor());
 		return new ModelAndView("addContact.jsp", "command", boardlist);
 	}
 
-	@RequestMapping("/contacts.do")
+	@RequestMapping("/movietween/contacts.do")
 	public ModelAndView showContacts() {
 		BoardList c = new BoardList();
-		c.setUtitle("������������");
-		c.setUcontent("������������������");
-		c.setUauthor("������������������");
+		c.setUtitle("하하하하하");
+		c.setUcontent("占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙");
+		c.setUauthor("占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙");
 
 		return new ModelAndView("contact.jsp", "command", c);
 	}
 
-	// //������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+	//테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트
 
 	/* search for movie */
-	@RequestMapping(value = "/search.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/movietween/search", method = RequestMethod.GET)
 	public String SearchMovie(ModelMap model, String name) {
 		movieListService.addHitByName(name);
 		MovieList movieList = movieListService.selectMovieByName(name);
@@ -68,22 +67,22 @@ public class HelloController {
 		return "movie/Tab_movielistdetail.jsp";
 	}
 
-	// ///////////////////////////////////////////������������������ �����������������
-	@RequestMapping(value = "/Tab_boardlist.do", method = RequestMethod.GET)
+	// 게시판
+	@RequestMapping(value = "/movietween/Tab_boardlist", method = RequestMethod.GET)
 	public String BoardList(ModelMap model) {
 		model.addAttribute("list", boardListService.list());
 		return "community/Tab_boardlist.jsp";
 	}
 
-	// ������������������ ���������������
-	@RequestMapping(value = "/Tab_boardwriting.do")
+	// 게시판글쓰기
+	@RequestMapping(value = "/movietween/Tab_boardwriting")
 	public String BoardWriting(ModelMap model) {
 
 		return "community/Tab_boardwriting.jsp";
 	}
 
-	// ������������������ ���������������������������
-	@RequestMapping(value = "/Tab_boarddetail.do")
+	// 게시판 자세히
+	@RequestMapping(value = "/movietween/Tab_boarddetail")
 	public String BoardDetail(ModelMap model, int uId) {
 		BoardList boarddetailentity = boardListService
 				.selectAllBoardContents(uId);
@@ -91,20 +90,20 @@ public class HelloController {
 		return "community/Tab_boarddetail.jsp";
 	}
 
-	// ///////////////////////////////////////////��������������������������������������
-	@RequestMapping(value = "/Tab_movielist.do", method = RequestMethod.GET)
+	// 영화리스트
+	@RequestMapping(value = "/movietween/Tab_movielist", method = RequestMethod.GET)
 	public String MovieList(ModelMap model) {
 		model.addAttribute("list2", movieListService.list());
 		return "movie/Tab_movielist.jsp";
 	}
-
+	
 	@RequestMapping(value = "/movielist2/**")
 	public void MovieList2(ModelMap model) {
 		System.out.println("!!!!!!");
 	}
 
-	// ������������ ���������������������������������������������
-	@RequestMapping(value = "/Tab_movielistdetail.do")
+	//영화디테일
+	@RequestMapping(value = "/movietween/Tab_movielistdetail")
 	public String MovieListDetail(ModelMap model, int id) {
 		movieListService.addHit(id);
 		MovieList movieList = movieListService.selectMovieById(id);
@@ -112,32 +111,32 @@ public class HelloController {
 		return "movie/Tab_movielistdetail.jsp";
 	}
 
-	// ///////////////////////////////////////////���������������������������
-	@RequestMapping(value = "/Tab_mypage.do")
+	// 마이페이지
+	@RequestMapping(value = "/movietween/Tab_mypage")
 	public String MyPage(ModelMap model) {
 		return "mypage/Tab_mypage.jsp";
 	}
 
-	// ������������������������
-	@RequestMapping(value = "/Tab_editprofile.do")
+	// 프로필수정
+	@RequestMapping(value = "/movietween/Tab_editprofile")
 	public String EditProfile(ModelMap model) {
 		return "mypage/Tab_editprofile.jsp";
 	}
 
-	// ���������������������������
-	@RequestMapping(value = "/Tab_mygraph.do")
+	//그래프 수정
+	@RequestMapping(value = "/movietween/Tab_mygraph")
 	public String MyGraph(ModelMap model) {
 		return "mypage/Tab_mygraph.jsp";
 	}
 
-	// ���������������������
-	@RequestMapping(value = "/Tab_charge.do")
+	//금액
+	@RequestMapping(value = "/movietween/Tab_charge")
 	public String MyCharge(ModelMap model) {
 		return "mypage/Tab_charge.jsp";
 	}
 
-	// ///////////////////////////////////////////���������������
-	@RequestMapping(value = "/Tab_about.do")
+	//우리소개
+	@RequestMapping(value = "/movietween/Tab_about")
 	public String About(ModelMap model) {
 		return "about/Tab_about.jsp";
 	}

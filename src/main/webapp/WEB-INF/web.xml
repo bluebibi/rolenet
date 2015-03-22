@@ -4,7 +4,6 @@
 	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
 	<display-name>Spring MVC Application</display-name>
-	<!-- 처음 실행시 어떤 페이지가 실행될지 설정하는 부분 -->
 
 	<servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
