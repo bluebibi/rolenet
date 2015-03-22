@@ -56,6 +56,7 @@
 	type="text/css">
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico">
+
 <style type="text/css">
 #title_search {
 	margin: 0 auto;
@@ -66,6 +67,15 @@
 	height: 280px;
 	margin: auto;
 }
+
+#head-back {
+	background-image:url(http://218.150.181.131/assets/img/gephi/002.png);
+	background-repeat:repeat;
+	height:244px;
+	margin: 0 auto;
+	text-align:center;
+}
+
 </style>
 </head>
 <!-- END HEAD -->
@@ -73,15 +83,19 @@
 <!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
 <body>
+
 		<%@include file="../includes/headerMenu.jsp"%>
+		
 
 		<!-- BEGIN PAGE CONTAINER -->
 		<div class="page-container">
 			<!-- BEGIN PAGE HEAD -->
+			
 			<div class="page-head">
+			
 				<div class="homeview">
 					<!-- BEGIN PAGE TITLE -->
-					<div id="title_search" class="homebox">
+					<div id="head-back" class="homebox">
 						<br> <br> <br> <br>
 						<h1 align="center">
 							Movietween <small>Scripts & Graphs!!</small>
@@ -89,7 +103,7 @@
 						<div class="container">
 							<form class="search-form"  method="GET">
 								<div class="input-group">
-									<input id="movieName"type="text" class="form-control"
+									  <input id="movieName"type="text" class="form-control"
 										placeholder="Search for Movies" name="query" 
 										onkeydown="javascript:if(event.keyCode==13){getName();}"> 
 										<span class="input-group-btn">
@@ -122,6 +136,7 @@
 							<div class="portlet light ">
 								<div class="portlet-title">
 									<div class="caption caption-md">
+									<span class="glyphicon glyphicon-hand-up"></span>
 										<i class="icon-bar-chart theme-font hide"></i> <span
 											class="caption-subject theme-font bold uppercase">MOST
 											RECOMMENDATION MOVIE</span> <span class="caption-helper hide">weekly
@@ -133,7 +148,7 @@
 												class="btn btn-transparent grey-salsa btn-circle btn-sm active">
 												<input type="radio" name="options" class="toggle"
 												id="option1">Today
-											</label> <label
+											</label><!--  <label
 												class="btn btn-transparent grey-salsa btn-circle btn-sm">
 												<input type="radio" name="options" class="toggle"
 												id="option2">Week
@@ -141,7 +156,7 @@
 												class="btn btn-transparent grey-salsa btn-circle btn-sm">
 												<input type="radio" name="options" class="toggle"
 												id="option2">Month
-											</label>
+											</label> -->
 										</div>
 									</div>
 								</div>
@@ -352,6 +367,8 @@
 							<div class="portlet light ">
 								<div class="portlet-title">
 									<div class="caption caption-md">
+									
+									<span class="glyphicon glyphicon-ok"></span>
 										<i class="icon-bar-chart theme-font hide"></i> <span
 											class="caption-subject theme-font bold uppercase">Updated
 											Movie</span> <span class="caption-helper hide">weekly
@@ -363,7 +380,7 @@
 												class="btn btn-transparent grey-salsa btn-circle btn-sm active">
 												<input type="radio" name="options" class="toggle"
 												id="option1">Today
-											</label> <label
+											 </label><!-- <label
 												class="btn btn-transparent grey-salsa btn-circle btn-sm">
 												<input type="radio" name="options" class="toggle"
 												id="option2">Week
@@ -371,7 +388,7 @@
 												class="btn btn-transparent grey-salsa btn-circle btn-sm">
 												<input type="radio" name="options" class="toggle"
 												id="option2">Month
-											</label>
+											</label> -->
 										</div>
 									</div>
 								</div>
@@ -404,7 +421,7 @@
 											<c:forEach var="m" items="${last}">
 												<tr onclick="document.location = 'Tab_movielistdetail.do?id=${m.id}';">
 													<td id="id">${m.id}</td>
-													<td>${m.name}</td>
+													<td class="bold">${m.name}</td>
 													<td>${m.year}</td>
 													<td>${m.director}</td>
 												</tr>

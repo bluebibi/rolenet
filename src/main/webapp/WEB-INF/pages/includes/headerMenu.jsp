@@ -134,10 +134,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/movietweenTab_mypage">MyPage</a>
+                        <a href="/movietween/Tab_mypage">MyPage</a>
                     </li>
                     <li>
-                        <a href="/movietweenTab_about">About</a>
+                        <a href="/movietween/Tab_about">About</a>
                     </li>
                 </ul>
 
