@@ -172,7 +172,6 @@
 <body onload="initToolTips();">
 	<%@include file="../includes/headerMenu.jsp"%>
 	<div id="toolTipLayer" style="position:absolute; visibility: hidden;left:0;right:0; z-index :5;" ></div>
-	<span onMouseOver="show()" onMouseOut="toolTip()">Tooltip with Images and Text</span>
 	<!-- BEGIN PAGE CONTAINER -->
 	<div class="page-container">
 		<!-- BEGIN PAGE HEAD -->
