@@ -39,14 +39,14 @@ public class HelloController {
 
 	// 게시판 글쓰기를 위한 테스트테스트
 	// 테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트
-	@RequestMapping(value = "/addContact.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/movietween/addContact.do", method = RequestMethod.POST)
 	public ModelAndView addContact(
 			@ModelAttribute("contact") BoardList boardlist, BindingResult result) {
 		System.out.println("authortname : " + boardlist.getUauthor());
 		return new ModelAndView("addContact.jsp", "command", boardlist);
 	}
 
-	@RequestMapping("/contacts.do")
+	@RequestMapping("/movietween/contacts.do")
 	public ModelAndView showContacts() {
 		BoardList c = new BoardList();
 		c.setUtitle("하하하하하");

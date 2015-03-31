@@ -427,7 +427,7 @@ var url = preurl + id + last;
     } else {
         window.onload = init;
     }
-    $('#graph-container').css('background-color', 'white');
+    $('#graph-container').css('background-color', '#FFFFD7');
 </script>
 
 					</div>
