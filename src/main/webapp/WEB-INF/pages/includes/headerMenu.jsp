@@ -48,7 +48,7 @@
                                                     <h3>Movie</h3>
                                                 </li>
                                                 <li>
-                                                    <a href="/movietween/Tab_movielist" class="iconify">
+                                                    <a href="/Tab_movielist" class="iconify">
                                                         <i class="icon-home"></i>
                                                         Movie List </a>
                                                 </li>
@@ -101,7 +101,7 @@
                                     Board </a>
                                 <ul class="dropdown-menu">
                                     <li class=" ">
-                                        <a href="/movietween/Tab_boardlist">
+                                        <a href="/Tab_boardlist">
                                             FreeBoard </a>
                                     </li>
                                     <li class=" ">
@@ -134,10 +134,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/movietween/Tab_mypage">MyPage</a>
+                        <a href="/Tab_mypage">MyPage</a>
                     </li>
                     <li>
-                        <a href="/movietween/Tab_about">About</a>
+                        <a href="/Tab_about">About</a>
                     </li>
                 </ul>
 
