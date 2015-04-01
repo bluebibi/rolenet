@@ -13,7 +13,6 @@ import com.springapp.dao.BoardListMapper;
 import com.springapp.dao.CharactorListMapper;
 import com.springapp.dao.MovieListMapper;
 import com.springapp.entity.BoardList;
-import com.springapp.entity.CharactorsList;
 import com.springapp.entity.MovieList;
 import com.springapp.service.BoardListService;
 import com.springapp.service.CharactorsListService;
@@ -96,13 +95,9 @@ public class HelloController {
 		return "community/Tab_boarddetail.jsp";
 	}
 
-<<<<<<< HEAD
-	// ����由ъ�ㅽ��
-	@RequestMapping(value = "/movietween/Tab_movielist", method = RequestMethod.GET)
-=======
-	// 영화리스트
-	@RequestMapping(value = "/Tab_movielist", method = RequestMethod.GET)
->>>>>>> ?
+
+
+
 	public String MovieList(ModelMap model) {
 		model.addAttribute("list2", movieListService.list());
 		return "movie/Tab_movielist.jsp";
@@ -113,13 +108,9 @@ public class HelloController {
 		System.out.println("!!!!!!");
 	}
 
-<<<<<<< HEAD
-	//����������
-	@RequestMapping(value = "/movietween/Tab_movielistdetail")
-=======
-	//영화디테일
-	@RequestMapping(value = "/Tab_movielistdetail")
->>>>>>> ?
+
+
+
 	public String MovieListDetail(ModelMap model, int id) {
 		movieListService.addHit(id);
 		MovieList movieList = movieListService.selectMovieById(id);
