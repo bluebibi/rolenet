@@ -477,12 +477,20 @@ var url = preurl + id + last;
                                 </thead>
 
                                 <tbody>
-                              
-                                    <tr>
-                         			    <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                    </tr>
+                              		
+                                  <script>
+									var k = '${degreeRole[1].name}';
+									var kk = '${degreeRole[';
+									var p = '1';
+									var pp = '.name}';
+									var ppp = kk + p + ppp;
+                                  for (var f=1; f <5; f++){
+									document.write('<tr>');
+									document.write('<td>');
+									document.write (k);
+									document.write ('</td>');
+									document.write ('</tr>');}
+									</script>
                             
                                 </tbody>
 
