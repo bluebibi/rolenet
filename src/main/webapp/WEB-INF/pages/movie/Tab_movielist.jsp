@@ -364,9 +364,6 @@ pageEncoding="UTF-8"%>
                                         onclick="document.location = 'Tab_movielistdetail.do?id=${m.id}';">
                                         <td id="id">${m.id}</td>
 
-                                        <!--<td><img alt="" class="img"
-                                            src="http://218.150.181.131/assets/img/gephi/${m.id}.png"
-                                            style="width: 200px;"></td>-->
                                         <td>${m.name}</td>
                                         <td>${m.year}</td>
                                         <td>${m.director}</td>
@@ -383,10 +380,6 @@ pageEncoding="UTF-8"%>
                         </div>
                     </div>
                     <!-- END EXAMPLE TABLE PORTLET-->
-                    <div align="right">
-                        <input type="button" name="버튼" value="글쓰기"
-                               onclick="location.href='Tab_boardwriting.do'">
-                    </div>
                 </div>
             </div>
             <!-- END PAGE CONTENT INNER -->
