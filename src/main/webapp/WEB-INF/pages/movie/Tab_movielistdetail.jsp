@@ -41,6 +41,14 @@
 	max-width: 500px;
 	height: 400px;
 }
+
+/*#graph-body {
+	background-image:url(http://218.150.181.131/assets/img/gephi/002.png);
+	background-repeat:repeat;
+	height:244px;
+	margin: 0 auto;
+	align:center;
+}*/
 </style>
 </head>
 <!-- END HEAD -->
@@ -57,11 +65,10 @@
 			<div class="container">
 				<!-- BEGIN PAGE TITLE -->
 				<div class="page-title">
-					<h1>
-						Movies <small> ${n.name}</small>
-					</h1>
-					<h1>
-						Director <small> ${n.director}</small>
+					<h1 align="center">
+						Movies <small> ${n.name}     </small>
+					
+						   Director <small> ${n.director}</small>
 					</h1>
 				</div>
 				<!-- END PAGE TITLE -->
@@ -429,6 +436,8 @@ var url = preurl + id + last;
         window.onload = init;
     }
     $('#graph-container').css('background-color', '#FFFFD7');
+    $('#graph-container').css('background-color', 'white');
+    $('#graph-container').css('background-color', '#FFFFFF');
 </script>
 
 					</div>

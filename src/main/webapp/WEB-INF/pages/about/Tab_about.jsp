@@ -113,8 +113,13 @@
 					<div class="row margin-bottom-30">
 						<div class="col-md-6">
 							<p>
+<<<<<<< Updated upstream
 								 ���대Ъ怨� 諛깅���곗�� 留�瑜닿� �노��濡� �������� 蹂댁�고���� �곕━���쇰��� 臾닿��� �쇱�由� ���ㅺ��� �����щ�� �����쇰� 湲몄�대낫������.
 								 異⑸�� 泥����� ���④뎄 蹂�泥�硫� 媛���由� ��援�湲곗��援��〓����援� 4怨듯��愿� B�� 103�� LINK LAB 9湲� ����援�
+=======
+								<big>Movietween을 만들기까지 얼마나 힘들었던가...</big><br>
+								충남 천안시 동남구 병천면 가전리 한국기술교육대학교<br> 4공학관 B동 103호 LINK LAB 9기 난닝구<br><br>
+>>>>>>> Stashed changes
 
 							</p>
 							<ul class="list-unstyled margin-top-10 margin-bottom-10">
