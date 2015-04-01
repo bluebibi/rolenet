@@ -113,7 +113,6 @@ public class HelloController {
 	public String MovieListDetail(ModelMap model, int id) {
 		movieListService.addHit(id);
 		MovieList movieList = movieListService.selectMovieById(id);
-
 		model.addAttribute("n", movieList);
 		model.addAttribute("naverRole", charactorsListService.selectBetweenRoleByMovieId(id));
 		model.addAttribute("degreeRole", charactorsListService.selectDegreeRoleByMovieId(id));

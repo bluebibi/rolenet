@@ -188,6 +188,7 @@
 				<!-- END PAGE BREADCRUMB -->
 				<!-- BEGIN PAGE CONTENT INNER -->
 				<div class="row margin-top-10">
+					<div class="col-md-6 col-sm-12">
 					<!-- BEGIN PORTLET-->
 					<div class="portlet light ">
 						<div id="graph-container"></div>
@@ -432,13 +433,66 @@ var url = preurl + id + last;
 
 					</div>
 					
-					<div>
-					
-					</div>
 					<!-- END PORTLET-->
+					</div>
+								<div class="col-md-6 col-sm-12">
+			<div class="portlet box blue-hoki">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-gift"></i>Information
+							</div>
+							<div class="actions">
+								<a href="javascript:;" class="btn btn-default btn-sm">
+								<i class="fa fa-pencil"></i> Edit </a>
+								<a href="javascript:;" class="btn btn-default btn-sm">
+								<i class="fa fa-plus"></i> Add </a>
+								<a class="btn btn-icon-only btn-default btn-sm fullscreen" href="#" data-original-title="" title="">
+								</a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;"><div class="scroller" style="height: 200px; overflow: hidden; width: auto;" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd" data-initialized="1">
+								<strong>synopsis</strong><br>
+								${n.synopsis}
+								</div><div class="slimScrollBar" style="background-color: rgb(161, 178, 189); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; z-index: 99; right: 1px; height: 138.88888888888889px; background-position: initial initial; background-repeat: initial initial;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; background-color: yellow; opacity: 0.2; z-index: 90; right: 1px; display: none; background-position: initial initial; background-repeat: initial initial;"></div></div>
+						</div>
+						                   <div class="portlet light">
+                        <div class="portlet-title" style="z-index: 1;">
+                            <div class="caption">
+                                <i class="fa fa-cogs font-green-sharp"></i> <span
+                                    class="caption-subject font-green-sharp bold uppercase">Movie Leader</span>
+                            </div>
+                            <div class="tools"></div>
+                        </div>
+                        <div class="portlet-body">
+                            <table class="table table-striped table-bordered table-hover"
+                                   id="sample_1">
+                                <thead>
+                                <tr>
+                                    <th>degreeRole</th>
+                                    <th>betweenRole</th>
+                                    <th>naverRole</th>
+
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                              
+                                    <tr>
+                         			    <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                            
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+					</div>
+			</div>
 				</div>
-				<div class="row"></div>
-				<div class="row"></div>
+
 				<!-- END PAGE CONTENT INNER -->
 			</div>
 		</div>
