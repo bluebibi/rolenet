@@ -96,7 +96,11 @@ public class HelloController {
 	}
 
 
+	// ����由ъ�ㅽ��
+	@RequestMapping(value = "/movietween/Tab_movielist", method = RequestMethod.GET)
 
+	// 영화리스트
+	@RequestMapping(value = "/Tab_movielist", method = RequestMethod.GET)
 
 	public String MovieList(ModelMap model) {
 		model.addAttribute("list2", movieListService.list());
@@ -109,8 +113,11 @@ public class HelloController {
 	}
 
 
+	//���������
+	@RequestMapping(value = "/movietween/Tab_movielistdetail")
 
-
+	//영화디테일
+	@RequestMapping(value = "/Tab_movielistdetail")
 	public String MovieListDetail(ModelMap model, int id) {
 		movieListService.addHit(id);
 		MovieList movieList = movieListService.selectMovieById(id);
