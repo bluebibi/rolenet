@@ -94,7 +94,7 @@ public class HelloController {
 		model.addAttribute("result", boarddetailentity);
 		return "community/Tab_boarddetail.jsp";
 	}
-
+	@RequestMapping(value = "/Tab_movielist", method = RequestMethod.GET)
 	public String MovieList(ModelMap model) {
 		model.addAttribute("list2", movieListService.list());
 		return "movie/Tab_movielist.jsp";
