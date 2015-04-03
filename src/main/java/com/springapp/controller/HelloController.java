@@ -33,7 +33,7 @@ public class HelloController {
 	private CharactorListMapper charactorListMapper;
 	@Autowired
 	private CharactorsListService charactorsListService;
-	// ///////////////////////////////////////////�몃�깆�ㅽ���댁�
+	// ///////////////////////////////////////////占쎈�占쎄�占썬�쏙옙占쏙옙��占�
 	@RequestMapping("/")
 	public String printWelcome(ModelMap model) {
 		model.addAttribute("hit", movieListMapper.selectMovieByHit());
@@ -42,8 +42,8 @@ public class HelloController {
 		return "home/index.jsp";
 	}
 
-	// 寃����� 湲��곌린瑜� ���� ���ㅽ�명���ㅽ��
-	// ���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ��
+	// 野�占쏙옙占쏙옙占� 疫뀐옙占쎄�由곁��占� 占쏙옙占쏙옙 占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙占�
+	// 占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙占�
 	@RequestMapping(value = "/movietween/addContact.do", method = RequestMethod.POST)
 	public ModelAndView addContact(
 			@ModelAttribute("contact") BoardList boardlist, BindingResult result) {
@@ -54,17 +54,17 @@ public class HelloController {
 	@RequestMapping("/movietween/contacts.do")
 	public ModelAndView showContacts() {
 		BoardList c = new BoardList();
-		c.setUtitle("����������");
-		c.setUcontent("������������������������������������������������������");
-		c.setUauthor("������������������������������������������������������");
+		c.setUtitle("占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙");
+		c.setUcontent("占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙");
+		c.setUauthor("占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙");
 
 		return new ModelAndView("contact.jsp", "command", c);
 	}
 
-	//���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ�명���ㅽ��
+	//占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙占�
 
 	/* search for movie */
-	@RequestMapping(value = "/movietween/search", method = RequestMethod.GET)
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public String SearchMovie(ModelMap model, String name) {
 		movieListService.addHitByName(name);
 		MovieList movieList = movieListService.selectMovieByName(name);
@@ -72,22 +72,22 @@ public class HelloController {
 		return "movie/Tab_movielistdetail.jsp";
 	}
 
-	// 寃�����
-	@RequestMapping(value = "/movietween/Tab_boardlist", method = RequestMethod.GET)
+	// 野�占쏙옙占쏙옙占�
+	@RequestMapping(value = "/Tab_boardlist", method = RequestMethod.GET)
 	public String BoardList(ModelMap model) {
 		model.addAttribute("list", boardListService.list());
 		return "community/Tab_boardlist.jsp";
 	}
 
-	// 寃�����湲��곌린
-	@RequestMapping(value = "/movietween/Tab_boardwriting")
+	// 野�占쏙옙占쏙옙占썸묾占쏙옙怨�由�
+	@RequestMapping(value = "/Tab_boardwriting")
 	public String BoardWriting(ModelMap model) {
 
 		return "community/Tab_boardwriting.jsp";
 	}
 
-	// 寃����� ���명��
-	@RequestMapping(value = "/movietween/Tab_boarddetail")
+	// 野�占쏙옙占쏙옙占� 占쏙옙占쎈�占쏙옙
+	@RequestMapping(value = "/Tab_boarddetail")
 	public String BoardDetail(ModelMap model, int uId) {
 		BoardList boarddetailentity = boardListService
 				.selectAllBoardContents(uId);
@@ -105,7 +105,7 @@ public class HelloController {
 		System.out.println("!!!!!!");
 	}
 
-	//영화디테일
+	//����������
 	@RequestMapping(value = "/Tab_movielistdetail")
 	public String MovieListDetail(ModelMap model, int id) {
 		movieListService.addHit(id);
@@ -117,32 +117,32 @@ public class HelloController {
 		return "movie/Tab_movielistdetail.jsp";
 	}
 
-	// 留��댄���댁�
-	@RequestMapping(value = "/movietween/Tab_mypage")
+	// 筌�占쏙옙��占쏙옙占쎈��占�
+	@RequestMapping(value = "/Tab_mypage")
 	public String MyPage(ModelMap model) {
 		return "mypage/Tab_mypage.jsp";
 	}
 
-	// ��濡�������
-	@RequestMapping(value = "/movietween/Tab_editprofile")
+	// 占쏙옙嚥∽옙占쏙옙占쏙옙占쏙옙
+	@RequestMapping(value = "/Tab_editprofile")
 	public String EditProfile(ModelMap model) {
 		return "mypage/Tab_editprofile.jsp";
 	}
 
-	//洹몃���� ����
-	@RequestMapping(value = "/movietween/Tab_mygraph")
+	//域밸�占쏙옙占쏙옙 占쏙옙占쏙옙
+	@RequestMapping(value = "/Tab_mygraph")
 	public String MyGraph(ModelMap model) {
 		return "mypage/Tab_mygraph.jsp";
 	}
 
-	//湲���
-	@RequestMapping(value = "/movietween/Tab_charge")
+	//疫뀐옙占쏙옙
+	@RequestMapping(value = "/Tab_charge")
 	public String MyCharge(ModelMap model) {
 		return "mypage/Tab_charge.jsp";
 	}
 
-	//�곕━��媛�
-	@RequestMapping(value = "/movietween/Tab_about")
+	//占쎄���占쏙옙揶�占�
+	@RequestMapping(value = "/Tab_about")
 	public String About(ModelMap model) {
 		return "about/Tab_about.jsp";
 	}

@@ -64,7 +64,6 @@
                                                         <i class="icon-cursor-move"></i>
                                                         A - D </a>
                                                 </li>
-
                                             </ul>
                                         </div>
                                         <div class="col-md-4">
