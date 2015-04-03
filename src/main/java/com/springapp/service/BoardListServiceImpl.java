@@ -25,16 +25,5 @@ public class BoardListServiceImpl implements BoardListService {
 		return boardListMapper.selectBoardContentsByID(uid);
 		
 	}
-	
 
-	//@Override
-	//public 
-/*
-	@Override
-	public BoardList selectBoardList(int id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	*/
-	
 }

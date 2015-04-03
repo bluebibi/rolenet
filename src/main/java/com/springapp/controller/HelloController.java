@@ -95,13 +95,6 @@ public class HelloController {
 		return "community/Tab_boarddetail.jsp";
 	}
 
-
-	// ����由ъ�ㅽ��
-	@RequestMapping(value = "/movietween/Tab_movielist", method = RequestMethod.GET)
-
-	// 영화리스트
-	@RequestMapping(value = "/Tab_movielist", method = RequestMethod.GET)
-
 	public String MovieList(ModelMap model) {
 		model.addAttribute("list2", movieListService.list());
 		return "movie/Tab_movielist.jsp";
@@ -111,10 +104,6 @@ public class HelloController {
 	public void MovieList2(ModelMap model) {
 		System.out.println("!!!!!!");
 	}
-
-
-	//���������
-	@RequestMapping(value = "/movietween/Tab_movielistdetail")
 
 	//영화디테일
 	@RequestMapping(value = "/Tab_movielistdetail")
