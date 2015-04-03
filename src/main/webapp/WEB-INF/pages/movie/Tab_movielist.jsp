@@ -361,7 +361,7 @@ pageEncoding="UTF-8"%>
                                 <tbody>
                                 <c:forEach var="m" items="${list2}">
                                     <tr onMouseOver="show(${m.id})" onMouseOut="toolTip()"
-                                        onclick="document.location = 'Tab_movielistdetail.do?id=${m.id}';">
+                                        onclick="document.location = 'Tab_movielistdetail?id=${m.id}';">
                                         <td id="id">${m.id}</td>
 
                                         <td>${m.name}</td>
