@@ -435,17 +435,17 @@ var url = preurl + id + last;
 						<div class="portlet-title tabbable-line">
 							<div class="caption">
 								<i class="icon-share font-red-sunglo"></i>
-								<span class="caption-subject font-red-sunglo bold uppercase">Revenue</span>
+								<span class="caption-subject font-red-sunglo bold uppercase">Info.Movie</span>
 								<span class="caption-helper">weekly stats...</span>
 							</div>
 							<ul class="nav nav-tabs">
 								<li>
 									<a href="#portlet_tab2" data-toggle="tab" id="statistics_amounts_tab">
-									Amounts </a>
+									Base </a>
 								</li>
 								<li class="active">
 									<a href="#portlet_tab1" data-toggle="tab">
-									Orders </a>
+									Synopsis </a>
 								</li>
 							</ul>
 						</div>
