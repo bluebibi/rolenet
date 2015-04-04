@@ -7,49 +7,12 @@ public class MovieList {
     int year;
     String director;
     String synopsis;
-    double diameter;
+    int spectators;
+	int diameter;
     double pathlength;
     double clustering;
     double density;
     int hit;
-    
-    public int getHit() {
-		return hit;
-	}
-	public void setHit(int hit) {
-		this.hit = hit;
-	}
-	public double getDiameter() {
-		return diameter;
-	}
-	public void setDiameter(double diameter) {
-		this.diameter = diameter;
-	}
-	public double getPathlength() {
-		return pathlength;
-	}
-	public void setPathlength(double pathlength) {
-		this.pathlength = pathlength;
-	}
-	public double getClustering() {
-		return clustering;
-	}
-	public void setClustering(double clustering) {
-		this.clustering = clustering;
-	}
-	public double getDensity() {
-		return density;
-	}
-	public void setDensity(double density) {
-		this.density = density;
-	}
-	public String getSynopsis() {
-		return synopsis;
-	}
-	public void setSynopsis(String synopsis) {
-		this.synopsis = synopsis;
-	}
-	int spectators;
 	public int getId() {
 		return id;
 	}
@@ -74,12 +37,48 @@ public class MovieList {
 	public void setDirector(String director) {
 		this.director = director;
 	}
+	public String getSynopsis() {
+		return synopsis;
+	}
+	public void setSynopsis(String synopsis) {
+		this.synopsis = synopsis;
+	}
 	public int getSpectators() {
 		return spectators;
 	}
 	public void setSpectators(int spectators) {
 		this.spectators = spectators;
 	}
-    
+	public int getDiameter() {
+		return diameter;
+	}
+	public void setDiameter(int diameter) {
+		this.diameter = diameter;
+	}
+	public double getPathlength() {
+		return pathlength;
+	}
+	public void setPathlength(double pathlength) {
+		this.pathlength = pathlength;
+	}
+	public double getClustering() {
+		return clustering;
+	}
+	public void setClustering(double clustering) {
+		this.clustering = clustering;
+	}
+	public double getDensity() {
+		return density;
+	}
+	public void setDensity(double density) {
+		this.density = density;
+	}
+	public int getHit() {
+		return hit;
+	}
+	public void setHit(int hit) {
+		this.hit = hit;
+	}
+ 
     
 }

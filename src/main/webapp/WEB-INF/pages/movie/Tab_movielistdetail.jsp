@@ -1,16 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
-<html lang="en" class="no-js">
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
+Version: 3.2.0
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-<meta charset="utf-8">
-<title>Movitween</title>
+<meta charset="utf-8"/>
+<title>Metronic | eCommerce</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="width=device-width, initial-scale=1" name="viewport">
-<meta content="" name="description">
-<meta content="" name="author">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta content="" name="description"/>
+<meta content="" name="author"/>
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
 <link href="http://218.150.181.131/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -18,13 +31,6 @@
 <link href="http://218.150.181.131/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="http://218.150.181.131/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
 <!-- END GLOBAL MANDATORY STYLES -->
-<!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
-<link href="http://218.150.181.131/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css">
-<link href="http://218.150.181.131/assets/global/plugins/morris/morris.css" rel="stylesheet" type="text/css">
-<!-- END PAGE LEVEL PLUGIN STYLES -->
-<!-- BEGIN PAGE STYLES -->
-<link href="http://218.150.181.131/assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
-<!-- END PAGE STYLES -->
 <!-- BEGIN THEME STYLES -->
 <link href="http://218.150.181.131/assets/global/css/components.css" rel="stylesheet" type="text/css">
 <link href="http://218.150.181.131/assets/global/css/plugins.css" rel="stylesheet" type="text/css">
@@ -32,23 +38,12 @@
 <link href="http://218.150.181.131/assets/admin/layout3/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color">
 <link href="http://218.150.181.131/assets/admin/layout3/css/custom.css" rel="stylesheet" type="text/css">
 <!-- END THEME STYLES -->
-<!-- BEGIN CUSTOM_CSS STYLES -->
-<link type="text/css" rel="stylesheet" href="http://218.150.181.131/css/movietween.css" />
-<!-- END CUSTOM_CSS STYLES -->
-<link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" href="favicon.ico"/>
 <style>
 #graph-container {
-	max-width: 500px;
-	height: 400px;
+	max-width: 515px;
+	height: 370px;
 }
-
-/*#graph-body {
-	background-image:url(http://218.150.181.131/assets/img/gephi/002.png);
-	background-repeat:repeat;
-	height:244px;
-	margin: 0 auto;
-	align:center;
-}*/
 </style>
 </head>
 <!-- END HEAD -->
@@ -56,149 +51,139 @@
 <!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
 <body>
+<!-- BEGIN HEADER -->
 <%@include file="../includes/headerMenu.jsp"%>
-
-	<!-- BEGIN PAGE CONTAINER -->
-	<div class="page-container">
-		<!-- BEGIN PAGE HEAD -->
-		<div class="page-head">
-			<div class="container">
-				<!-- BEGIN PAGE TITLE -->
-				<div class="page-title">
-					<h1 align="center">
-						Movies <small> ${n.name}     </small>
-					
-						   Director <small> ${n.director}</small>
-					</h1>
-				</div>
-				<!-- END PAGE TITLE -->
-				<!-- BEGIN PAGE TOOLBAR -->
-				<div class="page-toolbar">
-					<!-- BEGIN THEME PANEL -->
-					<div class="btn-group btn-theme-panel">
-						<a href="javascript:;" class="btn dropdown-toggle"
-							data-toggle="dropdown"> <i class="icon-settings"></i>
-						</a>
-						<div
-							class="dropdown-menu theme-panel pull-right dropdown-custom hold-on-click">
-							<div class="row">
-								<div class="col-md-6 col-sm-6 col-xs-12">
-									<h3>THEME COLORS</h3>
-									<div class="row">
-										<div class="col-md-6 col-sm-6 col-xs-12">
-											<ul class="theme-colors">
-												<li class="theme-color theme-color-default"
-													data-theme="default"><span class="theme-color-view"></span>
-													<span class="theme-color-name">Default</span></li>
-												<li class="theme-color theme-color-blue-hoki"
-													data-theme="blue-hoki"><span class="theme-color-view"></span>
-													<span class="theme-color-name">Blue Hoki</span></li>
-												<li class="theme-color theme-color-blue-steel"
-													data-theme="blue-steel"><span class="theme-color-view"></span>
-													<span class="theme-color-name">Blue Steel</span></li>
-												<li class="theme-color theme-color-yellow-orange"
-													data-theme="yellow-orange"><span
-													class="theme-color-view"></span> <span
-													class="theme-color-name">Orange</span></li>
-												<li class="theme-color theme-color-yellow-crusta"
-													data-theme="yellow-crusta"><span
-													class="theme-color-view"></span> <span
-													class="theme-color-name">Yellow Crusta</span></li>
-											</ul>
-										</div>
-										<div class="col-md-6 col-sm-6 col-xs-12">
-											<ul class="theme-colors">
-												<li class="theme-color theme-color-green-haze"
-													data-theme="green-haze"><span class="theme-color-view"></span>
-													<span class="theme-color-name">Green Haze</span></li>
-												<li class="theme-color theme-color-red-sunglo"
-													data-theme="red-sunglo"><span class="theme-color-view"></span>
-													<span class="theme-color-name">Red Sunglo</span></li>
-												<li class="theme-color theme-color-red-intense"
-													data-theme="red-intense"><span
-													class="theme-color-view"></span> <span
-													class="theme-color-name">Red Intense</span></li>
-												<li class="theme-color theme-color-purple-plum"
-													data-theme="purple-plum"><span
-													class="theme-color-view"></span> <span
-													class="theme-color-name">Purple Plum</span></li>
-												<li class="theme-color theme-color-purple-studio"
-													data-theme="purple-studio"><span
-													class="theme-color-view"></span> <span
-													class="theme-color-name">Purple Studio</span></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6 col-sm-6 col-xs-12 seperator">
-									<h3>LAYOUT</h3>
-									<ul class="theme-settings">
-										<li>Layout <select
-											class="theme-setting theme-setting-layout form-control input-sm input-small input-inline tooltips"
-											data-original-title="Change layout type"
-											data-container="body" data-placement="left">
-												<option value="boxed" selected="selected">Boxed</option>
-												<option value="fluid">Fluid</option>
-										</select>
-										</li>
-										<li>Top Menu Style <select
-											class="theme-setting theme-setting-top-menu-style form-control input-sm input-small input-inline tooltips"
-											data-original-title="Change top menu dropdowns style"
-											data-container="body" data-placement="left">
-												<option value="dark" selected="selected">Dark</option>
-												<option value="light">Light</option>
-										</select>
-										</li>
-										<li>Top Menu Mode <select
-											class="theme-setting theme-setting-top-menu-mode form-control input-sm input-small input-inline tooltips"
-											data-original-title="Enable fixed(sticky) top menu"
-											data-container="body" data-placement="left">
-												<option value="fixed">Fixed</option>
-												<option value="not-fixed" selected="selected">Not
-													Fixed</option>
-										</select>
-										</li>
-										<li>Mega Menu Style <select
-											class="theme-setting theme-setting-mega-menu-style form-control input-sm input-small input-inline tooltips"
-											data-original-title="Change mega menu dropdowns style"
-											data-container="body" data-placement="left">
-												<option value="dark" selected="selected">Dark</option>
-												<option value="light">Light</option>
-										</select>
-										</li>
-										<li>Mega Menu Mode <select
-											class="theme-setting theme-setting-mega-menu-mode form-control input-sm input-small input-inline tooltips"
-											data-original-title="Enable fixed(sticky) mega menu"
-											data-container="body" data-placement="left">
-												<option value="not-fixed">Not Fixed</option>
-										</select>
-										</li>
-									</ul>
-								</div>
-							</div>
+<!-- END HEADER -->
+<!-- BEGIN PAGE CONTAINER -->
+<div class="page-container">
+	<!-- BEGIN PAGE HEAD -->
+	<div class="page-head">
+		<div class="container">
+			<!-- BEGIN PAGE TITLE -->
+			<div class="page-title">
+				<h1>Look in ${n.name}</h1>
+			</div>
+			<!-- END PAGE TITLE -->
+			<!-- BEGIN PAGE TOOLBAR -->
+			<div class="page-toolbar">
+				<!-- BEGIN THEME PANEL -->
+				
+				<!-- END THEME PANEL -->
+			</div>
+			<!-- END PAGE TOOLBAR -->
+		</div>
+	</div>
+	<!-- END PAGE HEAD -->
+	<!-- BEGIN PAGE CONTENT -->
+	<div class="page-content">
+		<div class="container">
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title">Modal title</h4>
+						</div>
+						<div class="modal-body">
+							 Widget settings form goes here
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn blue">Save changes</button>
+							<button type="button" class="btn default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
-					<!-- END THEME PANEL -->
+					<!-- /.modal-content -->
 				</div>
-				<!-- END PAGE TOOLBAR -->
+				<!-- /.modal-dialog -->
 			</div>
-		</div>
-		<!-- END PAGE HEAD -->
-		<!-- BEGIN PAGE CONTENT -->
-		<div class="page-content">
-			<div class="container">
-				<!-- BEGIN PAGE BREADCRUMB -->
-				<ul class="page-breadcrumb breadcrumb hide">
-					<li><a href="#">Home</a><i class="fa fa-circle"></i></li>
-					<li class="active">Dashboard</li>
-				</ul>
-				<!-- END PAGE BREADCRUMB -->
-				<!-- BEGIN PAGE CONTENT INNER -->
-				<div class="row margin-top-10">
-					<div class="col-md-6 col-sm-12">
-					<!-- BEGIN PORTLET-->
-					<div class="portlet light ">
-						<div id="graph-container"></div>
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<!-- BEGIN PAGE BREADCRUMB -->
+			<ul class="page-breadcrumb breadcrumb">
+				<li>
+					<a href="/">Home</a><i class="fa fa-circle"></i>
+				</li>
+				<li>
+					<a href="/Tab_movielist">Movielist</a>
+					<i class="fa fa-circle"></i>
+				</li>
+				<li class="active">
+					 look in - Movie
+				</li>
+			</ul>
+			<!-- END PAGE BREADCRUMB -->
+			<!-- BEGIN PAGE CONTENT INNER -->
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-bottom-10">
+					<a class="dashboard-stat dashboard-stat-light blue-madison" href="javascript:;">
+					<div class="visual">
+						<i class="fa fa-briefcase fa-icon-medium"></i>
+					</div>
+					<div class="details">
+						<div class="number">
+							 Director : ${n.director}
+						</div>
+						<div class="desc">
+							 ${n.year}
+						</div>
+					</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<a class="dashboard-stat dashboard-stat-light red-intense" href="javascript:;">
+					<div class="visual">
+						<i class="fa fa-shopping-cart"></i>
+					</div>
+					<div class="details">
+						<div class="number">
+							 ${n.name}
+						</div>
+						<div class="desc">
+							 Movie title
+						</div>
+					</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<a class="dashboard-stat dashboard-stat-light green-haze" href="javascript:;">
+					<div class="visual">
+						<i class="fa fa-group fa-icon-medium"></i>
+					</div>
+					<div class="details">
+						<div class="number">
+							 ${n.spectators}
+						</div>
+						<div class="desc">
+							 number of Audience
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<!-- Begin: life time stats -->
+					<div class="portlet light">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-bar-chart font-green-sharp"></i>
+								<span class="caption-subject font-green-sharp bold uppercase">Actors-Network</span>
+								<span class="caption-helper">weekly stats...</span>
+							</div>
+							<div class="tools">
+								<a href="javascript:;" class="collapse">
+								</a>
+								<a href="#portlet-config" data-toggle="modal" class="config">
+								</a>
+								<a href="javascript:;" class="reload">
+								</a>
+								<a href="javascript:;" class="remove">
+								</a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<!-- sigmagraph-container-->
+							<div id="graph-container"></div>
 						<script src="http://218.150.181.131/sigma.js-1.0.3/jquery-2.1.1.min.js"></script>
 						<!-- START SIGMA IMPORTS -->
 <script src="http://218.150.181.131/sigma.js-1.0.3/src/sigma.core.js"></script>
@@ -440,90 +425,85 @@ var url = preurl + id + last;
     $('#graph-container').css('background-color', '#FFFFFF');
 </script>
 
+						</div>
 					</div>
-					
-					<!-- END PORTLET-->
-					</div>
-								<div class="col-md-6 col-sm-12">
-			<div class="portlet box blue-hoki">
-						<div class="portlet-title">
+					<!-- End: life time stats -->
+				</div>
+				<div class="col-md-6">
+					<!-- Begin: life time stats -->
+					<div class="portlet light">
+						<div class="portlet-title tabbable-line">
 							<div class="caption">
-								<i class="fa fa-gift"></i>Information
+								<i class="icon-share font-red-sunglo"></i>
+								<span class="caption-subject font-red-sunglo bold uppercase">Revenue</span>
+								<span class="caption-helper">weekly stats...</span>
 							</div>
-							<div class="actions">
-								<a href="javascript:;" class="btn btn-default btn-sm">
-								<i class="fa fa-pencil"></i> Edit </a>
-								<a href="javascript:;" class="btn btn-default btn-sm">
-								<i class="fa fa-plus"></i> Add </a>
-								<a class="btn btn-icon-only btn-default btn-sm fullscreen" href="#" data-original-title="" title="">
-								</a>
-							</div>
+							<ul class="nav nav-tabs">
+								<li>
+									<a href="#portlet_tab2" data-toggle="tab" id="statistics_amounts_tab">
+									Amounts </a>
+								</li>
+								<li class="active">
+									<a href="#portlet_tab1" data-toggle="tab">
+									Orders </a>
+								</li>
+							</ul>
 						</div>
 						<div class="portlet-body">
-							<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;"><div class="scroller" style="height: 200px; overflow: hidden; width: auto;" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd" data-initialized="1">
-								<strong>synopsis</strong><br>
-								${n.synopsis}
-								</div><div class="slimScrollBar" style="background-color: rgb(161, 178, 189); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; z-index: 99; right: 1px; height: 138.88888888888889px; background-position: initial initial; background-repeat: initial initial;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; background-color: yellow; opacity: 0.2; z-index: 90; right: 1px; display: none; background-position: initial initial; background-repeat: initial initial;"></div></div>
+							<div class="tab-content">
+								<div class="tab-pane active" id="portlet_tab1">
+									${n.synopsis}
+								</div>
+								<div class="tab-pane" id="portlet_tab2">
+									<div id="statistics_2" class="chart">
+									</div>
+								</div>
+							</div>
+							<div class="margin-top-20 no-margin no-border">
+								<div class="row">
+									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+										<span class="label label-success uppercase">
+										Revenue: </span>
+										<h3>$1,234,112.20</h3>
+									</div>
+									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+										<span class="label label-info uppercase">
+										Tax: </span>
+										<h3>$134,90.10</h3>
+									</div>
+									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+										<span class="label label-danger uppercase">
+										Shipment: </span>
+										<h3>$1,134,90.10</h3>
+									</div>
+									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+										<span class="label label-warning uppercase">
+										Orders: </span>
+										<h3>235090</h3>
+									</div>
+								</div>
+							</div>
 						</div>
-						                   <div class="portlet light">
-                        <div class="portlet-title" style="z-index: 1;">
-                            <div class="caption">
-                                <i class="fa fa-cogs font-green-sharp"></i> <span
-                                    class="caption-subject font-green-sharp bold uppercase">Movie Leader</span>
-                            </div>
-                            <div class="tools"></div>
-                        </div>
-                        <div class="portlet-body">
-                            <table class="table table-striped table-bordered table-hover"
-                                   id="sample_1">
-                                <thead>
-                                <tr>
-                                    <th>degreeRole</th>
-                                    <th>betweenRole</th>
-                                    <th>naverRole</th>
-
-                                </tr>
-                                </thead>
-
-                                <tbody>
-                              		
-                                  <script>
-									var k = '${degreeRole[1].name}';
-									var kk = '${degreeRole[';
-									var p = '1';
-									var pp = '.name}';
-									var ppp = kk + p + ppp;
-                                  for (var f=1; f <5; f++){
-									document.write('<tr>');
-									document.write('<td>');
-									document.write (k);
-									document.write ('</td>');
-									document.write ('</tr>');}
-									</script>
-                            
-                                </tbody>
-
-                            </table>
-                        </div>
-                    </div>
 					</div>
-			</div>
+					<!-- End: life time stats -->
 				</div>
-
-				<!-- END PAGE CONTENT INNER -->
 			</div>
+			<!-- END PAGE CONTENT INNER -->
 		</div>
-		<!-- END PAGE CONTENT -->
 	</div>
-	<!-- END PAGE CONTAINER -->
-	<%@include file="../includes/footMenu.jsp"%>
-	<!-- BEGIN JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) -->
-	<!-- BEGIN CORE PLUGINS -->
-	<!--[if lt IE 9]>
+	<!-- END PAGE CONTENT -->
+</div>
+<!-- END PAGE CONTAINER -->
+<!-- BEGIN FOOTER -->
+<%@include file="../includes/footMenu.jsp"%>
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
 <script src="http://218.150.181.131/assets/global/plugins/respond.min.js"></script>
 <script src="http://218.150.181.131/assets/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
-	<script src="http://218.150.181.131/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="http://218.150.181.131/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
 <!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 <script src="http://218.150.181.131/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
@@ -535,35 +515,25 @@ var url = preurl + id + last;
 <script src="http://218.150.181.131/assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="http://218.150.181.131/assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
-<!-- IMPORTANT! fullcalendar depends on jquery-ui-1.10.3.custom.min.js for drag & drop support -->
-<script src="http://218.150.181.131/assets/global/plugins/morris/morris.min.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/morris/raphael-min.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
+<script src="http://218.150.181.131/assets/global/plugins/flot/jquery.flot.js" type="text/javascript"></script>
+<script src="http://218.150.181.131/assets/global/plugins/flot/jquery.flot.resize.js" type="text/javascript"></script>
+<script src="http://218.150.181.131/assets/global/plugins/flot/jquery.flot.categories.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="http://218.150.181.131/assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/admin/pages/scripts/index3.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/admin/pages/scripts/tasks.js" type="text/javascript"></script>
+<script src="http://218.150.181.131/assets/admin/pages/scripts/ecommerce-index.js"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
-	<script>
-		jQuery(document).ready(function() {
-			Metronic.init(); // init metronic core componets
-			Layout.init(); // init layout
-			Demo.init(); // init demo(theme settings page)
-			Index.init(); // init index page
-			Tasks.initDashboardWidget(); // init tash dashboard widget
-		});
-	</script>
-	<!-- END JAVASCRIPTS -->
+<script>
+    jQuery(document).ready(function() {    
+        Metronic.init(); // init metronic core components
+        Layout.init(); // init current layout
+        Demo.init(); // init demo features
+        EcommerceIndex.init();
+    });
+</script>
+<!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->
 </html>
