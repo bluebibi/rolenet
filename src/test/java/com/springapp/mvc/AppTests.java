@@ -1,5 +1,5 @@
 package com.springapp.mvc;
-//¿¹¿µÀÌ ¼Ò½ºÆ®¸® Å×½ºÆ®
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò½ï¿½Æ®ï¿½ï¿½ ï¿½×½ï¿½Æ®
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -8,7 +8,7 @@
  
 %>
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
@@ -18,7 +18,9 @@
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <meta content="" name="description">
 <meta content="" name="author">
-<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
 <link
 	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all"
 	rel="stylesheet" type="text/css">
@@ -57,11 +59,19 @@
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico">
 
-<style type="text/css">
+<style type="text/css" media="screen">
 #title_search {
 	margin: 0 auto;
 }
-
+* { margin: auto; }
+body { margin: 20px 0; background: #abc; color: #111; font-family: Helvetica, Arial, Verdana, 'Lucida Grande', sans-serif; }
+h1, h3, p { text-align: center; }
+div.example { padding: 20px; margin: 10px auto; background: #bcd; width: 750px; }
+div.example h3 { margin-bottom: 10px; }
+ul, ol { padding: 0; }
+#list { width: 50px; height: 150px; overflow-y: scroll; }
+#images { width: 600px; height: 550px; overflow-x: hidden; text-align: center; list-style: none; }
+.endless_scroll_loader { position: fixed; top: 10px; right: 20px; }
 #container_jang {
 	max-width: 510px;
 	height: 280px;
@@ -75,17 +85,99 @@
 	margin: 0 auto;
 	text-align:center;
 }
-
 </style>
+
+<script type="text/javascript" src="http://218.150.181.131/assets/global/scroll/js/jquery.endless-scroll.js"></script>
+<script type="text/javascript" src="http://218.150.181.131/assets/global/scroll/js/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(function() {
+            $('#list').endlessScroll({
+                pagesToKeep: 10,
+                fireOnce: false,
+                insertBefore: "#list div:first",
+                insertAfter: "#list div:last",
+                content: function(i, p) {
+                    console.log(i, p)
+                    return '<li>' + p + '</li>'
+                },
+                ceaseFire: function(i) {
+                    if (i >= 10) {
+                        return true;
+                    }
+                },
+                intervalFrequency: 5
+            });
+
+            $('#images').scrollTop(101);
+            var images = $("ul#images").clone().find("li");
+            $('#images').endlessScroll({
+                pagesToKeep: 5,
+                inflowPixels: 100,
+                fireDelay: 10,
+                content: function(i, p, d) {
+                    console.log(i, p, d)
+                    return images.eq(Math.floor(Math.random()*8))[0].outerHTML;
+                }
+            });
+        });
+    </script>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
 <!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
+
 <body>
 
-		<%@include file="../includes/headerMenu.jsp"%>
-		
+        <h1>Endless Scroll Demo</h1>
+        <h3>by <a href="http://fredwu.me/">Fred Wu</a></h3>
+
+        <div class="example">
+            <h3>Ends in 10 calls:</h3>
+            <ul id="list">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <h3>Never ending:</h3>
+            <ul id="images">
+                <li><img src="http://218.150.181.131/assets/img/scroll/grass-blades.jpg" width="400" height="200" alt="Grass Blades" /></li>
+                <li><img src="http://218.150.181.131/assets/img/scroll/stones.jpg" width="400" height="200" alt="Stones" /></li>
+                <li><img src="http://218.150.181.131/assets/img/scroll/sea-mist.jpg" width="400" height="200" alt="Sea Mist" /></li>
+                <li><img src="http://218.150.181.131/assets/img/scroll/pier.jpg" width="400" height="200" alt="Pier" /></li>
+                <li><img src="http://218.150.181.131/assets/img/scroll/lotus.jpg" width="400" height="200" alt="Lotus" /></li>
+                <li><img src="http://218.150.181.131/assets/img/scroll/mojave.jpg" width="400" height="200" alt="Mojave" /></li>
+                <li><img src="http://218.150.181.131/assets/img/scroll/lightning.jpg" width="400" height="200" alt="Lightning" /></li>
+                <li><img src="http://218.150.181.131/assets/img/scroll/flowing-rock.jpg" width="400" height="200" alt="Grass Blades" /></li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <p>Copyright &copy; <a href="http://fredwu.me/">Fred Wu</a></p>
+        </div>
+
+        
+        <%@include file="../includes/headerMenu.jsp"%>
 
 		<!-- BEGIN PAGE CONTAINER -->
 		<div class="page-container">
@@ -514,6 +606,7 @@
 			type="text/javascript"></script>
 		<script src="http://218.150.181.131/assets/admin/pages/scripts/tasks.js"
 			type="text/javascript"></script>
+
 		<!-- END PAGE LEVEL SCRIPTS -->
 		<script>
 			jQuery(document).ready(function() {
