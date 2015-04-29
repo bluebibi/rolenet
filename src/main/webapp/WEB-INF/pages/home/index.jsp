@@ -91,34 +91,8 @@ ul, ol { padding: 0; }
 <script type="text/javascript" src="http://218.150.181.131/assets/global/scroll/js/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8">
         $(function() {
-            $('#list').endlessScroll({
-                pagesToKeep: 10,
-                fireOnce: false,
-                insertBefore: "#list div:first",
-                insertAfter: "#list div:last",
-                content: function(i, p) {
-                    console.log(i, p)
-                    return '<li>' + p + '</li>'
-                },
-                ceaseFire: function(i) {
-                    if (i >= 10) {
-                        return true;
-                    }
-                },
-                intervalFrequency: 5
-            });
+            $('.scroll').jscroll();
 
-            $('#images').scrollTop(101);
-            var images = $("ul#images").clone().find("li");
-            $('#images').endlessScroll({
-                pagesToKeep: 5,
-                inflowPixels: 100,
-                fireDelay: 10,
-                content: function(i, p, d) {
-                    console.log(i, p, d)
-                    return images.eq(Math.floor(Math.random()*8))[0].outerHTML;
-                }
-            });
         });
     </script>
 </head>
@@ -129,54 +103,7 @@ ul, ol { padding: 0; }
 
 <body>
 
-        <h1>Endless Scroll Demo</h1>
-        <h3>by <a href="http://fredwu.me/">Fred Wu</a></h3>
 
-        <div class="example">
-            <h3>Ends in 10 calls:</h3>
-            <ul id="list">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-            </ul>
-        </div>
-
-        <div class="example">
-            <h3>Never ending:</h3>
-            <ul id="images">
-                <li><img src="http://218.150.181.131/assets/img/scroll/grass-blades.jpg" width="400" height="200" alt="Grass Blades" /></li>
-                <li><img src="http://218.150.181.131/assets/img/scroll/stones.jpg" width="400" height="200" alt="Stones" /></li>
-                <li><img src="http://218.150.181.131/assets/img/scroll/sea-mist.jpg" width="400" height="200" alt="Sea Mist" /></li>
-                <li><img src="http://218.150.181.131/assets/img/scroll/pier.jpg" width="400" height="200" alt="Pier" /></li>
-                <li><img src="http://218.150.181.131/assets/img/scroll/lotus.jpg" width="400" height="200" alt="Lotus" /></li>
-                <li><img src="http://218.150.181.131/assets/img/scroll/mojave.jpg" width="400" height="200" alt="Mojave" /></li>
-                <li><img src="http://218.150.181.131/assets/img/scroll/lightning.jpg" width="400" height="200" alt="Lightning" /></li>
-                <li><img src="http://218.150.181.131/assets/img/scroll/flowing-rock.jpg" width="400" height="200" alt="Grass Blades" /></li>
-            </ul>
-        </div>
-
-        <div class="example">
-            <p>Copyright &copy; <a href="http://fredwu.me/">Fred Wu</a></p>
-        </div>
-
-        
         <%@include file="../includes/headerMenu.jsp"%>
 
 		<!-- BEGIN PAGE CONTAINER -->
@@ -223,24 +150,24 @@ ul, ol { padding: 0; }
 					<!-- END PAGE BREADCRUMB -->
 					<!-- BEGIN PAGE CONTENT INNER -->
 					<div class="row margin-top-10">
-						<div class="col-md-6 col-sm-12">
-							<!-- BEGIN PORTLET-->
-							<div class="portlet light ">
-								<div class="portlet-title">
-									<div class="caption caption-md">
-									<span class="glyphicon glyphicon-hand-up"></span>
-										<i class="icon-bar-chart theme-font hide"></i> <span
-											class="caption-subject theme-font bold uppercase">MOST
+																		<div class="col-md-6 col-sm-12">
+																			<!-- BEGIN PORTLET-->
+																			<div class="portlet light ">
+																				<div class="portlet-title">
+																					<div class="caption caption-md">
+																						<span class="glyphicon glyphicon-hand-up"></span>
+																						<i class="icon-bar-chart theme-font hide"></i> <span
+																							class="caption-subject theme-font bold uppercase">MOST
 											RECOMMENDATION MOVIE</span> <span class="caption-helper hide">weekly
 											stats...</span>
-									</div>
-									<div class="actions">
-										<div class="btn-group btn-group-devided" data-toggle="buttons">
-											<label
-												class="btn btn-transparent grey-salsa btn-circle btn-sm active">
-												<input type="radio" name="options" class="toggle"
-												id="option1">Today
-											</label><!--  <label
+																					</div>
+																					<div class="actions">
+																						<div class="btn-group btn-group-devided" data-toggle="buttons">
+																							<label
+																									class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+																								<input type="radio" name="options" class="toggle"
+																									   id="option1">Today
+																							</label><!--  <label
 												class="btn btn-transparent grey-salsa btn-circle btn-sm">
 												<input type="radio" name="options" class="toggle"
 												id="option2">Week
@@ -249,50 +176,50 @@ ul, ol { padding: 0; }
 												<input type="radio" name="options" class="toggle"
 												id="option2">Month
 											</label> -->
-										</div>
-									</div>
-								</div>
-								<div class="portlet-body">
-									<div class="row list-separated">
-										<div class="col-md-3 col-sm-3 col-xs-6">
-											<div class="font-grey-mint font-sm">Movie Name</div>
-											<div class="uppercase font-hg font-red-flamingo">
-												${hit.name} <span class="font-lg font-grey-mint"></span>
-											</div>
-										</div>
-										<div class="col-md-3 col-sm-3 col-xs-6">
-											<div class="font-grey-mint font-sm">Year</div>
-											<div class="uppercase font-hg theme-font">
-												${hit.year} <span class="font-lg font-grey-mint"></span>
-											</div>
-										</div>
-										<div class="col-md-3 col-sm-3 col-xs-6">
-											<div class="font-grey-mint font-sm">Director</div>
-											<div class="uppercase font-hg font-purple">
-												${hit.director} <span class="font-lg font-grey-mint"></span>
-											</div>
-										</div>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="portlet-body">
+																					<div class="row list-separated">
+																						<div class="col-md-3 col-sm-3 col-xs-6">
+																							<div class="font-grey-mint font-sm">Movie Name</div>
+																							<div class="uppercase font-hg font-red-flamingo">
+																								${hit.name} <span class="font-lg font-grey-mint"></span>
+																							</div>
+																						</div>
+																						<div class="col-md-3 col-sm-3 col-xs-6">
+																							<div class="font-grey-mint font-sm">Year</div>
+																							<div class="uppercase font-hg theme-font">
+																								${hit.year} <span class="font-lg font-grey-mint"></span>
+																							</div>
+																						</div>
+																						<div class="col-md-3 col-sm-3 col-xs-6">
+																							<div class="font-grey-mint font-sm">Director</div>
+																							<div class="uppercase font-hg font-purple">
+																								${hit.director} <span class="font-lg font-grey-mint"></span>
+																							</div>
+																						</div>
 
-									</div>
-									<ul class="list-separated list-inline-xs hide">
-										<li>
-											<div class="font-grey-mint font-sm">Total Sales</div>
-											<div class="uppercase font-hg font-red-flamingo">
-												13,760 <span class="font-lg font-grey-mint">$</span>
-											</div>
-										</li>
-										<li></li>
-										<li class="border">
-											<div class="font-grey-mint font-sm">Revenue</div>
-											<div class="uppercase font-hg theme-font">
-												4,760 <span class="font-lg font-grey-mint">$</span>
-											</div>
-										</li>
-										<li class="divider"></li>
-										<li>
-											<div class="font-grey-mint font-sm">Expenses</div>
-											<div class="uppercase font-hg font-purple">
-												11,760 <span class="font-lg font-grey-mint">$</span>
+																					</div>
+																					<ul class="list-separated list-inline-xs hide">
+																						<li>
+																							<div class="font-grey-mint font-sm">Total Sales</div>
+																							<div class="uppercase font-hg font-red-flamingo">
+																								13,760 <span class="font-lg font-grey-mint">$</span>
+																							</div>
+																						</li>
+																						<li></li>
+																						<li class="border">
+																							<div class="font-grey-mint font-sm">Revenue</div>
+																							<div class="uppercase font-hg theme-font">
+																								4,760 <span class="font-lg font-grey-mint">$</span>
+																							</div>
+																						</li>
+																						<li class="divider"></li>
+																						<li>
+																							<div class="font-grey-mint font-sm">Expenses</div>
+																							<div class="uppercase font-hg font-purple">
+																								11,760 <span class="font-lg font-grey-mint">$</span>
 											</div>
 										</li>
 										<li class="divider"></li>
