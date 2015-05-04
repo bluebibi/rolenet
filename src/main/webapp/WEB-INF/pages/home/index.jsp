@@ -134,7 +134,7 @@ ul, ol { padding: 0; }
 
 			<!-- END HEADER SEARCH BOX -->
 			<!-- BEGIN PAGE CONTENT -->
-			<div class = "scroll">
+
 			<div class="page-content">
 				<div class="container">
 					<!-- BEGIN PAGE BREADCRUMB -->
@@ -449,28 +449,29 @@ ul, ol { padding: 0; }
 							<!-- END PORTLET-->
 						</div>
 					</div>
+					<div class = "scroll">
 					<%@include file="../includes/movies.jsp"%>
+					</div>
+
 					<!-- END PAGE CONTENT INNER -->
 				</div>
+
 			</div>
 
 			<!-- END PAGE CONTENT -->
 		</div>
-			</div>
-		<!-- END PAGE CONTAINER -->
 
+		<!-- END PAGE CONTAINER -->
+		<a href="" class="scrollup">
+			<img src="http://218.150.181.131/assets/global/scroll/js/top.png" align="right">
+		</a>
 		<%@include file="../includes/footMenu.jsp"%>
-		<div class="scroll-to-top">
-			<i class="icon-arrow-up"></i>
-		</div>
 		<!-- BEGIN JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) -->
 		<!-- BEGIN CORE PLUGINS -->
 		<!--[if lt IE 9]>
 <script src="http://218.150.181.131/assets/global/plugins/respond.min.js"></script>
 <script src="http://218.150.181.131/assets/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
-		<script src="http://218.150.181.131/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js"
-				type="text/javascript"></script>
 		<script src="http://218.150.181.131/assets/global/plugins/jquery.min.js"
 			type="text/javascript"></script>
 		<script src="http://218.150.181.131/assets/global/plugins/jquery-migrate.min.js"
@@ -540,6 +541,8 @@ ul, ol { padding: 0; }
 				type="text/javascript"></script>
 		<script src="http://218.150.181.131/assets/global/scroll/js/jquery.jscroll.js"
 				type="text/javascript"></script>
+		<script src="http://218.150.181.131/assets/global/scroll/js/jquery.scrollUp.js"
+				type="text/javascript"></script>
 		<!-- END PAGE LEVEL SCRIPTS -->
 		<script>
 			jQuery(document).ready(function() {
@@ -549,7 +552,27 @@ ul, ol { padding: 0; }
 				Index.init(); // init index page
 				Tasks.initDashboardWidget(); // init tash dashboard widget
 				UIGeneral.init();
-				$('.scroll').jscroll();
+
+			});
+		</script>
+		<script>
+			$(document).ready(function () {
+				$(window).scroll(function () {
+					if ($(this).scrollTop() > 100) {
+						$('.scrollup').fadeIn();
+					} else {
+						$('.scrollup').fadeOut();
+					}
+				});
+
+				$('.scrollup').click(function () {
+					$("html, body").animate({
+						scrollTop: 0
+					}, 600);
+					return false;
+				});
+
+				$('.infinite-scroll').jscroll();
 			});
 		</script>
 		<script>

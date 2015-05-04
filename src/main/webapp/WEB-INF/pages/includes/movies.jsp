@@ -125,111 +125,6 @@
     <!-- BEGIN GRAPH -->
     <div id="container_jang"></div>
 
-
-    <script>
-      var id = ${hit.id};
-      var preurl = 'http://218.150.181.131/assets/gexf/'
-      var last = '.gexf';
-      var url = preurl + id + last;
-      sigma.classes.graph
-              .addMethod(
-              'neighbors',
-              function(nodeId) {
-                var k, neighbors = {}, index = this.allNeighborsIndex[nodeId]
-                        || {};
-                for (k in index)
-                  neighbors[k] = this.nodesIndex[k];
-                return neighbors;
-
-              });
-
-      sigma.parsers
-              .gexf(
-              url,
-              {
-                container : 'container_jang'
-              },
-              function(s) {
-                s.graph
-                        .nodes()
-                        .forEach(
-                        function(
-                                n) {
-                          n.originalColor = n.color;
-                        });
-                s.graph
-                        .edges()
-                        .forEach(
-                        function(
-                                e) {
-                          e.originalColor = e.color;
-                        });
-                s
-                        .bind(
-                        'clickNode',
-                        function(
-                                e) {
-                          var nodeId = e.data.node.id, toKeep = s.graph
-                                  .neighbors(nodeId);
-                          toKeep[nodeId] = e.data.node;
-
-                          s.graph
-                                  .nodes()
-                                  .forEach(
-                                  function(
-                                          n) {
-                                    if (toKeep[n.id])
-                                      n.color = n.originalColor;
-                                    else
-                                      n.color = '#eee';
-                                  });
-                          s.graph
-                                  .edges()
-                                  .forEach(
-                                  function(
-                                          e) {
-                                    if (toKeep[e.source]
-                                            && toKeep[e.target])
-                                      e.color = e.originalColor;
-                                    else
-                                      e.color = '#eee';
-                                  });
-                          // Since the data has been modified, we need to
-                          // call the refresh method to make the colors
-                          // update effective.
-                          s
-                                  .refresh();
-                        });
-
-                // When the stage is clicked, we just color each
-                // node and edge with its original color.
-                s
-                        .bind(
-                        'clickStage',
-                        function(
-                                e) {
-                          s.graph
-                                  .nodes()
-                                  .forEach(
-                                  function(
-                                          n) {
-                                    n.color = n.originalColor;
-                                  });
-
-                          s.graph
-                                  .edges()
-                                  .forEach(
-                                  function(
-                                          e) {
-                                    e.color = e.originalColor;
-                                  });
-
-                          // Same as in the previous event:
-                          s
-                                  .refresh();
-                        });
-              });
-    </script>
     <!-- END GRAPH -->
   </div>
 </div>
@@ -324,111 +219,6 @@
             <!-- BEGIN GRAPH -->
             <div id="container_jang"></div>
 
-
-            <script>
-              var id = ${hit.id};
-              var preurl = 'http://218.150.181.131/assets/gexf/'
-              var last = '.gexf';
-              var url = preurl + id + last;
-              sigma.classes.graph
-                      .addMethod(
-                      'neighbors',
-                      function(nodeId) {
-                        var k, neighbors = {}, index = this.allNeighborsIndex[nodeId]
-                                || {};
-                        for (k in index)
-                          neighbors[k] = this.nodesIndex[k];
-                        return neighbors;
-
-                      });
-
-              sigma.parsers
-                      .gexf(
-                      url,
-                      {
-                        container : 'container_jang'
-                      },
-                      function(s) {
-                        s.graph
-                                .nodes()
-                                .forEach(
-                                function(
-                                        n) {
-                                  n.originalColor = n.color;
-                                });
-                        s.graph
-                                .edges()
-                                .forEach(
-                                function(
-                                        e) {
-                                  e.originalColor = e.color;
-                                });
-                        s
-                                .bind(
-                                'clickNode',
-                                function(
-                                        e) {
-                                  var nodeId = e.data.node.id, toKeep = s.graph
-                                          .neighbors(nodeId);
-                                  toKeep[nodeId] = e.data.node;
-
-                                  s.graph
-                                          .nodes()
-                                          .forEach(
-                                          function(
-                                                  n) {
-                                            if (toKeep[n.id])
-                                              n.color = n.originalColor;
-                                            else
-                                              n.color = '#eee';
-                                          });
-                                  s.graph
-                                          .edges()
-                                          .forEach(
-                                          function(
-                                                  e) {
-                                            if (toKeep[e.source]
-                                                    && toKeep[e.target])
-                                              e.color = e.originalColor;
-                                            else
-                                              e.color = '#eee';
-                                          });
-                                  // Since the data has been modified, we need to
-                                  // call the refresh method to make the colors
-                                  // update effective.
-                                  s
-                                          .refresh();
-                                });
-
-                        // When the stage is clicked, we just color each
-                        // node and edge with its original color.
-                        s
-                                .bind(
-                                'clickStage',
-                                function(
-                                        e) {
-                                  s.graph
-                                          .nodes()
-                                          .forEach(
-                                          function(
-                                                  n) {
-                                            n.color = n.originalColor;
-                                          });
-
-                                  s.graph
-                                          .edges()
-                                          .forEach(
-                                          function(
-                                                  e) {
-                                            e.color = e.originalColor;
-                                          });
-
-                                  // Same as in the previous event:
-                                  s
-                                          .refresh();
-                                });
-                      });
-            </script>
             <!-- END GRAPH -->
           </div>
         </div>
@@ -523,111 +313,6 @@
               <!-- BEGIN GRAPH -->
               <div id="container_jang"></div>
 
-
-              <script>
-                var id = ${hit.id};
-                var preurl = 'http://218.150.181.131/assets/gexf/'
-                var last = '.gexf';
-                var url = preurl + id + last;
-                sigma.classes.graph
-                        .addMethod(
-                        'neighbors',
-                        function(nodeId) {
-                          var k, neighbors = {}, index = this.allNeighborsIndex[nodeId]
-                                  || {};
-                          for (k in index)
-                            neighbors[k] = this.nodesIndex[k];
-                          return neighbors;
-
-                        });
-
-                sigma.parsers
-                        .gexf(
-                        url,
-                        {
-                          container : 'container_jang'
-                        },
-                        function(s) {
-                          s.graph
-                                  .nodes()
-                                  .forEach(
-                                  function(
-                                          n) {
-                                    n.originalColor = n.color;
-                                  });
-                          s.graph
-                                  .edges()
-                                  .forEach(
-                                  function(
-                                          e) {
-                                    e.originalColor = e.color;
-                                  });
-                          s
-                                  .bind(
-                                  'clickNode',
-                                  function(
-                                          e) {
-                                    var nodeId = e.data.node.id, toKeep = s.graph
-                                            .neighbors(nodeId);
-                                    toKeep[nodeId] = e.data.node;
-
-                                    s.graph
-                                            .nodes()
-                                            .forEach(
-                                            function(
-                                                    n) {
-                                              if (toKeep[n.id])
-                                                n.color = n.originalColor;
-                                              else
-                                                n.color = '#eee';
-                                            });
-                                    s.graph
-                                            .edges()
-                                            .forEach(
-                                            function(
-                                                    e) {
-                                              if (toKeep[e.source]
-                                                      && toKeep[e.target])
-                                                e.color = e.originalColor;
-                                              else
-                                                e.color = '#eee';
-                                            });
-                                    // Since the data has been modified, we need to
-                                    // call the refresh method to make the colors
-                                    // update effective.
-                                    s
-                                            .refresh();
-                                  });
-
-                          // When the stage is clicked, we just color each
-                          // node and edge with its original color.
-                          s
-                                  .bind(
-                                  'clickStage',
-                                  function(
-                                          e) {
-                                    s.graph
-                                            .nodes()
-                                            .forEach(
-                                            function(
-                                                    n) {
-                                              n.color = n.originalColor;
-                                            });
-
-                                    s.graph
-                                            .edges()
-                                            .forEach(
-                                            function(
-                                                    e) {
-                                              e.color = e.originalColor;
-                                            });
-
-                                    // Same as in the previous event:
-                                    s
-                                            .refresh();
-                                  });
-                        });
-              </script>
               <!-- END GRAPH -->
             </div>
           </div>
@@ -723,113 +408,388 @@
                 <div id="container_jang"></div>
 
 
-                <script>
-                  var id = ${hit.id};
-                  var preurl = 'http://218.150.181.131/assets/gexf/'
-                  var last = '.gexf';
-                  var url = preurl + id + last;
-                  sigma.classes.graph
-                          .addMethod(
-                          'neighbors',
-                          function(nodeId) {
-                            var k, neighbors = {}, index = this.allNeighborsIndex[nodeId]
-                                    || {};
-                            for (k in index)
-                              neighbors[k] = this.nodesIndex[k];
-                            return neighbors;
-
-                          });
-
-                  sigma.parsers
-                          .gexf(
-                          url,
-                          {
-                            container : 'container_jang'
-                          },
-                          function(s) {
-                            s.graph
-                                    .nodes()
-                                    .forEach(
-                                    function(
-                                            n) {
-                                      n.originalColor = n.color;
-                                    });
-                            s.graph
-                                    .edges()
-                                    .forEach(
-                                    function(
-                                            e) {
-                                      e.originalColor = e.color;
-                                    });
-                            s
-                                    .bind(
-                                    'clickNode',
-                                    function(
-                                            e) {
-                                      var nodeId = e.data.node.id, toKeep = s.graph
-                                              .neighbors(nodeId);
-                                      toKeep[nodeId] = e.data.node;
-
-                                      s.graph
-                                              .nodes()
-                                              .forEach(
-                                              function(
-                                                      n) {
-                                                if (toKeep[n.id])
-                                                  n.color = n.originalColor;
-                                                else
-                                                  n.color = '#eee';
-                                              });
-                                      s.graph
-                                              .edges()
-                                              .forEach(
-                                              function(
-                                                      e) {
-                                                if (toKeep[e.source]
-                                                        && toKeep[e.target])
-                                                  e.color = e.originalColor;
-                                                else
-                                                  e.color = '#eee';
-                                              });
-                                      // Since the data has been modified, we need to
-                                      // call the refresh method to make the colors
-                                      // update effective.
-                                      s
-                                              .refresh();
-                                    });
-
-                            // When the stage is clicked, we just color each
-                            // node and edge with its original color.
-                            s
-                                    .bind(
-                                    'clickStage',
-                                    function(
-                                            e) {
-                                      s.graph
-                                              .nodes()
-                                              .forEach(
-                                              function(
-                                                      n) {
-                                                n.color = n.originalColor;
-                                              });
-
-                                      s.graph
-                                              .edges()
-                                              .forEach(
-                                              function(
-                                                      e) {
-                                                e.color = e.originalColor;
-                                              });
-
-                                      // Same as in the previous event:
-                                      s
-                                              .refresh();
-                                    });
-                          });
-                </script>
                 <!-- END GRAPH -->
               </div>
             </div>
           </div>
           <!-- END PORTLET-->
         </div>
+
+
+        <!--5-->
+        <div class="row margin-top-10">
+          <div class="col-md-6 col-sm-12">
+            <!-- BEGIN PORTLET-->
+            <div class="portlet light ">
+              <div class="portlet-title">
+                <div class="caption caption-md">
+                  <span class="glyphicon glyphicon-hand-up"></span>
+                  <i class="icon-bar-chart theme-font hide"></i> <span
+                        class="caption-subject theme-font bold uppercase">MOST
+											RECOMMENDATION MOVIE</span> <span class="caption-helper hide">weekly
+											stats...</span>
+                </div>
+                <div class="actions">
+                  <div class="btn-group btn-group-devided" data-toggle="buttons">
+                    <label
+                            class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+                      <input type="radio" name="options" class="toggle"
+                             id="option1">Today
+                    </label><!--  <label
+												class="btn btn-transparent grey-salsa btn-circle btn-sm">
+												<input type="radio" name="options" class="toggle"
+												id="option2">Week
+											</label> <label
+												class="btn btn-transparent grey-salsa btn-circle btn-sm">
+												<input type="radio" name="options" class="toggle"
+												id="option2">Month
+											</label> -->
+                  </div>
+                </div>
+              </div>
+              <div class="portlet-body">
+                <div class="row list-separated">
+                  <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="font-grey-mint font-sm">Movie Name</div>
+                    <div class="uppercase font-hg font-red-flamingo">
+                      ${hit.name} <span class="font-lg font-grey-mint"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="font-grey-mint font-sm">Year</div>
+                    <div class="uppercase font-hg theme-font">
+                      ${hit.year} <span class="font-lg font-grey-mint"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="font-grey-mint font-sm">Director</div>
+                    <div class="uppercase font-hg font-purple">
+                      ${hit.director} <span class="font-lg font-grey-mint"></span>
+                    </div>
+                  </div>
+
+                </div>
+                <ul class="list-separated list-inline-xs hide">
+                  <li>
+                    <div class="font-grey-mint font-sm">Total Sales</div>
+                    <div class="uppercase font-hg font-red-flamingo">
+                      13,760 <span class="font-lg font-grey-mint">$</span>
+                    </div>
+                  </li>
+                  <li></li>
+                  <li class="border">
+                    <div class="font-grey-mint font-sm">Revenue</div>
+                    <div class="uppercase font-hg theme-font">
+                      4,760 <span class="font-lg font-grey-mint">$</span>
+                    </div>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <div class="font-grey-mint font-sm">Expenses</div>
+                    <div class="uppercase font-hg font-purple">
+                      11,760 <span class="font-lg font-grey-mint">$</span>
+                    </div>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <div class="font-grey-mint font-sm">Growth</div>
+                    <div class="uppercase font-hg font-blue-sharp">
+                      9,760 <span class="font-lg font-grey-mint">$</span>
+                    </div>
+                  </li>
+                </ul>
+                <div style="height: 260px">
+                  <!-- 자리자리자리-->
+                  <!-- BEGIN GRAPH -->
+                  <div id="container_jang"></div>
+
+                  <!-- END GRAPH -->
+                </div>
+              </div>
+            </div>
+            <!-- END PORTLET-->
+          </div>
+
+
+          <!--6-->
+          <div class="row margin-top-10">
+            <div class="col-md-6 col-sm-12">
+              <!-- BEGIN PORTLET-->
+              <div class="portlet light ">
+                <div class="portlet-title">
+                  <div class="caption caption-md">
+                    <span class="glyphicon glyphicon-hand-up"></span>
+                    <i class="icon-bar-chart theme-font hide"></i> <span
+                          class="caption-subject theme-font bold uppercase">MOST
+											RECOMMENDATION MOVIE</span> <span class="caption-helper hide">weekly
+											stats...</span>
+                  </div>
+                  <div class="actions">
+                    <div class="btn-group btn-group-devided" data-toggle="buttons">
+                      <label
+                              class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+                        <input type="radio" name="options" class="toggle"
+                               id="option1">Today
+                      </label><!--  <label
+												class="btn btn-transparent grey-salsa btn-circle btn-sm">
+												<input type="radio" name="options" class="toggle"
+												id="option2">Week
+											</label> <label
+												class="btn btn-transparent grey-salsa btn-circle btn-sm">
+												<input type="radio" name="options" class="toggle"
+												id="option2">Month
+											</label> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="portlet-body">
+                  <div class="row list-separated">
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                      <div class="font-grey-mint font-sm">Movie Name</div>
+                      <div class="uppercase font-hg font-red-flamingo">
+                        ${hit.name} <span class="font-lg font-grey-mint"></span>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                      <div class="font-grey-mint font-sm">Year</div>
+                      <div class="uppercase font-hg theme-font">
+                        ${hit.year} <span class="font-lg font-grey-mint"></span>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                      <div class="font-grey-mint font-sm">Director</div>
+                      <div class="uppercase font-hg font-purple">
+                        ${hit.director} <span class="font-lg font-grey-mint"></span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <ul class="list-separated list-inline-xs hide">
+                    <li>
+                      <div class="font-grey-mint font-sm">Total Sales</div>
+                      <div class="uppercase font-hg font-red-flamingo">
+                        13,760 <span class="font-lg font-grey-mint">$</span>
+                      </div>
+                    </li>
+                    <li></li>
+                    <li class="border">
+                      <div class="font-grey-mint font-sm">Revenue</div>
+                      <div class="uppercase font-hg theme-font">
+                        4,760 <span class="font-lg font-grey-mint">$</span>
+                      </div>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <div class="font-grey-mint font-sm">Expenses</div>
+                      <div class="uppercase font-hg font-purple">
+                        11,760 <span class="font-lg font-grey-mint">$</span>
+                      </div>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <div class="font-grey-mint font-sm">Growth</div>
+                      <div class="uppercase font-hg font-blue-sharp">
+                        9,760 <span class="font-lg font-grey-mint">$</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div style="height: 260px">
+                    <!-- 자리자리자리-->
+                    <!-- BEGIN GRAPH -->
+                    <div id="container_jang"></div>
+
+                    <!-- END GRAPH -->
+                  </div>
+                </div>
+              </div>
+              <!-- END PORTLET-->
+            </div>
+
+            <!--7-->
+            <div class="row margin-top-10">
+              <div class="col-md-6 col-sm-12">
+                <!-- BEGIN PORTLET-->
+                <div class="portlet light ">
+                  <div class="portlet-title">
+                    <div class="caption caption-md">
+                      <span class="glyphicon glyphicon-hand-up"></span>
+                      <i class="icon-bar-chart theme-font hide"></i> <span
+                            class="caption-subject theme-font bold uppercase">MOST
+											RECOMMENDATION MOVIE</span> <span class="caption-helper hide">weekly
+											stats...</span>
+                    </div>
+                    <div class="actions">
+                      <div class="btn-group btn-group-devided" data-toggle="buttons">
+                        <label
+                                class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+                          <input type="radio" name="options" class="toggle"
+                                 id="option1">Today
+                        </label><!--  <label
+												class="btn btn-transparent grey-salsa btn-circle btn-sm">
+												<input type="radio" name="options" class="toggle"
+												id="option2">Week
+											</label> <label
+												class="btn btn-transparent grey-salsa btn-circle btn-sm">
+												<input type="radio" name="options" class="toggle"
+												id="option2">Month
+											</label> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="portlet-body">
+                    <div class="row list-separated">
+                      <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="font-grey-mint font-sm">Movie Name</div>
+                        <div class="uppercase font-hg font-red-flamingo">
+                          ${hit.name} <span class="font-lg font-grey-mint"></span>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="font-grey-mint font-sm">Year</div>
+                        <div class="uppercase font-hg theme-font">
+                          ${hit.year} <span class="font-lg font-grey-mint"></span>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="font-grey-mint font-sm">Director</div>
+                        <div class="uppercase font-hg font-purple">
+                          ${hit.director} <span class="font-lg font-grey-mint"></span>
+                        </div>
+                      </div>
+
+                    </div>
+                    <ul class="list-separated list-inline-xs hide">
+                      <li>
+                        <div class="font-grey-mint font-sm">Total Sales</div>
+                        <div class="uppercase font-hg font-red-flamingo">
+                          13,760 <span class="font-lg font-grey-mint">$</span>
+                        </div>
+                      </li>
+                      <li></li>
+                      <li class="border">
+                        <div class="font-grey-mint font-sm">Revenue</div>
+                        <div class="uppercase font-hg theme-font">
+                          4,760 <span class="font-lg font-grey-mint">$</span>
+                        </div>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <div class="font-grey-mint font-sm">Expenses</div>
+                        <div class="uppercase font-hg font-purple">
+                          11,760 <span class="font-lg font-grey-mint">$</span>
+                        </div>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <div class="font-grey-mint font-sm">Growth</div>
+                        <div class="uppercase font-hg font-blue-sharp">
+                          9,760 <span class="font-lg font-grey-mint">$</span>
+                        </div>
+                      </li>
+                    </ul>
+                    <div style="height: 260px">
+                      <!-- 자리자리자리-->
+                      <!-- BEGIN GRAPH -->
+                      <div id="container_jang"></div>
+
+                      <!-- END GRAPH -->
+                    </div>
+                  </div>
+                </div>
+                <!-- END PORTLET-->
+              </div>
+
+
+              <!--8-->
+              <div class="row margin-top-10">
+                <div class="col-md-6 col-sm-12">
+                  <!-- BEGIN PORTLET-->
+                  <div class="portlet light ">
+                    <div class="portlet-title">
+                      <div class="caption caption-md">
+                        <span class="glyphicon glyphicon-hand-up"></span>
+                        <i class="icon-bar-chart theme-font hide"></i> <span
+                              class="caption-subject theme-font bold uppercase">MOST
+											RECOMMENDATION MOVIE</span> <span class="caption-helper hide">weekly
+											stats...</span>
+                      </div>
+                      <div class="actions">
+                        <div class="btn-group btn-group-devided" data-toggle="buttons">
+                          <label
+                                  class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+                            <input type="radio" name="options" class="toggle"
+                                   id="option1">Today
+                          </label><!--  <label
+												class="btn btn-transparent grey-salsa btn-circle btn-sm">
+												<input type="radio" name="options" class="toggle"
+												id="option2">Week
+											</label> <label
+												class="btn btn-transparent grey-salsa btn-circle btn-sm">
+												<input type="radio" name="options" class="toggle"
+												id="option2">Month
+											</label> -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="portlet-body">
+                      <div class="row list-separated">
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                          <div class="font-grey-mint font-sm">Movie Name</div>
+                          <div class="uppercase font-hg font-red-flamingo">
+                            ${hit.name} <span class="font-lg font-grey-mint"></span>
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                          <div class="font-grey-mint font-sm">Year</div>
+                          <div class="uppercase font-hg theme-font">
+                            ${hit.year} <span class="font-lg font-grey-mint"></span>
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                          <div class="font-grey-mint font-sm">Director</div>
+                          <div class="uppercase font-hg font-purple">
+                            ${hit.director} <span class="font-lg font-grey-mint"></span>
+                          </div>
+                        </div>
+
+                      </div>
+                      <ul class="list-separated list-inline-xs hide">
+                        <li>
+                          <div class="font-grey-mint font-sm">Total Sales</div>
+                          <div class="uppercase font-hg font-red-flamingo">
+                            13,760 <span class="font-lg font-grey-mint">$</span>
+                          </div>
+                        </li>
+                        <li></li>
+                        <li class="border">
+                          <div class="font-grey-mint font-sm">Revenue</div>
+                          <div class="uppercase font-hg theme-font">
+                            4,760 <span class="font-lg font-grey-mint">$</span>
+                          </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <div class="font-grey-mint font-sm">Expenses</div>
+                          <div class="uppercase font-hg font-purple">
+                            11,760 <span class="font-lg font-grey-mint">$</span>
+                          </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <div class="font-grey-mint font-sm">Growth</div>
+                          <div class="uppercase font-hg font-blue-sharp">
+                            9,760 <span class="font-lg font-grey-mint">$</span>
+                          </div>
+                        </li>
+                      </ul>
+                      <div style="height: 260px">
+                        <!-- 자리자리자리-->
+                        <!-- BEGIN GRAPH -->
+                        <div id="container_jang"></div>
+
+                        <!-- END GRAPH -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END PORTLET-->
+                </div>
