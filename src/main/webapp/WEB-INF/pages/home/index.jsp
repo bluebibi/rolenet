@@ -87,14 +87,8 @@ ul, ol { padding: 0; }
 }
 </style>
 
-<script type="text/javascript" src="http://218.150.181.131/assets/global/scroll/js/jquery.endless-scroll.js"></script>
-<script type="text/javascript" src="http://218.150.181.131/assets/global/scroll/js/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf-8">
-        $(function() {
-            $('.scroll').jscroll();
 
-        });
-    </script>
+
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -140,6 +134,7 @@ ul, ol { padding: 0; }
 
 			<!-- END HEADER SEARCH BOX -->
 			<!-- BEGIN PAGE CONTENT -->
+			<div class = "scroll">
 			<div class="page-content">
 				<div class="container">
 					<!-- BEGIN PAGE BREADCRUMB -->
@@ -454,20 +449,28 @@ ul, ol { padding: 0; }
 							<!-- END PORTLET-->
 						</div>
 					</div>
-
+					<%@include file="../includes/movies.jsp"%>
 					<!-- END PAGE CONTENT INNER -->
 				</div>
 			</div>
+
 			<!-- END PAGE CONTENT -->
 		</div>
+			</div>
 		<!-- END PAGE CONTAINER -->
+
 		<%@include file="../includes/footMenu.jsp"%>
+		<div class="scroll-to-top">
+			<i class="icon-arrow-up"></i>
+		</div>
 		<!-- BEGIN JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) -->
 		<!-- BEGIN CORE PLUGINS -->
 		<!--[if lt IE 9]>
 <script src="http://218.150.181.131/assets/global/plugins/respond.min.js"></script>
 <script src="http://218.150.181.131/assets/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
+		<script src="http://218.150.181.131/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js"
+				type="text/javascript"></script>
 		<script src="http://218.150.181.131/assets/global/plugins/jquery.min.js"
 			type="text/javascript"></script>
 		<script src="http://218.150.181.131/assets/global/plugins/jquery-migrate.min.js"
@@ -533,7 +536,10 @@ ul, ol { padding: 0; }
 			type="text/javascript"></script>
 		<script src="http://218.150.181.131/assets/admin/pages/scripts/tasks.js"
 			type="text/javascript"></script>
-
+		<script src="http://218.150.181.131/assets/global/scroll/js/jquery.jscroll.min.js"
+				type="text/javascript"></script>
+		<script src="http://218.150.181.131/assets/global/scroll/js/jquery.jscroll.js"
+				type="text/javascript"></script>
 		<!-- END PAGE LEVEL SCRIPTS -->
 		<script>
 			jQuery(document).ready(function() {
@@ -542,6 +548,8 @@ ul, ol { padding: 0; }
 				Demo.init(); // init demo(theme settings page)
 				Index.init(); // init index page
 				Tasks.initDashboardWidget(); // init tash dashboard widget
+				UIGeneral.init();
+				$('.scroll').jscroll();
 			});
 		</script>
 		<script>
@@ -562,3 +570,4 @@ ul, ol { padding: 0; }
 </body>
 <!-- END BODY -->
 </html>
+
