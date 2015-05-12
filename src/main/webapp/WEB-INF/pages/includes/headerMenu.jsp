@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- BEGIN HEADER MENU -->
 
@@ -57,18 +57,6 @@
                                         <div class="col-md-4">
                                             <ul class="mega-menu-submenu">
                                                 <li>
-                                                    <h3>Actor</h3>
-                                                </li>
-                                                <li>
-                                                    <a href="layout_fluid.html" class="iconify">
-                                                        <i class="icon-cursor-move"></i>
-                                                        A - D </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ul class="mega-menu-submenu">
-                                                <li>
                                                     <h3>Director</h3>
                                                 </li>
                                                 <li>
@@ -84,54 +72,11 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-dropdown classic-menu-dropdown ">
-                        <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
-                            Community <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu pull-left">
-                            <li class=" dropdown-submenu">
-                                <a href=":;">
-                                    <i class="icon-briefcase"></i>
-                                    Notifications </a>
-                            </li>
-                            <li class=" dropdown-submenu">
-                                <a href=":;">
-                                    <i class="icon-wallet"></i>
-                                    Board </a>
-                                <ul class="dropdown-menu">
-                                    <li class=" ">
-                                        <a href="/Tab_boardlist">
-                                            FreeBoard </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="name">
-                                            MyPage
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="portlet_general3.html">
-                                            Boards #2 <span class="badge badge-roundless badge-danger">new</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class=" dropdown-submenu">
-                                <a href=":;">
-                                    <i class="icon-bar-chart"></i>
-                                    FAQ </a>
-                                <ul class="dropdown-menu">
-                                    <li class=" ">
-                                        <a href="charts_amcharts.html">
-                                            1:1 FAQ </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="charts_flotcharts.html">
-                                            Most Question </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+
+                    <li>
+                        <a href="/Tab_boardlist">Board </a>
                     </li>
+
                     <li>
                         <a href="/Tab_mypage">MyPage</a>
                     </li>
@@ -146,7 +91,6 @@
     </div>
     <!-- END HEADER -->
 </div>
-
 
 
 
