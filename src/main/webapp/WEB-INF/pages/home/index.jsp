@@ -429,7 +429,6 @@
 											<div class="number">${count}개</div>
 										</div>
 									</div>
-<<<<<<< HEAD
 									<div class="table-scrollable table-scrollable-borderless">
 										<table class="table table-hover table-light">
 											<thead>
@@ -454,32 +453,7 @@
 										</table>
 										
 									</div>
-=======
->>>>>>> a58b4582c85790835cd68c70057978637194c24d
 								</div>
-							</div>
-							<div class="table-scrollable table-scrollable-borderless">
-								<table class="table table-hover table-light">
-									<thead>
-									<tr class="font-grey-mint font-sm">
-										<th>No.</th>
-										<th>Movie</th>
-										<th>Year</th>
-										<th>Director</th>
-									</tr>
-									</thead>
-									<tbody>
-									<c:forEach var="m" items="${last}">
-										<tr onclick="document.location = 'Tab_movielistdetail.do?id=${m.id}';">
-											<td id="id">${m.id}</td>
-											<td class="bold">${m.name}</td>
-											<td>${m.year}</td>
-											<td>${m.director}</td>
-										</tr>
-									</c:forEach>
-									</tbody>
-
-								</table>
 							</div>
 						</div>
 					</div>
