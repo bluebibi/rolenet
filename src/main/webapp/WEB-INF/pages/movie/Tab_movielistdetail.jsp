@@ -396,7 +396,7 @@ var url = preurl + id + last;
                             'border': '1px solid #eee',
                             'position': 'absolute',
                             'left': posx,
-                            'top': posy +10
+                            'top': posy + 10
                         });
 
                 $('ul', popUp).css('margin', '0 0 0 10px');
@@ -420,8 +420,9 @@ var url = preurl + id + last;
     } else {
         window.onload = init;
     }
+    $('#graph-container').css('background-color', '#FFFFD7');
+    $('#graph-container').css('background-color', 'white');
     $('#graph-container').css('background-color', '#FFFFFF');
-
 </script>
 
 						</div>
