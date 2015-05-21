@@ -29,6 +29,7 @@ pageEncoding="UTF-8"%>
     </style>
 
     <script language="javascript">
+
         var agt = navigator.userAgent.toLowerCase();
         var is_major = parseInt(navigator.appVersion);
         var is_minor = parseFloat(navigator.appVersion);
@@ -340,7 +341,10 @@ pageEncoding="UTF-8"%>
                             </div>
                             <div class="tools"></div>
                         </div>
+
+
                         <div class="portlet-body">
+
                             <table class="table table-striped table-bordered table-hover"
                                    id="sample_1">
                                 <thead>
@@ -351,10 +355,10 @@ pageEncoding="UTF-8"%>
                                     <th width="10%">연도</th>
                                     <th width="10%">감독</th>
                                     <th width="10%">관객수</th>
-                                    <th width="10%">diameter</th>
-                                    <th width="10%">pathlength</th>
-                                    <th width="10%">clustering</th>
-                                    <th width="10%">density</th>
+                                    <th width="10%">diameter <a href="/Tab_Explain"><span class="glyphicon glyphicon-hand-up" onMouseOver="" onMouseOut=""></span></a> </th>
+                                    <th width="10%">pathlength<a href="/Tab_Explain"><span class="glyphicon glyphicon-hand-up" onMouseOver="" onMouseOut=""></span></a></th>
+                                    <th width="10%">clustering<a href="/Tab_Explain"><span class="glyphicon glyphicon-hand-up" onMouseOver="" onMouseOut=""></span></a></th>
+                                    <th width="10%">density<a href="/Tab_Explain"><span class="glyphicon glyphicon-hand-up" onMouseOver="" onMouseOut=""></span></a></th>
                                 </tr>
                                 </thead>
 

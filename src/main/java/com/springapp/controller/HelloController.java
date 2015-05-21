@@ -147,4 +147,8 @@ public class HelloController {
 		return "about/Tab_about.jsp";
 	}
 
+	@RequestMapping(value = "/Tab_Explain")
+	public String Explain(ModelMap model) {
+		return "movie/Tab_Explain.jsp";
+	}
 }
