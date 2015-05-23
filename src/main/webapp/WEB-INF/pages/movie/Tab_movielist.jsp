@@ -339,14 +339,35 @@ pageEncoding="UTF-8"%>
                                     class="caption-subject font-green-sharp bold uppercase">Movie
 										List</span>
                             </div>
-                            <div class="tools"></div>
+                            <div class="actions btn-set">
+								<div class="btn-group">
+									<a class="btn green-haze btn-circle" href="javascript:;" data-toggle="dropdown">
+									<!--<i class="fa fa-check-circle"></i>-->
+									 Columns <i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu pull-right" id="sample_4_column_toggler">
+
+										<li>
+											<label><input type="checkbox" checked data-column="6">diameter</label>
+										</li>
+										<li>
+											<label><input type="checkbox" checked data-column="7">pathlength</label>
+										</li>
+										<li>
+											<label><input type="checkbox" checked data-column="8">clustering</label>
+										</li>
+										<li>
+											<label><input type="checkbox" checked data-column="9">density</label>
+										</li>
+									</ul>
+								</div>
+							</div>
                         </div>
 
 
                         <div class="portlet-body">
 
-                            <table class="table table-striped table-bordered table-hover"
-                                   id="sample_1">
+                            <table class="table table-striped table-bordered table-hover" id="sample_4">
                                 <thead>
                                 <tr>
                                     <th width="5%">No.</th>
