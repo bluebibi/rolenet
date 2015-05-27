@@ -27,97 +27,6 @@ pageEncoding="UTF-8"%>
             /* comment the above 3 line if you don't want transparency*/
         }
     </style>
-
-    <script language="javascript">
-
-        var agt = navigator.userAgent.toLowerCase();
-        var is_major = parseInt(navigator.appVersion);
-        var is_minor = parseFloat(navigator.appVersion);
-
-        var is_nav = ((agt.indexOf('mozilla') != -1)
-        && (agt.indexOf('spoofer') == -1)
-        && (agt.indexOf('compatible') == -1)
-        && (agt.indexOf('opera') == -1) && (agt.indexOf('webtv') == -1) && (agt
-                .indexOf('hotjava') == -1));
-        var is_nav4 = (is_nav && (is_major == 4));
-        var is_nav6 = (is_nav && (is_major == 5));
-        var is_nav6up = (is_nav && (is_major >= 5));
-        var is_ie = ((agt.indexOf("msie") != -1) && (agt.indexOf("opera") == -1));
-    </script>
-    
-    <script language="JavaScript">
-        //tooltip Position
-        var offsetX = 0;
-        var offsetY = 5;
-        var opacity = 100;
-        var toolTipSTYLE;
-
-        function initToolTips() {
-            if (document.getElementById) {
-                toolTipSTYLE = document.getElementById("toolTipLayer").style;
-            }
-            if (is_ie || is_nav6up) {
-                toolTipSTYLE.visibility = "visible";
-                toolTipSTYLE.display = "none";
-                document.onmousemove = moveToMousePos;
-            }
-        }
-        function moveToMousePos(e) {
-            if (!is_ie) {
-                x = e.pageX;
-                y = e.pageY;
-            } else {
-                x = event.x + document.body.scrollLeft;
-                y = event.y + document.body.scrollTop;
-            }
-
-            toolTipSTYLE.left = x + offsetX + 'px';
-            toolTipSTYLE.top = y + offsetY + 'px';
-            return true;
-        }
-
-        function toolTip(msg, fg, bg) {
-            if (toolTip.arguments.length < 1) // if no arguments are passed then hide the tootip
-            {
-                if (is_nav4)
-                    toolTipSTYLE.visibility = "hidden";
-                else
-                    toolTipSTYLE.display = "none";
-            } else // show
-            {
-                if (!fg)
-                    fg = "#777777";
-                if (!bg)
-                    bg = "#ffffe5";
-                var content = '<table border="0" cellspacing="0" cellpadding="0" class="toolTip"><tr><td bgcolor="' + fg + '">'
-                        + '<table border="0" cellspacing="1" cellpadding="0"<tr><td bgcolor="' + bg + '">'
-                        + '<font face="sans-serif" color="' + fg + '" size="-2">'
-                        + msg + '</font></td></tr></table>' + '</td></tr></table>';
-                if (is_nav4) {
-                    toolTipSTYLE.document.write(content);
-                    toolTipSTYLE.document.close();
-                    toolTipSTYLE.visibility = "visible";
-                }
-
-                else if (is_ie || is_nav6up) {
-                    document.getElementById("toolTipLayer").innerHTML = content;
-                    toolTipSTYLE.display = 'block'
-                }
-            }
-
-        }
-
-        function show(d) {
-            /* you have mis placed the following 4 lines elsewhere inside the toolTip function */
-            s = '<table width="20%" cellspacing="2" cellpadding="0" border="0">';
-            s += '<tr><td><img src="http://218.150.181.131/assets/img/gephi/';
-            s += d;
-            s += '.png" width="200" height="200" border="0"/></tr>';
-            s += '</table>'
-
-            toolTip(s)
-        }
-    </script>
     <title>Movie</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -415,31 +324,7 @@ pageEncoding="UTF-8"%>
 <!-- END PAGE CONTAINER -->
 <%@include file="../includes/footMenu.jsp"%>
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-<!-- BEGIN CORE PLUGINS -->
-<!--[if lt IE 9]>
-<script src="http://218.150.181.131/assets/global/plugins/respond.min.js"></script>
-<script src="http://218.150.181.131/assets/global/plugins/excanvas.min.js"></script>
-<![endif]-->
-<script src="http://218.150.181.131/assets/global/plugins/jquery.min.js"
-        type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/jquery-migrate.min.js"
-        type="text/javascript"></script>
-<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-<script src="http://218.150.181.131/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js"
-        type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/bootstrap/js/bootstrap.min.js"
-        type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"
-        type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js"
-        type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/jquery.blockui.min.js"
-        type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/jquery.cokie.min.js"
-        type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/uniform/jquery.uniform.min.js"
-        type="text/javascript"></script>
-<!-- END CORE PLUGINS -->
+<%@include file="../includes/footer.jsp"%>
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script type="text/javascript"
         src="http://218.150.181.131/assets/global/plugins/select2/select2.min.js"></script>
@@ -465,26 +350,110 @@ pageEncoding="UTF-8"%>
         Layout.init(); // init current layout
         Demo.init(); // init demo features
         TableAdvanced.init();
-    });
-</script>
 
-<script>
-    function trans_Num(str) {
-        var str = String(str); //우선 스트림으로 바꾸고
-        var result = "";
-        var len = str.length;
-        if (len > 3) { //세자리 이상일떄만
-            for (i = len - 1, j = 0; i >= 0; i--) {
-                result = str.substring(i, i + 1) + result; //끝자리 부터 하나씩 합치다가
-                j++;
-                if (j == 3 && j != 0) { //세자리 되면 콤마 추가
-                    result = "," + result;
-                    j = 0;
-                }
+        var agt = navigator.userAgent.toLowerCase();
+        var is_major = parseInt(navigator.appVersion);
+        var is_minor = parseFloat(navigator.appVersion);
+
+        var is_nav = ((agt.indexOf('mozilla') != -1)
+        && (agt.indexOf('spoofer') == -1)
+        && (agt.indexOf('compatible') == -1)
+        && (agt.indexOf('opera') == -1) && (agt.indexOf('webtv') == -1) && (agt
+                .indexOf('hotjava') == -1));
+        var is_nav4 = (is_nav && (is_major == 4));
+        var is_nav6 = (is_nav && (is_major == 5));
+        var is_nav6up = (is_nav && (is_major >= 5));
+        var is_ie = ((agt.indexOf("msie") != -1) && (agt.indexOf("opera") == -1));
+
+        //tooltip Position
+        var offsetX = 0;
+        var offsetY = 5;
+        var opacity = 100;
+        var toolTipSTYLE;
+
+        function initToolTips() {
+            if (document.getElementById) {
+                toolTipSTYLE = document.getElementById("toolTipLayer").style;
+            }
+            if (is_ie || is_nav6up) {
+                toolTipSTYLE.visibility = "visible";
+                toolTipSTYLE.display = "none";
+                document.onmousemove = moveToMousePos;
             }
         }
-        return result;
-    }
+        function moveToMousePos(e) {
+            if (!is_ie) {
+                x = e.pageX;
+                y = e.pageY;
+            } else {
+                x = event.x + document.body.scrollLeft;
+                y = event.y + document.body.scrollTop;
+            }
+
+            toolTipSTYLE.left = x + offsetX + 'px';
+            toolTipSTYLE.top = y + offsetY + 'px';
+            return true;
+        }
+
+        function toolTip(msg, fg, bg) {
+            if (toolTip.arguments.length < 1) // if no arguments are passed then hide the tootip
+            {
+                if (is_nav4)
+                    toolTipSTYLE.visibility = "hidden";
+                else
+                    toolTipSTYLE.display = "none";
+            } else // show
+            {
+                if (!fg)
+                    fg = "#777777";
+                if (!bg)
+                    bg = "#ffffe5";
+                var content = '<table border="0" cellspacing="0" cellpadding="0" class="toolTip"><tr><td bgcolor="' + fg + '">'
+                        + '<table border="0" cellspacing="1" cellpadding="0"<tr><td bgcolor="' + bg + '">'
+                        + '<font face="sans-serif" color="' + fg + '" size="-2">'
+                        + msg + '</font></td></tr></table>' + '</td></tr></table>';
+                if (is_nav4) {
+                    toolTipSTYLE.document.write(content);
+                    toolTipSTYLE.document.close();
+                    toolTipSTYLE.visibility = "visible";
+                }
+
+                else if (is_ie || is_nav6up) {
+                    document.getElementById("toolTipLayer").innerHTML = content;
+                    toolTipSTYLE.display = 'block'
+                }
+            }
+
+        }
+
+        function show(d) {
+            /* you have mis placed the following 4 lines elsewhere inside the toolTip function */
+            s = '<table width="20%" cellspacing="2" cellpadding="0" border="0">';
+            s += '<tr><td><img src="http://218.150.181.131/assets/img/gephi/';
+            s += d;
+            s += '.png" width="200" height="200" border="0"/></tr>';
+            s += '</table>'
+
+            toolTip(s)
+        }
+
+        function trans_Num(str) {
+            var str = String(str); //우선 스트림으로 바꾸고
+            var result = "";
+            var len = str.length;
+            if (len > 3) { //세자리 이상일떄만
+                for (i = len - 1, j = 0; i >= 0; i--) {
+                    result = str.substring(i, i + 1) + result; //끝자리 부터 하나씩 합치다가
+                    j++;
+                    if (j == 3 && j != 0) { //세자리 되면 콤마 추가
+                        result = "," + result;
+                        j = 0;
+                    }
+                }
+            }
+            return result;
+        }
+    });
 </script>
 </body>
 <!-- END BODY -->
