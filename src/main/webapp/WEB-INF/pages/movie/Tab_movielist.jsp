@@ -458,7 +458,7 @@ pageEncoding="UTF-8"%>
 <script src="http://218.150.181.131/assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/admin/pages/scripts/table-advanced.js"></script>
+<script src="/resources/js/table-advanced.js"></script>
 <script>
     jQuery(document).ready(function () {
         Metronic.init(); // init metronic core components
