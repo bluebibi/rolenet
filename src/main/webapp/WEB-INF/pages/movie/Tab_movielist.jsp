@@ -348,16 +348,16 @@ pageEncoding="UTF-8"%>
 									<ul class="dropdown-menu pull-right" id="sample_4_column_toggler">
 
 										<li>
-											<label><input type="checkbox" data-column="6">diameter</label>
+											<label><input type="checkbox" checked data-column="6">diameter</label>
 										</li>
 										<li>
-											<label><input type="checkbox" data-column="7">pathlength</label>
+											<label><input type="checkbox" checked data-column="7">pathlength</label>
 										</li>
 										<li>
-											<label><input type="checkbox" data-column="8">clustering</label>
+											<label><input type="checkbox" checked data-column="8">clustering</label>
 										</li>
 										<li>
-											<label><input type="checkbox" data-column="9">density</label>
+											<label><input type="checkbox" checked data-column="9">density</label>
 										</li>
 									</ul>
 								</div>
