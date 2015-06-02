@@ -170,6 +170,7 @@
 			</ul>
 			<!-- END PAGE BREADCRUMB -->
 			<!-- BEGIN PAGE CONTENT INNER -->
+		<div class="row">
 			<div class="row margin-top-10">
 				<div class="col-md-6 col-sm-12">
 					<!-- BEGIN PORTLET-->
@@ -410,7 +411,7 @@
 
 								<span class="glyphicon glyphicon-ok"></span>
 								<i class="icon-bar-chart theme-font hide"></i> <span
-									class="caption-subject theme-font bold uppercase">Updated
+									class="caption-subject theme-font bold uppercase">Recently Updated
 											Movie</span> <span class="caption-helper hide">weekly
 											stats...</span>
 							</div>
@@ -418,12 +419,8 @@
 						</div>
 						<div class="portlet-body">
 							<div class="row number-stats margin-bottom-30">
-								<div class="col-md-7 col-sm-6 col-xs-6">
+							
 									<div class="stat-left">
-										<div class="stat-chart">
-											<!-- do not line break "sparkline_bar" div. sparkline chart has an issue when the container div has line break -->
-											<div id="sparkline_bar"></div>
-										</div>
 										<div class="stat-number">
 											<div class="title">Total</div>
 											<div class="number">${count}개</div>
@@ -448,7 +445,7 @@
 													<td>${m.director}</td>
 												</tr>
 											</c:forEach>
-										</tbody>
+											</tbody>
 
 										</table>
 										
@@ -457,13 +454,41 @@
 							</div>
 						</div>
 					</div>
+				</div>
 					<!-- END PORTLET-->
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-sm-12">
+				<div class="portlet light">
+					<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-bar-chart theme-font hide"></i>
+								<span class="caption-subject theme-font bold uppercase">★ 설문조사</span>
+								<span class="caption-helper hide">weekly stats...</span>
+							</div>
+					</div>
+					<div class="portlet-body">
+					</div>
 				</div>
 			</div>
-				<%@include file="../includes/movies.jsp"%>
+			<div class="col-md-6 col-sm-12">
+				<div class="portlet light">
+					<div class="portlet-title">
+							<div class="caption caption-md">
+								<i class="icon-bar-chart theme-font hide"></i>
+								<span class="caption-subject theme-font bold uppercase">★ 설문조사</span>
+								<span class="caption-helper hide">weekly stats...</span>
+							</div>
+					</div>
+					<div class="portlet-body">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 			<!-- END PAGE CONTENT INNER -->
-		</div>
+</div>
 
 	</div>
 

@@ -33,7 +33,7 @@ public class HelloController {
 	private CharactorListMapper charactorListMapper;
 	@Autowired
 	private CharactorsListService charactorsListService;
-	// ///////////////////////////////////////////占쎈�占쎄�占썬�쏙옙占쏙옙��占�
+	// ///////////////////////////////////////////����占썲����占썲���э옙����������占쏙옙��占�
 	@RequestMapping("/")
 	public String printWelcome(ModelMap model) {
 		model.addAttribute("hit", movieListMapper.selectMovieByHit());
@@ -42,8 +42,8 @@ public class HelloController {
 		return "home/index.jsp";
 	}
 
-	// 野�占쏙옙占쏙옙占� 疫뀐옙占쎄�由곁��占� 占쏙옙占쏙옙 占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙占�
-	// 占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙占�
+	// ��占썲��������������占� �ル��������占썹�깃�占쏙옙��占� ������������ ���������э옙����筌�占썲���������э옙������占�
+	// ���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙������占�
 	@RequestMapping(value = "/movietween/addContact.do", method = RequestMethod.POST)
 	public ModelAndView addContact(
 			@ModelAttribute("contact") BoardList boardlist, BindingResult result) {
@@ -54,17 +54,17 @@ public class HelloController {
 	@RequestMapping("/movietween/contacts.do")
 	public ModelAndView showContacts() {
 		BoardList c = new BoardList();
-		c.setUtitle("占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙");
-		c.setUcontent("占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙");
-		c.setUauthor("占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙");
+		c.setUtitle("������������������������������");
+		c.setUcontent("������������������������������������������������������������������������������������������������������������������������������������������������������������������");
+		c.setUauthor("������������������������������������������������������������������������������������������������������������������������������������������������������������������");
 
 		return new ModelAndView("contact.jsp", "command", c);
 	}
 
-	//占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙紐�占쏙옙占썬�쏙옙占�
+	//���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙������占�
 
 	/* search for movie */
-	@RequestMapping(value = "/search", method = RequestMethod.GET)
+	@RequestMapping(value = "/search.do", method = RequestMethod.GET)
 	public String SearchMovie(ModelMap model, String name) {
 		movieListService.addHitByName(name);
 		MovieList movieList = movieListService.selectMovieByName(name);
@@ -72,21 +72,21 @@ public class HelloController {
 		return "movie/Tab_movielistdetail.jsp";
 	}
 
-	// 野�占쏙옙占쏙옙占�
+	// ��占썲��������������占�
 	@RequestMapping(value = "/Tab_boardlist", method = RequestMethod.GET)
 	public String BoardList(ModelMap model) {
 		model.addAttribute("list", boardListService.list());
 		return "community/Tab_boardlist.jsp";
 	}
 
-	// 野�占쏙옙占쏙옙占썸묾占쏙옙怨�由�
+	// ��占썲���������������몃Ь�������⑨옙�깍옙
 	@RequestMapping(value = "/Tab_boardwriting")
 	public String BoardWriting(ModelMap model) {
 
 		return "community/Tab_boardwriting.jsp";
 	}
 
-	// 野�占쏙옙占쏙옙占� 占쏙옙占쎈�占쏙옙
+	// ��占썲��������������占� ����������占썲������
 	@RequestMapping(value = "/Tab_boarddetail")
 	public String BoardDetail(ModelMap model, int uId) {
 		BoardList boarddetailentity = boardListService
@@ -105,7 +105,7 @@ public class HelloController {
 		System.out.println("!!!!!!");
 	}
 
-	//����������
+	//占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙
 	@RequestMapping(value = "/Tab_movielistdetail")
 	public String MovieListDetail(ModelMap model, int id) {
 		movieListService.addHit(id);
@@ -117,31 +117,31 @@ public class HelloController {
 		return "movie/Tab_movielistdetail.jsp";
 	}
 
-	// 筌�占쏙옙��占쏙옙占쎈��占�
+	// 嶺�占썲������占쏙옙����������占쏙옙��占�
 	@RequestMapping(value = "/Tab_mypage")
 	public String MyPage(ModelMap model) {
 		return "mypage/Tab_mypage.jsp";
 	}
 
-	// 占쏙옙嚥∽옙占쏙옙占쏙옙占쏙옙
+	// �������β�쎌��������������������
 	@RequestMapping(value = "/Tab_editprofile")
 	public String EditProfile(ModelMap model) {
 		return "mypage/Tab_editprofile.jsp";
 	}
 
-	//域밸�占쏙옙占쏙옙 占쏙옙占쏙옙
+	//��諛몌옙������������ ������������
 	@RequestMapping(value = "/Tab_mygraph")
 	public String MyGraph(ModelMap model) {
 		return "mypage/Tab_mygraph.jsp";
 	}
 
-	//疫뀐옙占쏙옙
+	//�ル����������
 	@RequestMapping(value = "/Tab_charge")
 	public String MyCharge(ModelMap model) {
 		return "mypage/Tab_charge.jsp";
 	}
 
-	//占쎄���占쏙옙揶�占�
+	//����占쏙옙占썲�������띰옙��占�
 	@RequestMapping(value = "/Tab_about")
 	public String About(ModelMap model) {
 		return "about/Tab_about.jsp";
