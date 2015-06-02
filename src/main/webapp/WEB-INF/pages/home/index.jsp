@@ -141,9 +141,11 @@ $(function(){
 	string += director[count];
 	string += " | ";
 	string += year[count];
-	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
 	string += id[count];
-	string += "p.png' width='220' height='200'></div></div></div>";
+	string += "'><img src='http://218.150.181.131/poster/";
+	string += id[count];
+	string += "p.png' width='220' height='200'/></a></div></div></div>";
 	count++;
 	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 	string += name[count];
@@ -151,9 +153,11 @@ $(function(){
 	string += director[count];
 	string += " | ";
 	string += year[count];
-	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
 	string += id[count];
-	string += "p.png' width='220' height='200'></div></div></div>";
+	string += "'><img src='http://218.150.181.131/poster/";
+	string += id[count];
+	string += "p.png' width='220' height='200'/></a></div></div></div>";
 	count++;
 	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 	string += name[count];
@@ -161,9 +165,11 @@ $(function(){
 	string += director[count];
 	string += " | ";
 	string += year[count];
-	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
 	string += id[count];
-	string += "p.png' width='220' height='200'></div></div></div>";
+	string += "'><img src='http://218.150.181.131/poster/";
+	string += id[count];
+	string += "p.png' width='220' height='200'/></a></div></div></div>";
 	count++;
 	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 	string += name[count];
@@ -171,9 +177,11 @@ $(function(){
 	string += director[count];
 	string += " | ";
 	string += year[count];
-	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
 	string += id[count];
-	string += "p.png' width='220' height='200'></div></div></div>";
+	string += "'><img src='http://218.150.181.131/poster/";
+	string += id[count];
+	string += "p.png' width='220' height='200'/></a></div></div></div>";
 	string+="</div>";
 	//$(window).scroll(function() { });
     
@@ -210,9 +218,11 @@ $(function(){
         	string += director[count];
         	string += " | ";
         	string += year[count];
-        	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+        	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
         	string += id[count];
-        	string += "p.png' width='220' height='200'></div></div></div>";
+        	string += "'><img src='http://218.150.181.131/poster/";
+        	string += id[count];
+        	string += "p.png' width='220' height='200'/></a></div></div></div>";
         	count++;
         	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
         	string += name[count];
@@ -220,9 +230,11 @@ $(function(){
         	string += director[count];
         	string += " | ";
         	string += year[count];
-        	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+        	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
         	string += id[count];
-        	string += "p.png' width='220' height='200'></div></div></div>";
+        	string += "'><img src='http://218.150.181.131/poster/";
+        	string += id[count];
+        	string += "p.png' width='220' height='200'/></a></div></div></div>";
         	count++;
         	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
         	string += name[count];
@@ -230,9 +242,11 @@ $(function(){
         	string += director[count];
         	string += " | ";
         	string += year[count];
-        	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+        	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
         	string += id[count];
-        	string += "p.png' width='220' height='200'></div></div></div>";
+        	string += "'><img src='http://218.150.181.131/poster/";
+        	string += id[count];
+        	string += "p.png' width='220' height='200'/></a></div></div></div>";
         	count++;
         	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
         	string += name[count];
@@ -240,9 +254,11 @@ $(function(){
         	string += director[count];
         	string += " | ";
         	string += year[count];
-        	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+        	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
         	string += id[count];
-        	string += "p.png' width='220' height='200'></div></div></div>";
+        	string += "'><img src='http://218.150.181.131/poster/";
+        	string += id[count];
+        	string += "p.png' width='220' height='200'/></a></div></div></div>";
         	string+="</div>";
         	}else if(count == ${count} -1){
         		var string="<div class='row'>";
@@ -252,9 +268,11 @@ $(function(){
             	string += director[count];
             	string += " | ";
             	string += year[count];
-            	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+            	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
             	string += id[count];
-            	string += "p.png' width='220' height='200'></div></div></div>";
+            	string += "'><img src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png' width='220' height='200'/></a></div></div></div>";
             	string+="</div>";
         	} else if(count == ${count} -2){
         		var string="<div class='row'>";
@@ -264,9 +282,11 @@ $(function(){
             	string += director[count];
             	string += " | ";
             	string += year[count];
-            	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+            	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
             	string += id[count];
-            	string += "p.png' width='220' height='200'></div></div></div>";
+            	string += "'><img src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png' width='220' height='200'/></a></div></div></div>";
 				count++;
             	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
             	string += name[count];
@@ -274,9 +294,11 @@ $(function(){
             	string += director[count];
             	string += " | ";
             	string += year[count];
-            	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+            	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
             	string += id[count];
-            	string += "p.png' width='220' height='200'></div></div></div>";
+            	string += "'><img src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png' width='220' height='200'/></a></div></div></div>";
             	string+="</div>";
         		
         	} else if(count == ${count} -3){
@@ -287,9 +309,11 @@ $(function(){
             	string += director[count];
             	string += " | ";
             	string += year[count];
-            	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+            	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
             	string += id[count];
-            	string += "p.png' width='220' height='200'></div></div></div>";
+            	string += "'><img src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png' width='220' height='200'/></a></div></div></div>";
 				count++;
             	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
             	string += name[count];
@@ -297,9 +321,11 @@ $(function(){
             	string += director[count];
             	string += " | ";
             	string += year[count];
-            	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+            	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
             	string += id[count];
-            	string += "p.png' width='220' height='200'></div></div></div>";
+            	string += "'><img src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png' width='220' height='200'/></a></div></div></div>";
             	count++;
             	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
             	string += name[count];
@@ -307,9 +333,11 @@ $(function(){
             	string += director[count];
             	string += " | ";
             	string += year[count];
-            	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+            	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
             	string += id[count];
-            	string += "p.png' width='220' height='200'></div></div></div>";
+            	string += "'><img src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png' width='220' height='200'/></a></div></div></div>";
             	string+="</div>";
         		
         		} else{
@@ -320,9 +348,11 @@ $(function(){
                 	string += director[count];
                 	string += " | ";
                 	string += year[count];
-                	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+                	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
                 	string += id[count];
-                	string += "p.png' width='220' height='200'></div></div></div>";
+                	string += "'><img src='http://218.150.181.131/poster/";
+                	string += id[count];
+                	string += "p.png' width='220' height='200'/></a></div></div></div>";
                 	count++;
                 	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
                 	string += name[count];
@@ -330,9 +360,11 @@ $(function(){
                 	string += director[count];
                 	string += " | ";
                 	string += year[count];
-                	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+                	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
                 	string += id[count];
-                	string += "p.png' width='220' height='200'></div></div></div>";
+                	string += "'><img src='http://218.150.181.131/poster/";
+                	string += id[count];
+                	string += "p.png' width='220' height='200'/></a></div></div></div>";
                 	count++;
                 	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
                 	string += name[count];
@@ -340,9 +372,11 @@ $(function(){
                 	string += director[count];
                 	string += " | ";
                 	string += year[count];
-                	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+                	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
                 	string += id[count];
-                	string += "p.png' width='220' height='200'></div></div></div>";
+                	string += "'><img src='http://218.150.181.131/poster/";
+                	string += id[count];
+                	string += "p.png' width='220' height='200'/></a></div></div></div>";
                 	count++;
                 	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
                 	string += name[count];
@@ -350,9 +384,11 @@ $(function(){
                 	string += director[count];
                 	string += " | ";
                 	string += year[count];
-                	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+                	string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
                 	string += id[count];
-                	string += "p.png' width='220' height='200'></div></div></div>";
+                	string += "'><img src='http://218.150.181.131/poster/";
+                	string += id[count];
+                	string += "p.png' width='220' height='200'/></a></div></div></div>";
                 	string+="</div>";
         		}
         	
