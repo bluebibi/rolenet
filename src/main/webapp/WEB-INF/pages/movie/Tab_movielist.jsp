@@ -285,10 +285,10 @@ pageEncoding="UTF-8"%>
                                     <th width="10%">연도</th>
                                     <th width="10%">감독</th>
                                     <th width="10%">관객수</th>
-                                    <th width="10%">diameter <a href="/Tab_Explain"><span class="glyphicon glyphicon-hand-up" onMouseOver="" onMouseOut=""></span></a> </th>
-                                    <th width="10%">pathlength<a href="/Tab_Explain"><span class="glyphicon glyphicon-hand-up" onMouseOver="" onMouseOut=""></span></a></th>
-                                    <th width="10%">clustering<a href="/Tab_Explain"><span class="glyphicon glyphicon-hand-up" onMouseOver="" onMouseOut=""></span></a></th>
-                                    <th width="10%">density<a href="/Tab_Explain"><span class="glyphicon glyphicon-hand-up" onMouseOver="" onMouseOut=""></span></a></th>
+                                    <th width="10%">diameter</th>
+                                    <th width="10%">pathlength</th>
+                                    <th width="10%">clustering</th>
+                                    <th width="10%">density</th>
                                 </tr>
                                 </thead>
 
