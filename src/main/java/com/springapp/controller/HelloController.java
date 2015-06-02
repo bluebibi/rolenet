@@ -39,6 +39,7 @@ public class HelloController {
 		model.addAttribute("hit", movieListMapper.selectMovieByHit());
 		model.addAttribute("last", movieListService.LastList());
 		model.addAttribute("count", movieListMapper.movieCount());
+		model.addAttribute("scroll_movie", movieListService.list());
 		return "home/index.jsp";
 	}
 	@RequestMapping("/haha")

@@ -121,19 +121,19 @@
 $(function(){
 
     var count=1;
-
+	var string="<div class='row'>";
+	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>${scroll_movie[1].name}</span><span class='caption-helper'>${scroll_movie[1].director} | ";
+	string += ${scroll_movie[1].year};
+	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/1p.png' width='220' height='200'></div></div></div>";
+	string+="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>${scroll_movie[1].name}</span><span class='caption-helper'>${scroll_movie[1].director} | ${scroll_movie[1].year}</span></div></div><div class='portlet-body'></div></div></div>";
+	string+="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>${scroll_movie[1].name}</span><span class='caption-helper'>${scroll_movie[1].director} | ${scroll_movie[1].year}</span></div></div><div class='portlet-body'></div></div></div>";
+	string+="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>${scroll_movie[1].name}</span><span class='caption-helper'>${scroll_movie[1].director} | ${scroll_movie[1].year}</span></div></div><div class='portlet-body'></div></div></div>";
+	string+="</div>";
+	//$(window).scroll(function() { });
     
-    //$(window).scroll(function() { });
-    
-    //문서가 로드되면 20 row 생성 그리고 생성이 완료되면 scroll 이벤트 바인딩
-    for(var i = 1; i <= 20; i++) {
-        count = i;
-        $("<h1>"+count+" line scroll</h1>").appendTo("#haha");
 
-        if(count == 20) {
-            $(window).bind("scroll",infinityScrollFunction);
-        }
-    }
+    $(string).appendTo("#haha");
+	$(window).bind("scroll",infinityScrollFunction);
 
     function infinityScrollFunction() {
     	
@@ -156,7 +156,7 @@ $(function(){
         if(scrollHeight == documentHeight) { //문서의 맨끝에 도달했을때 내용 추가 
             for(var i = 0; i<10; i++) {
                 count++;
-                $("<h1>"+count+" line scroll</h1>").appendTo("#haha");
+                $(string).appendTo("#haha");
             }
         }
     }//function infinityScrollFunction()
@@ -211,7 +211,7 @@ $(function(){
 	<!-- BEGIN PAGE CONTENT -->
 
 	<div class="page-content">
-		<div class="container">
+		<div class="container" id="haha">
 			<!-- BEGIN PAGE BREADCRUMB -->
 			<ul class="page-breadcrumb breadcrumb hide">
 				<li><a href="#">Home</a><i class="fa fa-circle"></i></li>
@@ -505,34 +505,6 @@ $(function(){
 					</div>
 				</div>
 					<!-- END PORTLET-->
-		</div>
-		<div class="row">
-			<div class="col-md-6 col-sm-12">
-				<div class="portlet light" id="haha">
-					<div class="portlet-title">
-							<div class="caption caption-md">
-								<i class="icon-bar-chart theme-font hide"></i>
-								<span class="caption-subject theme-font bold uppercase">★ 설문조사</span>
-								<span class="caption-helper hide">weekly stats...</span>
-							</div>
-					</div>
-					<div class="portlet-body">
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6 col-sm-12">
-				<div class="portlet light">
-					<div class="portlet-title">
-							<div class="caption caption-md">
-								<i class="icon-bar-chart theme-font hide"></i>
-								<span class="caption-subject theme-font bold uppercase">★ 설문조사</span>
-								<span class="caption-helper hide">weekly stats...</span>
-							</div>
-					</div>
-					<div class="portlet-body">
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 
