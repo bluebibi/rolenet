@@ -114,6 +114,14 @@ function show(d) {
 
     toolTip(s)
 }
+function show2(d) {
+    /* you have mis placed the following 4 lines elsewhere inside the toolTip function */
+    s = '<table width="20%" cellspacing="2" cellpadding="0" border="0">';
+    s += '<tr><td>안녕</td></tr>';
+    s += '</table>';
+
+    toolTip(s)
+}
 </script>
     <title>Movie</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
@@ -373,10 +381,10 @@ function show(d) {
                                     <th width="10%">연도</th>
                                     <th width="10%">감독</th>
                                     <th width="10%">관객수</th>
-                                    <th width="10%">diameter</th>
-                                    <th width="10%">pathlength</th>
-                                    <th width="10%">clustering</th>
-                                    <th width="10%">density</th>
+                                    <th width="10%" onMouseOver="show2(${m.id})" onMouseOut="toolTip()">diameter</th>
+                                    <th width="10%" onMouseOver="show2(${m.id})" onMouseOut="toolTip()">pathlength</th>
+                                    <th width="10%" onMouseOver="show2(${m.id})" onMouseOut="toolTip()">clustering</th>
+                                    <th width="10%" onMouseOver="show2(${m.id})" onMouseOut="toolTip()">density</th>
                                 </tr>
                                 </thead>
 
