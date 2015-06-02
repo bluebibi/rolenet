@@ -1,6 +1,94 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<script>
+var agt = navigator.userAgent.toLowerCase();
+var is_major = parseInt(navigator.appVersion);
+var is_minor = parseFloat(navigator.appVersion);
+
+var is_nav = ((agt.indexOf('mozilla') != -1)
+&& (agt.indexOf('spoofer') == -1)
+&& (agt.indexOf('compatible') == -1)
+&& (agt.indexOf('opera') == -1) && (agt.indexOf('webtv') == -1) && (agt
+        .indexOf('hotjava') == -1));
+var is_nav4 = (is_nav && (is_major == 4));
+var is_nav6 = (is_nav && (is_major == 5));
+var is_nav6up = (is_nav && (is_major >= 5));
+var is_ie = ((agt.indexOf("msie") != -1) && (agt.indexOf("opera") == -1));
+
+//tooltip Position
+var offsetX = 0;
+var offsetY = 5;
+var opacity = 100;
+var toolTipSTYLE;
+
+function initToolTips() {
+    if (document.getElementById) {
+        toolTipSTYLE = document.getElementById("toolTipLayer").style;
+    }
+    if (is_ie || is_nav6up) {
+        toolTipSTYLE.visibility = "visible";
+        toolTipSTYLE.display = "none";
+        document.onmousemove = moveToMousePos;
+    }
+}
+function moveToMousePos(e) {
+    if (!is_ie) {
+        x = e.pageX;
+        y = e.pageY;
+    } else {
+        x = event.x + document.body.scrollLeft;
+        y = event.y + document.body.scrollTop;
+    }
+
+    toolTipSTYLE.left = x + offsetX + 'px';
+    toolTipSTYLE.top = y + offsetY + 'px';
+    return true;
+}
+
+function toolTip(msg, fg, bg) {
+	alert(mgs+fg,bg);
+    if (toolTip.arguments.length < 1) // if no arguments are passed then hide the tootip
+    {
+        if (is_nav4)
+            toolTipSTYLE.visibility = "hidden";
+        else
+            toolTipSTYLE.display = "none";
+    } else // show
+    {
+        if (!fg)
+            fg = "#777777";
+        if (!bg)
+            bg = "#ffffe5";
+        var content = '<table border="0" cellspacing="0" cellpadding="0" class="toolTip"><tr><td bgcolor="' + fg + '">'
+                + '<table border="0" cellspacing="1" cellpadding="0"<tr><td bgcolor="' + bg + '">'
+                + '<font face="sans-serif" color="' + fg + '" size="-2">'
+                + msg + '</font></td></tr></table>' + '</td></tr></table>';
+        if (is_nav4) {
+            toolTipSTYLE.document.write(content);
+            toolTipSTYLE.document.close();
+            toolTipSTYLE.visibility = "visible";
+        }
+
+        else if (is_ie || is_nav6up) {
+            document.getElementById("toolTipLayer").innerHTML = content;
+            toolTipSTYLE.display = 'block'
+        }
+    }
+
+}
+
+function show(d) {
+    /* you have mis placed the following 4 lines elsewhere inside the toolTip function */
+    s = '<table width="20%" cellspacing="2" cellpadding="0" border="0">';
+    s += '<tr><td><img src="http://218.150.181.131/assets/img/gephi/';
+    s += d;
+    s += '.png" width="200" height="200" border="0"/></tr>';
+    s += '</table>'
+
+    toolTip(s)
+}
+</script>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -350,92 +438,6 @@ pageEncoding="UTF-8"%>
         Layout.init(); // init current layout
         Demo.init(); // init demo features
         TableAdvanced.init();
-
-        var agt = navigator.userAgent.toLowerCase();
-        var is_major = parseInt(navigator.appVersion);
-        var is_minor = parseFloat(navigator.appVersion);
-
-        var is_nav = ((agt.indexOf('mozilla') != -1)
-        && (agt.indexOf('spoofer') == -1)
-        && (agt.indexOf('compatible') == -1)
-        && (agt.indexOf('opera') == -1) && (agt.indexOf('webtv') == -1) && (agt
-                .indexOf('hotjava') == -1));
-        var is_nav4 = (is_nav && (is_major == 4));
-        var is_nav6 = (is_nav && (is_major == 5));
-        var is_nav6up = (is_nav && (is_major >= 5));
-        var is_ie = ((agt.indexOf("msie") != -1) && (agt.indexOf("opera") == -1));
-
-        //tooltip Position
-        var offsetX = 0;
-        var offsetY = 5;
-        var opacity = 100;
-        var toolTipSTYLE;
-
-        function initToolTips() {
-            if (document.getElementById) {
-                toolTipSTYLE = document.getElementById("toolTipLayer").style;
-            }
-            if (is_ie || is_nav6up) {
-                toolTipSTYLE.visibility = "visible";
-                toolTipSTYLE.display = "none";
-                document.onmousemove = moveToMousePos;
-            }
-        }
-        function moveToMousePos(e) {
-            if (!is_ie) {
-                x = e.pageX;
-                y = e.pageY;
-            } else {
-                x = event.x + document.body.scrollLeft;
-                y = event.y + document.body.scrollTop;
-            }
-
-            toolTipSTYLE.left = x + offsetX + 'px';
-            toolTipSTYLE.top = y + offsetY + 'px';
-            return true;
-        }
-
-        function toolTip(msg, fg, bg) {
-            if (toolTip.arguments.length < 1) // if no arguments are passed then hide the tootip
-            {
-                if (is_nav4)
-                    toolTipSTYLE.visibility = "hidden";
-                else
-                    toolTipSTYLE.display = "none";
-            } else // show
-            {
-                if (!fg)
-                    fg = "#777777";
-                if (!bg)
-                    bg = "#ffffe5";
-                var content = '<table border="0" cellspacing="0" cellpadding="0" class="toolTip"><tr><td bgcolor="' + fg + '">'
-                        + '<table border="0" cellspacing="1" cellpadding="0"<tr><td bgcolor="' + bg + '">'
-                        + '<font face="sans-serif" color="' + fg + '" size="-2">'
-                        + msg + '</font></td></tr></table>' + '</td></tr></table>';
-                if (is_nav4) {
-                    toolTipSTYLE.document.write(content);
-                    toolTipSTYLE.document.close();
-                    toolTipSTYLE.visibility = "visible";
-                }
-
-                else if (is_ie || is_nav6up) {
-                    document.getElementById("toolTipLayer").innerHTML = content;
-                    toolTipSTYLE.display = 'block'
-                }
-            }
-
-        }
-
-        function show(d) {
-            /* you have mis placed the following 4 lines elsewhere inside the toolTip function */
-            s = '<table width="20%" cellspacing="2" cellpadding="0" border="0">';
-            s += '<tr><td><img src="http://218.150.181.131/assets/img/gephi/';
-            s += d;
-            s += '.png" width="200" height="200" border="0"/></tr>';
-            s += '</table>'
-
-            toolTip(s)
-        }
 
         function trans_Num(str) {
             var str = String(str); //우선 스트림으로 바꾸고
