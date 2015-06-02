@@ -109,7 +109,7 @@ function show(d) {
     s = '<table width="20%" cellspacing="2" cellpadding="0" border="0">';
     s += '<tr><td><img src="http://218.150.181.131/assets/img/gephi/';
     s += d;
-    s += '.png" width="200" height="200" border="0"/></tr>';
+    s += '.png" width="200" height="200" border="0"/></td></tr>';
     s += '</table>'
 
     toolTip(s)
@@ -117,7 +117,10 @@ function show(d) {
 function show2(d) {
     /* you have mis placed the following 4 lines elsewhere inside the toolTip function */
     s = '<table width="20%" cellspacing="2" cellpadding="0" border="0">';
-    s += '<tr><td>안녕</td></tr>';
+    s += '<tr><td><img src="http://218.150.181.131/Explain/';
+    s += d;
+    s += '.PNG"width="300" height="300" border="0"/>';
+    s += '</td></tr>';
     s += '</table>';
 
     toolTip(s)
@@ -381,10 +384,10 @@ function show2(d) {
                                     <th width="10%">연도</th>
                                     <th width="10%">감독</th>
                                     <th width="10%">관객수</th>
-                                    <th width="10%" onMouseOver="show2(${m.id})" onMouseOut="toolTip()">diameter</th>
-                                    <th width="10%" onMouseOver="show2(${m.id})" onMouseOut="toolTip()">pathlength</th>
-                                    <th width="10%" onMouseOver="show2(${m.id})" onMouseOut="toolTip()">clustering</th>
-                                    <th width="10%" onMouseOver="show2(${m.id})" onMouseOut="toolTip()">density</th>
+                                    <th width="10%" onMouseOver="show2(2)" onMouseOut="toolTip()">diameter</th>
+                                    <th width="10%" onMouseOver="show2(3)" onMouseOut="toolTip()">pathlength</th>
+                                    <th width="10%" onMouseOver="show2(4)" onMouseOut="toolTip()">clustering</th>
+                                    <th width="10%" onMouseOver="show2(5)" onMouseOut="toolTip()">density</th>
                                 </tr>
                                 </thead>
 
