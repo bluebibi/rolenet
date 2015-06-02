@@ -5,6 +5,7 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!--<![endif]-->
@@ -119,15 +120,60 @@
 <script>
 
 $(function(){
+	
+	var id = new Array();
+	var name = new Array();
+	var director = new Array();
+	var year = new Array();
+	
+	<c:forEach items="${scroll_movie}" var="item">
+	id.push("${item.id}");
+	name.push("${item.name}");
+	director.push("${item.director}");
+	year.push("${item.year}");
+	</c:forEach>
 
-    var count=1;
+    var count=0;
 	var string="<div class='row'>";
-	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>${scroll_movie[1].name}</span><span class='caption-helper'>${scroll_movie[1].director} | ";
-	string += ${scroll_movie[1].year};
-	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/1p.png' width='220' height='200'></div></div></div>";
-	string+="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>${scroll_movie[1].name}</span><span class='caption-helper'>${scroll_movie[1].director} | ${scroll_movie[1].year}</span></div></div><div class='portlet-body'></div></div></div>";
-	string+="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>${scroll_movie[1].name}</span><span class='caption-helper'>${scroll_movie[1].director} | ${scroll_movie[1].year}</span></div></div><div class='portlet-body'></div></div></div>";
-	string+="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>${scroll_movie[1].name}</span><span class='caption-helper'>${scroll_movie[1].director} | ${scroll_movie[1].year}</span></div></div><div class='portlet-body'></div></div></div>";
+	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+	string += name[count];
+	string += "</span><span class='caption-helper'>";
+	string += director[count];
+	string += " | ";
+	string += year[count];
+	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+	string += id[count];
+	string += "p.png' width='220' height='200'></div></div></div>";
+	count++;
+	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+	string += name[count];
+	string += "</span><span class='caption-helper'>";
+	string += director[count];
+	string += " | ";
+	string += year[count];
+	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+	string += id[count];
+	string += "p.png' width='220' height='200'></div></div></div>";
+	count++;
+	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+	string += name[count];
+	string += "</span><span class='caption-helper'>";
+	string += director[count];
+	string += " | ";
+	string += year[count];
+	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+	string += id[count];
+	string += "p.png' width='220' height='200'></div></div></div>";
+	count++;
+	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+	string += name[count];
+	string += "</span><span class='caption-helper'>";
+	string += director[count];
+	string += " | ";
+	string += year[count];
+	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+	string += id[count];
+	string += "p.png' width='220' height='200'></div></div></div>";
 	string+="</div>";
 	//$(window).scroll(function() { });
     
@@ -137,7 +183,7 @@ $(function(){
 
     function infinityScrollFunction() {
     	
-		if(count < 100){
+		if(count < ${count}){
         //현재문서의 높이를 구함.
         var documentHeight  = $(document).height();
         console.log("documentHeight : " + documentHeight);
@@ -154,13 +200,167 @@ $(function(){
         console.log("scrollHeight : " + scrollHeight);
             
         if(scrollHeight == documentHeight) { //문서의 맨끝에 도달했을때 내용 추가 
-            for(var i = 0; i<10; i++) {
-                count++;
+        	count++;
+        	if(count < ${count})
+        	if(count == ${count} -4){
+        	var string="<div class='row'>";
+        	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+        	string += name[count];
+        	string += "</span><span class='caption-helper'>";
+        	string += director[count];
+        	string += " | ";
+        	string += year[count];
+        	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+        	string += id[count];
+        	string += "p.png' width='220' height='200'></div></div></div>";
+        	count++;
+        	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+        	string += name[count];
+        	string += "</span><span class='caption-helper'>";
+        	string += director[count];
+        	string += " | ";
+        	string += year[count];
+        	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+        	string += id[count];
+        	string += "p.png' width='220' height='200'></div></div></div>";
+        	count++;
+        	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+        	string += name[count];
+        	string += "</span><span class='caption-helper'>";
+        	string += director[count];
+        	string += " | ";
+        	string += year[count];
+        	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+        	string += id[count];
+        	string += "p.png' width='220' height='200'></div></div></div>";
+        	count++;
+        	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+        	string += name[count];
+        	string += "</span><span class='caption-helper'>";
+        	string += director[count];
+        	string += " | ";
+        	string += year[count];
+        	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+        	string += id[count];
+        	string += "p.png' width='220' height='200'></div></div></div>";
+        	string+="</div>";
+        	}else if(count == ${count} -1){
+        		var string="<div class='row'>";
+            	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+            	string += name[count];
+            	string += "</span><span class='caption-helper'>";
+            	string += director[count];
+            	string += " | ";
+            	string += year[count];
+            	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png' width='220' height='200'></div></div></div>";
+            	string+="</div>";
+        	} else if(count == ${count} -2){
+        		var string="<div class='row'>";
+            	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+            	string += name[count];
+            	string += "</span><span class='caption-helper'>";
+            	string += director[count];
+            	string += " | ";
+            	string += year[count];
+            	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png' width='220' height='200'></div></div></div>";
+				count++;
+            	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+            	string += name[count];
+            	string += "</span><span class='caption-helper'>";
+            	string += director[count];
+            	string += " | ";
+            	string += year[count];
+            	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png' width='220' height='200'></div></div></div>";
+            	string+="</div>";
+        		
+        	} else if(count == ${count} -3){
+        		var string="<div class='row'>";
+            	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+            	string += name[count];
+            	string += "</span><span class='caption-helper'>";
+            	string += director[count];
+            	string += " | ";
+            	string += year[count];
+            	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png' width='220' height='200'></div></div></div>";
+				count++;
+            	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+            	string += name[count];
+            	string += "</span><span class='caption-helper'>";
+            	string += director[count];
+            	string += " | ";
+            	string += year[count];
+            	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png' width='220' height='200'></div></div></div>";
+            	count++;
+            	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+            	string += name[count];
+            	string += "</span><span class='caption-helper'>";
+            	string += director[count];
+            	string += " | ";
+            	string += year[count];
+            	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png' width='220' height='200'></div></div></div>";
+            	string+="</div>";
+        		
+        		} else{
+        			var string="<div class='row'>";
+                	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+                	string += name[count];
+                	string += "</span><span class='caption-helper'>";
+                	string += director[count];
+                	string += " | ";
+                	string += year[count];
+                	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+                	string += id[count];
+                	string += "p.png' width='220' height='200'></div></div></div>";
+                	count++;
+                	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+                	string += name[count];
+                	string += "</span><span class='caption-helper'>";
+                	string += director[count];
+                	string += " | ";
+                	string += year[count];
+                	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+                	string += id[count];
+                	string += "p.png' width='220' height='200'></div></div></div>";
+                	count++;
+                	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+                	string += name[count];
+                	string += "</span><span class='caption-helper'>";
+                	string += director[count];
+                	string += " | ";
+                	string += year[count];
+                	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+                	string += id[count];
+                	string += "p.png' width='220' height='200'></div></div></div>";
+                	count++;
+                	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
+                	string += name[count];
+                	string += "</span><span class='caption-helper'>";
+                	string += director[count];
+                	string += " | ";
+                	string += year[count];
+                	string += "</span></div></div><div class='portlet-body'><img src='http://218.150.181.131/poster/";
+                	string += id[count];
+                	string += "p.png' width='220' height='200'></div></div></div>";
+                	string+="</div>";
+        		}
+        	
                 $(string).appendTo("#haha");
-            }
+           
         }
     }//function infinityScrollFunction()
-
+	
     }
 });
 
