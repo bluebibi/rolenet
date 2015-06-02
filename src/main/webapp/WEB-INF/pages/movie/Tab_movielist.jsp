@@ -1,7 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        .Text {
+            font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
+            font-size: 8pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #333333;
+            text-decoration: none;
+        }
+
+        .toolTip {
+            font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
+            font-size: 8pt;
+            filter: alpha(opacity=80);
+            -moz-opacity: 0.8;
+            opacity: 0.8;
+            /* comment the above 3 line if you don't want transparency*/
+        }
+    </style>
+    <script>
 var agt = navigator.userAgent.toLowerCase();
 var is_major = parseInt(navigator.appVersion);
 var is_minor = parseFloat(navigator.appVersion);
@@ -47,7 +73,7 @@ function moveToMousePos(e) {
 }
 
 function toolTip(msg, fg, bg) {
-	alert(mgs+fg,bg);
+	
     if (toolTip.arguments.length < 1) // if no arguments are passed then hide the tootip
     {
         if (is_nav4)
@@ -89,32 +115,6 @@ function show(d) {
     toolTip(s)
 }
 </script>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
-<head>
-    <meta charset="utf-8"/>
-    <style type="text/css">
-        .Text {
-            font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
-            font-size: 8pt;
-            font-weight: normal;
-            font-style: normal;
-            color: #333333;
-            text-decoration: none;
-        }
-
-        .toolTip {
-            font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
-            font-size: 8pt;
-            filter: alpha(opacity=80);
-            -moz-opacity: 0.8;
-            opacity: 0.8;
-            /* comment the above 3 line if you don't want transparency*/
-        }
-    </style>
     <title>Movie</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
