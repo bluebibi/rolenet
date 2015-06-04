@@ -1,5 +1,7 @@
 package com.springapp.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -67,10 +69,11 @@ public class HelloController {
 	//���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙������占�
 
 	/* search for movie */
-	@RequestMapping(value = "/search.do", method = RequestMethod.GET)
-	public String SearchMovie(ModelMap model, String name) {
-		movieListService.addHitByName(name);
-		MovieList movieList = movieListService.selectMovieByName(name);
+	@RequestMapping(value = "/search.do", method = RequestMethod.POST)
+	public String SearchMovie(ModelMap model,HttpServletRequest request) {
+		movieListService.addHitByName(request.getParameter("query"));
+		MovieList movieList = movieListService.selectMovieByName(request.getParameter("query"));
+		System.out.println(request.getParameter("query"));
 		model.addAttribute("n", movieList);
 		return "movie/Tab_movielistdetail.jsp";
 	}

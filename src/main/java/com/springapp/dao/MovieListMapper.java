@@ -31,6 +31,6 @@ public interface MovieListMapper {
 	@Update("UPDATE movies SET hit= hit + 1 where id = #{id}")
 	public void addHit(@Param("id") int id);
 	
-	@Update("UPDATE movies SET hit= hit + 1 where id = #{name}")
+	@Update("UPDATE movies SET hit= hit + 1 where name = #{name}")
 	public void addHitByName(@Param("name") String name);
 }

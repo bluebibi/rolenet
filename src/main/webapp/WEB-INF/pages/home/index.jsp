@@ -498,15 +498,12 @@ $(function(){
 					Movietween <small>Scripts & Graphs!!</small>
 				</h1>
 				<div class="container">
-					<form class="search-form"  method="GET">
+					<form class="search-form" action="search.do" method="POST">
 						<div class="input-group">
-							<input id="movieName"type="text" class="form-control"
-								   placeholder="Search for Movies" name="query"
-								   onkeydown="javascript:if(event.keyCode==13){getName();}">
-										<span class="input-group-btn">
-
-										<i onclick="getName()" class="icon-magnifier"></i>
-									</span>
+							<input type="text" id="movieName" class="form-control" placeholder="Search for Movies" name="query">
+							<span class="input-group-btn">
+							<button type="submit"  class="icon-magnifier"></button>
+							</span>
 						</div>
 					</form>
 					<br> <br> <br> <br>
@@ -916,20 +913,7 @@ $(function(){
 
 	});
 </script>
-<script>
-	function getName(){
 
-		var tmp = document.getElementById("movieName");
-
-		var name = tmp.value;
-
-		name = encodeURIComponent(name);
-		name = "search.do?name="+name;
-
-		location.href=name;
-
-	}
-</script>
 
 
 <!-- END JAVASCRIPTS -->
