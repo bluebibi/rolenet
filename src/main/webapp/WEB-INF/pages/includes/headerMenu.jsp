@@ -73,13 +73,13 @@
                         </ul>
                     </li>
 
-                    <li>
+                    <!--<li>
                         <a href="/Tab_boardlist">Board </a>
                     </li>
 
                     <li>
                         <a href="/Tab_mypage">MyPage</a>
-                    </li>
+                    </li>-->
                     <li>
                         <a href="/Tab_about">About</a>
                     </li>
