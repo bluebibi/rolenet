@@ -12,6 +12,7 @@
 <!-- BEGIN HEAD -->
 <head>
 	<meta charset="utf-8" />
+ 
 	<title>Movietween | LINK 9th | Koreatech</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
@@ -145,7 +146,11 @@ $(function(){
 	string += id[count];
 	string += "'><img src='http://218.150.181.131/poster/";
 	string += id[count];
-	string += "p.png' width='220' height='200'/></a></div></div></div>";
+	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+	string += id[count];
+	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+	string += id[count];
+	string += "p.png'\"/></a></div></div></div>";
 	count++;
 	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 	string += name[count];
@@ -157,7 +162,11 @@ $(function(){
 	string += id[count];
 	string += "'><img src='http://218.150.181.131/poster/";
 	string += id[count];
-	string += "p.png' width='220' height='200'/></a></div></div></div>";
+	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+	string += id[count];
+	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+	string += id[count];
+	string += "p.png'\"/></a></div></div></div>";
 	count++;
 	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 	string += name[count];
@@ -169,7 +178,11 @@ $(function(){
 	string += id[count];
 	string += "'><img src='http://218.150.181.131/poster/";
 	string += id[count];
-	string += "p.png' width='220' height='200'/></a></div></div></div>";
+	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+	string += id[count];
+	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+	string += id[count];
+	string += "p.png'\"/></a></div></div></div>";
 	count++;
 	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 	string += name[count];
@@ -181,7 +194,11 @@ $(function(){
 	string += id[count];
 	string += "'><img src='http://218.150.181.131/poster/";
 	string += id[count];
-	string += "p.png' width='220' height='200'/></a></div></div></div>";
+	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+	string += id[count];
+	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+	string += id[count];
+	string += "p.png'\"/></a></div></div></div>";
 	string+="</div>";
 	//$(window).scroll(function() { });
     
@@ -222,7 +239,11 @@ $(function(){
         	string += id[count];
         	string += "'><img src='http://218.150.181.131/poster/";
         	string += id[count];
-        	string += "p.png' width='220' height='200'/></a></div></div></div>";
+        	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+        	string += id[count];
+        	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+        	string += id[count];
+        	string += "p.png'\"/></a></div></div></div>";
         	count++;
         	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
         	string += name[count];
@@ -234,7 +255,11 @@ $(function(){
         	string += id[count];
         	string += "'><img src='http://218.150.181.131/poster/";
         	string += id[count];
-        	string += "p.png' width='220' height='200'/></a></div></div></div>";
+        	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+        	string += id[count];
+        	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+        	string += id[count];
+        	string += "p.png'\"/></a></div></div></div>";
         	count++;
         	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
         	string += name[count];
@@ -246,7 +271,11 @@ $(function(){
         	string += id[count];
         	string += "'><img src='http://218.150.181.131/poster/";
         	string += id[count];
-        	string += "p.png' width='220' height='200'/></a></div></div></div>";
+        	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+        	string += id[count];
+        	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+        	string += id[count];
+        	string += "p.png'\"/></a></div></div></div>";
         	count++;
         	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
         	string += name[count];
@@ -258,7 +287,11 @@ $(function(){
         	string += id[count];
         	string += "'><img src='http://218.150.181.131/poster/";
         	string += id[count];
-        	string += "p.png' width='220' height='200'/></a></div></div></div>";
+        	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+        	string += id[count];
+        	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+        	string += id[count];
+        	string += "p.png'\"/></a></div></div></div>";
         	string+="</div>";
         	}else if(count == ${count} -1){
         		var string="<div class='row'>";
@@ -272,7 +305,11 @@ $(function(){
             	string += id[count];
             	string += "'><img src='http://218.150.181.131/poster/";
             	string += id[count];
-            	string += "p.png' width='220' height='200'/></a></div></div></div>";
+            	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+            	string += id[count];
+            	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png'\"/></a></div></div></div>";
             	string+="</div>";
         	} else if(count == ${count} -2){
         		var string="<div class='row'>";
@@ -286,7 +323,11 @@ $(function(){
             	string += id[count];
             	string += "'><img src='http://218.150.181.131/poster/";
             	string += id[count];
-            	string += "p.png' width='220' height='200'/></a></div></div></div>";
+            	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+            	string += id[count];
+            	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png'\"/></a></div></div></div>";
 				count++;
             	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
             	string += name[count];
@@ -298,7 +339,11 @@ $(function(){
             	string += id[count];
             	string += "'><img src='http://218.150.181.131/poster/";
             	string += id[count];
-            	string += "p.png' width='220' height='200'/></a></div></div></div>";
+            	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+            	string += id[count];
+            	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png'\"/></a></div></div></div>";
             	string+="</div>";
         		
         	} else if(count == ${count} -3){
@@ -313,7 +358,11 @@ $(function(){
             	string += id[count];
             	string += "'><img src='http://218.150.181.131/poster/";
             	string += id[count];
-            	string += "p.png' width='220' height='200'/></a></div></div></div>";
+            	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+            	string += id[count];
+            	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png'\"/></a></div></div></div>";
 				count++;
             	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
             	string += name[count];
@@ -325,7 +374,11 @@ $(function(){
             	string += id[count];
             	string += "'><img src='http://218.150.181.131/poster/";
             	string += id[count];
-            	string += "p.png' width='220' height='200'/></a></div></div></div>";
+            	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+            	string += id[count];
+            	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png'\"/></a></div></div></div>";
             	count++;
             	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
             	string += name[count];
@@ -337,7 +390,11 @@ $(function(){
             	string += id[count];
             	string += "'><img src='http://218.150.181.131/poster/";
             	string += id[count];
-            	string += "p.png' width='220' height='200'/></a></div></div></div>";
+            	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+            	string += id[count];
+            	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+            	string += id[count];
+            	string += "p.png'\"/></a></div></div></div>";
             	string+="</div>";
         		
         		} else{
@@ -352,7 +409,11 @@ $(function(){
                 	string += id[count];
                 	string += "'><img src='http://218.150.181.131/poster/";
                 	string += id[count];
-                	string += "p.png' width='220' height='200'/></a></div></div></div>";
+                	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+                	string += id[count];
+                	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+                	string += id[count];
+                	string += "p.png'\"/></a></div></div></div>";
                 	count++;
                 	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
                 	string += name[count];
@@ -364,7 +425,11 @@ $(function(){
                 	string += id[count];
                 	string += "'><img src='http://218.150.181.131/poster/";
                 	string += id[count];
-                	string += "p.png' width='220' height='200'/></a></div></div></div>";
+                	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+                	string += id[count];
+                	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+                	string += id[count];
+                	string += "p.png'\"/></a></div></div></div>";
                 	count++;
                 	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
                 	string += name[count];
@@ -376,7 +441,11 @@ $(function(){
                 	string += id[count];
                 	string += "'><img src='http://218.150.181.131/poster/";
                 	string += id[count];
-                	string += "p.png' width='220' height='200'/></a></div></div></div>";
+                	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+                	string += id[count];
+                	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+                	string += id[count];
+                	string += "p.png'\"/></a></div></div></div>";
                 	count++;
                 	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
                 	string += name[count];
@@ -388,7 +457,11 @@ $(function(){
                 	string += id[count];
                 	string += "'><img src='http://218.150.181.131/poster/";
                 	string += id[count];
-                	string += "p.png' width='220' height='200'/></a></div></div></div>";
+                	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+                	string += id[count];
+                	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
+                	string += id[count];
+                	string += "p.png'\"/></a></div></div></div>";
                 	string+="</div>";
         		}
         	
@@ -408,7 +481,7 @@ $(function(){
 <!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
 
-<body>
+<body >
 <%@include file="../includes/headerMenu.jsp"%>
 <a href="#" class="scrollup">Scroll</a>
 <!-- BEGIN PAGE CONTAINER -->

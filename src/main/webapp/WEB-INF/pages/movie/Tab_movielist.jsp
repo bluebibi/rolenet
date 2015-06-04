@@ -7,8 +7,8 @@ pageEncoding="UTF-8"%>
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-    <meta charset="utf-8"/>
-    <style type="text/css">
+<meta charset="utf-8"/>
+<style type="text/css">
         .Text {
             font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
             font-size: 8pt;
@@ -26,8 +26,8 @@ pageEncoding="UTF-8"%>
             opacity: 0.8;
             /* comment the above 3 line if you don't want transparency*/
         }
-    </style>
-    <script>
+</style>
+<script>
 var agt = navigator.userAgent.toLowerCase();
 var is_major = parseInt(navigator.appVersion);
 var is_minor = parseFloat(navigator.appVersion);
