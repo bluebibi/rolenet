@@ -520,7 +520,7 @@ $(function(){
 		<div class="container" id="haha">
 			<!-- BEGIN PAGE BREADCRUMB -->
 			<ul class="page-breadcrumb breadcrumb hide">
-				<li><a href="#">Home</a><i class="fa fa-circle"></i></li>
+				<li><a href="index.jsp">Home</a><i class="fa fa-circle"></i></li>
 				<li class="active">HOME</li>
 			</ul>
 			<!-- END PAGE BREADCRUMB -->

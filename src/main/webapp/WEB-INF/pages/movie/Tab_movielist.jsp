@@ -330,8 +330,8 @@ function show2(d) {
             <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
             <!-- BEGIN PAGE BREADCRUMB -->
             <ul class="page-breadcrumb breadcrumb">
-                <li><a href="#">Home</a><i class="fa fa-circle"></i></li>
-                <li><a href="table_advanced.html">Movie</a> <i
+                <li><a href="/">Home</a><i class="fa fa-circle"></i></li>
+                <li><a href="Tab_movielist.do">Movie</a> <i
                         class="fa fa-circle"></i></li>
                 <li class="active">Movie list</li>
             </ul>
@@ -442,7 +442,7 @@ function show2(d) {
 <script src="http://218.150.181.131/assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
-<script src="/resources/js/table-advanced.js"></script>
+<script src="/resources/js/table-advanced.js?version=000001"></script>
 <script>
     jQuery(document).ready(function () {
         Metronic.init(); // init metronic core components
