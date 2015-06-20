@@ -33,4 +33,5 @@ public interface MovieListMapper {
 	
 	@Update("UPDATE movies SET hit= hit + 1 where name = #{name}")
 	public void addHitByName(@Param("name") String name);
+	
 }

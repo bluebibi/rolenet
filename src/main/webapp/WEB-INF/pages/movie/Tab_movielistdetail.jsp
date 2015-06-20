@@ -449,7 +449,7 @@ var url = preurl + id + last;
 							</ul>
 						</div>
 						<div class="portlet-body">
-							<div class="tab-content">
+							<div class="tab-content" >
 								<div class="tab-pane active" id="portlet_tab1">
 									${n.synopsis}
 								</div>

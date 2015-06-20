@@ -117,9 +117,9 @@ public class HelloController {
 		movieListService.addHit(id);
 		MovieList movieList = movieListService.selectMovieById(id);
 		model.addAttribute("n", movieList);
-		model.addAttribute("naverRole", charactorsListService.selectBetweenRoleByMovieId(id));
+		model.addAttribute("naverRole", charactorsListService.selectNaverRoleByMovieId(id));
 		model.addAttribute("degreeRole", charactorsListService.selectDegreeRoleByMovieId(id));
-		model.addAttribute("betweenRole", charactorsListService.selectNaverRoleByMovieId(id));
+		model.addAttribute("betweenRole", charactorsListService.selectBetweenRoleByMovieId(id));
 		return "movie/Tab_movielistdetail.jsp";
 	}
 
