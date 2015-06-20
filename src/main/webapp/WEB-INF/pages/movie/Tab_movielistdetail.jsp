@@ -229,13 +229,13 @@ var url = preurl + id + last;
 
     function init() {
 
-       	var posx = 0; // x 좌표값
-    	var posy = 0; // y 좌표값
-        var degree_var, cluster_var, between_var; //degree, cluster, between 값들의 변수
+       	var posx = 0; // x ì¢íê°
+    	var posy = 0; // y ì¢íê°
+        var degree_var, cluster_var, between_var; //degree, cluster, between ê°ë¤ì ë³ì
 
 
-        //addmethod()첫번째파라미터는 함수이름, 두번째 파라미터는 해당 함수정의이다.
-        //neighbors란 노드로들어오거나 나가는 선들을 말한다. 이 edge 들에 대한 정보를 가진 함수를 정의함.
+        //addmethod()ì²«ë²ì§¸íë¼ë¯¸í°ë í¨ìì´ë¦, ëë²ì§¸ íë¼ë¯¸í°ë í´ë¹ í¨ìì ìì´ë¤.
+        //neighborsë ë¸ëë¡ë¤ì´ì¤ê±°ë ëê°ë ì ë¤ì ë§íë¤. ì´ edge ë¤ì ëí ì ë³´ë¥¼ ê°ì§ í¨ìë¥¼ ì ìí¨.
         sigma.classes.graph.addMethod('neighbors', function (nodeId) {
             var k, neighbors = {}, index = this.allNeighborsIndex[nodeId]
                     || {};
@@ -245,15 +245,15 @@ var url = preurl + id + last;
         });
 
 
-        //sigmajs 인스턴스 생성
+        //sigmajs ì¸ì¤í´ì¤ ìì±
         var sigInst = new sigma(document.getElementById('graph-container'));
 
-        //gexf 파일 파싱해서 위에서 만든 시그마인스턴스에 객체내용 집어넣음.
+        //gexf íì¼ íì±í´ì ììì ë§ë  ìê·¸ë§ì¸ì¤í´ì¤ì ê°ì²´ë´ì© ì§ì´ë£ì.
         sigma.parsers.gexf(
         		url
                 , sigInst
                 , function (t) {
-                    //그래프의 색깔을 기존 gexf에 있던 색 그대로 사용함.
+                    //ê·¸ëíì ìê¹ì ê¸°ì¡´ gexfì ìë ì ê·¸ëë¡ ì¬ì©í¨.
                     sigInst.graph.nodes().forEach(
                             function (n) {
                                 n.originalColor = n.color;
@@ -264,18 +264,18 @@ var url = preurl + id + last;
                             });
 
                     sigInst.refresh();
-                    // gexf-parsers.js 안의 메소드 이용법을 잘 모르것음.
+                    // gexf-parsers.js ìì ë©ìë ì´ì©ë²ì ì ëª¨ë¥´ê²ì.
                     //console.log(t.Graph('nodes')._nodes(sigInst));
                 }
         );
 
 
-        //그래프의 초기 셋팅 과정임. 각 속성마다 원하는 내용 지정.
+        //ê·¸ëíì ì´ê¸° ìí ê³¼ì ì. ê° ìì±ë§ë¤ ìíë ë´ì© ì§ì .
         sigInst.settings({
             defaultLabelColor: '#777',
             defaultLabelSize: 12,
-            defaultLabelHoverColor: '#555',  //마우스 호버시 레이블 글자색
-            defaultHoverLabelBGColor: '#fff',  //마우스 호버시 레이블 배경색
+            defaultLabelHoverColor: '#555',  //ë§ì°ì¤ í¸ë²ì ë ì´ë¸ ê¸ìì
+            defaultHoverLabelBGColor: '#fff',  //ë§ì°ì¤ í¸ë²ì ë ì´ë¸ ë°°ê²½ì
             hoverFontStyle: 'bold',
             fontStyle: 'bold',
             labelThreshold: 2,
@@ -290,13 +290,13 @@ var url = preurl + id + last;
         });
 
 
-        //노드 위에 마우스 올라왔을때 정의
+        //ë¸ë ìì ë§ì°ì¤ ì¬ë¼ììë ì ì
         sigInst.bind('overNode', function (e) {
             var nodeId = e.data.node.id, toKeep = sigInst.graph.neighbors(nodeId);
             toKeep[nodeId] = e.data.node;
 
-            //현재 마우스의 위치를 구하는 jquery문
-            //익스플로어 예외처리해야함.
+            //íì¬ ë§ì°ì¤ì ìì¹ë¥¼ êµ¬íë jqueryë¬¸
+            //ìµì¤íë¡ì´ ìì¸ì²ë¦¬í´ì¼í¨.
             function doSomething(e) {
             	
 
@@ -319,7 +319,7 @@ var url = preurl + id + last;
             between_var = e.data.node.attributes.betweenesscentrality;
 
             //console.log(e.data.node.attributes);
-            //console.log("y축 : "+mousePositionY);
+            //console.log("yì¶ : "+mousePositionY);
 
 
             sigInst.graph.nodes().forEach(
@@ -350,7 +350,7 @@ var url = preurl + id + last;
         });
 
 
-        //마우스가 스테이지로 나왔을때 함수 정의
+        //ë§ì°ì¤ê° ì¤íì´ì§ë¡ ëììë í¨ì ì ì
         // When the stage is clicked, we just color each
         // node and edge with its original color.
         sigInst.bind('outNode', function (e) {
@@ -463,24 +463,52 @@ var url = preurl + id + last;
 								<div class="row">
 									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
 										<span class="label label-success uppercase">
-										Revenue: </span>
-										<h3>$1,234,112.20</h3>
+										Role </span>
 									</div>
-									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
-										<span class="label label-info uppercase">
-										Tax: </span>
-										<h3>$134,90.10</h3>
-									</div>
-									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
-										<span class="label label-danger uppercase">
-										Shipment: </span>
-										<h3>$1,134,90.10</h3>
-									</div>
-									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
-										<span class="label label-warning uppercase">
-										Orders: </span>
-										<h3>235090</h3>
-									</div>
+								</div>
+								<br>
+								<div>
+								<table class="table table-striped table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                <th width="10%">Between</th>
+                                <c:forEach var="m" items="${betweenRole}">
+                                <th width="10%">${m.name}</th>
+                                </c:forEach>
+                                </tr>
+                                <tr>
+                                <th width="10%">Degree</th>
+                                <c:forEach var="m" items="${degreeRole}">
+                                <th width="10%">${m.name}</th>
+                                </c:forEach>
+                                </tr>
+                                <tr>
+                                <th width="10%">Naver</th>
+                                <c:forEach var="m" items="${naverRole}">
+                                <th width="10%">${m.name}</th>
+                                </c:forEach>
+                                </tr>
+                                </thead>
+
+                                <%-- <tbody>
+                                <c:forEach var="m" items="${list2}">
+                                    <tr onMouseOver="show(${m.id})" onMouseOut="toolTip()"
+                                        onclick="document.location = 'Tab_movielistdetail?id=${m.id}';">
+                                        <td id="id">${m.id}</td>
+
+                                        <td>${m.name}</td>
+                                        <td>${m.year}</td>
+                                        <td>${m.director}</td>
+                                        <td>${m.spectators}</td>
+                                        <td>${m.diameter}</td>
+                                        <td>${m.pathlength}</td>
+                                        <td>${m.clustering}</td>
+                                        <td>${m.density}</td>
+                                    </tr>
+                                </c:forEach>
+                                </tbody> --%>
+
+                            </table>
 								</div>
 							</div>
 						</div>
