@@ -41,8 +41,8 @@ License: You must have a valid license purchased only from themeforest(the above
 <link rel="shortcut icon" href="favicon.ico"/>
 <style>
 #graph-container {
-	max-width: 515px;
-	height: 370px;
+	max-width: 1015px;
+	height: 570px;
 }
 </style>
 </head>
@@ -160,15 +160,14 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-6">
+				<div>
 					<!-- Begin: life time stats -->
 					<div class="portlet light">
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="icon-bar-chart font-green-sharp"></i>
 								<span class="caption-subject font-green-sharp bold uppercase">Actors-Network</span>
-								<span class="caption-helper">weekly stats...</span>
+								
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -429,14 +428,14 @@ var url = preurl + id + last;
 					</div>
 					<!-- End: life time stats -->
 				</div>
-				<div class="col-md-6">
+				<div>
 					<!-- Begin: life time stats -->
 					<div class="portlet light">
 						<div class="portlet-title tabbable-line">
 							<div class="caption">
 								<i class="icon-share font-red-sunglo"></i>
 								<span class="caption-subject font-red-sunglo bold uppercase">Info.Movie</span>
-								<span class="caption-helper">weekly stats...</span>
+								
 							</div>
 							<ul class="nav nav-tabs">
 								<li>
@@ -515,7 +514,7 @@ var url = preurl + id + last;
 					</div>
 					<!-- End: life time stats -->
 				</div>
-			</div>
+
 			<!-- END PAGE CONTENT INNER -->
 		</div>
 	</div>
