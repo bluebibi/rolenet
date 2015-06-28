@@ -48,8 +48,7 @@ public class HelloController {
 	public String printWelcomez(ModelMap model) {
 		return "movie/test.jsp";
 	}
-	// ��占썲��������������占� �ル��������占썹�깃�占쏙옙��占� ������������ ���������э옙����筌�占썲���������э옙������占�
-	// ���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙����筌�占썲���������э옙������占�
+
 	@RequestMapping(value = "/movietween/addContact.do", method = RequestMethod.POST)
 	public ModelAndView addContact(
 			@ModelAttribute("contact") BoardList boardlist, BindingResult result) {
