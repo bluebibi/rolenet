@@ -176,8 +176,6 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 								<a href="javascript:;" class="reload">
 								</a>
-								<a href="javascript:;" class="remove">
-								</a>
 							</div>
 						</div>
 						<div class="portlet-body">
