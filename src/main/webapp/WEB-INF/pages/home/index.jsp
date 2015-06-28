@@ -208,7 +208,7 @@ $(function(){
 
     function infinityScrollFunction() {
     	
-		if(count < ${count}){
+		if(count < "${count}"){
         //현재문서의 높이를 구함.
         var documentHeight  = $(document).height();
         console.log("documentHeight : " + documentHeight);
@@ -226,8 +226,8 @@ $(function(){
             
         if(scrollHeight == documentHeight) { //문서의 맨끝에 도달했을때 내용 추가 
         	count++;
-        	if(count < ${count})
-        	if(count == ${count} -4){
+        	if(count < "${count}")
+        	if(count == "${count}" -4){
         	var string="<div class='row'>";
         	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
         	string += name[count];
@@ -293,7 +293,7 @@ $(function(){
         	string += id[count];
         	string += "p.png'\"/></a></div></div></div>";
         	string+="</div>";
-        	}else if(count == ${count} -1){
+        	}else if(count == "${count}" -1){
         		var string="<div class='row'>";
             	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
             	string += name[count];
@@ -311,7 +311,7 @@ $(function(){
             	string += id[count];
             	string += "p.png'\"/></a></div></div></div>";
             	string+="</div>";
-        	} else if(count == ${count} -2){
+        	} else if(count == "${count}" -2){
         		var string="<div class='row'>";
             	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
             	string += name[count];
@@ -346,7 +346,7 @@ $(function(){
             	string += "p.png'\"/></a></div></div></div>";
             	string+="</div>";
         		
-        	} else if(count == ${count} -3){
+        	} else if(count == "${count}" -3){
         		var string="<div class='row'>";
             	string +="<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
             	string += name[count];

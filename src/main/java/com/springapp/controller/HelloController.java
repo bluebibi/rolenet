@@ -48,7 +48,7 @@ public class HelloController {
 	public String printWelcomez(ModelMap model) {
 		return "movie/test.jsp";
 	}
-
+	
 	@RequestMapping(value = "/movietween/addContact.do", method = RequestMethod.POST)
 	public ModelAndView addContact(
 			@ModelAttribute("contact") BoardList boardlist, BindingResult result) {
