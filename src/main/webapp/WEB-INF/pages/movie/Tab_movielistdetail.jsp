@@ -51,6 +51,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
 <body>
+
 <!-- BEGIN HEADER -->
 <%@include file="../includes/headerMenu.jsp"%>
 <!-- END HEADER -->
@@ -174,7 +175,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 								<a href="#portlet-config" data-toggle="modal" class="config">
 								</a>
-								<a href="javascript:;" class="reload">
+								<a onclick="reloading()" class="reload">
 								</a>
 							</div>
 						</div>
@@ -223,6 +224,7 @@ var id = ${n.id};
 var preurl = 'http://218.150.181.131/assets/gexf/'
 var last = '.gexf';
 var url = preurl + id + last;
+var sigInst;
 
     function init() {
 
@@ -243,7 +245,7 @@ var url = preurl + id + last;
 
 
         //sigmajs ì¸ì¤í´ì¤ ìì±
-        var sigInst = new sigma(document.getElementById('graph-container'));
+        sigInst = new sigma(document.getElementById('graph-container'));
 
         //gexf íì¼ íì±í´ì ììì ë§ë  ìê·¸ë§ì¸ì¤í´ì¤ì ê°ì²´ë´ì© ì§ì´ë£ì.
         sigma.parsers.gexf(
@@ -283,7 +285,10 @@ var url = preurl + id + last;
             maxEdgeSize: 3,
             maxRatio: 1,
             mouseEnabled: true,
-            zoomingRatio: 1.0 //do not mouse wheel zoom -->1.0
+            doubleClickEnabled: false,
+            mouseInertiaDuration: 1000,
+            mouseInertiaRatio: 10,
+            zoomingRatio: 1.3 //do not mouse wheel zoom -->1.0
         });
 
 
@@ -408,8 +413,7 @@ var url = preurl + id + last;
 
             sigInst.bind('overNode', showNodeInfo).bind('outNode', hideNodeInfo).refresh();
         })();
-
-
+        
     }
 
     if (document.addEventListener) {
@@ -420,7 +424,33 @@ var url = preurl + id + last;
     $('#graph-container').css('background-color', '#FFFFD7');
     $('#graph-container').css('background-color', 'white');
     $('#graph-container').css('background-color', '#FFFFFF');
+    
+
+    function reloading(){
+       	console.log("dsfadsf : "+typeof sigInst);
+       	sigInst.settings({
+            defaultLabelColor: '#777',
+            defaultLabelSize: 12,
+            defaultLabelHoverColor: '#555',  //ë§ì°ì¤ í¸ë²ì ë ì´ë¸ ê¸ìì
+            defaultHoverLabelBGColor: '#fff',  //ë§ì°ì¤ í¸ë²ì ë ì´ë¸ ë°°ê²½ì
+            hoverFontStyle: 'bold',
+            fontStyle: 'bold',
+            labelThreshold: 2,
+            defaultEdgeType: 'straight',
+            minNodeSize: 1,
+            maxNodeSize: 10,
+            minEdgeSize: 1,
+            maxEdgeSize: 3,
+            maxRatio: 1,
+            mouseEnabled: true,
+            zoomingRatio: 1.0 //do not mouse wheel zoom -->1.0
+        });
+       	sigInst.refresh();
+    }
+
+   
 </script>
+
 
 						</div>
 					</div>

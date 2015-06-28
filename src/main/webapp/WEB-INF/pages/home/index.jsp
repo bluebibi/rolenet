@@ -21,9 +21,7 @@
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
-<link href=http://218.150.181.131/assets/global/scroll/js/image.css
-	"
-			rel="stylesheet" type="text/css">
+<link href="http://218.150.181.131/assets/global/scroll/js/image.css" rel="stylesheet" type="text/css">
 <link
 	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all"
 	rel="stylesheet" type="text/css">
@@ -146,10 +144,11 @@ ul, ol {
 	display: none;
 	text-indent: -9999px;
 	background:
-		url('http://218.150.181.131/assets/global/scrool/js/top.png')
+		url('http://218.150.181.131/assets/global/scroll/js/top.png')
 		no-repeat;
 }
 </style>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script>
 	$(document).ready(function() {
 		$(window).scroll(function() {
@@ -167,7 +166,7 @@ ul, ol {
 		});
 	});
 </script>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
 <script>
 	$(function() {
 
