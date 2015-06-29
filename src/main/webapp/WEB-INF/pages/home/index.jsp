@@ -187,6 +187,7 @@ ul, ol {
 		string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 		string += name[count];
 		string += "</span><span class='caption-helper'>";
+		string += "<br> &nbsp;";
 		string += director[count];
 		string += " | ";
 		string += year[count];
@@ -203,6 +204,7 @@ ul, ol {
 		string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 		string += name[count];
 		string += "</span><span class='caption-helper'>";
+		string += "<br> &nbsp;";
 		string += director[count];
 		string += " | ";
 		string += year[count];
@@ -219,6 +221,7 @@ ul, ol {
 		string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 		string += name[count];
 		string += "</span><span class='caption-helper'>";
+		string += "<br> &nbsp;";
 		string += director[count];
 		string += " | ";
 		string += year[count];
@@ -235,6 +238,7 @@ ul, ol {
 		string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 		string += name[count];
 		string += "</span><span class='caption-helper'>";
+		string += "<br> &nbsp;";
 		string += director[count];
 		string += " | ";
 		string += year[count];
@@ -279,6 +283,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -295,6 +300,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -311,6 +317,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -327,6 +334,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -345,6 +353,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -363,6 +372,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -379,6 +389,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -398,6 +409,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -414,6 +426,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -430,6 +443,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -449,6 +463,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -465,6 +480,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -481,6 +497,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];
@@ -497,6 +514,7 @@ ul, ol {
 							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
 							string += name[count];
 							string += "</span><span class='caption-helper'>";
+							string += "<br> &nbsp;";
 							string += director[count];
 							string += " | ";
 							string += year[count];

@@ -388,6 +388,7 @@ var sigInst;
                 ).append(
                         attributesToString()
                 ).css({
+							'font' : 'Verdana',
                             'display': 'inline-block',
                             'border-radius': 2,
                             'padding': 4,
@@ -479,7 +480,7 @@ var sigInst;
 						<div class="portlet-body">
 							<div class="tab-content" >
 								<div class="tab-pane active" id="portlet_tab1">
-									${n.synopsis}
+									<font face=Verdana>&nbsp;${n.synopsis}</font>
 								</div>
 								<div class="tab-pane" id="portlet_tab2">
 									<div id="statistics_2" class="chart">
@@ -500,19 +501,19 @@ var sigInst;
                                 <tr>
                                 <th width="10%">Between</th>
                                 <c:forEach var="m" items="${betweenRole}">
-                                <th width="10%">${m.name}</th>
+                                <th width="5%">${m.name}</th>
                                 </c:forEach>
                                 </tr>
                                 <tr>
                                 <th width="10%">Degree</th>
                                 <c:forEach var="m" items="${degreeRole}">
-                                <th width="10%">${m.name}</th>
+                                <th width="5%">${m.name}</th>
                                 </c:forEach>
                                 </tr>
                                 <tr>
                                 <th width="10%">Naver</th>
                                 <c:forEach var="m" items="${naverRole}">
-                                <th width="10%">${m.name}</th>
+                                <th width="5%" ><font color="red">${m.name}</font></th>
                                 </c:forEach>
                                 </tr>
                                 </thead>

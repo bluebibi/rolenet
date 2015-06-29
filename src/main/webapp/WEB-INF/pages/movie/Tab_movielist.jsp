@@ -449,7 +449,8 @@
 <script type="text/javascript"
         src="http://218.150.181.131/assets/global/plugins/datatables/extensions/Scroller/js/dataTables.scroller.min.js"></script>
 <script type="text/javascript"
-        src="http://218.150.181.131/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+        src="http://218.150.181.131/assets/global/plugi
+        ns/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="http://218.150.181.131/assets/global/scripts/metronic.js" type="text/javascript"></script>
