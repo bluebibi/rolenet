@@ -74,6 +74,9 @@ public class HelloController {
 		MovieList movieList = movieListService.selectMovieByName(request.getParameter("query"));
 		System.out.println(request.getParameter("query"));
 		model.addAttribute("n", movieList);
+		model.addAttribute("naverRole", charactorsListService.selectNaverRoleByMovieId(movieList.getId()));
+		model.addAttribute("degreeRole", charactorsListService.selectDegreeRoleByMovieId(movieList.getId()));
+		model.addAttribute("betweenRole", charactorsListService.selectBetweenRoleByMovieId(movieList.getId()));
 		return "movie/Tab_movielistdetail.jsp";
 	}
 
