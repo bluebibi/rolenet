@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-<meta charset="utf-8"/>
-<style type="text/css">
+    <meta charset="utf-8"/>
+    <style type="text/css">
         .Text {
             font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
             font-size: 8pt;
@@ -26,106 +26,112 @@ pageEncoding="UTF-8"%>
             opacity: 0.8;
             /* comment the above 3 line if you don't want transparency*/
         }
-</style>
-<script>
-var agt = navigator.userAgent.toLowerCase();
-var is_major = parseInt(navigator.appVersion);
-var is_minor = parseFloat(navigator.appVersion);
+    </style>
+    <script>
+        var agt = navigator.userAgent.toLowerCase();
+        var is_major = parseInt(navigator.appVersion);
+        var is_minor = parseFloat(navigator.appVersion);
 
-var is_nav = ((agt.indexOf('mozilla') != -1)
-&& (agt.indexOf('spoofer') == -1)
-&& (agt.indexOf('compatible') == -1)
-&& (agt.indexOf('opera') == -1) && (agt.indexOf('webtv') == -1) && (agt
-        .indexOf('hotjava') == -1));
-var is_nav4 = (is_nav && (is_major == 4));
-var is_nav6 = (is_nav && (is_major == 5));
-var is_nav6up = (is_nav && (is_major >= 5));
-var is_ie = ((agt.indexOf("msie") != -1) && (agt.indexOf("opera") == -1));
+        var is_nav = ((agt.indexOf('mozilla') != -1)
+        && (agt.indexOf('spoofer') == -1)
+        && (agt.indexOf('compatible') == -1)
+        && (agt.indexOf('opera') == -1) && (agt.indexOf('webtv') == -1) && (agt
+                .indexOf('hotjava') == -1));
+        var is_nav4 = (is_nav && (is_major == 4));
+        var is_nav6 = (is_nav && (is_major == 5));
+        var is_nav6up = (is_nav && (is_major >= 5));
+        var is_ie = ((agt.indexOf("msie") != -1) && (agt.indexOf("opera") == -1));
 
-//tooltip Position
-var offsetX = 0;
-var offsetY = 5;
-var opacity = 100;
-var toolTipSTYLE;
+        //tooltip Position
+        var offsetX = 0;
+        var offsetY = 5;
+        var opacity = 100;
+        var toolTipSTYLE;
 
-function initToolTips() {
-    if (document.getElementById) {
-        toolTipSTYLE = document.getElementById("toolTipLayer").style;
-    }
-    if (is_ie || is_nav6up) {
-        toolTipSTYLE.visibility = "visible";
-        toolTipSTYLE.display = "none";
-        document.onmousemove = moveToMousePos;
-    }
-}
-function moveToMousePos(e) {
-    if (!is_ie) {
-        x = e.pageX;
-        y = e.pageY;
-    } else {
-        x = event.x + document.body.scrollLeft;
-        y = event.y + document.body.scrollTop;
-    }
+        function initToolTips() {
+            if (document.getElementById) {
+                toolTipSTYLE = document.getElementById("toolTipLayer").style;
+            }
+            if (is_ie || is_nav6up) {
+                toolTipSTYLE.visibility = "visible";
+                toolTipSTYLE.display = "none";
+                document.onmousemove = moveToMousePos;
+            }
+        }
+        function moveToMousePos(e) {
+            if (!is_ie) {
+                x = e.pageX;
+                y = e.pageY;
+            } else {
+                x = event.x + document.body.scrollLeft;
+                y = event.y + document.body.scrollTop;
+            }
 
-    toolTipSTYLE.left = x + offsetX + 'px';
-    toolTipSTYLE.top = y + offsetY + 'px';
-    return true;
-}
-
-function toolTip(msg, fg, bg) {
-	
-    if (toolTip.arguments.length < 1) // if no arguments are passed then hide the tootip
-    {
-        if (is_nav4)
-            toolTipSTYLE.visibility = "hidden";
-        else
-            toolTipSTYLE.display = "none";
-    } else // show
-    {
-        if (!fg)
-            fg = "#777777";
-        if (!bg)
-            bg = "#ffffe5";
-        var content = '<table border="0" cellspacing="0" cellpadding="0" class="toolTip"><tr><td bgcolor="' + fg + '">'
-                + '<table border="0" cellspacing="1" cellpadding="0"<tr><td bgcolor="' + bg + '">'
-                + '<font face="sans-serif" color="' + fg + '" size="-2">'
-                + msg + '</font></td></tr></table>' + '</td></tr></table>';
-        if (is_nav4) {
-            toolTipSTYLE.document.write(content);
-            toolTipSTYLE.document.close();
-            toolTipSTYLE.visibility = "visible";
+            toolTipSTYLE.left = x + offsetX + 'px';
+            toolTipSTYLE.top = y + offsetY + 'px';
+            return true;
         }
 
-        else if (is_ie || is_nav6up) {
-            document.getElementById("toolTipLayer").innerHTML = content;
-            toolTipSTYLE.display = 'block'
+        function toolTip(msg, fg, bg) {
+
+            if (toolTip.arguments.length < 1) // if no arguments are passed then hide the tootip
+            {
+                if (is_nav4)
+                    toolTipSTYLE.visibility = "hidden";
+                else
+                    toolTipSTYLE.display = "none";
+            } else // show
+            {
+                if (!fg)
+                    fg = "#777777";
+                if (!bg)
+                    bg = "#ffffe5";
+                var content = '<table border="0" cellspacing="0" cellpadding="0" class="toolTip"><tr><td bgcolor="' + fg + '">'
+                        + '<table border="0" cellspacing="1" cellpadding="0"<tr><td bgcolor="' + bg + '">'
+                        + '<font face="sans-serif" color="' + fg + '" size="-2">'
+                        + msg + '</font></td></tr></table>' + '</td></tr></table>';
+                if (is_nav4) {
+                    toolTipSTYLE.document.write(content);
+                    toolTipSTYLE.document.close();
+                    toolTipSTYLE.visibility = "visible";
+                }
+
+                else if (is_ie || is_nav6up) {
+                    document.getElementById("toolTipLayer").innerHTML = content;
+                    toolTipSTYLE.display = 'block'
+                }
+            }
+
         }
-    }
 
-}
+        function show(d) {
+            /* you have mis placed the following 4 lines elsewhere inside the toolTip function */
+            s = '<table width="20%" cellspacing="2" cellpadding="0" border="0">';
+            s += '<tr><td><img src="http://218.150.181.131/assets/img/gephi/';
+            s += d;
+            s += '.png" width="200" height="200" border="0"/></td></tr>';
+            s += '</table>'
 
-function show(d) {
-    /* you have mis placed the following 4 lines elsewhere inside the toolTip function */
-    s = '<table width="20%" cellspacing="2" cellpadding="0" border="0">';
-    s += '<tr><td><img src="http://218.150.181.131/assets/img/gephi/';
-    s += d;
-    s += '.png" width="200" height="200" border="0"/></td></tr>';
-    s += '</table>'
+            toolTip(s)
+        }
+        function show2(d) {
+            /* you have mis placed the following 4 lines elsewhere inside the toolTip function */
+            s = '<table width="20%" cellspacing="2" cellpadding="0" border="0">';
+            s += '<tr><td><img src="http://218.150.181.131/Explain/';
+            s += d;
+            s += '.PNG"width="300" height="300" border="0"/>';
+            s += '</td></tr>';
+            s += '</table>';
 
-    toolTip(s)
-}
-function show2(d) {
-    /* you have mis placed the following 4 lines elsewhere inside the toolTip function */
-    s = '<table width="20%" cellspacing="2" cellpadding="0" border="0">';
-    s += '<tr><td><img src="http://218.150.181.131/Explain/';
-    s += d;
-    s += '.PNG"width="300" height="300" border="0"/>';
-    s += '</td></tr>';
-    s += '</table>';
+            toolTip(s)
+        }
 
-    toolTip(s)
-}
-</script>
+
+        function openPopup(url) {
+            window.open(url, "open_about", "top=100 left=100 width=640 height=400")
+        }
+    </script>
+
     <title>Movie</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -169,6 +175,7 @@ function show2(d) {
     <link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <!-- END HEAD -->
+
 <!-- BEGIN BODY -->
 <body onload="initToolTips();">
 <%@include file="../includes/headerMenu.jsp"%>
@@ -330,8 +337,8 @@ function show2(d) {
             <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
             <!-- BEGIN PAGE BREADCRUMB -->
             <ul class="page-breadcrumb breadcrumb">
-                <li><a href="/">Home</a><i class="fa fa-circle"></i></li>
-                <li><a href="Tab_movielist.do">Movie</a> <i
+                <li><a href="#">Home</a><i class="fa fa-circle"></i></li>
+                <li><a href="table_advanced.html">Movie</a> <i
                         class="fa fa-circle"></i></li>
                 <li class="active">Movie list</li>
             </ul>
@@ -348,28 +355,28 @@ function show2(d) {
 										List</span>
                             </div>
                             <div class="actions btn-set">
-								<div class="btn-group">
-									<a class="btn green-haze btn-circle" href="javascript:;" data-toggle="dropdown">
-									<!--<i class="fa fa-check-circle"></i>-->
-									 Columns <i class="fa fa-angle-down"></i>
-									</a>
-									<ul class="dropdown-menu pull-right" id="sample_4_column_toggler">
+                                <div class="btn-group">
+                                    <a class="btn green-haze btn-circle" href="javascript:;" data-toggle="dropdown">
+                                        <!--<i class="fa fa-check-circle"></i>-->
+                                        Columns <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right" id="sample_4_column_toggler">
 
-										<li>
-											<label><input type="checkbox" checked data-column="6">diameter</label>
-										</li>
-										<li>
-											<label><input type="checkbox" checked data-column="7">pathlength</label>
-										</li>
-										<li>
-											<label><input type="checkbox" checked data-column="8">clustering</label>
-										</li>
-										<li>
-											<label><input type="checkbox" checked data-column="9">density</label>
-										</li>
-									</ul>
-								</div>
-							</div>
+                                        <li>
+                                            <label><input type="checkbox" checked data-column="6">diameter</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" checked data-column="7">pathlength</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" checked data-column="8">clustering</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="checkbox" checked data-column="9">density</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
 
 
@@ -384,10 +391,16 @@ function show2(d) {
                                     <th width="10%">연도</th>
                                     <th width="10%">감독</th>
                                     <th width="10%">관객수</th>
-                                    <th width="10%" onMouseOver="show2(2)" onMouseOut="toolTip()">diameter</th>
-                                    <th width="10%" onMouseOver="show2(3)" onMouseOut="toolTip()">pathlength</th>
-                                    <th width="10%" onMouseOver="show2(4)" onMouseOut="toolTip()">clustering</th>
-                                    <th width="10%" onMouseOver="show2(5)" onMouseOut="toolTip()">density</th>
+                                    <th width="10%" onMouseOver="openPopup('http://218.150.181.131/Explain/2.PNG')"
+                                        onMouseOut="toolTip()" onMouseClick="">diameter</th>
+                                    <th width="10%" onMouseOver="openPopup('http://218.150.181.131/Explain/3.PNG')"
+                                        onMouseOut="toolTip()" onMouseClick="">pathlength</th>
+                                    <th width="10%" onMouseOver="openPopup('http://218.150.181.131/Explain/4.PNG')"
+                                        onMouseOut="toolTip()" onMouseClick="">clustering</th>
+                                    <th width="10%" onMouseOver="openPopup('http://218.150.181.131/Explain/5.PNG')"
+                                        onMouseOut="toolTip()" onMouseClick="">density</th>
+
+                                    <!--<th width="10%" onMouseOver="show2(5)" onMouseOut="toolTip()">density</th>-->
                                 </tr>
                                 </thead>
 
@@ -442,7 +455,7 @@ function show2(d) {
 <script src="http://218.150.181.131/assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
-<script src="/resources/js/table-advanced.js?version=000001"></script>
+<script src="/resources/js/table-advanced.js"></script>
 <script>
     jQuery(document).ready(function () {
         Metronic.init(); // init metronic core components
