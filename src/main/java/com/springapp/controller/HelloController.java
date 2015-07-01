@@ -108,6 +108,15 @@ public class HelloController {
 		return "movie/Tab_movielist.jsp";
 	}
 	
+	@RequestMapping(value = "/Tab_compare", method = RequestMethod.GET)
+	public String MovieCompare(ModelMap model, int movie1) {
+		System.out.println(movie1);
+		MovieList movieList = movieListService.selectMovieById(movie1);
+		model.addAttribute("movie1",movieList);
+		model.addAttribute("list3", movieListService.list());
+		return "movie/Tab_compare.jsp";
+	}
+	
 	@RequestMapping(value = "/movielist2/**")
 	public void MovieList2(ModelMap model) {
 		System.out.println("!!!!!!");

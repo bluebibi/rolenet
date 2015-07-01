@@ -45,6 +45,11 @@ License: You must have a valid license purchased only from themeforest(the above
 	height: 570px;
 }
 </style>
+<script>
+function openPopup(url) {
+    window.open(url, "open_about", "top=100 left=100 width=640 height=400")
+}
+</script>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -168,7 +173,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="caption">
 								<i class="icon-bar-chart font-green-sharp"></i>
 								<span class="caption-subject font-green-sharp bold uppercase">Actors-Network</span>
-								
+								&nbsp;
+								<button class="btn default purple-stripe" onclick="openPopup('http://localhost:8080/Tab_compare?movie1=${n.id}')">Compare </button>
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -176,7 +182,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<a href="#portlet-config" data-toggle="modal" class="config">
 								</a>
 								<a onclick="reloading()" class="reload">
-								</a>
+ㅁ								</a>
 							</div>
 						</div>
 						<div class="portlet-body">
