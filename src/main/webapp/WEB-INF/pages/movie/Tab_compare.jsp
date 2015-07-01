@@ -67,7 +67,11 @@
 <script>
 function clearBox()
 {
+	var a =  ${movie1.clustering};
+	alert(a);
 	$( ".list" ).empty();
+	var string = "<div>haha</div>";
+	$(string).appendTo(".list");
 }
 </script>
 </head>
