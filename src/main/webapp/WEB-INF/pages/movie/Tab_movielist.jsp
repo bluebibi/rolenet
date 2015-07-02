@@ -338,7 +338,7 @@
             <!-- BEGIN PAGE BREADCRUMB -->
             <ul class="page-breadcrumb breadcrumb">
                 <li><a href="#">Home</a><i class="fa fa-circle"></i></li>
-                <li><a href="table_advanced.html">Movie</a> <i
+                <li>Movie <i
                         class="fa fa-circle"></i></li>
                 <li class="active">Movie list</li>
             </ul>
@@ -391,7 +391,11 @@
                                     <th width="10%">연도</th>
                                     <th width="10%">감독</th>
                                     <th width="10%">관객수</th>
+<<<<<<< HEAD
                                     <th width="10%" onclick="openPopup('http://218.150.181.131/Explain/2.PNG')"
+=======
+                                   <th width="10%" onMouseOver="openPopup('http://218.150.181.131/Explain/2.PNG')"
+>>>>>>> fecebdae39813e31fdb8ac2a8a338e3a790ec551
                                         onMouseOut="toolTip()" onMouseClick="">diameter</th>
                                     <th width="10%" onclick="openPopup('http://218.150.181.131/Explain/3.PNG')"
                                         onMouseOut="toolTip()" onMouseClick="">pathlength</th>
