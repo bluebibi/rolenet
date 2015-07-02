@@ -60,7 +60,7 @@
                                                     <h3>Director</h3>
                                                 </li>
                                                 <li>
-                                                    <a href="layout_click_dropdowns.html" class="iconify">
+                                                    <a href="/Tab_Director" class="iconify">
                                                         <i class="icon-speech"></i>
                                                         A - D</a>
                                                 </li>

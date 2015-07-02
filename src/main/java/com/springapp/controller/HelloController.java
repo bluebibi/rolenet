@@ -168,4 +168,9 @@ public class HelloController {
 	public String Explain(ModelMap model) {
 		return "movie/Tab_Explain.jsp";
 	}
+
+	@RequestMapping(value = "/Tab_Director")
+	public String Director(ModelMap model) {
+		return "movie/Tab_Director.jsp";
+	}
 }
