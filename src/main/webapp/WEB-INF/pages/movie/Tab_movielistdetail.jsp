@@ -220,7 +220,7 @@ License: You must have a valid license purchased only from themeforest(the above
             defaultEdgeType: 'straight'
         }).graphProperties({
             minNodeSize: 1,
-            maxNodeSize: 6,
+            maxNodeSize: 8,
             minEdgeSize: 1,
             maxEdgeSize: 2
         }).mouseProperties({
