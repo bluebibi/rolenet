@@ -14,10 +14,10 @@
 <meta charset="utf-8" />
 
 <title>Movietween | LINK 9th | Koreatech</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="width=device-width, initial-scale=1" name="viewport">
-<meta content="" name="description">
-<meta content="" name="author">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
@@ -64,8 +64,9 @@
 	rel="stylesheet" type="text/css">
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico">
+<script src="http://218.150.181.131/sigma.js-1.0.3/jquery-2.1.1.min.js"></script>
 <script>
-function clearBox(year,spectators,diameter,pathlength,clustering,density)
+function clearBox(id,year,spectators,diameter,pathlength,clustering,density)
 {
 	var name = new Array();
 	var director = new Array();
@@ -73,13 +74,20 @@ function clearBox(year,spectators,diameter,pathlength,clustering,density)
 	//origin movie info
 	name.push("${movie1.name}");
 	director.push("${movie1.director}");
-	
+	var hohoho = $("."+ id).eq(0).html();
+	var director2 = $("."+id).eq(1).html();
+	console.log("hohoho : "+hohoho);
 
 	$( ".list" ).empty();
 	var string = "<div class='portlet-body'>";
 	string += "<table class='table table-striped table-bordered table-hover'>";
-	string += "<thead><tr><th></th><th>선택된 영화</th><th>7번방의선물</th></tr></thead>";
-	string += "<tbody><tr><th>감독</th><th>호호";
+	string += "<thead><tr><th></th><th>";
+	string += hohoho;
+	string += "</th><th>";
+	string += name[0];
+	string += "</th></tr></thead>";
+	string += "<tbody><tr><th>감독</th><th>";
+	string += director2
 	string += "</th><th>";
 	string += director[0];
 	string += "</th></tr>";
@@ -116,9 +124,23 @@ function clearBox(year,spectators,diameter,pathlength,clustering,density)
 	string += "</th><th>";
 	string += ${movie1.density};
 	string += "</th></tr>";
+	string += "<br><button class='btn default purple-stripe' onclick='compare()')'>Compare </button>";
 	$(string).appendTo(".list");
+};
+function compare(){
+	$( ".list" ).empty();
+	var string = "<table class='table table-striped table-bordered table-hover'>";
+	string += "<thead><tr><th width='5%'>No.</th><th width='10%'>영화</th><th width='10%'>연도</th><th width='10%'>감독</th><th>관객수</th><th>diameter</th><th>pathlength</th><th>clustering</th><th>density</th></tr></thead><tbody>";
+	string += "<c:forEach var='m' items='${list3}'>";
+	string += "<tr onclick='clearBox(${m.id},${m.year},${m.spectators},${m.diameter},${m.pathlength},${m.clustering},${m.density})'>";
+	string += "<td>${m.id}</td><td class='${m.id}'>${m.name}</td><td>${m.year}</td><td class='${m.id}'>${m.director}</td><td>${m.spectators}</td>";
+    string += "<td>${m.diameter}</td>";
+    string += "<td>${m.pathlength}</td>";
+    string += "<td>${m.clustering}</td><td>${m.density}</td></tr></c:forEach></tbody></table>";
+    $(string).appendTo(".list");
 }
 </script>
+
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -147,11 +169,11 @@ function clearBox(year,spectators,diameter,pathlength,clustering,density)
 				</thead>
 				<tbody>
                 	<c:forEach var="m" items="${list3}">
-                    	<tr onclick="clearBox(${m.year},${m.spectators},${m.diameter},${m.pathlength},${m.clustering},${m.density})">
+                    	<tr onclick="clearBox(${m.id},${m.year},${m.spectators},${m.diameter},${m.pathlength},${m.clustering},${m.density})">
                         	<td>${m.id}</td>
-                        	<td>${m.name}</td>
+                        	<td class="${m.id}">${m.name}</td>
                             <td>${m.year}</td>
-                            <td>${m.director}</td>
+                            <td class="${m.id}">${m.director}</td>
                             <td>${m.spectators}</td>
                             <td>${m.diameter}</td>
                             <td>${m.pathlength}</td>
@@ -166,6 +188,8 @@ function clearBox(year,spectators,diameter,pathlength,clustering,density)
 	<!-- BEGIN JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) -->
 <%@include file="../includes/footer.jsp"%>
 	<!-- END PAGE LEVEL PLUGINS -->
+	
+	
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 	<script src="http://218.150.181.131/assets/global/scripts/metronic.js"
 		type="text/javascript"></script>
@@ -190,6 +214,7 @@ function clearBox(year,spectators,diameter,pathlength,clustering,density)
 		src="http://218.150.181.131/assets/global/scroll/js/jquery.scrollUp.min.js"
 		type="text/javascript"></script>
 	<!-- END PAGE LEVEL SCRIPTS -->
+
 	<script type="text/javascript">
 	jQuery(document).ready(function() {
 		Metronic.init(); // init metronic core componets
