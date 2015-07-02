@@ -120,10 +120,15 @@ ul, ol {
 	right: 20px;
 }
 
-#container_jang {
-	max-width: 510px;
-	height: 280px;
-	margin: auto;
+.sigma-parent {
+	position: relative;
+	height: 100%;
+}
+
+.sigma-expand {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 
 #head-back {
@@ -676,324 +681,264 @@ ul, ol {
 									<div style="height: 260px">
 										<!-- 자리자리자리-->
 										<!-- BEGIN GRAPH -->
-										<div id="container_jang"></div>
-										<script src="/js/sigmajs/jquery-2.1.1.min.js"></script>
-										<!-- START SIGMA IMPORTS -->
+										<div class="sigma-parent">
+											<div class="sigma-expand" id="sigma-jang"></div>
+										</div>
 										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/sigma.core.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/conrad.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/utils/sigma.utils.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/utils/sigma.polyfills.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/sigma.settings.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/classes/sigma.classes.dispatcher.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/classes/sigma.classes.configurable.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/classes/sigma.classes.graph.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/classes/sigma.classes.camera.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/classes/sigma.classes.quad.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/captors/sigma.captors.mouse.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/captors/sigma.captors.touch.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/sigma.renderers.canvas.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/sigma.renderers.webgl.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/sigma.renderers.def.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/webgl/sigma.webgl.nodes.def.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/webgl/sigma.webgl.nodes.fast.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/webgl/sigma.webgl.edges.def.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/webgl/sigma.webgl.edges.fast.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/webgl/sigma.webgl.edges.arrow.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/canvas/sigma.canvas.labels.def.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/canvas/sigma.canvas.hovers.def.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/canvas/sigma.canvas.nodes.def.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/canvas/sigma.canvas.edges.def.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/canvas/sigma.canvas.edges.curve.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/canvas/sigma.canvas.edges.arrow.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/middlewares/sigma.middlewares.rescale.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/middlewares/sigma.middlewares.copy.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/misc/sigma.misc.animation.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/misc/sigma.misc.bindEvents.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/src/misc/sigma.misc.drawHovers.js"></script>
-										<!-- END SIGMA IMPORTS -->
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/gexf-parser.js"></script>
-										<script
-											src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/sigma.parsers.gexf.js"></script>
+								src="http://218.150.181.131/sigmajsGraph/jquery-2.1.1.min.js"></script>
+							<script src="http://218.150.181.131/sigmajsGraph/sigma.min.js"></script>
+							<script src="http://218.150.181.131/sigmajsGraph/parseGexf.js"></script>
+							<script src="http://218.150.181.131/sigmajsGraph/scroll.min.js"></script>
 										<script>
-											var id = ${hit.id}
-											var preurl = 'http://218.150.181.131/assets/gexf/'
-											var last = '.gexf';
-											var url = preurl + id + last;
+										var id=${hit.id};
+										console.log("id : "+id);
+										var url_prefix='http://218.150.181.131/assets/gexf/';
+										var url_suffix='.gexf';
+										var completeURL = url_prefix+id+url_suffix;
 
-											function init() {
+									    function init() {
 
-												var posx = 0;
-												var posy = 0;
-												var degree_var, cluster_var, between_var;
+									        var sigInst = sigma.init(document.getElementById('sigma-jang')).drawingProperties({
+									            defaultLabelColor: '#777',
+									            defaultLabelSize: 12,
+									            defaultLabelBGColor: '#777',
+									            defaultLabelHoverColor: '#555',
+									            labelThreshold: 2,
+									            defaultEdgeType: 'straight'
+									        }).graphProperties({
+									            minNodeSize: 1,
+									            maxNodeSize: 8,
+									            minEdgeSize: 1,
+									            maxEdgeSize: 2
+									        }).mouseProperties({
+									            maxRatio: 1,
+									            mouseEnabled: false
+									        });
 
-												sigma.classes.graph
-														.addMethod(
-																'neighbors',
-																function(nodeId) {
-																	var k, neighbors = {}, index = this.allNeighborsIndex[nodeId]
-																			|| {};
-																	for (k in index)
-																		neighbors[k] = this.nodesIndex[k];
-																	return neighbors;
-																});
 
-												var sigInst = new sigma(
-														document
-																.getElementById('container_jang'));
+									        sigInst.parseGexf(completeURL);
 
-												sigma.parsers
-														.gexf(
-																url,
-																sigInst,
-																function(t) {
-																	sigInst.graph
-																			.nodes()
-																			.forEach(
-																					function(
-																							n) {
-																						n.originalColor = n.color;
-																					});
-																	sigInst.graph
-																			.edges()
-																			.forEach(
-																					function(
-																							e) {
-																						e.originalColor = e.color;
-																					});
+									        // Bind events :
+									        sigInst.bind('overnodes',function(event){
+									            var nodes = event.content;
+									            var neighbors = {};
+									            sigInst.iterEdges(function(e){
+									                if(nodes.indexOf(e.source)>=0 || nodes.indexOf(e.target)>=0){
+									                    neighbors[e.source] = 1;
+									                    neighbors[e.target] = 1;
+									                }
+									            }).iterNodes(function(n){
+									                if(!neighbors[n.id]){
+									                    n.hidden = 1;
+									                }else{
+									                    n.hidden = 0;
+									                }
+									            }).draw(2,2,2);
+									        }).bind('outnodes',function(){
+									            sigInst.iterEdges(function(e){
+									                e.hidden = 0;
+									            }).iterNodes(function(n){
+									                n.hidden = 0;
+									            }).draw(2,2,2);
+									        });
 
-																	sigInst
-																			.refresh();
-																	//console.log(t.Graph('nodes')._nodes(sigInst));
-																});
+									        (function(){
 
-												sigInst
-														.settings({
-															defaultLabelColor : '#777',
-															defaultLabelSize : 12,
-															defaultLabelHoverColor : '#555',
-															defaultHoverLabelBGColor : '#fff',
-															hoverFontStyle : 'bold',
-															fontStyle : 'bold',
-															labelThreshold : 2,
-															defaultEdgeType : 'straight',
-															minNodeSize : 1,
-															maxNodeSize : 10,
-															minEdgeSize : 1,
-															maxEdgeSize : 3,
-															maxRatio : 1,
-															mouseEnabled : false,
-															zoomingRatio : 1.0
-														//do not mouse wheel zoom -->1.0
-														});
+									            // First, let's write a FishEye class.
+									            // There is no need to make this class global, since it is made to be used through
+									            // the SigmaPublic object, that's why a local scope is used for the declaration.
+									            // The parameter 'sig' represents a Sigma instance.
+									            var FishEye = function(sig) {
+									                sigma.classes.Cascade.call(this);      // The Cascade class manages the chainable property
+									                                                       // edit/get function.
 
-												sigInst
-														.bind(
-																'overNode',
-																function(e) {
-																	var nodeId = e.data.node.id, toKeep = sigInst.graph
-																			.neighbors(nodeId);
-																	toKeep[nodeId] = e.data.node;
+									                var self = this;                       // Used to avoid any scope confusion.
+									                var isActivated = false;               // Describes is the FishEye is activated.
 
-																	function doSomething(
-																			e) {
+									                this.p = {                             // The object containing the properties accessible with
+									                    radius: 200,                         // the Cascade.config() method.
+									                    power: 2
+									                };
 
-																		if (!e)
-																			var e = window.event;
-																		if (e.pageX
-																				|| e.pageY) {
-																			posx = e.pageX;
-																			posy = e.pageY;
-																		} else if (e.clientX
-																				|| e.clientY) {
-																			posx = e.clientX
-																					+ document.body.scrollLeft
-																					+ document.documentElement.scrollLeft;
-																			posy = e.clientY
-																					+ document.body.scrollTop
-																					+ document.documentElement.scrollTop;
-																		}
-																		// posx and posy contain the mouse position relative to the document
-																		// Do something with this information
+									                function applyFishEye(mouseX, mouseY) {   // This method will apply a formula relatively to
+									                    // the mouse position.
+									                    var newDist, newSize, xDist, yDist, dist,
+									                            radius   = self.p.radius,
+									                            power    = self.p.power,
+									                            powerExp = Math.exp(power);
 
-																	}
-																	doSomething(event)
-																	degree_var = e.data.node.attributes.degree;
-																	cluster_var = e.data.node.attributes.modularity_class;
-																	between_var = e.data.node.attributes.betweenesscentrality;
+									                    sig.graph.nodes.forEach(function(node) {
+									                        xDist = node.displayX - mouseX;
+									                        yDist = node.displayY - mouseY;
+									                        dist  = Math.sqrt(xDist*xDist + yDist*yDist);
 
-																	sigInst.graph
-																			.nodes()
-																			.forEach(
-																					function(
-																							n) {
-																						if (toKeep[n.id]) {
-																							n.color = n.originalColor;
+									                        if(dist < radius){
+									                            newDist = powerExp/(powerExp-1)*radius*(1-Math.exp(-dist/radius*power));
+									                            newSize = powerExp/(powerExp-1)*radius*(1-Math.exp(-dist/radius*power));
 
-																						} else {
-																							n.color = '#eee';
-																						}
-																					});
-																	sigInst.graph
-																			.edges()
-																			.forEach(
-																					function(
-																							e) {
-																						if (toKeep[e.source]
-																								&& toKeep[e.target]) {
-																							e.color = e.originalColor;
-																						} else {
-																							e.color = '#eee';
-																						}
-																					});
-																	// Since the data has been modified, we need to
-																	// call the refresh method to make the colors
-																	// update effective.
-																	sigInst
-																			.refresh();
+									                            if(!node.isFixed){
+									                                node.displayX = mouseX + xDist*(newDist/dist*3/4 + 1/4);
+									                                node.displayY = mouseY + yDist*(newDist/dist*3/4 + 1/4);
+									                            }
 
-																});
+									                            node.displaySize = Math.min(node.displaySize*newSize/dist,10*node.displaySize);
+									                        }
+									                    });
+									                };
 
-												// When the stage is clicked, we just color each
-												// node and edge with its original color.
-												sigInst
-														.bind(
-																'outNode',
-																function(e) {
-																	sigInst.graph
-																			.nodes()
-																			.forEach(
-																					function(
-																							n) {
-																						n.color = n.originalColor;
-																					});
-																	sigInst.graph
-																			.edges()
-																			.forEach(
-																					function(
-																							e) {
-																						e.color = e.originalColor;
-																					});
-																	// Same as in the previous event:
-																	sigInst
-																			.refresh();
-																});
+									                // The method that will be triggered when Sigma's 'graphscaled' is dispatched.
+									                function handler() {
+									                    applyFishEye(
+									                            sig.mousecaptor.mouseX,
+									                            sig.mousecaptor.mouseY
+									                    );
+									                }
 
-												(function() {
+									                this.handler = handler;
 
-													var popUp;
+									                // A public method to set/get the isActivated parameter.
+									                this.activated = function(v) {
+									                    if(v==undefined){
+									                        return isActivated;
+									                    }else{
+									                        isActivated = v;
+									                        return this;
+									                    }
+									                };
 
-													function attributesToString() {
-														return '<ul style="list-style-type:none; padding:0px; margin:0px; position:relative; left:-6px;">'
-																+ '<li style="font-size:12px!important;">'
-																+ 'degree : '
-																+ degree_var
-																+ '<br/>'
-																+ 'cluster : '
-																+ cluster_var
-																+ '<br/>'
-																+ 'between : '
-																+ between_var
-																+ '</li>'
-																+ '</ul>';
-													}
+									                // this.refresh() is just a helper to draw the graph.
+									                this.refresh = function(){
+									                    sig.draw(2,2,2);
+									                };
+									            };
 
-													function showNodeInfo(event) {
-														popUp && popUp.remove();
+									            // Then, let's add some public method to sigma.js instances :
+									            sigma.publicPrototype.activateFishEye = function() {
+									                if(!this.fisheye) {
+									                    var sigmaInstance = this;
+									                    var fe = new FishEye(sigmaInstance._core);
+									                    sigmaInstance.fisheye = fe;
+									                }
 
-														var node = event.data.node;
+									                if(!this.fisheye.activated()){
+									                    this.fisheye.activated(true);
+									                    this._core.bind('graphscaled', this.fisheye.handler);
+									                    document.getElementById(
+									                            'sigma_mouse_'+this.getID()
+									                    ).addEventListener('mousemove',this.fisheye.refresh,true);
+									                }
 
-														popUp = $(
-																'<div class="node-info-popup"></div>')
-																.append(
-																		attributesToString())
-																.css(
-																		{
-																			'display' : 'inline-block',
-																			'border-radius' : 2,
-																			'padding' : 4,
-																			'background' : 'white',
-																			'width' : '130',
-																			'color' : '#777',
-																			'z-index' : '99999',
-																			'border' : '1px solid #eee',
-																			'position' : 'absolute',
-																			'left' : posx,
-																			'top' : posy + 10
-																		});
+									                return this;
+									            };
 
-														$('ul', popUp).css(
-																'margin',
-																'0 0 0 10px');
+									            sigma.publicPrototype.desactivateFishEye = function() {
+									                if(this.fisheye && this.fisheye.activated()){
+									                    this.fisheye.activated(false);
+									                    this._core.unbind('graphscaled', this.fisheye.handler);
+									                    document.getElementById(
+									                            'sigma_mouse_'+this.getID()
+									                    ).removeEventListener('mousemove',this.fisheye.refresh,true);
+									                }
 
-														$('#container_jang')
-																.append(popUp);
-													}
+									                return this;
+									            };
 
-													function hideNodeInfo(event) {
-														popUp && popUp.remove();
-														popUp = false;
-													}
+									            sigma.publicPrototype.fishEyeProperties = function(a1, a2) {
+									                var res = this.fisheye.config(a1, a2);
+									                return res == s ? this.fisheye : res;
+									            };
+									        })();
 
-													sigInst.bind('overNode',
-															showNodeInfo).bind(
-															'outNode',
-															hideNodeInfo)
-															.refresh();
-												})();
 
-											}
+									        (function(){
 
-											if (document.addEventListener) {
-												document.addEventListener(
-														"DOMContentLoaded",
-														init, false);
-											} else {
-												window.onload = init;
-											}
-											$('#container_jang').css(
-													'background-color',
-													'#FFFFD7');
-											$('#container_jang')
-													.css('background-color',
-															'white');
-											$('#container_jang').css(
-													'background-color',
-													'#FFFFFF');
-										</script>
+									            var popUp;
+
+									            function attributesToString(attr) {
+									                console.log(attr);
+
+									                var out = [];
+
+									                $.each(attr, function(index, value) {
+									                    switch(value['attr']){
+									                        case "betweenesscentrality":
+									                            out.push({attr:'Betweenness', val: value['val']})
+									                            break;
+									                        case "degree":
+									                            out.push({attr:'Degree', val: value['val']})
+									                            break;
+									                        case "modularity_class":
+									                            out.push({attr:'Cluster', val: value['val']})
+									                            break;
+									                    }
+
+
+
+									                });
+
+									                return '<ul style="list-style-type:none; padding:0px; margin:0px; position:relative; left:-6px;">' +
+									                        out.map(function(o){
+									                            return '<li style="font-size:12px!important;">' + o.attr + ' : ' + Math.round(o.val*10)/10 + '</li>';
+									                        }).join('') +
+									                        '</ul>';
+
+									            }
+
+									            function showNodeInfo(event) {
+									                popUp && popUp.remove();
+
+									                var node;
+									                sigInst.iterNodes(function(n){
+									                    node = n;
+									                },[event.content[0]]);
+
+									                popUp = $(
+									                        '<div class="node-info-popup"></div>'
+									                ).append(
+
+									                        attributesToString( node['attr']['attributes'] )
+									                ).attr(
+									                        'id',
+									                        'node-info'+sigInst.getID()
+									                ).css({
+									                            'display': 'inline-block',
+									                            'border-radius': 2,
+									                            'padding': 4,
+									                            'background': 'white',
+									                            'width': '130',
+									                            'color': '#777',
+									                            'z-index': '99999',
+									                            'border': '1px solid #eee',
+									                            'position': 'absolute',
+									                            'left': node.displayX,
+									                            'top': node.displayY+10
+									                        });
+
+									                $('ul',popUp).css('margin','0 0 0 10px');
+
+									                $('#sigma-jang').append(popUp);
+									            }
+
+									            function hideNodeInfo(event) {
+									                popUp && popUp.remove();
+									                popUp = false;
+									            }
+
+									            sigInst.bind('overnodes',showNodeInfo).bind('outnodes',hideNodeInfo).draw();
+									        })();
+
+									        // Finally, let's activate the FishEye on our instance:
+									        sigInst.activateFishEye().draw();
+									    }
+
+									    if (document.addEventListener) {
+									        document.addEventListener("DOMContentLoaded", init, false);
+									    } else {
+									        window.onload = init;
+									    }
+
+									    $('#sigma-jang').css('background-color','white');
+									</script>
 										<!-- END GRAPH -->
 									</div>
 								</div>
