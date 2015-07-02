@@ -226,142 +226,213 @@ function openPopup(url) {
 <script src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/gexf-parser.js"></script>
 <script src="http://218.150.181.131/sigma.js-1.0.3/plugins/sigma.parsers.gexf/sigma.parsers.gexf.js"></script>
 <script>
-var id = ${n.id};
-var preurl = 'http://218.150.181.131/assets/gexf/'
-var last = '.gexf';
-var url = preurl + id + last;
-var sigInst;
-
     function init() {
-
-       	var posx = 0; // x ì¢íê°
-    	var posy = 0; // y ì¢íê°
+        var posx = 0; // x ì¢íê°
+        var posy = 0; // y ì¢íê°
         var degree_var, cluster_var, between_var; //degree, cluster, between ê°ë¤ì ë³ì
 
 
-        //addmethod()ì²«ë²ì§¸íë¼ë¯¸í°ë í¨ìì´ë¦, ëë²ì§¸ íë¼ë¯¸í°ë í´ë¹ í¨ìì ìì´ë¤.
-        //neighborsë ë¸ëë¡ë¤ì´ì¤ê±°ë ëê°ë ì ë¤ì ë§íë¤. ì´ edge ë¤ì ëí ì ë³´ë¥¼ ê°ì§ í¨ìë¥¼ ì ìí¨.
-        sigma.classes.graph.addMethod('neighbors', function (nodeId) {
-            var k, neighbors = {}, index = this.allNeighborsIndex[nodeId]
-                    || {};
-            for (k in index)
-                neighbors[k] = this.nodesIndex[k];
-            return neighbors;
-        });
+        /**
+         * This is the code to write the FishEye plugin :
+         */
+        (function () {
 
+            // First, let's write a FishEye class.
+            // There is no need to make this class global, since it is made to be used through
+            // the SigmaPublic object, that's why a local scope is used for the declaration.
+            // The parameter 'sig' represents a Sigma instance.
+            var FishEye = function (sig) {
+                sigma.classes.Cascade.call(this);      // The Cascade class manages the chainable property
+                                                       // edit/get function.
 
-        //sigmajs ì¸ì¤í´ì¤ ìì±
-        sigInst = new sigma(document.getElementById('graph-container'));
+                var self = this;                       // Used to avoid any scope confusion.
+                var isActivated = false;               // Describes is the FishEye is activated.
 
-        //gexf íì¼ íì±í´ì ììì ë§ë  ìê·¸ë§ì¸ì¤í´ì¤ì ê°ì²´ë´ì© ì§ì´ë£ì.
-        sigma.parsers.gexf(
-        		url
-                , sigInst
-                , function (t) {
-                    //ê·¸ëíì ìê¹ì ê¸°ì¡´ gexfì ìë ì ê·¸ëë¡ ì¬ì©í¨.
-                    sigInst.graph.nodes().forEach(
-                            function (n) {
-                                n.originalColor = n.color;
-                            });
-                    sigInst.graph.edges().forEach(
-                            function (e) {
-                                e.originalColor = e.color;
-                            });
+                this.p = {                             // The object containing the properties accessible with
+                    radius: 200,                         // the Cascade.config() method.
+                    power: 2
+                };
 
-                    sigInst.refresh();
-                    // gexf-parsers.js ìì ë©ìë ì´ì©ë²ì ì ëª¨ë¥´ê²ì.
-                    //console.log(t.Graph('nodes')._nodes(sigInst));
+                function applyFishEye(mouseX, mouseY) {   // This method will apply a formula relatively to
+                    // the mouse position.
+                    var newDist, newSize, xDist, yDist, dist,
+                            radius = self.p.radius,
+                            power = self.p.power,
+                            powerExp = Math.exp(power);
+
+                    sig.graph.nodes.forEach(function (node) {
+                        xDist = node.displayX - mouseX;
+                        yDist = node.displayY - mouseY;
+                        dist = Math.sqrt(xDist * xDist + yDist * yDist);
+
+                        if (dist < radius) {
+                            newDist = powerExp / (powerExp - 1) * radius * (1 - Math.exp(-dist / radius * power));
+                            newSize = powerExp / (powerExp - 1) * radius * (1 - Math.exp(-dist / radius * power));
+
+                            if (!node.isFixed) {
+                                node.displayX = mouseX + xDist * (newDist / dist * 3 / 4 + 1 / 4);
+                                node.displayY = mouseY + yDist * (newDist / dist * 3 / 4 + 1 / 4);
+                            }
+
+                            node.displaySize = Math.min(node.displaySize * newSize / dist, 10 * node.displaySize);
+                        }
+                    });
+                };
+
+                // The method that will be triggered when Sigma's 'graphscaled' is dispatched.
+                function handler() {
+                    applyFishEye(
+                            sig.mousecaptor.mouseX,
+                            sig.mousecaptor.mouseY
+                    );
                 }
-        );
+
+                this.handler = handler;
+
+                // A public method to set/get the isActivated parameter.
+                this.activated = function (v) {
+                    if (v == undefined) {
+                        return isActivated;
+                    } else {
+                        isActivated = v;
+                        return this;
+                    }
+                };
+
+                // this.refresh() is just a helper to draw the graph.
+                this.refresh = function () {
+                    sig.draw(2, 2, 2);
+                };
+            };
+
+            // Then, let's add some public method to sigma.js instances :
+            sigma.publicPrototype.activateFishEye = function () {
+                if (!this.fisheye) {
+                    var sigmaInstance = this;
+                    var fe = new FishEye(sigmaInstance._core);
+                    sigmaInstance.fisheye = fe;
+                }
+
+                if (!this.fisheye.activated()) {
+                    this.fisheye.activated(true);
+                    this._core.bind('graphscaled', this.fisheye.handler);
+                    document.getElementById(
+                            'sigma_mouse_' + this.getID()
+                    ).addEventListener('mousemove', this.fisheye.refresh, true);
+                }
+
+                return this;
+            };
+
+            sigma.publicPrototype.desactivateFishEye = function () {
+                if ((this.fisheye) && (this.fisheye.activated())) {
+                    this.fisheye.activated(false);
+                    this._core.unbind('graphscaled', this.fisheye.handler);
+                    document.getElementById(
+                            'sigma_mouse_' + this.getID()
+                    ).removeEventListener('mousemove', this.fisheye.refresh, true);
+                }
+
+                return this;
+            };
+
+            sigma.publicPrototype.fishEyeProperties = function (a1, a2) {
+                var res = this.fisheye.config(a1, a2);
+                return res == s ? this.fisheye : res;
+            };
+        })();
 
 
-        //ê·¸ëíì ì´ê¸° ìí ê³¼ì ì. ê° ìì±ë§ë¤ ìíë ë´ì© ì§ì .
-        sigInst.settings({
-            defaultLabelColor: '#777',
-            defaultLabelSize: 12,
-            defaultLabelHoverColor: '#555',  //ë§ì°ì¤ í¸ë²ì ë ì´ë¸ ê¸ìì
-            defaultHoverLabelBGColor: '#fff',  //ë§ì°ì¤ í¸ë²ì ë ì´ë¸ ë°°ê²½ì
-            hoverFontStyle: 'bold',
-            fontStyle: 'bold',
-            labelThreshold: 2,
-            defaultEdgeType: 'straight',
-            minNodeSize: 1,
-            maxNodeSize: 10,
+        // Instanciate sigma.js and customize rendering :
+        var sigInst = sigma.init(document.getElementById('sigma-example')).drawingProperties({
+            defaultLabelColor: '#fff',
+            defaultLabelSize: 18,
+            defaultLabelBGColor: '#fff',
+            defaultLabelHoverColor: '#000',
+            labelThreshold: 3,
+            defaultEdgeType: 'curve'
+        }).graphProperties({
+            minNodeSize: 0.5,
+            maxNodeSize: 5,
             minEdgeSize: 1,
-            maxEdgeSize: 3,
-            maxRatio: 1,
-            mouseEnabled: true,
-            doubleClickEnabled: false,
-            mouseInertiaDuration: 1000,
-            mouseInertiaRatio: 10,
-            zoomingRatio: 1.3 //do not mouse wheel zoom -->1.0
+            maxEdgeSize: 1
+        }).mouseProperties({
+            maxRatio: 4
+        });
+
+        // Parse a GEXF encoded file to fill the graph
+        // (requires "sigma.parseGexf.js" to be included)
+        sigInst.parseGexf('http://218.150.181.131/assets/gexf/1.gexf');
+
+
+
+        // Bind events :
+        sigInst.bind('overnodes', function (event) {
+            var nodes = event.content;
+            var neighbors = {};
+
+            sigInst.iterEdges(function (e) {
+                if (nodes.indexOf(e.source) >= 0 || nodes.indexOf(e.target) >= 0) {
+                    neighbors[e.source] = 1;
+                    neighbors[e.target] = 1;
+                }
+            }).iterNodes(function (n) {
+                if (!neighbors[n.id]) {
+                    n.hidden = 1;
+                } else {
+                    n.hidden = 0;
+                }
+            }).draw(2, 2, 2);
+        }).bind('outnodes', function () {
+            sigInst.iterEdges(function (e) {
+                e.hidden = 0;
+            }).iterNodes(function (n) {
+                n.hidden = 0;
+            }).draw(2, 2, 2);
         });
 
 
-        //ë¸ë ìì ë§ì°ì¤ ì¬ë¼ììë ì ì
-        sigInst.bind('overNode', function (e) {
-            var nodeId = e.data.node.id, toKeep = sigInst.graph.neighbors(nodeId);
-            toKeep[nodeId] = e.data.node;
+        sigInst.bind('overnodes', function (ss) {
 
-            //íì¬ ë§ì°ì¤ì ìì¹ë¥¼ êµ¬íë jqueryë¬¸
-            //ìµì¤íë¡ì´ ìì¸ì²ë¦¬í´ì¼í¨.
-            function doSomething(e) {
-            	
+            function doSomething(ss) {
 
-            	if (!e) var e = window.event;
-            	if (e.pageX || e.pageY) {
-            	posx = e.pageX;
-            	posy = e.pageY;
-            	} else if (e.clientX || e.clientY) {
-            	posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-            	posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
-            	}
-            	// posx and posy contain the mouse position relative to the document
-            	// Do something with this information
-            	
-            	
-            	}
-            doSomething(event)
-            degree_var =  e.data.node.attributes.degree;
-            cluster_var = e.data.node.attributes.modularity_class;
-            between_var = e.data.node.attributes.betweenesscentrality;
+                if (!ss)
+                    var ss = window.event;
+                if (ss.pageX || ss.pageY) {
+                    posx = ss.pageX;
+                    posy = ss.pageY;
+                } else if (ss.clientX || ss.clientY) {
+                    posx = ss.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+                    posy = ss.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+                }
+                // posx and posy contain the mouse position relative to the document
+                // Do something with this information
 
-            //console.log(e.data.node.attributes);
+
+            }
+
+            doSomething(event);
+
+            console.log("ss : "+ ss.content);
+            for(var ttt in ss){
+                console.log("ttt : "+ttt);
+            }
+            degree_var =  ss.data.node.attributes.degree;
+            cluster_var = ss.data.node.attributes.modularity_class;
+            between_var = ss.data.node.attributes.betweenesscentrality;
+
+
             //console.log("yì¶ : "+mousePositionY);
 
-
-            sigInst.graph.nodes().forEach(
-                    function (n) {
-                        if (toKeep[n.id]) {
-                            n.color = n.originalColor;
-
-                        }
-                        else {
-                            n.color = '#eee';
-                        }
-                    });
-            sigInst.graph.edges().forEach(
-                    function (e) {
-                        if (toKeep[e.source]
-                                && toKeep[e.target]) {
-                            e.color = e.originalColor;
-                        }
-                        else {
-                            e.color = '#eee';
-                        }
-                    });
-            // Since the data has been modified, we need to
-            // call the refresh method to make the colors
-            // update effective.
-            sigInst.refresh();
-
         });
 
 
-        //ë§ì°ì¤ê° ì¤íì´ì§ë¡ ëììë í¨ì ì ì
-        // When the stage is clicked, we just color each
-        // node and edge with its original color.
-        
+
+
+// Mod Dmitry
+        // Draw the graph :
+//  sigInst.draw();
+
         (function () {
 
             var popUp;
@@ -382,8 +453,10 @@ var sigInst;
                 ).append(
                         attributesToString()
                 ).css({
-							'font' : 'Verdana',
-                            
+                            'display': 'inline-block',
+                            'border-radius': 2,
+                            'padding': 4,
+                            'background': 'white',
                             'width': '130',
                             'color': '#777',
                             'z-index': '99999',
@@ -394,8 +467,7 @@ var sigInst;
                         });
 
                 $('ul', popUp).css('margin', '0 0 0 10px');
-
-                $('#graph-container').append(popUp);
+                $('#sigma-example').append(popUp);
             }
 
             function hideNodeInfo(event) {
@@ -403,9 +475,10 @@ var sigInst;
                 popUp = false;
             }
 
-            sigInst.bind('overNode', showNodeInfo).bind('outNode', hideNodeInfo).refresh();
+            sigInst.bind('overnodes', showNodeInfo).bind('outnodes', hideNodeInfo).refresh();
         })();
-        
+
+        sigInst.activateFishEye().draw();
     }
 
     if (document.addEventListener) {
@@ -413,14 +486,7 @@ var sigInst;
     } else {
         window.onload = init;
     }
-    $('#graph-container').css('background-color', '#FFFFD7');
-    $('#graph-container').css('background-color', 'white');
-    $('#graph-container').css('background-color', '#FFFFFF');
- 
-
-   
 </script>
-
 
 						</div>
 					</div>
