@@ -391,13 +391,13 @@
                                     <th width="10%">연도</th>
                                     <th width="10%">감독</th>
                                     <th width="10%">관객수</th>
-                                    <th width="10%" onMouseOver="openPopup('http://218.150.181.131/Explain/2.PNG')"
+                                    <th width="10%" onclick="openPopup('http://218.150.181.131/Explain/2.PNG')"
                                         onMouseOut="toolTip()" onMouseClick="">diameter</th>
-                                    <th width="10%" onMouseOver="openPopup('http://218.150.181.131/Explain/3.PNG')"
+                                    <th width="10%" onclick="openPopup('http://218.150.181.131/Explain/3.PNG')"
                                         onMouseOut="toolTip()" onMouseClick="">pathlength</th>
-                                    <th width="10%" onMouseOver="openPopup('http://218.150.181.131/Explain/4.PNG')"
+                                    <th width="10%" onclick="openPopup('http://218.150.181.131/Explain/4.PNG')"
                                         onMouseOut="toolTip()" onMouseClick="">clustering</th>
-                                    <th width="10%" onMouseOver="openPopup('http://218.150.181.131/Explain/5.PNG')"
+                                    <th width="10%" onclick="openPopup('http://218.150.181.131/Explain/5.PNG')"
                                         onMouseOut="toolTip()" onMouseClick="">density</th>
 
                                     <!--<th width="10%" onMouseOver="show2(5)" onMouseOut="toolTip()">density</th>-->
