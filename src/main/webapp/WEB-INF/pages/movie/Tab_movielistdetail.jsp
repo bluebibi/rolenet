@@ -431,29 +431,7 @@ var sigInst;
     $('#graph-container').css('background-color', '#FFFFD7');
     $('#graph-container').css('background-color', 'white');
     $('#graph-container').css('background-color', '#FFFFFF');
-    
-
-    function reloading(){
-       	console.log("dsfadsf : "+typeof sigInst);
-       	sigInst.settings({
-            defaultLabelColor: '#777',
-            defaultLabelSize: 12,
-            defaultLabelHoverColor: '#555',  //ë§ì°ì¤ í¸ë²ì ë ì´ë¸ ê¸ìì
-            defaultHoverLabelBGColor: '#fff',  //ë§ì°ì¤ í¸ë²ì ë ì´ë¸ ë°°ê²½ì
-            hoverFontStyle: 'bold',
-            fontStyle: 'bold',
-            labelThreshold: 2,
-            defaultEdgeType: 'straight',
-            minNodeSize: 1,
-            maxNodeSize: 10,
-            minEdgeSize: 1,
-            maxEdgeSize: 3,
-            maxRatio: 1,
-            mouseEnabled: true,
-            zoomingRatio: 1.0 //do not mouse wheel zoom -->1.0
-        });
-       	sigInst.refresh();
-    }
+ 
 
    
 </script>
