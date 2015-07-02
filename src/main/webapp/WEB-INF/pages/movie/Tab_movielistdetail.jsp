@@ -17,43 +17,57 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-    <meta charset="utf-8"/>
-    <title>Movietween | LINK 9th | Koreatech</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta content="" name="description"/>
-    <meta content="" name="author"/>
-    <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
-    <link href="http://218.150.181.131/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://218.150.181.131/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
-    <link href="http://218.150.181.131/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="http://218.150.181.131/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
-    <!-- END GLOBAL MANDATORY STYLES -->
-    <!-- BEGIN THEME STYLES -->
-    <link href="http://218.150.181.131/assets/global/css/components.css" rel="stylesheet" type="text/css">
-    <link href="http://218.150.181.131/assets/global/css/plugins.css" rel="stylesheet" type="text/css">
-    <link href="http://218.150.181.131/assets/admin/layout3/css/layout.css" rel="stylesheet" type="text/css">
-    <link href="http://218.150.181.131/assets/admin/layout3/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color">
-    <link href="http://218.150.181.131/assets/admin/layout3/css/custom.css" rel="stylesheet" type="text/css">
-    <!-- END THEME STYLES -->
-    <link rel="shortcut icon" href="favicon.ico"/>
-        <style type="text/css">
+<meta charset="utf-8" />
+<title>Movietween | LINK 9th | Koreatech</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta content="" name="description" />
+<meta content="" name="author" />
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link
+	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all"
+	rel="stylesheet" type="text/css">
+<link
+	href="http://218.150.181.131/assets/global/plugins/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<link
+	href="http://218.150.181.131/assets/global/plugins/simple-line-icons/simple-line-icons.min.css"
+	rel="stylesheet" type="text/css">
+<link
+	href="http://218.150.181.131/assets/global/plugins/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet" type="text/css">
+<link
+	href="http://218.150.181.131/assets/global/plugins/uniform/css/uniform.default.css"
+	rel="stylesheet" type="text/css">
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN THEME STYLES -->
+<link href="http://218.150.181.131/assets/global/css/components.css"
+	rel="stylesheet" type="text/css">
+<link href="http://218.150.181.131/assets/global/css/plugins.css"
+	rel="stylesheet" type="text/css">
+<link href="http://218.150.181.131/assets/admin/layout3/css/layout.css"
+	rel="stylesheet" type="text/css">
+<link
+	href="http://218.150.181.131/assets/admin/layout3/css/themes/default.css"
+	rel="stylesheet" type="text/css" id="style_color">
+<link href="http://218.150.181.131/assets/admin/layout3/css/custom.css"
+	rel="stylesheet" type="text/css">
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico" />
+<style type="text/css">
+.sigma-parent {
+	position: relative;
+	height: 540px;
+}
 
-        .sigma-parent {
-            position: relative;
-            height: 540px;
-        }
-
-        .sigma-expand {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-    </style>
-    <script>
+.sigma-expand {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+</style>
+<script>
         function openPopup(url) {
             window.open(url, "open_about", "top=100 left=100 width=640 height=400")
         }
@@ -65,150 +79,132 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
 <body>
 
-<!-- BEGIN HEADER -->
-<%@include file="../includes/headerMenu.jsp"%>
-<!-- END HEADER -->
-<!-- BEGIN PAGE CONTAINER -->
-<div class="page-container">
-    <!-- BEGIN PAGE HEAD -->
-    <div class="page-head">
-        <div class="container">
-            <!-- BEGIN PAGE TITLE -->
-            <div class="page-title">
-                <h1>Look in ${n.name}</h1>
-            </div>
-            <!-- END PAGE TITLE -->
-            <!-- BEGIN PAGE TOOLBAR -->
-            <div class="page-toolbar">
-                <!-- BEGIN THEME PANEL -->
+	<!-- BEGIN HEADER -->
+	<%@include file="../includes/headerMenu.jsp"%>
+	<!-- END HEADER -->
+	<!-- BEGIN PAGE CONTAINER -->
+	<div class="page-container">
+		<!-- BEGIN PAGE HEAD -->
+		<div class="page-head">
+			<div class="container">
+				<!-- BEGIN PAGE TITLE -->
+				<div class="page-title">
+					<h1>Look in ${n.name}</h1>
+				</div>
+				<!-- END PAGE TITLE -->
+				<!-- BEGIN PAGE TOOLBAR -->
+				<div class="page-toolbar">
+					<!-- BEGIN THEME PANEL -->
 
-                <!-- END THEME PANEL -->
-            </div>
-            <!-- END PAGE TOOLBAR -->
-        </div>
-    </div>
-    <!-- END PAGE HEAD -->
-    <!-- BEGIN PAGE CONTENT -->
-    <div class="page-content">
-        <div class="container">
-            <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-            <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                            <h4 class="modal-title">Modal title</h4>
-                        </div>
-                        <div class="modal-body">
-                            Widget settings form goes here
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn blue">Save changes</button>
-                            <button type="button" class="btn default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-            <!-- BEGIN PAGE BREADCRUMB -->
-            <ul class="page-breadcrumb breadcrumb">
-                <li>
-                    <a href="/">Home</a><i class="fa fa-circle"></i>
-                </li>
-                <li>
-                    <a href="/Tab_movielist">Movielist</a>
-                    <i class="fa fa-circle"></i>
-                </li>
-                <li class="active">
-                    look in - Movie
-                </li>
-            </ul>
-            <!-- END PAGE BREADCRUMB -->
-            <!-- BEGIN PAGE CONTENT INNER -->
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-bottom-10">
-                    <a class="dashboard-stat dashboard-stat-light blue-madison" href="javascript:;">
-                        <div class="visual">
-                            <i class="fa fa-briefcase fa-icon-medium"></i>
-                        </div>
-                        <div class="details">
-                            <div class="number">
-                                Director : ${n.director}
-                            </div>
-                            <div class="desc">
-                                ${n.year}
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <a class="dashboard-stat dashboard-stat-light red-intense" href="javascript:;">
-                        <div class="visual">
-                            <i class="fa fa-shopping-cart"></i>
-                        </div>
-                        <div class="details">
-                            <div class="number">
-                                ${n.name}
-                            </div>
-                            <div class="desc">
-                                Movie title
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <a class="dashboard-stat dashboard-stat-light green-haze" href="javascript:;">
-                        <div class="visual">
-                            <i class="fa fa-group fa-icon-medium"></i>
-                        </div>
-                        <div class="details">
-                            <div class="number">
-                                ${n.spectators}
-                            </div>
-                            <div class="desc">
-                                number of Audience
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div>
-                <!-- Begin: life time stats -->
-                <div class="portlet light">
-                    <div class="portlet-title">
-                        <div class="caption">
-                            <i class="icon-bar-chart font-green-sharp"></i>
-                            <span class="caption-subject font-green-sharp bold uppercase">Actors-Network</span>
-                            &nbsp;
-                            <button class="btn default purple-stripe" onclick="openPopup('http://localhost:8080/Tab_compare?movie1=${n.id}')">Compare </button>
-                        </div>
-                        <div class="tools">
-                            <a href="javascript:;" class="collapse">
-                            </a>
-                            <a href="#portlet-config" data-toggle="modal" class="config">
-                            </a>
-                            <a onclick="reloading()" class="reload">
-                                ㅁ								</a>
-                        </div>
-                    </div>
-                    <div class="portlet-body">
-                        <!-- sigmagraph-container-->
-                        <div class="sigma-parent">
-    						<div class="sigma-expand" id="sigma-jang"></div>
+					<!-- END THEME PANEL -->
+				</div>
+				<!-- END PAGE TOOLBAR -->
+			</div>
+		</div>
+		<!-- END PAGE HEAD -->
+		<!-- BEGIN PAGE CONTENT -->
+		<div class="page-content">
+			<div class="container">
+				<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+				<div class="modal fade" id="portlet-config" tabindex="-1"
+					role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-hidden="true"></button>
+								<h4 class="modal-title">Modal title</h4>
+							</div>
+							<div class="modal-body">Widget settings form goes here</div>
+							<div class="modal-footer">
+								<button type="button" class="btn blue">Save changes</button>
+								<button type="button" class="btn default" data-dismiss="modal">Close</button>
+							</div>
 						</div>
+						<!-- /.modal-content -->
+					</div>
+					<!-- /.modal-dialog -->
+				</div>
+				<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+				<!-- BEGIN PAGE BREADCRUMB -->
+				<ul class="page-breadcrumb breadcrumb">
+					<li><a href="/">Home</a><i class="fa fa-circle"></i></li>
+					<li><a href="/Tab_movielist">Movielist</a> <i
+						class="fa fa-circle"></i></li>
+					<li class="active">look in - Movie</li>
+				</ul>
+				<!-- END PAGE BREADCRUMB -->
+				<!-- BEGIN PAGE CONTENT INNER -->
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-bottom-10">
+						<a class="dashboard-stat dashboard-stat-light blue-madison"
+							href="javascript:;">
+							<div class="visual">
+								<i class="fa fa-briefcase fa-icon-medium"></i>
+							</div>
+							<div class="details">
+								<div class="number">Director : ${n.director}</div>
+								<div class="desc">${n.year}</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<a class="dashboard-stat dashboard-stat-light red-intense"
+							href="javascript:;">
+							<div class="visual">
+								<i class="fa fa-shopping-cart"></i>
+							</div>
+							<div class="details">
+								<div class="number">${n.name}</div>
+								<div class="desc">Movie title</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<a class="dashboard-stat dashboard-stat-light green-haze"
+							href="javascript:;">
+							<div class="visual">
+								<i class="fa fa-group fa-icon-medium"></i>
+							</div>
+							<div class="details">
+								<div class="number">${n.spectators}</div>
+								<div class="desc">number of Audience</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<!-- Begin: life time stats -->
+					<div class="portlet light">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-bar-chart font-green-sharp"></i> <span
+									class="caption-subject font-green-sharp bold uppercase">Actors-Network</span>
+								&nbsp;
+								<button class="btn default purple-stripe"
+									onclick="openPopup('http://localhost:8080/Tab_compare?movie1=${n.id}')">Compare
+								</button>
+							</div>
+							<div class="tools">
+								<a href="javascript:;" class="collapse"> </a> <a
+									href="#portlet-config" data-toggle="modal" class="config">
+								</a> <a onclick="javascript:;" class="reload"></a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<!-- sigmagraph-container-->
+							<div class="sigma-parent">
+								<div class="sigma-expand" id="sigma-jang"></div>
+							</div>
 
-                        <script src="http://218.150.181.131/sigmajsGraph/jquery-2.1.1.min.js"></script>
-                        <script src="http://218.150.181.131/sigmajsGraph/sigma.min.js"></script>
-                        <script src="http://218.150.181.131/sigmajsGraph/parseGexf.js"></script>
-                        <script src="http://218.150.181.131/sigmajsGraph/scroll.min.js"></script>
-                        
-                        
-                        
-                        
-                        <script>
-	var id={n.id};
+							<script
+								src="http://218.150.181.131/sigmajsGraph/jquery-2.1.1.min.js"></script>
+							<script src="http://218.150.181.131/sigmajsGraph/sigma.min.js"></script>
+							<script src="http://218.150.181.131/sigmajsGraph/parseGexf.js"></script>
+							<script src="http://218.150.181.131/sigmajsGraph/scroll.min.js"></script>
+							<script>
+	var id=${n.id};
+	console.log("id : "+id);
 	var url_prefix='http://218.150.181.131/assets/gexf/';
 	var url_suffix='.gexf';
 	var completeURL = url_prefix+id+url_suffix;
@@ -233,8 +229,7 @@ License: You must have a valid license purchased only from themeforest(the above
         });
 
 
-        var url = "http://218.150.181.131/assets/gexf/1.gexf";
-        sigInst.parseGexf(url);
+        sigInst.parseGexf(completeURL);
 
         // Bind events :
         sigInst.bind('overnodes',function(event){
@@ -459,72 +454,66 @@ License: You must have a valid license purchased only from themeforest(the above
 </script>
 
 
-                    </div>
-                </div>
-                <!-- End: life time stats -->
-            </div>
-            <div>
-                <!-- Begin: life time stats -->
-                <div class="portlet light">
-                    <div class="portlet-title tabbable-line">
-                        <div class="caption">
-                            <i class="icon-share font-red-sunglo"></i>
-                            <span class="caption-subject font-red-sunglo bold uppercase">Info.Movie</span>
+						</div>
+					</div>
+					<!-- End: life time stats -->
+				</div>
+				<div>
+					<!-- Begin: life time stats -->
+					<div class="portlet light">
+						<div class="portlet-title tabbable-line">
+							<div class="caption">
+								<i class="icon-share font-red-sunglo"></i> <span
+									class="caption-subject font-red-sunglo bold uppercase">Info.Movie</span>
 
-                        </div>
-                        <ul class="nav nav-tabs">
-                            <li>
-                                <a href="#portlet_tab2" data-toggle="tab" id="statistics_amounts_tab">
-                                    Base </a>
-                            </li>
-                            <li class="active">
-                                <a href="#portlet_tab1" data-toggle="tab">
-                                    Synopsis </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="portlet-body">
-                        <div class="tab-content" >
-                            <div class="tab-pane active" id="portlet_tab1">
-                                <font face=Verdana>&nbsp;${n.synopsis}</font>
-                            </div>
-                            <div class="tab-pane" id="portlet_tab2">
-                                <div id="statistics_2" class="chart">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="margin-top-20 no-margin no-border">
-                            <div class="row">
-                                <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
-										<span class="label label-success uppercase">
-										Role </span>
-                                </div>
-                            </div>
-                            <br>
-                            <div>
-                                <table class="table table-striped table-bordered table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th width="10%">Between</th>
-                                        <c:forEach var="m" items="${betweenRole}">
-                                            <th width="5%">${m.name}</th>
-                                        </c:forEach>
-                                    </tr>
-                                    <tr>
-                                        <th width="10%">Degree</th>
-                                        <c:forEach var="m" items="${degreeRole}">
-                                            <th width="5%">${m.name}</th>
-                                        </c:forEach>
-                                    </tr>
-                                    <tr>
-                                        <th width="10%">Naver</th>
-                                        <c:forEach var="m" items="${naverRole}">
-                                            <th width="5%" ><font color="red">${m.name}</font></th>
-                                        </c:forEach>
-                                    </tr>
-                                    </thead>
+							</div>
+							<ul class="nav nav-tabs">
+								<li><a href="#portlet_tab2" data-toggle="tab"
+									id="statistics_amounts_tab"> Base </a></li>
+								<li class="active"><a href="#portlet_tab1"
+									data-toggle="tab"> Synopsis </a></li>
+							</ul>
+						</div>
+						<div class="portlet-body">
+							<div class="tab-content">
+								<div class="tab-pane active" id="portlet_tab1">
+									<font face=Verdana>&nbsp;${n.synopsis}</font>
+								</div>
+								<div class="tab-pane" id="portlet_tab2">
+									<div id="statistics_2" class="chart"></div>
+								</div>
+							</div>
+							<div class="margin-top-20 no-margin no-border">
+								<div class="row">
+									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+										<span class="label label-success uppercase"> Role </span>
+									</div>
+								</div>
+								<br>
+								<div>
+									<table class="table table-striped table-bordered table-hover">
+										<thead>
+											<tr>
+												<th width="10%">Between</th>
+												<c:forEach var="m" items="${betweenRole}">
+													<th width="5%">${m.name}</th>
+												</c:forEach>
+											</tr>
+											<tr>
+												<th width="10%">Degree</th>
+												<c:forEach var="m" items="${degreeRole}">
+													<th width="5%">${m.name}</th>
+												</c:forEach>
+											</tr>
+											<tr>
+												<th width="10%">Naver</th>
+												<c:forEach var="m" items="${naverRole}">
+													<th width="5%"><font color="red">${m.name}</font></th>
+												</c:forEach>
+											</tr>
+										</thead>
 
-                                    <%-- <tbody>
+										<%-- <tbody>
                                 <c:forEach var="m" items="${list2}">
                                     <tr onMouseOver="show(${m.id})" onMouseOut="toolTip()"
                                         onclick="document.location = 'Tab_movielistdetail?id=${m.id}';">
@@ -542,37 +531,49 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </c:forEach>
                                 </tbody> --%>
 
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End: life time stats -->
-            </div>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End: life time stats -->
+				</div>
 
-            <!-- END PAGE CONTENT INNER -->
-        </div>
-    </div>
-    <!-- END PAGE CONTENT -->
-</div>
-<!-- END PAGE CONTAINER -->
-<!-- BEGIN FOOTER -->
-<%@include file="../includes/footMenu.jsp"%>
-<!-- END FOOTER -->
-<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-<%@include file="../includes/footer.jsp"%>
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="http://218.150.181.131/assets/global/plugins/flot/jquery.flot.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/flot/jquery.flot.resize.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/global/plugins/flot/jquery.flot.categories.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL PLUGINS -->
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="http://218.150.181.131/assets/global/scripts/metronic.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
-<script src="http://218.150.181.131/assets/admin/pages/scripts/ecommerce-index.js"></script>
-<!-- END PAGE LEVEL SCRIPTS -->
-<script>
+				<!-- END PAGE CONTENT INNER -->
+			</div>
+		</div>
+		<!-- END PAGE CONTENT -->
+	</div>
+	<!-- END PAGE CONTAINER -->
+	<!-- BEGIN FOOTER -->
+	<%@include file="../includes/footMenu.jsp"%>
+	<!-- END FOOTER -->
+	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+	<%@include file="../includes/footer.jsp"%>
+	<!-- BEGIN PAGE LEVEL PLUGINS -->
+	<script
+		src="http://218.150.181.131/assets/global/plugins/flot/jquery.flot.js"
+		type="text/javascript"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/flot/jquery.flot.resize.js"
+		type="text/javascript"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/flot/jquery.flot.categories.js"
+		type="text/javascript"></script>
+	<!-- END PAGE LEVEL PLUGINS -->
+	<!-- BEGIN PAGE LEVEL SCRIPTS -->
+	<script src="http://218.150.181.131/assets/global/scripts/metronic.js"
+		type="text/javascript"></script>
+	<script
+		src="http://218.150.181.131/assets/admin/layout3/scripts/layout.js"
+		type="text/javascript"></script>
+	<script
+		src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js"
+		type="text/javascript"></script>
+	<script
+		src="http://218.150.181.131/assets/admin/pages/scripts/ecommerce-index.js"></script>
+	<!-- END PAGE LEVEL SCRIPTS -->
+	<script>
     jQuery(document).ready(function() {
         Metronic.init(); // init metronic core components
         Layout.init(); // init current layout
@@ -580,7 +581,7 @@ License: You must have a valid license purchased only from themeforest(the above
         EcommerceIndex.init();
     });
 </script>
-<!-- END JAVASCRIPTS -->
+	<!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->
 </html>
