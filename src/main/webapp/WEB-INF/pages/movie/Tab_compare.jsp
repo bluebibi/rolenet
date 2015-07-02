@@ -65,12 +65,57 @@
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico">
 <script>
-function clearBox()
+function clearBox(year,spectators,diameter,pathlength,clustering,density)
 {
-	var a =  ${movie1.clustering};
-	alert(a);
+	var name = new Array();
+	var director = new Array();
+	
+	//origin movie info
+	name.push("${movie1.name}");
+	director.push("${movie1.director}");
+	
+
 	$( ".list" ).empty();
-	var string = "<div>haha</div>";
+	var string = "<div class='portlet-body'>";
+	string += "<table class='table table-striped table-bordered table-hover'>";
+	string += "<thead><tr><th></th><th>선택된 영화</th><th>7번방의선물</th></tr></thead>";
+	string += "<tbody><tr><th>감독</th><th>호호";
+	string += "</th><th>";
+	string += director[0];
+	string += "</th></tr>";
+	string += "<tr><th>개봉일</th><th>";
+	string += year;
+	string += "</th><th>";
+	string += ${movie1.year};
+	string += "</th></tr>";
+	string += "<tr><th>관객수</th><th>";
+	string += spectators;
+	string += "</th><th>";
+	string += ${movie1.spectators};
+	string += "</th></tr>";
+	string += "<tr><th>diameter</th><th>";
+	string += diameter;
+	string += "</th><th>";
+	string += ${movie1.diameter};
+	string += "</th></tr>";
+	
+	string += "<tr><th>pathlength</th><th>";
+	string += pathlength;
+	string += "</th><th>";
+	string += ${movie1.pathlength};
+	string += "</th></tr>";
+	
+	string += "<tr><th>clustering</th><th>";
+	string += clustering;
+	string += "</th><th>";
+	string += ${movie1.clustering};
+	string += "</th></tr>";
+	
+	string += "<tr><th>density</th><th>";
+	string += density;
+	string += "</th><th>";
+	string += ${movie1.density};
+	string += "</th></tr>";
 	$(string).appendTo(".list");
 }
 </script>
@@ -102,7 +147,7 @@ function clearBox()
 				</thead>
 				<tbody>
                 	<c:forEach var="m" items="${list3}">
-                    	<tr onclick="clearBox()">
+                    	<tr onclick="clearBox(${m.year},${m.spectators},${m.diameter},${m.pathlength},${m.clustering},${m.density})">
                         	<td>${m.id}</td>
                         	<td>${m.name}</td>
                             <td>${m.year}</td>
