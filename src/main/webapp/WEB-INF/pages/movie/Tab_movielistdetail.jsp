@@ -361,19 +361,7 @@ var sigInst;
         //ë§ì°ì¤ê° ì¤íì´ì§ë¡ ëììë í¨ì ì ì
         // When the stage is clicked, we just color each
         // node and edge with its original color.
-        sigInst.bind('outNode', function (e) {
-            sigInst.graph.nodes().forEach(
-                    function (n) {
-                        n.color = n.originalColor;
-                    });
-            sigInst.graph.edges().forEach(
-                    function (e) {
-                        e.color = e.originalColor;
-                    });
-            // Same as in the previous event:
-            sigInst.refresh();
-        });
-
+        
         (function () {
 
             var popUp;
@@ -395,10 +383,7 @@ var sigInst;
                         attributesToString()
                 ).css({
 							'font' : 'Verdana',
-                            'display': 'inline-block',
-                            'border-radius': 2,
-                            'padding': 4,
-                            'background': 'white',
+                            
                             'width': '130',
                             'color': '#777',
                             'z-index': '99999',
