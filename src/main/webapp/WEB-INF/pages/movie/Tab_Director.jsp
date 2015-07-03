@@ -396,6 +396,7 @@
                 <c:forEach var="m" items="${dlist}">
                   <tr onclick="document.location = 'Tab_DirectorDetail?director=${m.director}';">
                     <td>${m.director}</td>
+                    
 
                   </tr>
 
