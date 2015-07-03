@@ -58,4 +58,24 @@ public class MovieListServiceImpl implements MovieListService {
 	public List<MovieList> LastList15() {
 		return movieListMapper.LastList15();
 	}
+
+	@Override
+	public List<MovieList> year2000() {
+		return movieListMapper.year2000();
+	}
+
+	@Override
+	public List<MovieList> year2005() {
+		return movieListMapper.year2005();
+	}
+
+	@Override
+	public List<MovieList> year2010() {
+		return movieListMapper.year2010();
+	}
+
+	@Override
+	public List<MovieList> year2015() {
+		return movieListMapper.year2015();
+	}
 }

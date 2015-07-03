@@ -28,6 +28,18 @@ public interface MovieListMapper {
 	@Select("select count(*) from movies")
 	public int movieCount();
 	
+	@Select("select * from movies where year > 1900 and year <= 2000")
+	public List<MovieList> year2000();
+	
+	@Select("select * from movies where year > 2000 and year <= 2005")
+	public List<MovieList> year2005();
+	
+	@Select("select * from movies where year > 2005 and year <= 2010")
+	public List<MovieList> year2010();
+	
+	@Select("select * from movies where year > 2010 and year <= 2015")
+	public List<MovieList> year2015();
+	
 	@Select("select * from movies order by hit desc limit 1")
 	public MovieList selectMovieByHit();
 	

@@ -2,8 +2,6 @@ package com.springapp.service;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
-
 import com.springapp.entity.MovieList;
 
 public interface MovieListService {
@@ -17,5 +15,8 @@ public interface MovieListService {
 	public void addHit(int id);
 	public void addHitByName(String name);
 	public MovieList selectMovieByHit();
-	
+	public List<MovieList> year2000();
+	public List<MovieList> year2005();
+	public List<MovieList> year2010();
+	public List<MovieList> year2015();
 }

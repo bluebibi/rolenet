@@ -138,6 +138,10 @@ public class HelloController {
 	@RequestMapping(value = "/Tab_charts")
 	public String chart(ModelMap model) {
 		model.addAttribute("last", movieListService.LastList15());
+		model.addAttribute("list2000", movieListService.year2000());
+		model.addAttribute("list2005", movieListService.year2005());
+		model.addAttribute("list2010", movieListService.year2010());
+		model.addAttribute("list2015", movieListService.year2015());
 		return "movie/Tab_charts.jsp";
 	}
 
