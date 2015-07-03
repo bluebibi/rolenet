@@ -3501,6 +3501,7 @@ var ChartsFlotcharts = function() {
 	var clustering2000 = new Array();
 	var density2000 = new Array();
 	
+	
 	<c:forEach items="${list2000}" var="item">
 	diameter2000.push("${item.diameter}");
 	pathlength2000.push("${item.pathlength}");
@@ -3508,6 +3509,7 @@ var ChartsFlotcharts = function() {
 	density2000.push("${item.density}");
 	</c:forEach>
 	
+	console.log(typeof diameter2000[0]);
 	var diameter2005 = new Array();
 	var pathlength2005 = new Array();
 	var clustering2005 = new Array();
@@ -3544,10 +3546,11 @@ var ChartsFlotcharts = function() {
 	density2015.push("${item.density}");
 	</c:forEach>
 	
-	var diameter2000min = 0.0;
+	var diameter2000min = 0;
 	var pathlength2000min = 0.0;
 	var clustering2000min = 0.0;
 	var density2000min = 0.0;
+	console.log(typeof clustering2000min);
 	
 	var diameter2005min = 0.0;
 	var pathlength2005min = 0.0;
@@ -3564,14 +3567,16 @@ var ChartsFlotcharts = function() {
 	var clustering2015min = 0.0;
 	var density2015min = 0.0;
 	
+	
 	for (var i = 0; i < diameter2000.length; i++){
 		diameter2000min += diameter2000[i];
 		pathlength2000min += pathlength2000[i];
 		clustering2000min += clustering2000[i];
 		density2000min += density2000[i];
+		console.log(typeof diameter2000[i]);
 		
 	}
-	alert(diameter2000min);
+	alert(clustering2000min);
 	diameter2000min /= diameter2000.length;
 	pathlength2000min /= diameter2000.length;
 	clustering2000min /= diameter2000.length;
