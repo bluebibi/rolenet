@@ -67,6 +67,19 @@
 
                                             </ul>
                                         </div>
+                                        <div class="col-md-4">
+                                            <ul class="mega-menu-submenu">
+                                                <li>
+                                                    <h3>Analysis</h3>
+                                                </li>
+                                                <li>
+                                                    <a href="/Tab_charts" class="iconify">
+                                                        <i class="icon-speech"></i>
+                                                        charts</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>                                        
                                     </div>
                                 </div>
                             </li>

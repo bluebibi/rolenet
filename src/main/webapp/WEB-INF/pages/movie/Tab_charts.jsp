@@ -34,8 +34,6 @@
           href="http://218.150.181.131/assets/global/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css"/>
     <link rel="stylesheet" type="text/css"
           href="http://218.150.181.131/assets/global/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css"/>
-    <link rel="stylesheet" type="text/css"
-          href="http://218.150.181.131/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
     <!-- END PAGE LEVEL STYLES -->
     <!-- BEGIN THEME STYLES -->
     <link href="http://218.150.181.131/assets/global/css/components.css"
@@ -215,17 +213,6 @@
 <!-- END PAGE LEVEL PLUGINS -->
 <script type="text/javascript"
         src="http://218.150.181.131/assets/global/plugins/select2/select2.min.js"></script>
-<script type="text/javascript"
-        src="http://218.150.181.131/assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript"
-        src="http://218.150.181.131/assets/global/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
-<script type="text/javascript"
-        src="http://218.150.181.131/assets/global/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
-<script type="text/javascript"
-        src="http://218.150.181.131/assets/global/plugins/datatables/extensions/Scroller/js/dataTables.scroller.min.js"></script>
-<script type="text/javascript"
-        src="http://218.150.181.131/assets/global/plugi
-        ns/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="http://218.150.181.131/assets/global/scripts/metronic.js" type="text/javascript"></script>
@@ -3552,7 +3539,7 @@ var ChartsFlotcharts = function() {
 	var diameter2005min = 0.0;
 	var pathlength2005min = 0.0;
 	var clustering2005min = 0.0;
-	var density2015min = 0.0;
+	var density2005min = 0.0;
 	
 	var diameter2010min = 0.0;
 	var pathlength2010min = 0.0;
@@ -3564,13 +3551,16 @@ var ChartsFlotcharts = function() {
 	var clustering2015min = 0.0;
 	var density2015min = 0.0;
 	
+	
 	for (var i = 0; i < diameter2000.length; i++){
-		diameter2000min += diameter2000[i];
-		pathlength2000min += pathlength2000[i];
-		clustering2000min += clustering2000[i];
-		density2000min += density2000[i];
-		
+		console.log(typeof density2000min + " : " + i);
+		diameter2000min += Number(diameter2000[i]);
+		pathlength2000min += Number(pathlength2000[i]);
+		clustering2000min += Number(clustering2000[i]);
+		density2000min += Number(density2000[i]);
+		console.log(typeof density2000min);
 	}
+	
 	
 	diameter2000min /= diameter2000.length;
 	pathlength2000min /= diameter2000.length;
@@ -3578,10 +3568,10 @@ var ChartsFlotcharts = function() {
 	density2000min /= diameter2000.length;
 
 	for (var i = 0; i < diameter2005.length; i++){
-		diameter2005min += diameter2005[i];
-		pathlength2005min += pathlength2005[i];
-		clustering2005min += clustering2005[i];
-		density2005min += density2005[i];
+		diameter2005min += Number(diameter2005[i]);
+		pathlength2005min += Number(pathlength2005[i]);
+		clustering2005min += Number(clustering2005[i]);
+		density2005min += Number(density2005[i]);
 	}
 	
 	diameter2005min /= diameter2005.length;
@@ -3590,10 +3580,10 @@ var ChartsFlotcharts = function() {
 	density2005min /= diameter2005.length;
 	
 	for (var i = 0; i < diameter2010.length; i++){
-		diameter2010min += diameter2010[i];
-		pathlength2010min += pathlength2010[i];
-		clustering2010min += clustering2010[i];
-		density2010min += density2010[i];
+		diameter2010min += Number(diameter2010[i]);
+		pathlength2010min += Number(pathlength2010[i]);
+		clustering2010min += Number(clustering2010[i]);
+		density2010min += Number(density2010[i]);
 	}
 	
 	diameter2010min /= diameter2010.length;
@@ -3602,18 +3592,16 @@ var ChartsFlotcharts = function() {
 	density2010min /= diameter2010.length;
 	
 	for (var i = 0; i < diameter2015.length; i++){
-		diameter2015min += diameter2015[i];
-		pathlength2015min += pathlength2015[i];
-		clustering2015min += clustering2015[i];
-		density2015min += density2015[i];
+		diameter2015min += Number(diameter2015[i]);
+		pathlength2015min += Number(pathlength2015[i]);
+		clustering2015min += Number(clustering2015[i]);
+		density2015min += Number(density2015[i]);
 	}
 	
 	diameter2015min /= diameter2015.length;
 	pathlength2015min /= diameter2015.length;
 	clustering2015min /= diameter2015.length;
 	density2015min /= diameter2015.length;
-	
-	alert(density2015min);
 	
     return {
         //main function to initiate the module
@@ -3740,87 +3728,66 @@ var ChartsFlotcharts = function() {
                 function randValue() {
                     return (Math.floor(Math.random() * (1 + 40 - 20))) + 20;
                 }
-                var pageviews = [
-                    [1, randValue()],
-                    [2, randValue()],
-                    [3, 2 + randValue()],
-                    [4, 3 + randValue()],
-                    [5, 5 + randValue()],
-                    [6, 10 + randValue()],
-                    [7, 15 + randValue()],
-                    [8, 20 + randValue()],
-                    [9, 25 + randValue()],
-                    [10, 30 + randValue()],
-                    [11, 35 + randValue()],
-                    [12, 25 + randValue()],
-                    [13, 15 + randValue()],
-                    [14, 20 + randValue()],
-                    [15, 45 + randValue()],
-                    [16, 50 + randValue()],
-                    [17, 65 + randValue()],
-                    [18, 70 + randValue()],
-                    [19, 85 + randValue()],
-                    [20, 80 + randValue()],
-                    [21, 75 + randValue()],
-                    [22, 80 + randValue()],
-                    [23, 75 + randValue()],
-                    [24, 70 + randValue()],
-                    [25, 65 + randValue()],
-                    [26, 75 + randValue()],
-                    [27, 80 + randValue()],
-                    [28, 85 + randValue()],
-                    [29, 90 + randValue()],
-                    [30, 95 + randValue()]
+                var diameter = [
+                    [2000, diameter2000min],
+                    [2005, diameter2005min],
+                    [2010, diameter2010min],
+                    [2015, diameter2015min]
+                    
                 ];
-                var visitors = [
-                    [1, randValue() - 5],
-                    [2, randValue() - 5],
-                    [3, randValue() - 5],
-                    [4, 6 + randValue()],
-                    [5, 5 + randValue()],
-                    [6, 20 + randValue()],
-                    [7, 25 + randValue()],
-                    [8, 36 + randValue()],
-                    [9, 26 + randValue()],
-                    [10, 38 + randValue()],
-                    [11, 39 + randValue()],
-                    [12, 50 + randValue()],
-                    [13, 51 + randValue()],
-                    [14, 12 + randValue()],
-                    [15, 13 + randValue()],
-                    [16, 14 + randValue()],
-                    [17, 15 + randValue()],
-                    [18, 15 + randValue()],
-                    [19, 16 + randValue()],
-                    [20, 17 + randValue()],
-                    [21, 18 + randValue()],
-                    [22, 19 + randValue()],
-                    [23, 20 + randValue()],
-                    [24, 21 + randValue()],
-                    [25, 14 + randValue()],
-                    [26, 24 + randValue()],
-                    [27, 25 + randValue()],
-                    [28, 26 + randValue()],
-                    [29, 27 + randValue()],
-                    [30, 31 + randValue()]
+                var pathlength = [
+                    [2000, pathlength2000min],
+                    [2005, pathlength2005min],
+                    [2010, pathlength2010min],
+                    [2015, pathlength2015min]
+     
+                ];
+                var clustering = [
+                    [2000, clustering2000min],
+                    [2005, clustering2005min],
+                    [2010, clustering2010min],
+                    [2015, clustering2015min]
+                   
+                ];
+                var density = [
+                    [2000, density2000min],
+                    [2005, density2005min],
+                    [2010, density2010min],
+                    [2015, density2015min]
+                   
                 ];
 
                 var plot = $.plot($("#chart_2"), [{
-                    data: pageviews,
-                    label: "Unique Visits",
+                    data: diameter,
+                    label: "diameter",
                     lines: {
                         lineWidth: 1,
                     },
                     shadowSize: 0
 
                 }, {
-                    data: visitors,
-                    label: "Page Views",
+                    data: pathlength,
+                    label: "pathlength",
                     lines: {
                         lineWidth: 1,
                     },
                     shadowSize: 0
-                }], {
+                },{
+                    data: clustering,
+                    label: "clustering",
+                    lines: {
+                        lineWidth: 1,
+                    },
+                    shadowSize: 0
+                },{
+                    data: density,
+                    label: "density",
+                    lines: {
+                        lineWidth: 1,
+                    },
+                    shadowSize: 0
+                }
+                ], {
                     series: {
                         lines: {
                             show: true,
