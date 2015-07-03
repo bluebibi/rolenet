@@ -85,7 +85,7 @@ var ChartsAmcharts = function() {
     }
 
     var initChartSample2 = function() {
-        var chart = AmCharts.makeChart("chart_2", {
+        var chart = AmCharts.makeChart("chart_22", {
             "type": "serial",
             "theme": "light",
 
@@ -316,7 +316,7 @@ var ChartsAmcharts = function() {
             }
         });
 
-        $('#chart_2').closest('.portlet').find('.fullscreen').click(function() {
+        $('#chart_22').closest('.portlet').find('.fullscreen').click(function() {
             chart.invalidateSize();
         });
     }
