@@ -398,7 +398,6 @@
                   <tr onclick="document.location = 'Tab_DirectorDetail?director=${m.director}';">
                     <td>${m.director}</td>
                     <td>${m.count}</td>
-
                   </tr>
 
                 </c:forEach>

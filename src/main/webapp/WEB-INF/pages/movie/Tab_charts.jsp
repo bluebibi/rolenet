@@ -3501,7 +3501,6 @@ var ChartsFlotcharts = function() {
 	var clustering2000 = new Array();
 	var density2000 = new Array();
 	
-	
 	<c:forEach items="${list2000}" var="item">
 	diameter2000.push("${item.diameter}");
 	pathlength2000.push("${item.pathlength}");
@@ -3509,7 +3508,6 @@ var ChartsFlotcharts = function() {
 	density2000.push("${item.density}");
 	</c:forEach>
 	
-	console.log(typeof diameter2000[0]);
 	var diameter2005 = new Array();
 	var pathlength2005 = new Array();
 	var clustering2005 = new Array();
@@ -3546,11 +3544,10 @@ var ChartsFlotcharts = function() {
 	density2015.push("${item.density}");
 	</c:forEach>
 	
-	var diameter2000min = 0;
+	var diameter2000min = 0.0;
 	var pathlength2000min = 0.0;
 	var clustering2000min = 0.0;
 	var density2000min = 0.0;
-	console.log(typeof clustering2000min);
 	
 	var diameter2005min = 0.0;
 	var pathlength2005min = 0.0;
@@ -3567,22 +3564,56 @@ var ChartsFlotcharts = function() {
 	var clustering2015min = 0.0;
 	var density2015min = 0.0;
 	
-	
 	for (var i = 0; i < diameter2000.length; i++){
 		diameter2000min += diameter2000[i];
 		pathlength2000min += pathlength2000[i];
 		clustering2000min += clustering2000[i];
 		density2000min += density2000[i];
-		console.log(typeof diameter2000[i]);
 		
 	}
-	alert(clustering2000min);
+	
 	diameter2000min /= diameter2000.length;
 	pathlength2000min /= diameter2000.length;
 	clustering2000min /= diameter2000.length;
 	density2000min /= diameter2000.length;
 
+	for (var i = 0; i < diameter2005.length; i++){
+		diameter2005min += diameter2005[i];
+		pathlength2005min += pathlength2005[i];
+		clustering2005min += clustering2005[i];
+		density2005min += density2005[i];
+	}
 	
+	diameter2005min /= diameter2005.length;
+	pathlength2005min /= diameter2005.length;
+	clustering2005min /= diameter2005.length;
+	density2005min /= diameter2005.length;
+	
+	for (var i = 0; i < diameter2010.length; i++){
+		diameter2010min += diameter2010[i];
+		pathlength2010min += pathlength2010[i];
+		clustering2010min += clustering2010[i];
+		density2010min += density2010[i];
+	}
+	
+	diameter2010min /= diameter2010.length;
+	pathlength2010min /= diameter2010.length;
+	clustering2010min /= diameter2010.length;
+	density2010min /= diameter2010.length;
+	
+	for (var i = 0; i < diameter2015.length; i++){
+		diameter2015min += diameter2015[i];
+		pathlength2015min += pathlength2015[i];
+		clustering2015min += clustering2015[i];
+		density2015min += density2015[i];
+	}
+	
+	diameter2015min /= diameter2015.length;
+	pathlength2015min /= diameter2015.length;
+	clustering2015min /= diameter2015.length;
+	density2015min /= diameter2015.length;
+	
+	alert(density2015min);
 	
     return {
         //main function to initiate the module
