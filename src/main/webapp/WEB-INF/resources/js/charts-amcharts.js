@@ -503,6 +503,9 @@ var ChartsAmcharts = function() {
     }
 
     var initChartSample5 = function() {
+		var name = "${last[0].name}";
+		alert(name);
+
         var chart = AmCharts.makeChart("chart_5", {
             "theme": "light",
             "type": "serial",
@@ -635,6 +638,7 @@ var ChartsAmcharts = function() {
         $('#chart_5').closest('.portlet').find('.fullscreen').click(function() {
             chart.invalidateSize();
         });
+        
     }
 
     var initChartSample6 = function() {

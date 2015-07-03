@@ -53,4 +53,9 @@ public class MovieListServiceImpl implements MovieListService {
 	public MovieList selectMovieByHit(){
 		return movieListMapper.selectMovieByHit();
 	}
+
+	@Override
+	public List<MovieList> LastList15() {
+		return movieListMapper.LastList15();
+	}
 }

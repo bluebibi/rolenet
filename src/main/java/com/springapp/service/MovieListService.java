@@ -12,8 +12,10 @@ public interface MovieListService {
 	public MovieList selectMovieById(int id);
 	public MovieList selectMovieByName(String name);
 	public List<MovieList> LastList();
+	public List<MovieList> LastList15();
 	public int movieCount();
 	public void addHit(int id);
 	public void addHitByName(String name);
 	public MovieList selectMovieByHit();
+	
 }

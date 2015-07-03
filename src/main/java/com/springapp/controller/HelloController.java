@@ -35,7 +35,8 @@ public class HelloController {
 	private CharactorListMapper charactorListMapper;
 	@Autowired
 	private CharactorsListService charactorsListService;
-	// ///////////////////////////////////////////����占썲����占썲���э옙����������占쏙옙��占�
+
+	
 	@RequestMapping("/")
 	public String printWelcome(ModelMap model) {
 		model.addAttribute("hit", movieListMapper.selectMovieByHit());
@@ -51,7 +52,7 @@ public class HelloController {
 	
 	@RequestMapping(value = "/movietween/addContact.do", method = RequestMethod.POST)
 	public ModelAndView addContact(
-			@ModelAttribute("contact") BoardList boardlist, BindingResult result) {
+		@ModelAttribute("contact") BoardList boardlist, BindingResult result) {
 		System.out.println("authortname : " + boardlist.getUauthor());
 		return new ModelAndView("addContact.jsp", "command", boardlist);
 	}
@@ -136,7 +137,7 @@ public class HelloController {
 	
 	@RequestMapping(value = "/Tab_charts")
 	public String chart(ModelMap model) {
-		
+		model.addAttribute("last", movieListService.LastList15());
 		return "movie/Tab_charts.jsp";
 	}
 
