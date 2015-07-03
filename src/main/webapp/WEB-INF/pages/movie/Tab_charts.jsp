@@ -247,7 +247,7 @@
         ChartsFlotcharts.initCharts();
         ChartsFlotcharts.initPieCharts();
         ChartsFlotcharts.initBarCharts();
-        
+        ChartsAmcharts.init();
     });
 </script>
 </body>
