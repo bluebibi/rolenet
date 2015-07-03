@@ -48,5 +48,11 @@ public interface MovieListMapper {
 	
 	@Update("UPDATE movies SET hit= hit + 1 where name = #{name}")
 	public void addHitByName(@Param("name") String name);
+
+	@Select("SELECT director, count(director) FROM 9th.movies group by director order BY movies.director asc ")
+	public List<MovieList> Dlist();
+
+	@Select("SELECT * from 9th.movies where director = #{director}")
+	public List<MovieList> selectMovieByDirector(@Param("director") String director);
 	
 }

@@ -19,4 +19,6 @@ public interface MovieListService {
 	public List<MovieList> year2005();
 	public List<MovieList> year2010();
 	public List<MovieList> year2015();
+	public List<MovieList> Dlist();
+	public List<MovieList> selectMovieByDirector(String director);
 }

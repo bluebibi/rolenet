@@ -1,7 +1,8 @@
-<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
@@ -26,9 +27,6 @@
       /* comment the above 3 line if you don't want transparency*/
     }
   </style>
-
-
-
   <script>
     var agt = navigator.userAgent.toLowerCase();
     var is_major = parseInt(navigator.appVersion);
@@ -387,16 +385,18 @@
                 <thead>
                 <tr>
                   <!-- <th width="15%">그래프</th>-->
-                  <th width="10%">감독</th>
+                  <th width="10%">제목</th>
+                  <th width="10%">연도</th>
+                  <th width="10%">관객 수</th>
                   <!--<th width="10%" onMouseOver="show2(5)" onMouseOut="toolTip()">density</th>-->
                 </tr>
                 </thead>
                 <tbody>
-
-                <c:forEach var="m" items="${dlist}">
-                  <tr onclick="document.location = 'Tab_DirectorDetail?director=${m.director}';">
-                    <td>${m.director}</td>
-
+                <c:forEach var="m" items="${dlist2}">
+                  <tr>
+                    <td>${m.name}</td>
+                    <td>${m.year}</td>
+                    <td>${m.spectators}</td>
                   </tr>
 
                 </c:forEach>
@@ -417,7 +417,6 @@
 <%@include file="../includes/footMenu.jsp"%>
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <%@include file="../includes/footer.jsp"%>
-
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script type="text/javascript"
         src="http://218.150.181.131/assets/global/plugins/select2/select2.min.js"></script>
@@ -438,8 +437,6 @@
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
 <script src="/resources/js/table-advanced.js"></script>
-
-
 <script>
   jQuery(document).ready(function () {
     Metronic.init(); // init metronic core components

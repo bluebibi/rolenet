@@ -43,14 +43,14 @@ public class MovieListServiceImpl implements MovieListService {
 	public void addHit(int id) {
 		movieListMapper.addHit(id);
 	}
-	
+
 	@Override
-	public void addHitByName(String name){
+	public void addHitByName(String name) {
 		movieListMapper.addHitByName(name);
 	}
-	
+
 	@Override
-	public MovieList selectMovieByHit(){
+	public MovieList selectMovieByHit() {
 		return movieListMapper.selectMovieByHit();
 	}
 
@@ -77,5 +77,15 @@ public class MovieListServiceImpl implements MovieListService {
 	@Override
 	public List<MovieList> year2015() {
 		return movieListMapper.year2015();
+	}
+
+	@Override
+	public List<MovieList> Dlist() {
+		return movieListMapper.Dlist();
+	}
+
+	@Override
+	public List<MovieList> selectMovieByDirector(String director) {
+		return movieListMapper.selectMovieByDirector(director);
 	}
 }

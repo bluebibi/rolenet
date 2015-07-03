@@ -180,8 +180,20 @@ public class HelloController {
 		return "movie/Tab_Explain.jsp";
 	}
 
-	@RequestMapping(value = "/Tab_Director")
-	public String Director(ModelMap model) {
+	@RequestMapping(value = "/Tab_Director", method= RequestMethod.GET)
+	public String Director(ModelMap model,String director) {
+		model.addAttribute("dlist",movieListService.Dlist());
+		//model.addAttribute("dlist2",movieListService.selectMovieByDirector(director));
 		return "movie/Tab_Director.jsp";
+	}
+
+	@RequestMapping(value = "/Tab_DirectorDetail", method= RequestMethod.GET)
+	public String DirectorDetail(ModelMap model,String director){
+		//director = ;
+		//MovieList movieList = movieListService.selectMovieByDirector(director);
+		//model.addAttribute("dlist2", movieList);
+		System.out.println(director);
+		model.addAttribute("dlist2", movieListService.selectMovieByDirector(director));
+		return "movie/Tab_DirectorDetail.jsp";
 	}
 }
