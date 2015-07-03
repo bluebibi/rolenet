@@ -382,12 +382,35 @@
             <div class="portlet-body">
 
               <table class="table table-striped table-bordered table-hover" id="sample_4">
+                  <thead>
+                  <tr>
+                    <!-- <th width="15%">그래프</th>-->
+                    <th width="10%">제목</th>
+                    <th width="10%">연도</th>
+                    <th width="10%">관객 수</th>
+                    <!--<th width="10%" onMouseOver="show2(5)" onMouseOut="toolTip()">density</th>-->
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <c:forEach var="m" items="${dlist2}">
+                    <tr>
+                      <td>${m.name}</td>
+                      <td>${m.year}</td>
+                      <td>${m.spectators}</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+              </table>
+              </div>
+
+              <div class="portlet-body">
+              <table class="table table-striped table-bordered table-hover" id="sample_4">
                 <thead>
                 <tr>
                   <!-- <th width="15%">그래프</th>-->
-                  <th width="10%">제목</th>
-                  <th width="10%">연도</th>
-                  <th width="10%">관객 수</th>
+                  <th width="10%">누적 관객수</th>
+                  <th width="10%">평균 Diameter</th>
+                  <th width="10%">평균 PathLength</th>
                   <!--<th width="10%" onMouseOver="show2(5)" onMouseOut="toolTip()">density</th>-->
                 </tr>
                 </thead>
@@ -398,10 +421,10 @@
                     <td>${m.year}</td>
                     <td>${m.spectators}</td>
                   </tr>
-
                 </c:forEach>
                 </tbody>
               </table>
+
 
             </div>
           </div>

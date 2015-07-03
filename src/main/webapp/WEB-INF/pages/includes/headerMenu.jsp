@@ -62,7 +62,7 @@
                                                 <li>
                                                     <a href="/Tab_Director" class="iconify">
                                                         <i class="icon-speech"></i>
-                                                        A - D</a>
+                                                        Director List</a>
                                                 </li>
 
                                             </ul>
