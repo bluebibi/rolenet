@@ -133,6 +133,12 @@ public class HelloController {
 		model.addAttribute("betweenRole", charactorsListService.selectBetweenRoleByMovieId(id));
 		return "movie/Tab_movielistdetail.jsp";
 	}
+	
+	@RequestMapping(value = "/Tab_charts")
+	public String chart(ModelMap model) {
+		
+		return "movie/Tab_charts.jsp";
+	}
 
 	// 嶺�占썲������占쏙옙����������占쏙옙��占�
 	@RequestMapping(value = "/Tab_mypage")
