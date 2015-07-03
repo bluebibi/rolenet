@@ -388,6 +388,7 @@
                 <tr>
                   <!-- <th width="15%">그래프</th>-->
                   <th width="10%">감독</th>
+                  <th width="10%">영화 수</th>
                   <!--<th width="10%" onMouseOver="show2(5)" onMouseOut="toolTip()">density</th>-->
                 </tr>
                 </thead>
@@ -396,6 +397,7 @@
                 <c:forEach var="m" items="${dlist}">
                   <tr onclick="document.location = 'Tab_DirectorDetail?director=${m.director}';">
                     <td>${m.director}</td>
+                    <td>${m.count}</td>
 
                   </tr>
 

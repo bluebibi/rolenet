@@ -13,6 +13,7 @@ public class MovieList {
     double clustering;
     double density;
     int hit;
+	int count;
 	public int getId() {
 		return id;
 	}
@@ -81,4 +82,11 @@ public class MovieList {
 	}
  
     
+
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
 }
