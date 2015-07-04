@@ -140,7 +140,7 @@
 								<div class="caption">
 									<i class="icon-bar-chart font-green-haze"></i>
 									<span class="caption-subject bold uppercase font-green-haze"> 3D Chart</span>
-									<span class="caption-helper">3d cylinder chart</span>
+									<span class="caption-helper">RECENTLY MOVIE</span>
 								</div>
 							<div class="tools">
 							<a href="javascript:;" class="collapse"></a>
@@ -168,12 +168,39 @@
 											</div>
 										</div>
 								</div>
+							</div>
+
+						</div>
+							<!-- END CHART PORTLET-->
+				</div>
+			</div>
+					<div class="row">
+						<div class="col-md-12">
+							<!-- BEGIN CHART PORTLET-->
+							<div class="portlet light">
+							<div class="portlet-title">
+								<div class="caption">
+									<i class="fa fa-cogs font-green-sharp"></i>
+									<span class="caption-subject font-green-sharp bold uppercase">ORDER BY SPACTATORS</span>
+								</div>
+								<div class="tools">
+									<a href="javascript:;" class="collapse">
+									</a>
+									<a href="#portlet-config" data-toggle="modal" class="config">
+									</a>
+									<a href="javascript:;" class="reload">
+									</a>
+									<a href="javascript:;" class="remove">
+									</a>
 								</div>
 							</div>
-							<!-- END CHART PORTLET-->
+							<div class="portlet-body">
+								<div id="chart_1_2" class="chart">
+								</div>
+							</div>
+							</div>
 						</div>
 					</div>
-					
 			<!-- END PIE CHART PORTLET-->
 			<!-- END PAGE CONTENT INNER -->
 		</div>
@@ -569,7 +596,7 @@ var ChartsAmcharts = function() {
             "fontFamily": 'Open Sans',            
             "color":    '#888888',
             
-            "pathToImages": Metronic.getGlobalPluginsPath() + "amcharts/amcharts/images/",
+            "pathToImages": "http://218.150.181.131/assets/global/plugins/amcharts/amcharts/images/",
 
             "dataProvider": [{
                 "lineColor": "#b7e021",  
@@ -3475,6 +3502,7 @@ var ChartsAmcharts = function() {
             initChartSample10();
             initChartSample11();
             initChartSample12();
+            initChartSample555();
         }
 
     };
@@ -3483,6 +3511,26 @@ var ChartsAmcharts = function() {
 </script>
 <script>
 var ChartsFlotcharts = function() {
+	var id = new Array();
+	var name = new Array();
+	var director = new Array();
+	var year = new Array();
+	var diameter = new Array();
+	var pathlength = new Array();
+	var clustering = new Array();
+	var density = new Array();
+	
+	<c:forEach items="${Spactators}" var="item">
+	id.push("${item.id}");
+	name.push("${item.name}");
+	director.push("${item.director}");
+	year.push("${item.year}");
+	diameter.push("${item.diameter}");
+	pathlength.push("${item.pathlength}");
+	clustering.push("${item.clustering}");
+	density.push("${item.density}");
+	</c:forEach>
+	
 	var diameter2000 = new Array();
 	var pathlength2000 = new Array();
 	var clustering2000 = new Array();
@@ -4120,11 +4168,11 @@ var ChartsFlotcharts = function() {
 
             function GenerateSeries(added) {
                 var data = [];
-                var start = 100 + added;
-                var end = 200 + added;
+                var start =0;
+                var end = 1;
 
                 for (i = 1; i <= 20; i++) {
-                    var d = Math.floor(Math.random() * (end - start + 1) + start);
+                    var d = Math.floor( end - start);
                     data.push([i, d]);
                     start++;
                     end++;
@@ -4166,11 +4214,11 @@ var ChartsFlotcharts = function() {
             // horizontal bar chart:
 
             var data1 = [
-                [10, 10],
-                [20, 20],
-                [30, 30],
-                [40, 40],
-                [50, 50]
+                [density[0],name[0]],
+                [density[0],name[0]],
+                [density[0],name[0]],
+                [density[0],name[0]]
+                
             ];
 
             var options = {

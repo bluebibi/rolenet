@@ -25,6 +25,9 @@ public interface MovieListMapper {
 	@Select("SELECT * FROM movies ORDER BY year DESC LIMIT 15")
 	public List<MovieList> LastList15();
 	
+	@Select("SELECT * FROM movies ORDER BY spectators DESC LIMIT 15")
+	public List<MovieList> LastList15bySpectators();
+	
 	@Select("select count(*) from movies")
 	public int movieCount();
 	

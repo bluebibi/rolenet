@@ -88,4 +88,9 @@ public class MovieListServiceImpl implements MovieListService {
 	public List<MovieList> selectMovieByDirector(String director) {
 		return movieListMapper.selectMovieByDirector(director);
 	}
+
+	@Override
+	public List<MovieList> LastList15bySpectators() {
+		return movieListMapper.LastList15bySpectators();
+	}
 }

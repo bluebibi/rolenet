@@ -142,6 +142,7 @@ public class HelloController {
 		model.addAttribute("list2005", movieListService.year2005());
 		model.addAttribute("list2010", movieListService.year2010());
 		model.addAttribute("list2015", movieListService.year2015());
+		model.addAttribute("Spactators",movieListService.LastList15bySpectators());
 		return "movie/Tab_charts.jsp";
 	}
 
