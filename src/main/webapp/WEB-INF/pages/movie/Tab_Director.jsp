@@ -388,7 +388,12 @@
                 <tr>
                   <!-- <th width="15%">그래프</th>-->
                   <th width="10%">감독</th>
-                  <th width="10%">영화 수</th>
+                  <th width="10%">누적 관객 수</th>
+                  <th width="10%">평균 Diameter</th>
+                  <th width="10%">평균 Pathlength</th>
+                  <th width="10%">평균 Clustering</th>
+                  <th width="10%">평균 Density</th>
+
                   <!--<th width="10%" onMouseOver="show2(5)" onMouseOut="toolTip()">density</th>-->
                 </tr>
                 </thead>
@@ -397,7 +402,11 @@
                 <c:forEach var="m" items="${dlist}">
                   <tr onclick="document.location = 'Tab_DirectorDetail?director=${m.director}';">
                     <td>${m.director}</td>
-                    <td>${m.count}</td>
+                    <td>${m.sumS}</td>
+                    <td>${m.avgD}</td>
+                    <td>${m.avgP}</td>
+                    <td>${m.avgC}</td>
+                    <td>${m.avgDE}</td>
                   </tr>
 
                 </c:forEach>

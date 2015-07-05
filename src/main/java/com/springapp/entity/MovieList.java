@@ -14,6 +14,11 @@ public class MovieList {
     double density;
     int hit;
 	int count;
+	int sumS;
+	double avgD;
+	double avgP;
+	double avgC;
+	double avgDE;
 	public int getId() {
 		return id;
 	}
@@ -83,10 +88,21 @@ public class MovieList {
  
     
 
-	public int getCount() {
-		return count;
-	}
-	public void setCount(int count) {
-		this.count = count;
-	}
+	public int getCount() {		return count;	}
+	public void setCount(int count) {		this.count = count;	}
+
+	public int getSumS() {		return sumS;	}
+	public void setSumS(int sumS) {		this.sumS = sumS;	}
+
+	public double getAvgD() {		return avgD;	}
+	public void setAvgD(double avgD) {		this.avgD = avgD;	}
+
+	public double getAvgC() {		return avgC;	}
+	public void setAvgC(double avgC) {		this.avgC = avgC;	}
+
+	public double getAvgP() {		return avgP;	}
+	public void setAvgP(double avgP) {		this.avgP = avgP;	}
+
+	public double getAvgDE() {		return avgDE;	}
+	public void setAvgDE(double avgDE) {		this.avgDE = avgDE;	}
 }
