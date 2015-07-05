@@ -141,18 +141,18 @@
 									<i class="icon-bar-chart font-green-haze"></i>
 									<span class="caption-subject bold uppercase font-green-haze"> 3D Chart</span>
 									&nbsp;
-									<select id="seledtBox" onchange="reload(this.value)">
-									<option id="0" value="0">clustering</option>
-									<option id="1" value="1">diameter</option>
-									<option id="2" value="2">pathlength</option>
-									<option id="3" value="3">density</option>
+									<select id="seledtBox" onchange="reload(this.value)" name="select">
+									<option id="0" value="0" ${flag eq "0" ? "selected" :""}>clustering</option>
+									<option id="1" value="1" ${flag eq "1" ? "selected" :""}>diameter</option>
+									<option id="2" value="2" ${flag eq "2" ? "selected" :""}>pathlength</option>
+									<option id="3" value="3" ${flag eq "3" ? "selected" :""}>density</option>
 									</select>
 									&nbsp;
 									<span>AND ORDER BY</span>
 									&nbsp;
 									<select id="seledtBox" onchange="reload2(this.value)">
-									<option id="0" value="0">YEAR</option>
-									<option id="1" value="1">SPACTATORS</option>
+									<option id="0" value="0" ${flag2 eq "0" ? "selected" :""}>YEAR</option>
+									<option id="1" value="1" ${flag2 eq "1" ? "selected" :""}>SPACTATORS</option>
 									</select>
 									
 								</div>
@@ -236,6 +236,7 @@
 <script>
 var flag = ${flag};
 var flag2 = ${flag2};
+
 /* function flagChange(flag2)
 {
 	flag = flag2;
