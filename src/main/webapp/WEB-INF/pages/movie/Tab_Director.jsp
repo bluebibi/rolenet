@@ -387,12 +387,12 @@
                 <thead>
                 <tr>
                   <!-- <th width="15%">그래프</th>-->
-                  <th width="10%">감독</th>
-                  <th width="10%">누적 관객 수</th>
-                  <th width="10%">평균 Diameter</th>
-                  <th width="10%">평균 Pathlength</th>
-                  <th width="10%">평균 Clustering</th>
-                  <th width="10%">평균 Density</th>
+                  <th width="10%">Director</th>
+                  <th width="10%">Sum Spectators</th>
+                  <th width="10%">Avg Diameter</th>
+                  <th width="10%">Avg Pathlength</th>
+                  <th width="10%">Avg Clustering</th>
+                  <th width="10%">Avg Density</th>
 
                   <!--<th width="10%" onMouseOver="show2(5)" onMouseOut="toolTip()">density</th>-->
                 </tr>
