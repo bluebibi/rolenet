@@ -393,7 +393,7 @@
                   </thead>
                   <tbody>
                   <c:forEach var="m" items="${dlist2}">
-                    <tr>
+                    <tr onclick="document.location = 'Tab_movielistdetail?id=${m.id}';" >
                       <td>${m.name}</td>
                       <td>${m.year}</td>
                       <td>${m.spectators}</td>
