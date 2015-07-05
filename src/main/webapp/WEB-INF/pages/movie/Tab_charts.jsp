@@ -140,8 +140,23 @@
 								<div class="caption">
 									<i class="icon-bar-chart font-green-haze"></i>
 									<span class="caption-subject bold uppercase font-green-haze"> 3D Chart</span>
-									<span class="caption-helper">RECENTLY MOVIE</span>
+									&nbsp;
+									<select id="seledtBox" onchange="reload(this.value)">
+									<option id="0" value="0">clustering</option>
+									<option id="1" value="1">diameter</option>
+									<option id="2" value="2">pathlength</option>
+									<option id="3" value="3">density</option>
+									</select>
+									&nbsp;
+									<span>AND ORDER BY</span>
+									&nbsp;
+									<select id="seledtBox" onchange="reload2(this.value)">
+									<option id="0" value="0">YEAR</option>
+									<option id="1" value="1">SPACTATORS</option>
+									</select>
+									
 								</div>
+								
 							<div class="tools">
 							<a href="javascript:;" class="collapse"></a>
 							<a href="#portlet-config" data-toggle="modal" class="config"></a>
@@ -150,7 +165,7 @@
 							<a href="javascript:;" class="remove"></a>
 							</div>
 							</div>
-						<div class="portlet-body">
+						<div class="portlet-body1">
 							<div id="chart_5" class="chart" style="height: 400px;"></div>
 								<div class="well margin-top-20">
 										<div class="row">
@@ -168,39 +183,12 @@
 											</div>
 										</div>
 								</div>
-							</div>
+						</div>
 
 						</div>
 							<!-- END CHART PORTLET-->
 				</div>
 			</div>
-					<div class="row">
-						<div class="col-md-12">
-							<!-- BEGIN CHART PORTLET-->
-							<div class="portlet light">
-							<div class="portlet-title">
-								<div class="caption">
-									<i class="fa fa-cogs font-green-sharp"></i>
-									<span class="caption-subject font-green-sharp bold uppercase">ORDER BY SPACTATORS</span>
-								</div>
-								<div class="tools">
-									<a href="javascript:;" class="collapse">
-									</a>
-									<a href="#portlet-config" data-toggle="modal" class="config">
-									</a>
-									<a href="javascript:;" class="reload">
-									</a>
-									<a href="javascript:;" class="remove">
-									</a>
-								</div>
-							</div>
-							<div class="portlet-body">
-								<div id="chart_1_2" class="chart">
-								</div>
-							</div>
-							</div>
-						</div>
-					</div>
 			<!-- END PIE CHART PORTLET-->
 			<!-- END PAGE CONTENT INNER -->
 		</div>
@@ -246,7 +234,28 @@
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
 <script>
+var flag = ${flag};
+/* function flagChange(flag2)
+{
+	flag = flag2;
+	$( ".portlet-body1" ).empty();
+	var string = "<div id='chart_5' class='chart' style='height: 400px;'></div><div class='well margin-top-20'>";
+	string += "<div class='row'><div class='col-sm-3'><label class='text-left'>Top Radius:</label>";
+	string += "<input class='chart_5_chart_input' data-property='topRadius' type='range' min='0' max='1.5' value='1' step='0.01'/>";
+	string += "</div><div class='col-sm-3'><label class='text-left'>Angle:</label><input class='chart_5_chart_input' data-property='angle' type='range' min='0' max='89' value='30' step='1'/>";
+	string += "</div><div class='col-sm-3'><label class='text-left'>Depth:</label><input class='chart_5_chart_input' data-property='depth3D' type='range' min='1' max='120' value='40' step='1'/>";
+	string += "</div></div></div>";
+	$(string).appendTo(".portlet-body1");
+	
+	//location.reload();
+	console.log(flag);
+} */
+
+function reload(flag2){
+	location.href="/Tab_charts?flag=" + flag2;
+}
 var ChartsAmcharts = function() {
+	console.log("22" + flag);
 	var id = new Array();
 	var name = new Array();
 	var director = new Array();
@@ -261,10 +270,18 @@ var ChartsAmcharts = function() {
 	name.push("${item.name}");
 	director.push("${item.director}");
 	year.push("${item.year}");
-	diameter.push("${item.diameter}");
-	pathlength.push("${item.pathlength}");
-	clustering.push("${item.clustering}");
-	density.push("${item.density}");
+	
+	if (flag == 0 ){
+		clustering.push("${item.clustering}");
+	} else if(flag == 1){
+		clustering.push("${item.diameter}");
+	} else if(flag == 2){
+		clustering.push("${item.pathlength}");
+	} else{
+		clustering.push("${item.density}");
+	}
+	
+	
 	</c:forEach>
 	
     var initChartSample1 = function() {
@@ -3502,7 +3519,6 @@ var ChartsAmcharts = function() {
             initChartSample10();
             initChartSample11();
             initChartSample12();
-            initChartSample555();
         }
 
     };

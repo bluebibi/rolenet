@@ -73,7 +73,7 @@
                                                     <h3>Analysis</h3>
                                                 </li>
                                                 <li>
-                                                    <a href="/Tab_charts" class="iconify">
+                                                    <a href="/Tab_charts?flag=0" class="iconify">
                                                         <i class="icon-speech"></i>
                                                         charts</a>
                                                 </li>
