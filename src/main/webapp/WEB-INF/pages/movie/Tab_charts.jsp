@@ -235,6 +235,7 @@
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
 <script>
 var flag = ${flag};
+var flag2 = ${flag2};
 /* function flagChange(flag2)
 {
 	flag = flag2;
@@ -251,8 +252,12 @@ var flag = ${flag};
 	console.log(flag);
 } */
 
-function reload(flag2){
-	location.href="/Tab_charts?flag=" + flag2;
+function reload(flag3){
+	location.href="/Tab_charts?flag=" + flag3 + "&flag2=" + ${flag2};
+}
+
+function reload2(flag3){
+	location.href="/Tab_charts?flag=" + ${flag} + "&flag2=" + flag3;
 }
 var ChartsAmcharts = function() {
 	console.log("22" + flag);
@@ -265,9 +270,18 @@ var ChartsAmcharts = function() {
 	var clustering = new Array();
 	var density = new Array();
 	
+	if(flag2 == 0){
+		<c:forEach items="${last}" var="item">
+		name.push("${item.name}");
+		</c:forEach>
+	} else{
+		<c:forEach items="${Spactators}" var="item">
+		name.push("${item.name}");
+		</c:forEach>
+	}
+	
 	<c:forEach items="${last}" var="item">
 	id.push("${item.id}");
-	name.push("${item.name}");
 	director.push("${item.director}");
 	year.push("${item.year}");
 	
@@ -280,9 +294,9 @@ var ChartsAmcharts = function() {
 	} else{
 		clustering.push("${item.density}");
 	}
-	
-	
 	</c:forEach>
+	
+	
 	
     var initChartSample1 = function() {
         var chart = AmCharts.makeChart("chart_1", {
