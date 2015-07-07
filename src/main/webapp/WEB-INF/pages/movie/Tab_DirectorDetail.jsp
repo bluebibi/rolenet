@@ -340,7 +340,7 @@
         <li><a href="#">Home</a><i class="fa fa-circle"></i></li>
         <li>Movie <i
                 class="fa fa-circle"></i></li>
-        <li class="active">Director list</li>
+        <li class="active"><a href="Tab_Director">Director list</a></li>
       </ul>
       <!-- END PAGE BREADCRUMB -->
       <!-- BEGIN PAGE CONTENT INNER -->
@@ -353,29 +353,6 @@
                 <i class="fa fa-cogs font-green-sharp"></i> <span
                       class="caption-subject font-green-sharp bold uppercase">Director
 										List</span>
-              </div>
-              <div class="actions btn-set">
-                <div class="btn-group">
-                  <a class="btn green-haze btn-circle" href="javascript:;" data-toggle="dropdown">
-                    <!--<i class="fa fa-check-circle"></i>-->
-                    Columns <i class="fa fa-angle-down"></i>
-                  </a>
-                  <ul class="dropdown-menu pull-right" id="sample_4_column_toggler">
-
-                    <li>
-                      <label><input type="checkbox" checked data-column="6">diameter</label>
-                    </li>
-                    <li>
-                      <label><input type="checkbox" checked data-column="7">pathlength</label>
-                    </li>
-                    <li>
-                      <label><input type="checkbox" checked data-column="8">clustering</label>
-                    </li>
-                    <li>
-                      <label><input type="checkbox" checked data-column="9">density</label>
-                    </li>
-                  </ul>
-                </div>
               </div>
             </div>
 
