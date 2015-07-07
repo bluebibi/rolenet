@@ -182,7 +182,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									class="caption-subject font-green-sharp bold uppercase">Actors-Network</span>
 								&nbsp;
 								<button class="btn default purple-stripe"
-									onclick="openPopup('http://localhost:8080/Tab_compare?movie1=${n.id}')">Compare
+									onclick="openPopup('/Tab_compare?movie1=${n.id}')">Compare
 								</button>
 							</div>
 							<div class="tools">
