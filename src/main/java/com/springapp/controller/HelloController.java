@@ -1,8 +1,7 @@
 package com.springapp.controller;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -15,10 +14,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.springapp.dao.BoardListMapper;
 import com.springapp.dao.CharactorListMapper;
+import com.springapp.dao.FileDTO;
 import com.springapp.dao.MovieListMapper;
 import com.springapp.entity.BoardList;
 import com.springapp.entity.MovieList;
@@ -218,4 +219,40 @@ public class HelloController {
 		model.addAttribute("dlist2", movieListService.selectMovieByDirector(director));
 		return "movie/Tab_DirectorDetail.jsp";
 	}
+	
+	@RequestMapping(value = "/upload.do")
+	public String fileupload(ModelMap model){
+		return "movie/fileForm.jsp";
+	}
+	
+	@RequestMapping(value = "/file.do", method = RequestMethod.GET)
+    public ModelAndView fileForm() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("fileForm");
+        return mv;
+    }
+     
+    @RequestMapping(value = "/file.do", method = RequestMethod.POST)
+    public String fileSubmit(FileDTO dto) {
+        MultipartFile uploadfile = dto.getUploadfile();
+        if (uploadfile != null) {
+            String fileName = uploadfile.getOriginalFilename();
+            dto.setFileName(fileName);
+            try {
+                // 1. FileOutputStream 사용
+                // byte[] fileData = file.getBytes();
+                // FileOutputStream output = new FileOutputStream("C:/images/" + fileName);
+                // output.write(fileData);
+                 
+                // 2. File 사용
+                File file = new File("/Users/kth/drop/" + fileName);
+                uploadfile.transferTo(file);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } // try - catch
+        } // if
+        System.out.println("complete");
+        // 데이터 베이스 처리를 현재 위치에서 처리
+        return "movie/fileForm.jsp"; // 리스트 요청으로 보내야하는데 일단 제외하고 구현
+    }
 }
