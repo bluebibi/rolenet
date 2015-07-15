@@ -1,5 +1,11 @@
 package com.springapp.controller;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -133,6 +139,19 @@ public class HelloController {
 		model.addAttribute("degreeRole", charactorsListService.selectDegreeRoleByMovieId(id));
 		model.addAttribute("betweenRole", charactorsListService.selectBetweenRoleByMovieId(id));
 		return "movie/Tab_movielistdetail.jsp";
+	}
+	@RequestMapping(value = "/python")
+	public void python(ModelMap model) throws IOException{
+		//BufferedWriter out = new BufferedWriter(new FileWriter("/Users/kth/so/kmeans2.py"));
+		//out.write(prg);
+		//out.close();
+		Process p = Runtime.getRuntime().exec("python /Users/kth/so/kmeans2.py");
+		BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
+		String ret;
+		while ((ret = in.readLine()) != null) {
+	        System.out.println(ret);
+	      }
+		//System.out.println("value is : "+ret);
 	}
 	
 	@RequestMapping(value = "/Tab_charts")
