@@ -65,7 +65,18 @@
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico">
 <script src="http://218.150.181.131/sigma.js-1.0.3/jquery-2.1.1.min.js"></script>
+<script>
+	function Submit()
+	{
+		var f = document.formName;
 
+		f.action = "file.do";
+		f.encoding = "multipart/form-data";
+		f.submit();
+		//f.action = "insertInfo.do";
+		//f.submit();
+	}
+</script>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -90,7 +101,7 @@
 	<div class="page-content">
 		<div class="container">
 			<div class="portlet light">
-			<form action="file.do" method="post" enctype="multipart/form-data">
+			<form name="formName"method="post">
 			<table>
 				<tr>
 					<th>시나리오</th>
@@ -98,19 +109,19 @@
 				</tr>
 				<tr>
 					<th>영화 제목</th>
-					<td><input type="text" name="uploadfile" required="required" ></td>
+					<td><input type="text" name="name" required="required" ></td>
 				</tr>
 				<tr>
 					<th>작가</th>
-					<td><input type="text" name="uploadfile" required="required"  ></td>
+					<td><input type="text" name="director" required="required"  ></td>
 				</tr>
 				<tr>
 					<th>줄거리</th>
-					<td><textarea rows="20" cols="uploadfile" name="content" required="required"></textarea></td>
+					<td><textarea rows="20"  name="content" required="required"></textarea></td>
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input type="submit" value="작성">
+						<input type="submit" value="작성" onclick="Submit()">
 						<input type="reset" value="취소">
 					</td>
 				</tr>
