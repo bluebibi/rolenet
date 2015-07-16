@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.springapp.entity.UserMovieList;
+import com.springapp.service.UserMovieListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -42,7 +44,8 @@ public class HelloController {
     private CharactorListMapper charactorListMapper;
     @Autowired
     private CharactorsListService charactorsListService;
-
+    @Autowired
+    private UserMovieListService userMovieListService;
 
     @RequestMapping("/")
     public String printWelcome(ModelMap model) {
@@ -149,7 +152,8 @@ public class HelloController {
         //BufferedWriter out = new BufferedWriter(new FileWriter("/Users/kth/so/kmeans2.py"));
         //out.write(prg);
         //out.close();
-        Process p = Runtime.getRuntime().exec("python /Users/kth/so/kmeans2.py");
+
+        Process p = Runtime.getRuntime().exec("python /Users/kth/so/file.py");
         BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
         String ret;
         while ((ret = in.readLine()) != null) {
@@ -243,13 +247,14 @@ public class HelloController {
     }
 
     @RequestMapping(value = "/file.do", method = RequestMethod.POST)
-    public String fileSubmit(FileDTO dto, HttpServletRequest request) {
-
+    public String fileSubmit(FileDTO dto, HttpServletRequest request) throws IOException{
+        int topnum = userMovieListService.topNum();
+        topnum = topnum + 1;
         System.out.println("file upload");
         MultipartFile uploadfile = dto.getUploadfile();
         if (uploadfile != null) {
-            String fileName = uploadfile.getOriginalFilename();
-            dto.setFileName(fileName);
+            //String fileName = uploadfile.getOriginalFilename();
+            dto.setFileName(topnum + ".txt");
             try {
                 // 1. FileOutputStream 사용
                 // byte[] fileData = file.getBytes();
@@ -257,18 +262,31 @@ public class HelloController {
                 // output.write(fileData);
 
                 // 2. File 사용
-                File file = new File("/Users/kth/drop/" + fileName);
+                File file = new File("/Users/kth/drop/" + topnum + ".txt");
                 uploadfile.transferTo(file);
             } catch (IOException e) {
                 e.printStackTrace();
             } // try - catch
         } // if
 
+        String name = request.getParameter("name");
+        String director = request.getParameter("director");
+        String synopsis = request.getParameter("content");
 
-        System.out.println("name = " + request.getParameter("name"));
-        System.out.println("name = " + request.getParameter("director"));
-        System.out.println("name = " + request.getParameter("content"));
+        System.out.println("name = " + name);
+        System.out.println("director = " + director);
+        System.out.println("synopsis = " + synopsis);
 
+
+        userMovieListService.insertUserMovie(topnum,director, synopsis, name);
+        System.out.println("디비 입력완료 ㅋㅎㅋ");
+        Process p = Runtime.getRuntime().exec("python /Users/kth/so/finall.py");
+        System.out.println("파이썬 실행 완료 ㅋㅎㅋ");
+        BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
+        String ret;
+        while ((ret = in.readLine()) != null) {
+            System.out.println(ret);
+        }
         System.out.println("complete");
         // 데이터 베이스 처리를 현재 위치에서 처리
         return "movie/fileForm.jsp"; // 리스트 요청으로 보내야하는데 일단 제외하고 구현
