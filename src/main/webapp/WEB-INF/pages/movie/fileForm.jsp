@@ -73,11 +73,57 @@
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
 
 <body>
-	<form action="file.do" method="post" enctype="multipart/form-data">
-		<input type="file" name="uploadfile" required="required">
-		<input type="submit" value = "제출">
-	</form>
+<%@include file="../includes/headerMenu.jsp"%>
+<div class="page-container">
+	<!-- BEGIN PAGE HEAD -->
+	<div class="page-head">
+		<div class="container">
+			<!-- BEGIN PAGE TITLE -->
+			<div class="page-title">
+				<h1>Upload <small> your scenario</small></h1>
+			</div>
+			<!-- END PAGE TITLE -->
+		</div>
+	</div>
+	<!-- END PAGE HEAD -->
+	<!-- BEGIN PAGE CONTENT -->
+	<div class="page-content">
+		<div class="container">
+			<div class="portlet light">
+			<form action="file.do" method="post" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<th>시나리오</th>
+					<td><input type="file" name="uploadfile" required="required" value="first"></td>
+				</tr>
+				<tr>
+					<th>영화 제목</th>
+					<td><input type="text" name="uploadfile" required="required" ></td>
+				</tr>
+				<tr>
+					<th>작가</th>
+					<td><input type="text" name="uploadfile" required="required"  ></td>
+				</tr>
+				<tr>
+					<th>줄거리</th>
+					<td><textarea rows="20" cols="uploadfile" name="content" required="required"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="작성">
+						<input type="reset" value="취소">
+					</td>
+				</tr>
+			</table>
+			</form>
+			</div>
+			<div class="portlet light">
+			</div>
+		</div>
+	</div>
+</div>
 	<!-- BEGIN JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) -->
+<%@include file="../includes/footMenu.jsp"%>
 <%@include file="../includes/footer.jsp"%>
 	<!-- END PAGE LEVEL PLUGINS -->
 	
