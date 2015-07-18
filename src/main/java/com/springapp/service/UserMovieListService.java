@@ -12,13 +12,13 @@ import java.util.List;
 public interface UserMovieListService {
     List<UserMovieList> list();
 
-    public UserMovieList selectMovieById(int id);
+    UserMovieList selectMovieById(int id);
 
-    public UserMovieList selectMovieByName(String name);
+    UserMovieList selectMovieByName(String name);
 
-    public int movieCount();
+    int movieCount();
 
-    public void insertUserMovie(int id,String director, String synopsis,String name);
+    void insertUserMovie(int id, String director, String synopsis, String name);
 
-    public Integer topNum();
+    Integer topNum();
 }

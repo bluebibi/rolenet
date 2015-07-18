@@ -8,8 +8,8 @@ import com.springapp.entity.Member;
 import com.springapp.entity.MovieList;
 
 public interface MemberListService {
-	public List<Member> list();
+	List<Member> list();
 	MovieList selectMemberByID(@Param("id") int id);
-	public int memberCount();
-	public void insertMember();
+	int memberCount();
+	void insertMember();
 }
