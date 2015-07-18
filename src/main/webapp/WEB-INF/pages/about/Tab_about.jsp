@@ -76,7 +76,7 @@
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
 			<div class="page-title">
-				<h1>About Us <small>Link 9th</small></h1>
+				<h1>만든이 소개<small> >> LINK 9th</small></h1>
 			</div>
 			<!-- END PAGE TITLE -->
 		</div>
@@ -112,34 +112,34 @@
 				<div class="portlet-body">
 					<div class="row margin-bottom-30">
 						<div class="col-md-6">
-							<p>
-								<big>Movietween을 만들기까지 얼마나 힘들었던가...</big><br>
-								충남 천안시 동남구 병천면 가전리 한국기술교육대학교<br> 4공학관 B동 103호 LINK LAB 9기 난닝구<br><br>
-
+							<p> <center>
+								<big>Movietween은 영화분석 사이트입니다.</big><br>
+								충남 천안시 동남구 병천면 가전리 한국기술교육대학교<br> 4공학관 B동 103호 LINK LAB 9기 '난닝구'<br><br>
+								</center>
 							</p>
 							<ul class="list-unstyled margin-top-10 margin-bottom-10">
 								<li>
-									<i class="fa fa-check icon-default"></i> ���� : ���μ��
+									<i class="fa fa-check icon-default"></i> 제목 : 무비트윈
 								</li>
 								<li>
-									<i class="fa fa-check icon-success"></i> ���� : 源�����, �댁����, ��二쇱��
+									<i class="fa fa-check icon-default"></i> 목적 : 영화분석
 								</li>
 								<li>
-									<i class="fa fa-check icon-info"></i> ��紐� : ����援� (I'm Link 9th)
+									<i class="fa fa-check icon-default"></i> 만든이 : 난닝구 (I'm Link 9th)
 								</li>
 								<li>
-									<i class="fa fa-check icon-danger"></i> 吏���援����� : ���고��
+									<i class="fa fa-check icon-default"></i> 연락처 : 123
 								</li>
-								<li>
-									<i class="fa fa-check icon-warning"></i> ���댄��
-								</li>
+								<!-- <li>
+									<i class="fa fa-check icon-default"></i> ���댄��
+								</li> -->
 							</ul>
 							<!-- Blockquotes -->
 							<blockquote class="hero">
 								<p>
-									臾대�媛ㅻ���� �곗���� 臾대��몄�� �곗����������������媛�����������!!!!!!!!!!!!!!!!!!!!
+									많은 의견 주세요. 피드백 환영합니다.
 								</p>
-								<small>��二쇱��</small>
+								<small>연락처는 아래를 참고하세요.</small>
 							</blockquote>
 						</div>
 						<div class="col-md-6">
@@ -150,16 +150,16 @@
 					<!--/row-->
 					<!-- Meer Our Team -->
 					<div class="headline">
-						<h3>Meet Our Team</h3>
+						<h3>팀원 소개</h3>
 					</div>
 					<div class="row thumbnails">
 						<div class="col-md-3">
 							<div class="meet-our-team">
-								<h3>���μ�� <small>���� �ㅽ��留�/珥�愿�</small></h3>
+								<h3>이름 <small>소개</small></h3>
 								<img src="http://218.150.181.131/assets/img/2.png" alt="" class="img-responsive"/>
 								<div class="team-info">
 									<p>
-										�⑹�� ���� �뱁�� ��硫� 醫�寃���.
+										가나다라
 									</p>
 									<ul class="social-icons pull-right">
 										<li>
@@ -188,44 +188,11 @@
 						</div>
 						<div class="col-md-3">
 							<div class="meet-our-team">
-								<h3>�댁���� <small> ������</small></h3>
-								<img src="http://218.150.181.131/assets/img.pngpg" alt="" class="img-responsive"/>
-								<div class="team-info">
-									<p>
-										�ъ���怨� �ㅻ�
-									</p>
-									<ul class="social-icons pull-right">
-										<li>
-											<a href="javascript:;" data-original-title="twitter" class="twitter">
-											</a>
-										</li>
-										<li>
-											<a href="javascript:;" data-original-title="facebook" class="facebook">
-											</a>
-										</li>
-										<li>
-											<a href="javascript:;" data-original-title="linkedin" class="linkedin">
-											</a>
-										</li>
-										<li>
-											<a href="javascript:;" data-original-title="Goole Plus" class="googleplus">
-											</a>
-										</li>
-										<li>
-											<a href="javascript:;" data-original-title="skype" class="skype">
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="meet-our-team">
-								<h3>源����� <small>硫��몄��� / ��..</small></h3>
+								<h3>이름 <small>소개</small></h3>
 								<img src="http://218.150.181.131/assets/img/2.png" alt="" class="img-responsive"/>
 								<div class="team-info">
 									<p>
-										����3, 濡�, �쇳�� �깅��
+										가나다라
 									</p>
 									<ul class="social-icons pull-right">
 										<li>
@@ -254,11 +221,44 @@
 						</div>
 						<div class="col-md-3">
 							<div class="meet-our-team">
-								<h3>��二쇱�� <small>��二쇱��</small></h3>
-								<img src="http://218.150.181.131/assets/img/3.png" alt="" class="img-responsive"/>
+								<h3>이름 <small>소개</small></h3>
+								<img src="http://218.150.181.131/assets/img/2.png" alt="" class="img-responsive"/>
 								<div class="team-info">
 									<p>
-										��二쇱��
+										가나다라
+									</p>
+									<ul class="social-icons pull-right">
+										<li>
+											<a href="javascript:;" data-original-title="twitter" class="twitter">
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" data-original-title="facebook" class="facebook">
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" data-original-title="linkedin" class="linkedin">
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" data-original-title="Goole Plus" class="googleplus">
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" data-original-title="skype" class="skype">
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="meet-our-team">
+								<h3>이름 <small>소개</small></h3>
+								<img src="http://218.150.181.131/assets/img/2.png" alt="" class="img-responsive"/>
+								<div class="team-info">
+									<p>
+										가나다라
 									</p>
 									<ul class="social-icons pull-right">
 										<li>

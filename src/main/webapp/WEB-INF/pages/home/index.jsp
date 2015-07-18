@@ -564,15 +564,16 @@ ul, ol {
 				<div id="head-back" class="homebox">
 					<br> <br> <br> <br>
 					<h1 align="center">
-						Movietween <small>Scripts & Graphs!!</small>
+						MOVIETWEEN <small></small>
 					</h1>
 					<div class="container">
 						<form class="search-form" action="search.do" method="POST">
 							<div class="input-group">
 								<input type="text" id="movieName" class="form-control"
-									placeholder="Search for Movies" name="query"> <span
+									placeholder="영화 검색하기" name="query"> <span
 									class="input-group-btn">
 									<button type="submit" class="icon-magnifier"></button>
+								</span>
 								</span>
 							</div>
 						</form>
@@ -602,20 +603,19 @@ ul, ol {
 							<div class="portlet light ">
 								<div class="portlet-title">
 									<div class="caption caption-md">
-										<span class="glyphicon glyphicon-hand-up"></span> <i
+										<span class="glyphicon glyphicon-ok"></span> <i
 											class="icon-bar-chart theme-font hide"></i> <span
-											class="caption-subject theme-font bold uppercase">MOST
-											RECOMMENDATION MOVIE</span> <span class="caption-helper hide">weekly
-											stats...</span>
+											class="caption-subject theme-font bold uppercase">가장 클릭이 많이 된 영화</span> <span class="caption-helper hide">
+										<!--weekly stats...--></span>
 									</div>
-									<div class="actions">
+									<!-- <div class="actions">
 										<div class="btn-group btn-group-devided" data-toggle="buttons">
 											<label
 												class="btn btn-transparent grey-salsa btn-circle btn-sm active">
 												<input type="radio" name="options" class="toggle"
-												id="option1">Today
+												id="option1"> Today
 											</label>
-											<!--  <label
+											  <label
 												class="btn btn-transparent grey-salsa btn-circle btn-sm">
 												<input type="radio" name="options" class="toggle"
 												id="option2">Week
@@ -623,26 +623,26 @@ ul, ol {
 												class="btn btn-transparent grey-salsa btn-circle btn-sm">
 												<input type="radio" name="options" class="toggle"
 												id="option2">Month
-											</label> -->
+											</label>
 										</div>
-									</div>
+									</div> -->
 								</div>
 								<div class="portlet-body">
 									<div class="row list-separated">
-										<div class="col-md-3 col-sm-3 col-xs-6">
-											<div class="font-grey-mint font-sm">Movie Name</div>
+										<div class="col-md-4 col-sm-4 col-xs-6">
+											<div class="font-grey-mint font-sm">영화 제목</div>
 											<div class="uppercase font-hg font-red-flamingo">
 												${hit.name} <span class="font-lg font-grey-mint"></span>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-3 col-xs-6">
-											<div class="font-grey-mint font-sm">Year</div>
+											<div class="font-grey-mint font-sm">개봉 년도</div>
 											<div class="uppercase font-hg theme-font">
 												${hit.year} <span class="font-lg font-grey-mint"></span>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-3 col-xs-6">
-											<div class="font-grey-mint font-sm">Director</div>
+											<div class="font-grey-mint font-sm">감독</div>
 											<div class="uppercase font-hg font-purple">
 												${hit.director} <span class="font-lg font-grey-mint"></span>
 											</div>
@@ -953,8 +953,7 @@ ul, ol {
 
 										<span class="glyphicon glyphicon-ok"></span> <i
 											class="icon-bar-chart theme-font hide"></i> <span
-											class="caption-subject theme-font bold uppercase">Recently
-											Updated Movie</span> <span class="caption-helper hide">weekly
+											class="caption-subject theme-font bold uppercase">최근 업데이트 된 영화</span> <span class="caption-helper hide">weekly
 											stats...</span>
 									</div>
 
@@ -964,7 +963,7 @@ ul, ol {
 
 										<div class="stat-left">
 											<div class="stat-number">
-												<div class="title">Total</div>
+												<div class="title">전체</div>
 												<div class="number">${count}개</div>
 											</div>
 										</div>
@@ -973,9 +972,9 @@ ul, ol {
 												<thead>
 													<tr class="font-grey-mint font-sm">
 														<th>No.</th>
-														<th>Movie</th>
-														<th>Year</th>
-														<th>Director</th>
+														<th>영화</th>
+														<th>년도</th>
+														<th>감독</th>
 													</tr>
 												</thead>
 												<tbody>

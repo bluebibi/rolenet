@@ -191,21 +191,20 @@
       <!-- BEGIN PAGE TITLE -->
       <div class="page-title">
         <h1>
-          Director
-          <small>list</small>
+          감독 목록
+          <small></small>
         </h1>
       </div>
       <!-- END PAGE TITLE -->
       <!-- BEGIN PAGE TOOLBAR -->
       <div class="page-toolbar">
         <!-- BEGIN THEME PANEL -->
-        <div class="btn-group btn-theme-panel">
+        <!--<div class="btn-group btn-theme-panel">
           <a href="javascript:;" class="btn dropdown-toggle"
              data-toggle="dropdown"> <i class="icon-settings"></i>
           </a>
 
-          <div
-                  class="dropdown-menu theme-panel pull-right dropdown-custom hold-on-click">
+          <div class="dropdown-menu theme-panel pull-right dropdown-custom hold-on-click">
             <div class="row">
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <h3>THEME COLORS</h3>
@@ -305,7 +304,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- END THEME PANEL -->
       </div>
       <!-- END PAGE TOOLBAR -->
@@ -337,14 +336,16 @@
       </div>
       <!-- /.modal -->
       <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
       <!-- BEGIN PAGE BREADCRUMB -->
-      <ul class="page-breadcrumb breadcrumb">
+      <!-- <ul class="page-breadcrumb breadcrumb">
         <li><a href="#">Home</a><i class="fa fa-circle"></i></li>
         <li>Movie <i
                 class="fa fa-circle"></i></li>
         <li class="active">Director list</li>
-      </ul>
+      </ul> -->
       <!-- END PAGE BREADCRUMB -->
+
       <!-- BEGIN PAGE CONTENT INNER -->
       <div class="row">
         <div class="col-md-12">
@@ -353,8 +354,7 @@
             <div class="portlet-title" style="z-index: 1;">
               <div class="caption">
                 <i class="fa fa-cogs font-green-sharp"></i> <span
-                      class="caption-subject font-green-sharp bold uppercase">Director
-										List</span>
+                      class="caption-subject font-green-sharp bold uppercase">감독 목록</span>
               </div>
               <div class="actions btn-set">
                 <div class="btn-group">

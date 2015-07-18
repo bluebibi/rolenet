@@ -6,18 +6,21 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-						<h2>About</h2>
+						<!--<h2>About</h2>
 						<p>Korea University of Technology and Education (KoreaTech),
-							Department of Computer Science & Engineering, The LINK lab.</p>
+							Department of Computer Science & Engineering, The LINK lab.</p>-->
+						<h2>만든이</h2>
+						<p>한국기술교육대학교(Koreatech) LINK lab. <br/>
+						충남 천안시 병천면 가전리</p>
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs12 footer-block">
-						<h2>Subscribe Email</h2>
+						<h2>메일 보내기</h2>
 						<div class="subscribe-form">
 							<form action="javascript:;">
 								<div class="input-group">
 									<input type="text" placeholder="mail@email.com"
 										class="form-control"> <span class="input-group-btn">
-										<button class="btn" type="submit">Submit</button>
+										<button class="btn" type="submit">제출</button>
 									</span>
 								</div>
 							</form>
@@ -35,9 +38,9 @@
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-						<h2>Contacts</h2>
+						<h2>연락처</h2>
 						<address class="margin-bottom-40">
-							Phone: 800 123 3456<br> Email: <a
+							전화번호: 800 123 3456<br> 이메일: <a
 								href="mailto:info@metronic.com">info@link.com</a>
 						</address>
 					</div>

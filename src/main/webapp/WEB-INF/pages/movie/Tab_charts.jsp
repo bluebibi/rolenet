@@ -61,7 +61,7 @@
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
 			<div class="page-title">
-				<h1>Analysis <small> about movies</small></h1>
+				<h1>차트 목록<small></small></h1>
 			</div>
 			<!-- END PAGE TITLE -->
 		</div>

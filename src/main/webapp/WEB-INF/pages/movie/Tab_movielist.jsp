@@ -189,15 +189,15 @@
             <!-- BEGIN PAGE TITLE -->
             <div class="page-title">
                 <h1>
-                    Movie
-                    <small>list</small>
+                    영화 목록
+                    <small></small>
                 </h1>
             </div>
             <!-- END PAGE TITLE -->
             <!-- BEGIN PAGE TOOLBAR -->
             <div class="page-toolbar">
                 <!-- BEGIN THEME PANEL -->
-                <div class="btn-group btn-theme-panel">
+               <!--<div class="btn-group btn-theme-panel">
                     <a href="javascript:;" class="btn dropdown-toggle"
                        data-toggle="dropdown"> <i class="icon-settings"></i>
                     </a>
@@ -303,13 +303,13 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <!-- END THEME PANEL -->
             </div>
             <!-- END PAGE TOOLBAR -->
-        </div>
-    </div>
-    <!-- END PAGE HEAD -->
+            </div>
+          </div>
+          <!-- END PAGE HEAD -->
     <!-- BEGIN PAGE CONTENT -->
     <div class="page-content">
         <div class="container">
@@ -340,7 +340,7 @@
                 <li><a href="#">Home</a><i class="fa fa-circle"></i></li>
                 <li>Movie <i
                         class="fa fa-circle"></i></li>
-                <li class="active">Movie list</li>
+                <li class="active">영화 목록</li>
             </ul>
             <!-- END PAGE BREADCRUMB -->
             <!-- BEGIN PAGE CONTENT INNER -->
@@ -351,7 +351,7 @@
                         <div class="portlet-title" style="z-index: 1;">
                             <div class="caption">
                                 <i class="fa fa-cogs font-green-sharp"></i> <span
-                                    class="caption-subject font-green-sharp bold uppercase">Movie
+                                    class="caption-subject font-green-sharp bold uppercase">영화
 										List</span>
                             </div>
                             <div class="actions btn-set">
