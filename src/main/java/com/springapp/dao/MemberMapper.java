@@ -11,16 +11,16 @@ import com.springapp.entity.MovieList;
 
 public interface MemberMapper {
 	@Select("select * from member")
-	List<Member> list();
+	public List<Member> list();
 	
 	@Select("SELECT * FROM member WHERE id = #{id}")
 	MovieList selectMemberByID(@Param("id") int id);
 	
 	@Select("select count(*) from member")
-	int memberCount();
+	public int memberCount();
 	
 	@Insert("insert into member values(#{id},#{pass},#{nick},#{email},#{regist_day},#{country})")
-	void insertMember();
+	public void insertMember();
 	
 
 }

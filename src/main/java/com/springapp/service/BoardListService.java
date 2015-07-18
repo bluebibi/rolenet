@@ -8,7 +8,7 @@ public interface BoardListService {
 
 	List<BoardList> list();
 
-	BoardList selectAllBoardContents(int uid);
+	public BoardList selectAllBoardContents(int uid);
 	
 	//BoardList selectBoardList(int id);
 	
