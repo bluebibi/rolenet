@@ -32,11 +32,11 @@
             <div class="hor-menu ">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="/">Home</a>
+                        <a href="/">홈</a>
                     </li>
                     <li class="menu-dropdown mega-menu-dropdown ">
                         <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
-                            Movie <i class="fa fa-angle-down"></i>
+                            영화 <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu" style="min-width: 710px">
                             <li>
@@ -45,24 +45,24 @@
                                         <div class="col-md-4">
                                             <ul class="mega-menu-submenu">
                                                 <li>
-                                                    <h3>Movie</h3>
+                                                    <h3>:: 영화 ::</h3>
                                                 </li>
                                                 <li>
                                                     <a href="/Tab_movielist" class="iconify">
                                                         <i class="icon-home"></i>
-                                                        Movie List </a>
+                                                        영화 목록 </a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-md-4">
                                             <ul class="mega-menu-submenu">
                                                 <li>
-                                                    <h3>Director</h3>
+                                                    <h3>:: 감독 ::</h3>
                                                 </li>
                                                 <li>
                                                     <a href="/Tab_Director" class="iconify">
                                                         <i class="icon-speech"></i>
-                                                        Director List</a>
+                                                        감독 목록</a>
                                                 </li>
 
                                             </ul>
@@ -70,12 +70,12 @@
                                         <div class="col-md-4">
                                             <ul class="mega-menu-submenu">
                                                 <li>
-                                                    <h3>Analysis</h3>
+                                                    <h3>:: 분석 ::</h3>
                                                 </li>
                                                 <li>
                                                     <a href="/Tab_charts?flag=0&flag2=0" class="iconify">
                                                         <i class="icon-speech"></i>
-                                                        charts</a>
+                                                        차트</a>
                                                 </li>
 
                                             </ul>
@@ -107,7 +107,7 @@
                         <a href="/Tab_mypage">MyPage</a>
                     </li>-->
                     <li>
-                        <a href="/Tab_about">About</a>
+                        <a href="/Tab_about">더보기</a>
                     </li>
                 </ul>
 
