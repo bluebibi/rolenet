@@ -247,7 +247,12 @@ public class HelloController {
     }
 
     @RequestMapping(value = "/file.do", method = RequestMethod.POST)
-    public String fileSubmit(FileDTO dto, HttpServletRequest request) throws IOException{
+    public String fileSubmit(FileDTO dto, HttpServletRequest request) throws IOException {
+        String path = request.getSession().getServletContext().getRealPath("/");
+        int index = path.indexOf("/target");
+        path = path.substring(0, index);
+        System.out.println(request.getSession().getServletContext().getRealPath("/") + "," + index + "," + path);
+        path += "/src/main/webapp/WEB-INF/resources/scenario/";
         int topnum = userMovieListService.topNum();
         topnum = topnum + 1;
         System.out.println("file upload");
@@ -262,7 +267,7 @@ public class HelloController {
                 // output.write(fileData);
 
                 // 2. File 사용
-                File file = new File("/Users/kth/drop/" + topnum + ".txt");
+                File file = new File(path + topnum + ".txt");
                 uploadfile.transferTo(file);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -278,9 +283,11 @@ public class HelloController {
         System.out.println("synopsis = " + synopsis);
 
 
-        userMovieListService.insertUserMovie(topnum,director, synopsis, name);
+        userMovieListService.insertUserMovie(topnum, director, synopsis, name);
         System.out.println("디비 입력완료 ㅋㅎㅋ");
-        Process p = Runtime.getRuntime().exec("python /Users/kth/so/finall.py");
+        String exePython = "python " + path +"finall.py" + " " + path;
+        System.out.print(exePython);
+        Process p = Runtime.getRuntime().exec(exePython);
         System.out.println("파이썬 실행 완료 ㅋㅎㅋ");
         BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
         String ret;

@@ -79,7 +79,20 @@
                                                 </li>
 
                                             </ul>
-                                        </div>                                        
+                                        </div>
+                                        <div class="col-md-4">
+                                            <ul class="mega-menu-submenu">
+                                                <li>
+                                                    <h3>나의 영화</h3>
+                                                </li>
+                                                <li>
+                                                    <a href="/upload.do" class="iconify">
+                                                        <i class="icon-speech"></i>
+                                                        업로드</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
