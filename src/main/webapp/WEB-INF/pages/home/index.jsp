@@ -200,7 +200,7 @@ ul, ol {
 		string += id[count];
 		string += "'><img src='http://218.150.181.131/poster/";
 	string += id[count];
-	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
 	string += id[count];
 	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
 	string += id[count];
@@ -217,7 +217,7 @@ ul, ol {
 		string += id[count];
 		string += "'><img src='http://218.150.181.131/poster/";
 	string += id[count];
-	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
 	string += id[count];
 	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
 	string += id[count];
@@ -234,7 +234,7 @@ ul, ol {
 		string += id[count];
 		string += "'><img src='http://218.150.181.131/poster/";
 	string += id[count];
-	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
 	string += id[count];
 	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
 	string += id[count];
@@ -251,7 +251,7 @@ ul, ol {
 		string += id[count];
 		string += "'><img src='http://218.150.181.131/poster/";
 	string += id[count];
-	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
 	string += id[count];
 	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
 	string += id[count];
@@ -269,7 +269,7 @@ ul, ol {
 				var documentHeight = $(document).height();
 				console.log("documentHeight : " + documentHeight);
 
-				//scrollTop() 메서드는 선택된 요소의 세로 스크롤 위치를 설정하거나 반환    
+				//scrollTop() 메서드는 선택된 요소의 세로 스크롤 위치를 설정하거나 반환
 				//스크롤바가 맨 위쪽에 있을때 , 위치는 0
 				console.log("window의 scrollTop() : " + $(window).scrollTop());
 				//height() 메서드는 브라우저 창의 높이를 설정하거나 반환
@@ -296,7 +296,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
         	string += id[count];
-        	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+        	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
         	string += id[count];
         	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
         	string += id[count];
@@ -313,7 +313,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
         	string += id[count];
-        	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+        	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
         	string += id[count];
         	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
         	string += id[count];
@@ -330,7 +330,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
         	string += id[count];
-        	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+        	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
         	string += id[count];
         	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
         	string += id[count];
@@ -347,7 +347,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
         	string += id[count];
-        	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+        	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
         	string += id[count];
         	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
         	string += id[count];
@@ -366,7 +366,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
             	string += id[count];
-            	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+            	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
             	string += id[count];
             	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
             	string += id[count];
@@ -385,7 +385,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
             	string += id[count];
-            	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+            	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
             	string += id[count];
             	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
             	string += id[count];
@@ -402,7 +402,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
             	string += id[count];
-            	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+            	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
             	string += id[count];
             	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
             	string += id[count];
@@ -422,7 +422,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
             	string += id[count];
-            	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+            	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
             	string += id[count];
             	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
             	string += id[count];
@@ -439,7 +439,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
             	string += id[count];
-            	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+            	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
             	string += id[count];
             	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
             	string += id[count];
@@ -456,7 +456,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
             	string += id[count];
-            	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+            	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
             	string += id[count];
             	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
             	string += id[count];
@@ -476,7 +476,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
                 	string += id[count];
-                	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+                	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
                 	string += id[count];
                 	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
                 	string += id[count];
@@ -493,7 +493,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
                 	string += id[count];
-                	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+                	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
                 	string += id[count];
                 	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
                 	string += id[count];
@@ -510,7 +510,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
                 	string += id[count];
-                	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+                	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
                 	string += id[count];
                 	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
                 	string += id[count];
@@ -527,7 +527,7 @@ ul, ol {
 							string += id[count];
 							string += "'><img src='http://218.150.181.131/poster/";
                 	string += id[count];
-                	string += "p.png' width='220' height='200'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
+                	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
                 	string += id[count];
                 	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
                 	string += id[count];
@@ -595,410 +595,6 @@ ul, ol {
 					<li class="active">HOME</li>
 				</ul>
 				<!-- END PAGE BREADCRUMB -->
-				<!-- BEGIN PAGE CONTENT INNER -->
-				<div class="row">
-					<div class="row margin-top-10">
-						<div class="col-md-6 col-sm-12">
-							<!-- BEGIN PORTLET-->
-							<div class="portlet light ">
-								<div class="portlet-title">
-									<div class="caption caption-md">
-										<span class="glyphicon glyphicon-ok"></span> <i
-											class="icon-bar-chart theme-font hide"></i> <span
-											class="caption-subject theme-font bold uppercase">가장 클릭이 많이 된 영화</span> <span class="caption-helper hide">
-										<!--weekly stats...--></span>
-									</div>
-									<!-- <div class="actions">
-										<div class="btn-group btn-group-devided" data-toggle="buttons">
-											<label
-												class="btn btn-transparent grey-salsa btn-circle btn-sm active">
-												<input type="radio" name="options" class="toggle"
-												id="option1"> Today
-											</label>
-											  <label
-												class="btn btn-transparent grey-salsa btn-circle btn-sm">
-												<input type="radio" name="options" class="toggle"
-												id="option2">Week
-											</label> <label
-												class="btn btn-transparent grey-salsa btn-circle btn-sm">
-												<input type="radio" name="options" class="toggle"
-												id="option2">Month
-											</label>
-										</div>
-									</div> -->
-								</div>
-								<div class="portlet-body">
-									<div class="row list-separated">
-										<div class="col-md-4 col-sm-4 col-xs-6">
-											<div class="font-grey-mint font-sm">영화 제목</div>
-											<div class="uppercase font-hg font-red-flamingo">
-												${hit.name} <span class="font-lg font-grey-mint"></span>
-											</div>
-										</div>
-										<div class="col-md-3 col-sm-3 col-xs-6">
-											<div class="font-grey-mint font-sm">개봉 년도</div>
-											<div class="uppercase font-hg theme-font">
-												${hit.year} <span class="font-lg font-grey-mint"></span>
-											</div>
-										</div>
-										<div class="col-md-3 col-sm-3 col-xs-6">
-											<div class="font-grey-mint font-sm">감독</div>
-											<div class="uppercase font-hg font-purple">
-												${hit.director} <span class="font-lg font-grey-mint"></span>
-											</div>
-										</div>
-
-									</div>
-									<ul class="list-separated list-inline-xs hide">
-										<li>
-											<div class="font-grey-mint font-sm">Total Sales</div>
-											<div class="uppercase font-hg font-red-flamingo">
-												13,760 <span class="font-lg font-grey-mint">$</span>
-											</div>
-										</li>
-										<li></li>
-										<li class="border">
-											<div class="font-grey-mint font-sm">Revenue</div>
-											<div class="uppercase font-hg theme-font">
-												4,760 <span class="font-lg font-grey-mint">$</span>
-											</div>
-										</li>
-										<li class="divider"></li>
-										<li>
-											<div class="font-grey-mint font-sm">Expenses</div>
-											<div class="uppercase font-hg font-purple">
-												11,760 <span class="font-lg font-grey-mint">$</span>
-											</div>
-										</li>
-										<li class="divider"></li>
-										<li>
-											<div class="font-grey-mint font-sm">Growth</div>
-											<div class="uppercase font-hg font-blue-sharp">
-												9,760 <span class="font-lg font-grey-mint">$</span>
-											</div>
-										</li>
-									</ul>
-									<div style="height: 260px">
-										<!-- 자리자리자리-->
-										<!-- BEGIN GRAPH -->
-										<div class="sigma-parent">
-											<div class="sigma-expand" id="sigma-jang"></div>
-										</div>
-										<script
-								src="http://218.150.181.131/sigmajsGraph/jquery-2.1.1.min.js"></script>
-							<script src="http://218.150.181.131/sigmajsGraph/sigma.min.js"></script>
-							<script src="http://218.150.181.131/sigmajsGraph/parseGexf.js"></script>
-							<script src="http://218.150.181.131/sigmajsGraph/scroll.min.js"></script>
-										<script>
-										var id=${hit.id};
-										console.log("id : "+id);
-										var url_prefix='http://218.150.181.131/assets/gexf/';
-										var url_suffix='.gexf';
-										var completeURL = url_prefix+id+url_suffix;
-
-									    function init() {
-
-									        var sigInst = sigma.init(document.getElementById('sigma-jang')).drawingProperties({
-									            defaultLabelColor: '#777',
-									            defaultLabelSize: 12,
-									            defaultLabelBGColor: '#777',
-									            defaultLabelHoverColor: '#555',
-									            labelThreshold: 2,
-									            defaultEdgeType: 'straight'
-									        }).graphProperties({
-									            minNodeSize: 1,
-									            maxNodeSize: 8,
-									            minEdgeSize: 1,
-									            maxEdgeSize: 2
-									        }).mouseProperties({
-									            maxRatio: 1,
-									            mouseEnabled: false
-									        });
-
-
-									        sigInst.parseGexf(completeURL);
-
-									        // Bind events :
-									        sigInst.bind('overnodes',function(event){
-									            var nodes = event.content;
-									            var neighbors = {};
-									            sigInst.iterEdges(function(e){
-									                if(nodes.indexOf(e.source)>=0 || nodes.indexOf(e.target)>=0){
-									                    neighbors[e.source] = 1;
-									                    neighbors[e.target] = 1;
-									                }
-									            }).iterNodes(function(n){
-									                if(!neighbors[n.id]){
-									                    n.hidden = 1;
-									                }else{
-									                    n.hidden = 0;
-									                }
-									            }).draw(2,2,2);
-									        }).bind('outnodes',function(){
-									            sigInst.iterEdges(function(e){
-									                e.hidden = 0;
-									            }).iterNodes(function(n){
-									                n.hidden = 0;
-									            }).draw(2,2,2);
-									        });
-
-									        (function(){
-
-									            // First, let's write a FishEye class.
-									            // There is no need to make this class global, since it is made to be used through
-									            // the SigmaPublic object, that's why a local scope is used for the declaration.
-									            // The parameter 'sig' represents a Sigma instance.
-									            var FishEye = function(sig) {
-									                sigma.classes.Cascade.call(this);      // The Cascade class manages the chainable property
-									                                                       // edit/get function.
-
-									                var self = this;                       // Used to avoid any scope confusion.
-									                var isActivated = false;               // Describes is the FishEye is activated.
-
-									                this.p = {                             // The object containing the properties accessible with
-									                    radius: 200,                         // the Cascade.config() method.
-									                    power: 2
-									                };
-
-									                function applyFishEye(mouseX, mouseY) {   // This method will apply a formula relatively to
-									                    // the mouse position.
-									                    var newDist, newSize, xDist, yDist, dist,
-									                            radius   = self.p.radius,
-									                            power    = self.p.power,
-									                            powerExp = Math.exp(power);
-
-									                    sig.graph.nodes.forEach(function(node) {
-									                        xDist = node.displayX - mouseX;
-									                        yDist = node.displayY - mouseY;
-									                        dist  = Math.sqrt(xDist*xDist + yDist*yDist);
-
-									                        if(dist < radius){
-									                            newDist = powerExp/(powerExp-1)*radius*(1-Math.exp(-dist/radius*power));
-									                            newSize = powerExp/(powerExp-1)*radius*(1-Math.exp(-dist/radius*power));
-
-									                            if(!node.isFixed){
-									                                node.displayX = mouseX + xDist*(newDist/dist*3/4 + 1/4);
-									                                node.displayY = mouseY + yDist*(newDist/dist*3/4 + 1/4);
-									                            }
-
-									                            node.displaySize = Math.min(node.displaySize*newSize/dist,10*node.displaySize);
-									                        }
-									                    });
-									                };
-
-									                // The method that will be triggered when Sigma's 'graphscaled' is dispatched.
-									                function handler() {
-									                    applyFishEye(
-									                            sig.mousecaptor.mouseX,
-									                            sig.mousecaptor.mouseY
-									                    );
-									                }
-
-									                this.handler = handler;
-
-									                // A public method to set/get the isActivated parameter.
-									                this.activated = function(v) {
-									                    if(v==undefined){
-									                        return isActivated;
-									                    }else{
-									                        isActivated = v;
-									                        return this;
-									                    }
-									                };
-
-									                // this.refresh() is just a helper to draw the graph.
-									                this.refresh = function(){
-									                    sig.draw(2,2,2);
-									                };
-									            };
-
-									            // Then, let's add some public method to sigma.js instances :
-									            sigma.publicPrototype.activateFishEye = function() {
-									                if(!this.fisheye) {
-									                    var sigmaInstance = this;
-									                    var fe = new FishEye(sigmaInstance._core);
-									                    sigmaInstance.fisheye = fe;
-									                }
-
-									                if(!this.fisheye.activated()){
-									                    this.fisheye.activated(true);
-									                    this._core.bind('graphscaled', this.fisheye.handler);
-									                    document.getElementById(
-									                            'sigma_mouse_'+this.getID()
-									                    ).addEventListener('mousemove',this.fisheye.refresh,true);
-									                }
-
-									                return this;
-									            };
-
-									            sigma.publicPrototype.desactivateFishEye = function() {
-									                if(this.fisheye && this.fisheye.activated()){
-									                    this.fisheye.activated(false);
-									                    this._core.unbind('graphscaled', this.fisheye.handler);
-									                    document.getElementById(
-									                            'sigma_mouse_'+this.getID()
-									                    ).removeEventListener('mousemove',this.fisheye.refresh,true);
-									                }
-
-									                return this;
-									            };
-
-									            sigma.publicPrototype.fishEyeProperties = function(a1, a2) {
-									                var res = this.fisheye.config(a1, a2);
-									                return res == s ? this.fisheye : res;
-									            };
-									        })();
-
-
-									        (function(){
-
-									            var popUp;
-
-									            function attributesToString(attr) {
-									                console.log(attr);
-
-									                var out = [];
-
-									                $.each(attr, function(index, value) {
-									                    switch(value['attr']){
-									                        case "betweenesscentrality":
-									                            out.push({attr:'Betweenness', val: value['val']})
-									                            break;
-									                        case "degree":
-									                            out.push({attr:'Degree', val: value['val']})
-									                            break;
-									                        case "modularity_class":
-									                            out.push({attr:'Cluster', val: value['val']})
-									                            break;
-									                    }
-
-
-
-									                });
-
-									                return '<ul style="list-style-type:none; padding:0px; margin:0px; position:relative; left:-6px;">' +
-									                        out.map(function(o){
-									                            return '<li style="font-size:12px!important;">' + o.attr + ' : ' + Math.round(o.val*10)/10 + '</li>';
-									                        }).join('') +
-									                        '</ul>';
-
-									            }
-
-									            function showNodeInfo(event) {
-									                popUp && popUp.remove();
-
-									                var node;
-									                sigInst.iterNodes(function(n){
-									                    node = n;
-									                },[event.content[0]]);
-
-									                popUp = $(
-									                        '<div class="node-info-popup"></div>'
-									                ).append(
-
-									                        attributesToString( node['attr']['attributes'] )
-									                ).attr(
-									                        'id',
-									                        'node-info'+sigInst.getID()
-									                ).css({
-									                            'display': 'inline-block',
-									                            'border-radius': 2,
-									                            'padding': 4,
-									                            'background': 'white',
-									                            'width': '130',
-									                            'color': '#777',
-									                            'z-index': '99999',
-									                            'border': '1px solid #eee',
-									                            'position': 'absolute',
-									                            'left': node.displayX,
-									                            'top': node.displayY+10
-									                        });
-
-									                $('ul',popUp).css('margin','0 0 0 10px');
-
-									                $('#sigma-jang').append(popUp);
-									            }
-
-									            function hideNodeInfo(event) {
-									                popUp && popUp.remove();
-									                popUp = false;
-									            }
-
-									            sigInst.bind('overnodes',showNodeInfo).bind('outnodes',hideNodeInfo).draw();
-									        })();
-
-									        // Finally, let's activate the FishEye on our instance:
-									        sigInst.activateFishEye().draw();
-									    }
-
-									    if (document.addEventListener) {
-									        document.addEventListener("DOMContentLoaded", init, false);
-									    } else {
-									        window.onload = init;
-									    }
-
-									    $('#sigma-jang').css('background-color','white');
-									</script>
-										<!-- END GRAPH -->
-									</div>
-								</div>
-							</div>
-							<!-- END PORTLET-->
-						</div>
-						<div class="col-md-6 col-sm-12">
-							<!-- BEGIN PORTLET-->
-							<div class="portlet light ">
-								<div class="portlet-title">
-									<div class="caption caption-md">
-
-										<span class="glyphicon glyphicon-ok"></span> <i
-											class="icon-bar-chart theme-font hide"></i> <span
-											class="caption-subject theme-font bold uppercase">최근 업데이트 된 영화</span> <span class="caption-helper hide">weekly
-											stats...</span>
-									</div>
-
-								</div>
-								<div class="portlet-body">
-									<div class="row number-stats margin-bottom-30">
-
-										<div class="stat-left">
-											<div class="stat-number">
-												<div class="title">전체</div>
-												<div class="number">${count}개</div>
-											</div>
-										</div>
-										<div class="table-scrollable table-scrollable-borderless">
-											<table class="table table-hover table-light">
-												<thead>
-													<tr class="font-grey-mint font-sm">
-														<th>No.</th>
-														<th>영화</th>
-														<th>년도</th>
-														<th>감독</th>
-													</tr>
-												</thead>
-												<tbody>
-													<c:forEach var="m" items="${last}">
-														<tr
-															onclick="document.location = 'Tab_movielistdetail.do?id=${m.id}';">
-															<td id="id">${m.id}</td>
-															<td class="bold">${m.name}</td>
-															<td>${m.year}</td>
-															<td>${m.director}</td>
-														</tr>
-													</c:forEach>
-												</tbody>
-
-											</table>
-
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- END PORTLET-->
-				</div>
 			</div>
 
 			<!-- END PAGE CONTENT INNER -->
