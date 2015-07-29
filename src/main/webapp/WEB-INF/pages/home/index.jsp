@@ -587,8 +587,9 @@ ul, ol {
 		<!-- END HEADER SEARCH BOX -->
 		<!-- BEGIN PAGE CONTENT -->
 
-		<div class="page-content">
-			<div class="container" id="haha">
+		<div class="page-content" style=" background: white;">
+
+			<div class="container" id="haha" style=" background: white;">
 				<!-- BEGIN PAGE BREADCRUMB -->
 				<ul class="page-breadcrumb breadcrumb hide">
 					<li><a href="index.jsp">Home</a><i class="fa fa-circle"></i></li>
