@@ -148,16 +148,10 @@ var infinite = new Waypoint.Infinite({
 			<!-- BEGIN PAGE CONTENT INNER -->
 			<div class="row">
 				<div class="col-md-12">
-					<div class="tabbable tabbable-custom tabbable-noborder">
-						
-						<div class="tab-content">
-							<div class="tab-pane active" id="tab_1">
 								<!-- BEGIN FILTER -->
 								<div class="margin-top-10">
-									
 									<div class="row mix-grid">
 										<div class="col-md-3 col-sm-4 mix">
-											<div class="mix-inner">
 												<img class="img-responsive" src="../../assets/admin/pages/media/works/img1.jpg" alt="">
 												<div class="mix-details">
 													<h4>Cascusamus et iusto odio</h4>
@@ -168,10 +162,8 @@ var infinite = new Waypoint.Infinite({
 													<i class="fa fa-search"></i>
 													</a>
 												</div>
-											</div>
 										</div>
 										<div class="col-md-3 col-sm-4 mix">
-											<div class="mix-inner">
 												<img class="img-responsive" src="../../assets/admin/pages/media/works/img2.jpg" alt="">
 												<div class="mix-details">
 													<h4>Cascusamus et iusto accusamus</h4>
@@ -182,10 +174,8 @@ var infinite = new Waypoint.Infinite({
 													<i class="fa fa-search"></i>
 													</a>
 												</div>
-											</div>
 										</div>
 										<div class="col-md-3 col-sm-4 mix">
-											<div class="mix-inner">
 												<img class="img-responsive" src="../../assets/admin/pages/media/works/img3.jpg" alt="">
 												<div class="mix-details">
 													<h4>Cascusamus et iusto accusamus</h4>
@@ -196,10 +186,8 @@ var infinite = new Waypoint.Infinite({
 													<i class="fa fa-search"></i>
 													</a>
 												</div>
-											</div>
 										</div>
 										<div class="col-md-3 col-sm-4 mix">
-											<div class="mix-inner">
 												<img class="img-responsive" src="../../assets/admin/pages/media/works/img4.jpg" alt="">
 												<div class="mix-details">
 													<h4>Cascusamus et iusto accusamus</h4>
@@ -210,11 +198,9 @@ var infinite = new Waypoint.Infinite({
 													<i class="fa fa-search"></i>
 													</a>
 												</div>
-											</div>
 										</div>
 										
 										<div class="col-md-3 col-sm-4 mix">
-											<div class="mix-inner">
 												<img class="img-responsive" src="../../assets/admin/pages/media/works/img5.jpg" alt="">
 												<div class="mix-details">
 													<h4>Cascusamus et iusto accusamus</h4>
@@ -225,10 +211,8 @@ var infinite = new Waypoint.Infinite({
 													<i class="fa fa-search"></i>
 													</a>
 												</div>
-											</div>
 										</div>
 										<div class="col-md-3 col-sm-4 mix">
-											<div class="mix-inner">
 												<img class="img-responsive" src="../../assets/admin/pages/media/works/img6.jpg" alt="">
 												<div class="mix-details">
 													<h4>Cascusamus et iusto accusamus</h4>
@@ -239,7 +223,6 @@ var infinite = new Waypoint.Infinite({
 													<i class="fa fa-search"></i>
 													</a>
 												</div>
-											</div>
 										</div>
 									
 										
@@ -247,10 +230,7 @@ var infinite = new Waypoint.Infinite({
 									</div>
 								</div>
 								<!-- END FILTER -->
-							</div>
 							
-						</div>
-					</div>
 				</div>
 			</div>
 			<!-- END PAGE CONTENT INNER -->
