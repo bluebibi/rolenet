@@ -1,6 +1,7 @@
 package com.springapp.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -12,6 +13,10 @@ public interface MovieListMapper {
 
 	@Select("SELECT * FROM movies")
 	public List<MovieList> list();
+	
+	@Select("SELECT * FROM movies WHERE id >= #{id_1} AND id < #{id_2}")
+	public List<MovieList> list_jangwon(@Param("id_1") int id_1, @Param("id_2") int id_2);
+	
 
 	@Select("SELECT * FROM movies WHERE id = #{id}")
 	MovieList selectMovieContentsByID(@Param("id") int id);
@@ -57,5 +62,7 @@ public interface MovieListMapper {
 
 	@Select("SELECT * from 9th.movies where director = #{director}")
 	public List<MovieList> selectMovieByDirector(@Param("director") String director);
+	
+	
 	
 }

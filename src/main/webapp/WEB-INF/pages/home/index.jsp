@@ -20,8 +20,28 @@
 <meta content="" name="author">
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 
+<!--  BEGIN INFINITE SCROLL -->
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+var infinite = new Waypoint.Infinite({
+	  element: $('.infinite-container')[0]
+	});
+</script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://218.150.181.131/assets/libr/jquery.waypoints.min.js"></script>
+<script src="http://218.150.181.131/assets/libr/infinite.min.js"></script>
+<script src="http://218.150.181.131/assets/libr/scripts.js"></script>
+<script src="http://218.150.181.131/assets/libr/sticky.min.js"></script>
+<script src="http://218.150.181.131/assets/libr/inview.min.js"></script>
+
+
+<!--  END INFINITE SCROLL -->
+
+
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
-<link href="http://218.150.181.131/assets/global/scroll/js/image.css" rel="stylesheet" type="text/css">
+<link href="http://218.150.181.131/assets/global/scroll/js/image.css"
+	rel="stylesheet" type="text/css">
 <link
 	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all"
 	rel="stylesheet" type="text/css">
@@ -74,475 +94,11 @@
 	margin: auto;
 }
 
-body {
-	margin: 20px 0;
-	background: #abc;
-	color: #111;
-	font-family: Helvetica, Arial, Verdana, 'Lucida Grande', sans-serif;
-}
 
-h1, h3, p {
-	text-align: center;
-}
-
-div.example {
-	padding: 20px;
-	margin: 10px auto;
-	background: #bcd;
-	width: 750px;
-}
-
-div.example h3 {
-	margin-bottom: 10px;
-}
-
-ul, ol {
-	padding: 0;
-}
-
-#list {
-	width: 50px;
-	height: 150px;
-	overflow-y: scroll;
-}
-
-#images {
-	width: 600px;
-	height: 550px;
-	overflow-x: hidden;
-	text-align: center;
-	list-style: none;
-}
-
-.endless_scroll_loader {
-	position: fixed;
-	top: 10px;
-	right: 20px;
-}
-
-.sigma-parent {
-	position: relative;
-	height: 100%;
-}
-
-.sigma-expand {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
-
-#head-back {
-	background-image: url(http://218.150.181.131/assets/img/gephi/002.png);
-	background-repeat: repeat;
-	height: 244px;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.scrollup {
-	width: 40px;
-	height: 40px;
-	opacity: 0.3;
-	position: fixed;
-	bottom: 50px;
-	right: 100px;
-	display: none;
-	text-indent: -9999px;
-	background:
-		url('http://218.150.181.131/assets/global/scroll/js/top.png')
-		no-repeat;
-}
 </style>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script>
-	$(document).ready(function() {
-		$(window).scroll(function() {
-			if ($(this).scrollTop() > 100) {
-				$('.scrollup').fadeIn();
-			} else {
-				$('.scrollup').fadeOut();
-			}
-		});
-		$('.scrollup').click(function() {
-			$("html, body").animate({
-				scrollTop : 0
-			}, 600);
-			return false;
-		});
-	});
-</script>
 
-<script>
-	$(function() {
 
-		var id = new Array();
-		var name = new Array();
-		var director = new Array();
-		var year = new Array();
 
-		<c:forEach items="${scroll_movie}" var="item">
-		id.push("${item.id}");
-		name.push("${item.name}");
-		director.push("${item.director}");
-		year.push("${item.year}");
-		</c:forEach>
-
-		var count = 0;
-		var string = "<div class='row'>";
-		string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-		string += name[count];
-		string += "</span><span class='caption-helper'>";
-		string += "<br> &nbsp;";
-		string += director[count];
-		string += " | ";
-		string += year[count];
-		string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-		string += id[count];
-		string += "'><img src='http://218.150.181.131/poster/";
-	string += id[count];
-	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-	string += id[count];
-	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-	string += id[count];
-	string += "p.png'\"/></a></div></div></div>";
-		count++;
-		string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-		string += name[count];
-		string += "</span><span class='caption-helper'>";
-		string += "<br> &nbsp;";
-		string += director[count];
-		string += " | ";
-		string += year[count];
-		string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-		string += id[count];
-		string += "'><img src='http://218.150.181.131/poster/";
-	string += id[count];
-	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-	string += id[count];
-	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-	string += id[count];
-	string += "p.png'\"/></a></div></div></div>";
-		count++;
-		string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-		string += name[count];
-		string += "</span><span class='caption-helper'>";
-		string += "<br> &nbsp;";
-		string += director[count];
-		string += " | ";
-		string += year[count];
-		string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-		string += id[count];
-		string += "'><img src='http://218.150.181.131/poster/";
-	string += id[count];
-	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-	string += id[count];
-	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-	string += id[count];
-	string += "p.png'\"/></a></div></div></div>";
-		count++;
-		string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-		string += name[count];
-		string += "</span><span class='caption-helper'>";
-		string += "<br> &nbsp;";
-		string += director[count];
-		string += " | ";
-		string += year[count];
-		string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-		string += id[count];
-		string += "'><img src='http://218.150.181.131/poster/";
-	string += id[count];
-	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-	string += id[count];
-	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-	string += id[count];
-	string += "p.png'\"/></a></div></div></div>";
-		string += "</div>";
-		//$(window).scroll(function() { });
-
-		$(string).appendTo("#haha");
-		$(window).bind("scroll", infinityScrollFunction);
-
-		function infinityScrollFunction() {
-
-			if (count < "${count}") {
-				//현재문서의 높이를 구함.
-				var documentHeight = $(document).height();
-				console.log("documentHeight : " + documentHeight);
-
-				//scrollTop() 메서드는 선택된 요소의 세로 스크롤 위치를 설정하거나 반환
-				//스크롤바가 맨 위쪽에 있을때 , 위치는 0
-				console.log("window의 scrollTop() : " + $(window).scrollTop());
-				//height() 메서드는 브라우저 창의 높이를 설정하거나 반환
-				console.log("window의 height() : " + $(window).height());
-
-				//세로 스크롤위치 max값과 창의 높이를 더하면 현재문서의 높이를 구할수있음.
-				//세로 스크롤위치 값이 max이면 문서의 끝에 도달했다는 의미
-				var scrollHeight = $(window).scrollTop() + $(window).height();
-				console.log("scrollHeight : " + scrollHeight);
-
-				if (scrollHeight == documentHeight) { //문서의 맨끝에 도달했을때 내용 추가 
-					count++;
-					if (count < "${count}")
-						if (count == "${count}" - 4) {
-							var string = "<div class='row'>";
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-        	string += id[count];
-        	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-        	string += id[count];
-        	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-        	string += id[count];
-        	string += "p.png'\"/></a></div></div></div>";
-							count++;
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-        	string += id[count];
-        	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-        	string += id[count];
-        	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-        	string += id[count];
-        	string += "p.png'\"/></a></div></div></div>";
-							count++;
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-        	string += id[count];
-        	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-        	string += id[count];
-        	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-        	string += id[count];
-        	string += "p.png'\"/></a></div></div></div>";
-							count++;
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-        	string += id[count];
-        	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-        	string += id[count];
-        	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-        	string += id[count];
-        	string += "p.png'\"/></a></div></div></div>";
-							string += "</div>";
-						} else if (count == "${count}" - 1) {
-							var string = "<div class='row'>";
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-            	string += id[count];
-            	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-            	string += id[count];
-            	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-            	string += id[count];
-            	string += "p.png'\"/></a></div></div></div>";
-							string += "</div>";
-						} else if (count == "${count}" - 2) {
-							var string = "<div class='row'>";
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-            	string += id[count];
-            	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-            	string += id[count];
-            	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-            	string += id[count];
-            	string += "p.png'\"/></a></div></div></div>";
-							count++;
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-            	string += id[count];
-            	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-            	string += id[count];
-            	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-            	string += id[count];
-            	string += "p.png'\"/></a></div></div></div>";
-							string += "</div>";
-
-						} else if (count == "${count}" - 3) {
-							var string = "<div class='row'>";
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-            	string += id[count];
-            	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-            	string += id[count];
-            	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-            	string += id[count];
-            	string += "p.png'\"/></a></div></div></div>";
-							count++;
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-            	string += id[count];
-            	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-            	string += id[count];
-            	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-            	string += id[count];
-            	string += "p.png'\"/></a></div></div></div>";
-							count++;
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-            	string += id[count];
-            	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-            	string += id[count];
-            	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-            	string += id[count];
-            	string += "p.png'\"/></a></div></div></div>";
-							string += "</div>";
-
-						} else {
-							var string = "<div class='row'>";
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-                	string += id[count];
-                	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-                	string += id[count];
-                	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-                	string += id[count];
-                	string += "p.png'\"/></a></div></div></div>";
-							count++;
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-                	string += id[count];
-                	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-                	string += id[count];
-                	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-                	string += id[count];
-                	string += "p.png'\"/></a></div></div></div>";
-							count++;
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-                	string += id[count];
-                	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-                	string += id[count];
-                	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-                	string += id[count];
-                	string += "p.png'\"/></a></div></div></div>";
-							count++;
-							string += "<div class='col-md-3 col-sm-3'><div class='portlet light' id='haha'><div class='portlet-title tabbable-line'><div class='caption'><i class='icon-share font-red-sunglo'></i><span class='caption-subject font-red-sunglo bold uppercase'>";
-							string += name[count];
-							string += "</span><span class='caption-helper'>";
-							string += "<br> &nbsp;";
-							string += director[count];
-							string += " | ";
-							string += year[count];
-							string += "</span></div></div><div class='portlet-body'><a href='Tab_movielistdetail?id=";
-							string += id[count];
-							string += "'><img src='http://218.150.181.131/poster/";
-                	string += id[count];
-                	string += "p.png' width='220' height='400'onmouseover=\"this.src='http://218.150.181.131/assets/img/gephi/";
-                	string += id[count];
-                	string += ".png'\" onmouseout=\"this.src='http://218.150.181.131/poster/";
-                	string += id[count];
-                	string += "p.png'\"/></a></div></div></div>";
-							string += "</div>";
-						}
-
-					$(string).appendTo("#haha");
-
-				}
-			}//function infinityScrollFunction()
-
-		}
-	});
-</script>
 
 </head>
 <!-- END HEAD -->
@@ -552,7 +108,6 @@ ul, ol {
 
 <body>
 	<%@include file="../includes/headerMenu.jsp"%>
-	<a href="#" class="scrollup">Scroll</a>
 	<!-- BEGIN PAGE CONTAINER -->
 	<div class="page-container">
 		<!-- BEGIN PAGE HEAD -->
@@ -573,8 +128,7 @@ ul, ol {
 									placeholder="영화 검색하기" name="query"> <span
 									class="input-group-btn">
 									<button type="submit" class="icon-magnifier"></button>
-								</span>
-								</span>
+								</span> </span>
 							</div>
 						</form>
 						<br> <br> <br> <br>
@@ -587,15 +141,138 @@ ul, ol {
 		<!-- END HEADER SEARCH BOX -->
 		<!-- BEGIN PAGE CONTENT -->
 
-		<div class="page-content" style=" background: white;">
+		<div class="page-content" style="background: white;">
+			<!-- jangjang -->
+			<div class="container" id="haha" style="background: white;">
+			
+			<!-- BEGIN PAGE CONTENT INNER -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="tabbable tabbable-custom tabbable-noborder">
+						
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab_1">
+								<!-- BEGIN FILTER -->
+								<div class="margin-top-10">
+									
+									<div class="row mix-grid">
+										<div class="col-md-3 col-sm-4 mix">
+											<div class="mix-inner">
+												<img class="img-responsive" src="../../assets/admin/pages/media/works/img1.jpg" alt="">
+												<div class="mix-details">
+													<h4>Cascusamus et iusto odio</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="../../assets/admin/pages/media/works/img2.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-4 mix">
+											<div class="mix-inner">
+												<img class="img-responsive" src="../../assets/admin/pages/media/works/img2.jpg" alt="">
+												<div class="mix-details">
+													<h4>Cascusamus et iusto accusamus</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="../../assets/admin/pages/media/works/img2.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-4 mix">
+											<div class="mix-inner">
+												<img class="img-responsive" src="../../assets/admin/pages/media/works/img3.jpg" alt="">
+												<div class="mix-details">
+													<h4>Cascusamus et iusto accusamus</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="../../assets/admin/pages/media/works/img3.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-4 mix">
+											<div class="mix-inner">
+												<img class="img-responsive" src="../../assets/admin/pages/media/works/img4.jpg" alt="">
+												<div class="mix-details">
+													<h4>Cascusamus et iusto accusamus</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="../../assets/admin/pages/media/works/img4.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-md-3 col-sm-4 mix">
+											<div class="mix-inner">
+												<img class="img-responsive" src="../../assets/admin/pages/media/works/img5.jpg" alt="">
+												<div class="mix-details">
+													<h4>Cascusamus et iusto accusamus</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="../../assets/admin/pages/media/works/img5.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-4 mix">
+											<div class="mix-inner">
+												<img class="img-responsive" src="../../assets/admin/pages/media/works/img6.jpg" alt="">
+												<div class="mix-details">
+													<h4>Cascusamus et iusto accusamus</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="../../assets/admin/pages/media/works/img6.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+									
+										
+										
+									</div>
+								</div>
+								<!-- END FILTER -->
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END PAGE CONTENT INNER -->
+			
 
-			<div class="container" id="haha" style=" background: white;">
-				<!-- BEGIN PAGE BREADCRUMB -->
-				<ul class="page-breadcrumb breadcrumb hide">
-					<li><a href="index.jsp">Home</a><i class="fa fa-circle"></i></li>
-					<li class="active">HOME</li>
-				</ul>
-				<!-- END PAGE BREADCRUMB -->
+			
+			
+			
+			
+		
+				<article>
+
+					<div class="infinite-container waypoint">
+						<c:forEach var="m" items="${list_jangwon}">
+							<div class="infinite-item"><img src="'http://218.150.181.131/poster/'+${m.id}+'p.png'">${m.id}</div>
+						</c:forEach>
+						
+					</div>
+					<a class="infinite-more-link" href="/pages?id_1=${id_2}"></a>
+				</article>
+				
+				
 			</div>
 
 			<!-- END PAGE CONTENT INNER -->
@@ -608,9 +285,7 @@ ul, ol {
 
 	<!-- END PAGE CONTAINER -->
 
-	<%@include file="../includes/footMenu.jsp"%>
-	<!-- BEGIN JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) -->
-<%@include file="../includes/footer.jsp"%>
+
 	<!-- END PAGE LEVEL PLUGINS -->
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 	<script src="http://218.150.181.131/assets/global/scripts/metronic.js"
@@ -637,15 +312,15 @@ ul, ol {
 		type="text/javascript"></script>
 	<!-- END PAGE LEVEL SCRIPTS -->
 	<script type="text/javascript">
-	jQuery(document).ready(function() {
-		Metronic.init(); // init metronic core componets
-		Layout.init(); // init layout
-		Demo.init(); // init demo(theme settings page)
-		Index.init(); // init index page
-		Tasks.initDashboardWidget(); // init tash dashboard widget
+		jQuery(document).ready(function() {
+			Metronic.init(); // init metronic core componets
+			Layout.init(); // init layout
+			Demo.init(); // init demo(theme settings page)
+			Index.init(); // init index page
+			Tasks.initDashboardWidget(); // init tash dashboard widget
 
-	});
-</script>
+		});
+	</script>
 
 
 

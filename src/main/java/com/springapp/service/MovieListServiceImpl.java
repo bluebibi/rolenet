@@ -1,6 +1,7 @@
 package com.springapp.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -93,4 +94,11 @@ public class MovieListServiceImpl implements MovieListService {
 	public List<MovieList> LastList15bySpectators() {
 		return movieListMapper.LastList15bySpectators();
 	}
+
+	@Override
+	public List<MovieList> list_jangwon(int id_1,int id_2) {
+		// TODO Auto-generated method stub
+		return movieListMapper.list_jangwon(id_1, id_2);
+	}
+
 }

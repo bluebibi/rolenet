@@ -90,6 +90,11 @@
                                                         <i class="icon-speech"></i>
                                                         업로드</a>
                                                 </li>
+                                                <li>
+                                                    <a href="/ajax.do?id_1=1" class="iconify">
+                                                        <i class="icon-speech"></i>
+                                                        page_jangwontest</a>
+                                                </li>
 
                                             </ul>
                                         </div>

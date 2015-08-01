@@ -1,6 +1,7 @@
 package com.springapp.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.springapp.entity.MovieList;
 
@@ -22,4 +23,5 @@ public interface MovieListService {
 	public List<MovieList> Dlist();
 	public List<MovieList> selectMovieByDirector(String director);
 	public List<MovieList> LastList15bySpectators();
+	public List<MovieList> list_jangwon(int id_1, int id_2);
 }
