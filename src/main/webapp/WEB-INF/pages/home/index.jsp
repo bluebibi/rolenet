@@ -18,22 +18,20 @@
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <meta content="" name="description">
 <meta content="" name="author">
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 
 <!--  BEGIN INFINITE SCROLL -->
-
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script>
-var infinite = new Waypoint.Infinite({
-	  element: $('.infinite-container')[0]
-	});
-</script>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://218.150.181.131/assets/libr/jquery.waypoints.min.js"></script>
 <script src="http://218.150.181.131/assets/libr/infinite.min.js"></script>
 <script src="http://218.150.181.131/assets/libr/scripts.js"></script>
 <script src="http://218.150.181.131/assets/libr/sticky.min.js"></script>
 <script src="http://218.150.181.131/assets/libr/inview.min.js"></script>
+<script>
+	var infinite = new Waypoint.Infinite({
+		element : $('.infinite-container')[0]
+	});
+</script>
 
 
 <!--  END INFINITE SCROLL -->
@@ -58,6 +56,15 @@ var infinite = new Waypoint.Infinite({
 	href="http://218.150.181.131/assets/global/plugins/uniform/css/uniform.default.css"
 	rel="stylesheet" type="text/css">
 <!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN PAGE LEVEL STYLES -->
+
+<link
+	href="http://218.150.181.131/assets/global/plugins/fancybox/source/jquery.fancybox.css"
+	rel="stylesheet" type="text/css" />
+<link href="http://218.150.181.131/assets/admin/pages/css/portfolio.css"
+	rel="stylesheet" type="text/css" />
+<!-- END PAGE LEVEL STYLES -->
+
 <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
 <link
 	href="http://218.150.181.131/assets/global/plugins/jqvmap/jqvmap/jqvmap.css"
@@ -83,6 +90,7 @@ var infinite = new Waypoint.Infinite({
 <link href="http://218.150.181.131/assets/admin/layout3/css/custom.css"
 	rel="stylesheet" type="text/css">
 <!-- END THEME STYLES -->
+
 <link rel="shortcut icon" href="favicon.ico">
 
 <style type="text/css" media="screen">
@@ -93,8 +101,6 @@ var infinite = new Waypoint.Infinite({
 * {
 	margin: auto;
 }
-
-
 </style>
 
 
@@ -137,173 +143,107 @@ var infinite = new Waypoint.Infinite({
 				<!-- END PAGE TITLE -->
 			</div>
 		</div>
+	</div>
+	<!-- END HEADER SEARCH BOX -->
 
-		<!-- END HEADER SEARCH BOX -->
-		<!-- BEGIN PAGE CONTENT -->
-
-		<div class="page-content" style="background: white;">
-			<!-- jangjang -->
-			<div class="container" id="haha" style="background: white;">
-			
+	<!-- BEGIN PAGE CONTAINER -->
+	<!-- BEGIN PAGE CONTENT -->
+	<div class="page-content">
+		<div class="container">
 			<!-- BEGIN PAGE CONTENT INNER -->
-			<div class="row">
-				<div class="col-md-12">
-								<!-- BEGIN FILTER -->
-								<div class="margin-top-10">
-									<div class="row mix-grid">
-										<div class="col-md-3 col-sm-4 mix">
-												<img class="img-responsive" src="../../assets/admin/pages/media/works/img1.jpg" alt="">
-												<div class="mix-details">
-													<h4>Cascusamus et iusto odio</h4>
-													<a class="mix-link">
-													<i class="fa fa-link"></i>
-													</a>
-													<a class="mix-preview fancybox-button" href="../../assets/admin/pages/media/works/img2.jpg" title="Project Name" data-rel="fancybox-button">
-													<i class="fa fa-search"></i>
-													</a>
-												</div>
-										</div>
-										<div class="col-md-3 col-sm-4 mix">
-												<img class="img-responsive" src="../../assets/admin/pages/media/works/img2.jpg" alt="">
-												<div class="mix-details">
-													<h4>Cascusamus et iusto accusamus</h4>
-													<a class="mix-link">
-													<i class="fa fa-link"></i>
-													</a>
-													<a class="mix-preview fancybox-button" href="../../assets/admin/pages/media/works/img2.jpg" title="Project Name" data-rel="fancybox-button">
-													<i class="fa fa-search"></i>
-													</a>
-												</div>
-										</div>
-										<div class="col-md-3 col-sm-4 mix">
-												<img class="img-responsive" src="../../assets/admin/pages/media/works/img3.jpg" alt="">
-												<div class="mix-details">
-													<h4>Cascusamus et iusto accusamus</h4>
-													<a class="mix-link">
-													<i class="fa fa-link"></i>
-													</a>
-													<a class="mix-preview fancybox-button" href="../../assets/admin/pages/media/works/img3.jpg" title="Project Name" data-rel="fancybox-button">
-													<i class="fa fa-search"></i>
-													</a>
-												</div>
-										</div>
-										<div class="col-md-3 col-sm-4 mix">
-												<img class="img-responsive" src="../../assets/admin/pages/media/works/img4.jpg" alt="">
-												<div class="mix-details">
-													<h4>Cascusamus et iusto accusamus</h4>
-													<a class="mix-link">
-													<i class="fa fa-link"></i>
-													</a>
-													<a class="mix-preview fancybox-button" href="../../assets/admin/pages/media/works/img4.jpg" title="Project Name" data-rel="fancybox-button">
-													<i class="fa fa-search"></i>
-													</a>
-												</div>
-										</div>
-										
-										<div class="col-md-3 col-sm-4 mix">
-												<img class="img-responsive" src="../../assets/admin/pages/media/works/img5.jpg" alt="">
-												<div class="mix-details">
-													<h4>Cascusamus et iusto accusamus</h4>
-													<a class="mix-link">
-													<i class="fa fa-link"></i>
-													</a>
-													<a class="mix-preview fancybox-button" href="../../assets/admin/pages/media/works/img5.jpg" title="Project Name" data-rel="fancybox-button">
-													<i class="fa fa-search"></i>
-													</a>
-												</div>
-										</div>
-										<div class="col-md-3 col-sm-4 mix">
-												<img class="img-responsive" src="../../assets/admin/pages/media/works/img6.jpg" alt="">
-												<div class="mix-details">
-													<h4>Cascusamus et iusto accusamus</h4>
-													<a class="mix-link">
-													<i class="fa fa-link"></i>
-													</a>
-													<a class="mix-preview fancybox-button" href="../../assets/admin/pages/media/works/img6.jpg" title="Project Name" data-rel="fancybox-button">
-													<i class="fa fa-search"></i>
-													</a>
-												</div>
-										</div>
-									
-										
-										
+			<article>
+				<div class="infinite-container waypoint">
+
+					<div class="row">
+						<!-- BEGIN FILTER -->
+						<div class="row mix-grid">
+							<c:forEach var="m" items="${list_jangwon}">
+								<div class="col-md-3 col-sm-4 mix">
+									<img class="img-responsive infinite-item"
+										src="http://218.150.181.131/poster/${m.id}p.png" alt="">
+									<div class="mix-details">
+										<h4>Cascusamus et iusto odio</h4>
+										<a class="mix-link"> <i class="fa fa-link"></i>
+										</a> <a class="mix-preview fancybox-button"
+											href="http://218.150.181.131/poster/${m.id}p.png"
+											title="Project Name" data-rel="fancybox-button"> <i
+											class="fa fa-search"></i>
+										</a>
 									</div>
 								</div>
-								<!-- END FILTER -->
-							
-				</div>
-			</div>
-			<!-- END PAGE CONTENT INNER -->
-			
 
-			
-			
-			
-			
-		
-				<article>
-
-					<div class="infinite-container waypoint">
-						<c:forEach var="m" items="${list_jangwon}">
-							<div class="infinite-item"><img src="'http://218.150.181.131/poster/'+${m.id}+'p.png'">${m.id}</div>
-						</c:forEach>
-						
+							</c:forEach>
+						</div>
+						<!-- END FILTER -->
 					</div>
-					<a class="infinite-more-link" href="/pages?id_1=${id_2}"></a>
-				</article>
-				
-				
-			</div>
+					<!-- END PAGE CONTENT INNER -->
 
-			<!-- END PAGE CONTENT INNER -->
+
+
+				</div>
+				<a class="infinite-more-link" href="/pages?id_1=${id_2}"></a>
+			</article>
+
+
 		</div>
-
 	</div>
-
 	<!-- END PAGE CONTENT -->
-	</div>
-
 	<!-- END PAGE CONTAINER -->
 
 
+	<script
+		src="http://218.150.181.131/assets/global/plugins/jquery-migrate.min.js"></script>
+	<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+	<script
+		src="http://218.150.181.131/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/jquery.blockui.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/jquery.cokie.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/uniform/jquery.uniform.min.js"></script>
+	<!-- END CORE PLUGINS -->
+
+	<!-- BEGIN PAGE LEVEL PLUGINS -->
+	<script
+		src="http://218.150.181.131/assets/global/plugins/jquery-mixitup/jquery.mixitup.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
 	<!-- END PAGE LEVEL PLUGINS -->
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
-	<script src="http://218.150.181.131/assets/global/scripts/metronic.js"
-		type="text/javascript"></script>
+	<script src="http://218.150.181.131/assets/global/scripts/metronic.js"></script>
 	<script
-		src="http://218.150.181.131/assets/admin/layout3/scripts/layout.js"
-		type="text/javascript"></script>
+		src="http://218.150.181.131/assets/admin/layout3/scripts/layout.js"></script>
 	<script
-		src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js"
-		type="text/javascript"></script>
+		src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js"></script>
 	<script
-		src="http://218.150.181.131/assets/admin/pages/scripts/index3.js"
-		type="text/javascript"></script>
+		src="http://218.150.181.131/assets/admin/pages/scripts/portfolio.js"></script>
 	<script
-		src="http://218.150.181.131/assets/admin/pages/scripts/tasks.js"
-		type="text/javascript"></script>
+		src="http://218.150.181.131/assets/admin/pages/scripts/index3.js"></script>
 	<script
-		src="http://218.150.181.131/assets/admin/pages/scripts/ecommerce-index.js"></script>
-	<script
-		src="http://218.150.181.131/assets/global/scroll/js/jquery.scrollUp.js"
-		type="text/javascript"></script>
-	<script
-		src="http://218.150.181.131/assets/global/scroll/js/jquery.scrollUp.min.js"
-		type="text/javascript"></script>
+		src="http://218.150.181.131/assets/admin/pages/scripts/tasks.js"></script>
+	<!-- 
+	<script	src="http://218.150.181.131/assets/admin/pages/scripts/ecommerce-index.js"></script>
+	<script	src="http://218.150.181.131/assets/global/scroll/js/jquery.scrollUp.js"></script>
+	<script	src="http://218.150.181.131/assets/global/scroll/js/jquery.scrollUp.min.js"></script>
+	 -->
 	<!-- END PAGE LEVEL SCRIPTS -->
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
 			Metronic.init(); // init metronic core componets
 			Layout.init(); // init layout
 			Demo.init(); // init demo(theme settings page)
-			Index.init(); // init index page
 			Tasks.initDashboardWidget(); // init tash dashboard widget
+			Portfolio.init();
 
 		});
 	</script>
-
-
-
 	<!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->

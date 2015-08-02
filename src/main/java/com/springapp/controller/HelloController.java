@@ -60,8 +60,8 @@ public class HelloController {
 		model.addAttribute("count", movieListMapper.movieCount());
 		model.addAttribute("scroll_movie", movieListService.list());
 
-		model.addAttribute("list_jangwon",movieListService.list_jangwon(1, 60));
-		model.addAttribute("id_2",60);
+		model.addAttribute("list_jangwon",movieListService.list_jangwon(1, 12));
+		model.addAttribute("id_2",12);
 		return "home/index.jsp";
 	}
 
@@ -132,14 +132,15 @@ public class HelloController {
 	
 	@RequestMapping(value = "/ajax.do")
 	public String testJangwon(ModelMap model, int id_1) {
-		model.addAttribute("list_jangwon",movieListService.list_jangwon(id_1, id_1+60));
-		model.addAttribute("id_2",id_1 + 60);
+		model.addAttribute("list_jangwon",movieListService.list_jangwon(id_1, id_1+36));
+		model.addAttribute("id_2",id_1 + 24);
 		return "movie/page_jangwontest.jsp";
 	}
 	@RequestMapping(value = "/pages", method = RequestMethod.GET)
 	public String MovieList3(ModelMap model, int id_1) {
-		model.addAttribute("list2_jangwon", movieListService.list_jangwon(id_1, id_1+60));
-		model.addAttribute("id_2",id_1+60);
+		model.addAttribute("list2_jangwon", movieListService.list_jangwon(id_1, id_1+12));
+		model.addAttribute("id_2",id_1+12);
+		System.out.println("^^^^^");
 		return "movie/page2.jsp";
 	}
 	

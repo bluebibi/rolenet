@@ -19,6 +19,13 @@ public class MovieList {
 	double avgP;
 	double avgC;
 	double avgDE;
+	int ordernum;
+	public void setOrdernum(int ordernum) {
+		this.ordernum = ordernum;
+	}
+	public int getOrdernum() {
+		return ordernum;
+	}
 	public int getId() {
 		return id;
 	}
