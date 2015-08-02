@@ -20,22 +20,8 @@
 <meta content="" name="author">
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 
-<!--  BEGIN INFINITE SCROLL -->
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://218.150.181.131/assets/libr/jquery.waypoints.min.js"></script>
-<script src="http://218.150.181.131/assets/libr/infinite.min.js"></script>
-<script src="http://218.150.181.131/assets/libr/scripts.js"></script>
-<script src="http://218.150.181.131/assets/libr/sticky.min.js"></script>
-<script src="http://218.150.181.131/assets/libr/inview.min.js"></script>
-<script>
-	var infinite = new Waypoint.Infinite({
-		element : $('.infinite-container')[0]
-	});
-</script>
 
-
-
-<!--  END INFINITE SCROLL -->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
@@ -159,6 +145,7 @@
 						<div class="row mix-grid">
 							<c:forEach var="m" items="${list2_jangwon}">
 								<div class="col-md-3 col-sm-4 mix">
+								<p>hohoho</p>
 									<img class="img-responsive infinite-item"
 										src="http://218.150.181.131/poster/${m.id}p.png" alt="">
 									<div class="mix-details">
@@ -170,6 +157,7 @@
 											class="fa fa-search"></i>
 										</a>
 									</div>
+									<p>hohoho</p>
 								</div>
 
 							</c:forEach>
@@ -244,6 +232,22 @@
 
 		});
 	</script>
+	
+	<!--  BEGIN INFINITE SCROLL -->
+	<script src="http://218.150.181.131/assets/libr/jquery.waypoints.min.js"></script>
+	<script src="http://218.150.181.131/assets/libr/sticky.min.js"></script>
+	<script src="http://218.150.181.131/assets/libr/infinite.min.js"></script>
+	<script src="http://218.150.181.131/assets/libr/inview.min.js"></script>
+	<script src="http://218.150.181.131/assets/libr/scripts.js"></script>
+<script>
+	var infinite = new Waypoint.Infinite({
+		element : $('.infinite-container')[0]
+	});
+</script>
+
+
+
+<!--  END INFINITE SCROLL -->
 	<!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->

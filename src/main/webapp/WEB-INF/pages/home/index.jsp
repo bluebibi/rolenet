@@ -20,22 +20,8 @@
 <meta content="" name="author">
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 
-<!--  BEGIN INFINITE SCROLL -->
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://218.150.181.131/assets/libr/jquery.waypoints.min.js"></script>
-<script src="http://218.150.181.131/assets/libr/infinite.min.js"></script>
-<script src="http://218.150.181.131/assets/libr/scripts.js"></script>
-<script src="http://218.150.181.131/assets/libr/sticky.min.js"></script>
-<script src="http://218.150.181.131/assets/libr/inview.min.js"></script>
-<script>
-	var infinite = new Waypoint.Infinite({
-		element : $('.infinite-container')[0]
-	});
-</script>
 
-
-<!--  END INFINITE SCROLL -->
-
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
 <link href="http://218.150.181.131/assets/global/scroll/js/image.css"
@@ -105,7 +91,6 @@
 
 
 
-
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -159,7 +144,7 @@
 						<div class="row mix-grid">
 							<c:forEach var="m" items="${list_jangwon}">
 								<div class="col-md-3 col-sm-4 mix">
-									<img class="img-responsive infinite-item"
+									<img class="img-responsive infinite-item dipper"
 										src="http://218.150.181.131/poster/${m.id}p.png" alt="">
 									<div class="mix-details">
 										<h4>Cascusamus et iusto odio</h4>
@@ -243,6 +228,31 @@
 			Portfolio.init();
 
 		});
+	</script>
+	<!--  BEGIN INFINITE SCROLL -->
+
+	<script src="http://218.150.181.131/assets/libr/jquery.waypoints.min.js"></script>
+	<script src="http://218.150.181.131/assets/libr/sticky.min.js"></script>
+	<script src="http://218.150.181.131/assets/libr/infinite.min.js"></script>
+	<script src="http://218.150.181.131/assets/libr/inview.min.js"></script>
+	<script src="http://218.150.181.131/assets/libr/scripts.js"></script>
+	<script>
+		var infinite = new Waypoint.Infinite({
+			element : $('.infinite-container')[0]
+		});
+	</script>
+
+
+
+
+
+	<!--  END INFINITE SCROLL -->
+
+	<script>
+		var $dipper = $('.dipper');
+		$dipper.waypoint(function() {
+			console.log("waypoint!!");
+		})
 	</script>
 	<!-- END JAVASCRIPTS -->
 </body>
