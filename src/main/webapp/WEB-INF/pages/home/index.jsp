@@ -90,7 +90,6 @@
 </style>
 
 
-
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -136,38 +135,34 @@
 	<div class="page-content">
 		<div class="container">
 			<!-- BEGIN PAGE CONTENT INNER -->
-			<article>
-				<div class="infinite-container waypoint">
+			<div class="row">
+				<div class="col-md-12">
 
-					<div class="row">
-						<!-- BEGIN FILTER -->
-						<div class="row mix-grid">
-							<c:forEach var="m" items="${list_jangwon}">
-								<div class="col-md-3 col-sm-4 mix">
-									<img class="img-responsive infinite-item dipper"
-										src="http://218.150.181.131/poster/${m.id}p.png" alt="">
+					<!-- BEGIN FILTER -->
+					<div class="margin-top-10">
+
+						<div class="mix-grid">
+							<c:forEach var="m" items="${listAll_jangwon}">
+								<div class="col-md-3 col-sm-4 mix insertimg">
 									<div class="mix-details">
 										<h4>Cascusamus et iusto odio</h4>
-										<a class="mix-link"> <i class="fa fa-link"></i>
-										</a> <a class="mix-preview fancybox-button"
-											href="http://218.150.181.131/poster/${m.id}p.png"
-											title="Project Name" data-rel="fancybox-button"> <i
-											class="fa fa-search"></i>
+										<a class="mix-link"> 
+										<i class="fa fa-link"></i>
 										</a>
 									</div>
 								</div>
 
-							</c:forEach>
+						</c:forEach>
 						</div>
-						<!-- END FILTER -->
+
 					</div>
-					<!-- END PAGE CONTENT INNER -->
-
-
+					<!-- END FILTER -->
 
 				</div>
-				<a class="infinite-more-link" href="/pages?id_1=${id_2}"></a>
-			</article>
+			</div>
+			<!-- END PAGE CONTENT INNER -->
+
+			<!-- <a class="infinite-more-link" href="/pages?id_1=${id_2}"></a> -->
 
 
 		</div>
@@ -230,7 +225,7 @@
 		});
 	</script>
 	<!--  BEGIN INFINITE SCROLL -->
-
+	<!-- 
 	<script src="http://218.150.181.131/assets/libr/jquery.waypoints.min.js"></script>
 	<script src="http://218.150.181.131/assets/libr/sticky.min.js"></script>
 	<script src="http://218.150.181.131/assets/libr/infinite.min.js"></script>
@@ -241,18 +236,43 @@
 			element : $('.infinite-container')[0]
 		});
 	</script>
+ -->
 
 
-
-
-
+	<script
+		src="http://218.150.181.131/assets/libr/jquery.waypoints.min.js"></script>
+		
+	<script>
+	var idarr = new Array();
+	<c:forEach var="m" items="${listAll_jangwon}">
+		idarr.push("${m.id}");
+	</c:forEach>
+	for(var i=0;i<idarr.length;i++){
+		
+	}
+	$(".page-content .insertimg").append("<img class='img-responsive' src='http://218.150.181.131/poster/1p.png' alt=''>");
+	$(".mix-details").append("<a class='mix-preview fancybox-button' href='http://218.150.181.131/poster/1p.png' title='Project Name' data-rel='fancybox-button'><i class='fa fa-search'></i></a>");
+	
+	</script>
+<!-- 	<script>
+	var idarr = new Array();
+	<c:forEach var="m" items="${listAll_jangwon}">
+		idarr.push("${m.ordernum}");
+	</c:forEach>
+	
+	
+		$('#'+${m.id}).click(function(){
+			alert("dfdf");
+		});
+	</script>
+ -->
 	<!--  END INFINITE SCROLL -->
 
 	<script>
 		var $dipper = $('.dipper');
 		$dipper.waypoint(function() {
 			console.log("waypoint!!");
-		})
+		});
 	</script>
 	<!-- END JAVASCRIPTS -->
 </body>

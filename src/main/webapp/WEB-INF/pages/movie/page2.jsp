@@ -229,6 +229,7 @@
 			Demo.init(); // init demo(theme settings page)
 			Tasks.initDashboardWidget(); // init tash dashboard widget
 			Portfolio.init();
+			console.log("page2 시작");
 
 		});
 	</script>

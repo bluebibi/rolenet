@@ -60,6 +60,8 @@ public class HelloController {
 		model.addAttribute("count", movieListMapper.movieCount());
 		model.addAttribute("scroll_movie", movieListService.list());
 
+		
+		model.addAttribute("listAll_jangwon",movieListService.list());
 		model.addAttribute("list_jangwon",movieListService.list_jangwon(1, 12));
 		model.addAttribute("id_2",12);
 		return "home/index.jsp";
