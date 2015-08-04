@@ -143,7 +143,7 @@
 
 						<div class="mix-grid">
 							<c:forEach var="m" items="${listAll_jangwon}">
-								<div class="col-md-3 col-sm-4 mix insertimg">
+								<div id="${m.id}" class="col-md-3 col-sm-4 mix insertimg">
 									<div class="mix-details">
 										<h4>Cascusamus et iusto odio</h4>
 										<a class="mix-link"> 
@@ -246,12 +246,19 @@
 	var idarr = new Array();
 	<c:forEach var="m" items="${listAll_jangwon}">
 		idarr.push("${m.id}");
+		$("#${m.id}").append("<img class='img-responsive' src='http://218.150.181.131/poster/"+${m.id}+"p.png' alt=''>");
+		$(".mix-details #${m.id}").append("<a class='mix-preview fancybox-button' href='http://218.150.181.131/poster/"+${m.id}+"p.png' title='Project Name' data-rel='fancybox-button'><i class='fa fa-search'></i></a>");
 	</c:forEach>
-	for(var i=0;i<idarr.length;i++){
-		
-	}
-	$(".page-content .insertimg").append("<img class='img-responsive' src='http://218.150.181.131/poster/1p.png' alt=''>");
-	$(".mix-details").append("<a class='mix-preview fancybox-button' href='http://218.150.181.131/poster/1p.png' title='Project Name' data-rel='fancybox-button'><i class='fa fa-search'></i></a>");
+	
+	
+	
+
+	//$("#"+${m.id}).append("<img class='img-responsive' src='http://218.150.181.131/poster/"+idarr[1]+"p.png' alt=''>");
+	//$("#"+${m.id}).append("<a class='mix-preview fancybox-button' href='http://218.150.181.131/poster/"+idarr[1]+"p.png' title='Project Name' data-rel='fancybox-button'><i class='fa fa-search'></i></a>");
+
+	
+	//$(".page-content .insertimg").append("<img class='img-responsive' src='http://218.150.181.131/poster/"+idarr[i]+"p.png' alt=''>");
+	//$(".mix-details").append("<a class='mix-preview fancybox-button' href='http://218.150.181.131/poster/"+idarr[i]+"p.png' title='Project Name' data-rel='fancybox-button'><i class='fa fa-search'></i></a>");
 	
 	</script>
 <!-- 	<script>
