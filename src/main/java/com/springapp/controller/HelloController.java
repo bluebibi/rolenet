@@ -62,8 +62,8 @@ public class HelloController {
 
 		
 		model.addAttribute("listAll_jangwon",movieListService.list());
-		model.addAttribute("list_jangwon",movieListService.list_jangwon(1, 12));
-		model.addAttribute("id_2",12);
+		model.addAttribute("list_jangwon",movieListService.list_jangwon(1, 4));
+		model.addAttribute("id_2",4);
 		return "home/index.jsp";
 	}
 
@@ -140,8 +140,8 @@ public class HelloController {
 	}
 	@RequestMapping(value = "/pages", method = RequestMethod.GET)
 	public String MovieList3(ModelMap model, int id_1) {
-		model.addAttribute("list2_jangwon", movieListService.list_jangwon(id_1, id_1+12));
-		model.addAttribute("id_2",id_1+12);
+		model.addAttribute("list2_jangwon", movieListService.list_jangwon(id_1, id_1+4));
+		model.addAttribute("id_2",id_1+4);
 		System.out.println("^^^^^");
 		return "movie/page2.jsp";
 	}

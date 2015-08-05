@@ -138,39 +138,38 @@
 	<div class="page-content">
 		<div class="container">
 			<!-- BEGIN PAGE CONTENT INNER -->
-			<article>
-				<div class="infinite-container waypoint">
-					<div class="row">
-						<!-- BEGIN FILTER -->
-						<div class="row mix-grid">
-							<c:forEach var="m" items="${list2_jangwon}">
-								<div class="col-md-3 col-sm-4 mix">
-								<p>hohoho</p>
-									<img class="img-responsive infinite-item"
-										src="http://218.150.181.131/poster/${m.id}p.png" alt="">
-									<div class="mix-details">
-										<h4>Cascusamus et iusto odio</h4>
-										<a class="mix-link"> <i class="fa fa-link"></i>
-										</a> <a class="mix-preview fancybox-button"
-											href="http://218.150.181.131/poster/${m.id}p.png"
-											title="Project Name" data-rel="fancybox-button"> <i
-											class="fa fa-search"></i>
-										</a>
+			<div class="row">
+				<div class="col-md-12">
+
+					<!-- BEGIN FILTER -->
+					<div class="margin-top-10">
+
+						<div class="mix-grid infinite-container">
+							<c:forEach var="m" items="${list2_jangwon}" varStatus="status">
+								<c:if test="${status.index < 4}">
+									<div id="${m.id}" class="col-md-3 col-sm-4 mix insertimg infinite-item">
+										<img class='img-responsive' src='http://218.150.181.131/poster/${m.id}p.png' alt=''>
+										<div class="mix-details">
+											<h4>Cascusamus et iusto odio</h4>
+											<a class="mix-link"> <i class="fa fa-link"></i>
+											</a>
+											<a class='mix-preview fancybox-button' href='http://218.150.181.131/poster/${m.id}p.png' title='Project Name' data-rel='fancybox-button'>
+											<i class='fa fa-search'></i>
+											</a>
+										</div>
 									</div>
-									<p>hohoho</p>
-								</div>
+								</c:if>
+								
 
 							</c:forEach>
 						</div>
-						<!-- END FILTER -->
+						<a class="infinite-more-link" href="/pages?id_1=${id_2}"></a>
 					</div>
-					<!-- END PAGE CONTENT INNER -->
-
-
+					<!-- END FILTER -->
 
 				</div>
-				<a class="infinite-more-link" href="/pages?id_1=${id_2}"></a>
-			</article>
+			</div>
+			<!-- END PAGE CONTENT INNER -->
 
 
 		</div>

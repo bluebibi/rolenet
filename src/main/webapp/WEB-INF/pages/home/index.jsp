@@ -84,8 +84,8 @@
 	margin: 0 auto;
 }
 
-* {
-	margin: auto;
+.hiddenstyle{
+	opacity:0;
 }
 </style>
 
@@ -141,28 +141,32 @@
 					<!-- BEGIN FILTER -->
 					<div class="margin-top-10">
 
-						<div class="mix-grid">
-							<c:forEach var="m" items="${listAll_jangwon}">
-								<div id="${m.id}" class="col-md-3 col-sm-4 mix insertimg">
-									<div class="mix-details">
-										<h4>Cascusamus et iusto odio</h4>
-										<a class="mix-link"> 
-										<i class="fa fa-link"></i>
-										</a>
+						<div class="mix-grid infinite-container">
+							<c:forEach var="m" items="${list_jangwon}" varStatus="status">
+								<c:if test="${status.index < 4}">
+									<div id="${m.id}" class="col-md-3 col-sm-4 mix insertimg infinite-item">
+										<img class='img-responsive' src='http://218.150.181.131/poster/${m.id}p.png' alt=''>
+										<div class="mix-details">
+											<h4>Cascusamus et iusto odio</h4>
+											<a class="mix-link"> <i class="fa fa-link"></i>
+											</a>
+											<a class='mix-preview fancybox-button' href='http://218.150.181.131/poster/${m.id}p.png' title='Project Name' data-rel='fancybox-button'>
+											<i class='fa fa-search'></i>
+											</a>
+										</div>
 									</div>
-								</div>
+								</c:if>
+								
 
-						</c:forEach>
+							</c:forEach>
 						</div>
-
+						<a class="infinite-more-link" href="/pages?id_1=${id_2}"></a>
 					</div>
 					<!-- END FILTER -->
 
 				</div>
 			</div>
 			<!-- END PAGE CONTENT INNER -->
-
-			<!-- <a class="infinite-more-link" href="/pages?id_1=${id_2}"></a> -->
 
 
 		</div>
@@ -225,7 +229,7 @@
 		});
 	</script>
 	<!--  BEGIN INFINITE SCROLL -->
-	<!-- 
+
 	<script src="http://218.150.181.131/assets/libr/jquery.waypoints.min.js"></script>
 	<script src="http://218.150.181.131/assets/libr/sticky.min.js"></script>
 	<script src="http://218.150.181.131/assets/libr/infinite.min.js"></script>
@@ -236,51 +240,11 @@
 			element : $('.infinite-container')[0]
 		});
 	</script>
- -->
 
 
-	<script
-		src="http://218.150.181.131/assets/libr/jquery.waypoints.min.js"></script>
-		
-	<script>
-	var idarr = new Array();
-	<c:forEach var="m" items="${listAll_jangwon}">
-		idarr.push("${m.id}");
-		$("#${m.id}").append("<img class='img-responsive' src='http://218.150.181.131/poster/"+${m.id}+"p.png' alt=''>");
-		$(".mix-details #${m.id}").append("<a class='mix-preview fancybox-button' href='http://218.150.181.131/poster/"+${m.id}+"p.png' title='Project Name' data-rel='fancybox-button'><i class='fa fa-search'></i></a>");
-	</c:forEach>
-	
-	
-	
 
-	//$("#"+${m.id}).append("<img class='img-responsive' src='http://218.150.181.131/poster/"+idarr[1]+"p.png' alt=''>");
-	//$("#"+${m.id}).append("<a class='mix-preview fancybox-button' href='http://218.150.181.131/poster/"+idarr[1]+"p.png' title='Project Name' data-rel='fancybox-button'><i class='fa fa-search'></i></a>");
 
 	
-	//$(".page-content .insertimg").append("<img class='img-responsive' src='http://218.150.181.131/poster/"+idarr[i]+"p.png' alt=''>");
-	//$(".mix-details").append("<a class='mix-preview fancybox-button' href='http://218.150.181.131/poster/"+idarr[i]+"p.png' title='Project Name' data-rel='fancybox-button'><i class='fa fa-search'></i></a>");
-	
-	</script>
-<!-- 	<script>
-	var idarr = new Array();
-	<c:forEach var="m" items="${listAll_jangwon}">
-		idarr.push("${m.ordernum}");
-	</c:forEach>
-	
-	
-		$('#'+${m.id}).click(function(){
-			alert("dfdf");
-		});
-	</script>
- -->
-	<!--  END INFINITE SCROLL -->
-
-	<script>
-		var $dipper = $('.dipper');
-		$dipper.waypoint(function() {
-			console.log("waypoint!!");
-		});
-	</script>
 	<!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->
