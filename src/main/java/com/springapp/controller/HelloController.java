@@ -140,9 +140,10 @@ public class HelloController {
 	}
 	@RequestMapping(value = "/pages", method = RequestMethod.GET)
 	public String MovieList3(ModelMap model, int id_1) {
-		model.addAttribute("list2_jangwon", movieListService.list_jangwon(id_1, id_1+4));
-		model.addAttribute("id_2",id_1+4);
-		System.out.println("^^^^^");
+        System.out.println("id_1 = " + id_1);
+        System.out.println("from: " + (id_1 + 1));
+        System.out.println("to: " + (id_1 + 5));
+        model.addAttribute("list2_jangwon", movieListService.list_jangwon(id_1 + 1, id_1 + 5));
 		return "movie/page2.jsp";
 	}
 	
