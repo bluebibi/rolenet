@@ -538,7 +538,22 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 					<!-- End: life time stats -->
 				</div>
+                <div>
+                    <div class="portlet light">
+                        <div class="alert alert-info">
+                            <strong>이 영화가 마음에 드신다면..</strong> 다음 영화들을 추천드려요
+                        </div>
+                        <div>
+                            <c:forEach var="m" items="${recommend}">
+                                <div>
+                                <img class='img-responsive' src='http://218.150.181.131/poster/${m.movie_id}p.png' width="270pt" height="100pt" onclick="document.location = 'Tab_movielistdetail?id=${m.movie_id}';">
+                                <div>
 
+                             </c:forEach>
+                        </div>
+                    </div>
+
+                </div>
 				<!-- END PAGE CONTENT INNER -->
 			</div>
 		</div>

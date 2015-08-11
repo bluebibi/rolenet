@@ -142,7 +142,7 @@
                         <c:forEach var="m" items="${listAll_jangwon}" varStatus="status">
                             <c:if test="${status.index < 12}">
                                 <div id="${m.id}" class="col-md-3 col-sm-4 insertimg mix infinite-item">
-                                    <img class='img-responsive' src='http://218.150.181.131/poster/${m.id}p.png' alt=''>
+                                    <img class='img-responsive' src='http://218.150.181.131/poster/${m.id}p.png' alt='' width='270pt'>
                                     <div class="mix-details">
                                         <h4>Cascusamus et iusto odio</h4>
                                         <a class="mix-link"> <i class="fa fa-link"></i>
