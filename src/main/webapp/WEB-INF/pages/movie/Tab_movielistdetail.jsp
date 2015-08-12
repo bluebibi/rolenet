@@ -258,7 +258,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<i class="fa fa-briefcase fa-icon-medium"></i>
 							</div>
 							<div class="details">
-								<div class="number">감   독 : ${n.director}</div>
+								<div class="number">감&nbsp;&nbsp;독 : <span class="number" style="font-size:24px !important;">${n.director}</span></div>
 								<div class="desc">${n.year}</div>
 							</div>
 						</a>
