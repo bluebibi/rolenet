@@ -243,10 +243,10 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
 				<!-- BEGIN PAGE BREADCRUMB -->
 				<ul class="page-breadcrumb breadcrumb">
-					<li><a href="/">Home</a><i class="fa fa-circle"></i></li>
-					<li><a href="/Tab_movielist">Movielist</a> <i
+					<li><a href="/">홈화면</a><i class="fa fa-circle"></i></li>
+					<li><a href="/Tab_movielist">영화리스트</a> <i
 						class="fa fa-circle"></i></li>
-					<li class="active">look in - Movie</li>
+					<li class="active">영화 자세히보기</li>
 				</ul>
 				<!-- END PAGE BREADCRUMB -->
 				<!-- BEGIN PAGE CONTENT INNER -->
@@ -258,7 +258,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<i class="fa fa-briefcase fa-icon-medium"></i>
 							</div>
 							<div class="details">
-								<div class="number">Director : ${n.director}</div>
+								<div class="number">감   독 : ${n.director}</div>
 								<div class="desc">${n.year}</div>
 							</div>
 						</a>
@@ -271,7 +271,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="details">
 								<div class="number">${n.name}</div>
-								<div class="desc">Movie title</div>
+								<div class="desc">영화 제목</div>
 							</div>
 						</a>
 					</div>
@@ -283,7 +283,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="details">
 								<div class="number">${n.spectators}</div>
-								<div class="desc">number of Audience</div>
+								<div class="desc">관객 수</div>
 							</div>
 						</a>
 					</div>
@@ -294,10 +294,10 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="icon-bar-chart font-green-sharp"></i> <span
-									class="caption-subject font-green-sharp bold uppercase">Actors-Network</span>
+									class="caption-subject font-green-sharp bold uppercase">영화 내 인물 네트워크</span>
 								&nbsp;
 								<button class="btn default purple-stripe"
-									onclick="openPopup('/Tab_compare?movie1=${n.id}')">Compare
+									onclick="openPopup('/Tab_compare?movie1=${n.id}')">다른영화와 비교
 								</button>
 							</div>
 							<div class="tools">
