@@ -242,7 +242,6 @@
         if($(window).scrollTop() == $(document).height() - $(window).height()) {
             $('div#loadmoreajaxloader').show('slow');
             var lastIndex = $('.infinite-item:last').attr("id");
-            alert("last: " + lastIndex);
             $.get("/pages?id_1=" + lastIndex, function(html) {
                     if(html) {
                         $("#postwrapper").append(html);

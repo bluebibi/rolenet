@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <%@ page import="com.springapp.entity.CharactorsList" %>
 <%@ page import="java.util.List" %>
 <%@ page import="org.springframework.beans.factory.annotation.Autowired" %>
@@ -576,15 +578,12 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet light">
 						<div class="portlet-title tabbable-line">
 							<div class="caption">
-								<i class="icon-share font-red-sunglo"></i> <span
-									class="caption-subject font-red-sunglo bold uppercase">Info.Movie</span>
-
+								<i class="icon-share font-red-sunglo"></i> 
+								<span class="caption-subject font-red-sunglo bold uppercase">영화정보</span>
 							</div>
 							<ul class="nav nav-tabs">
-								<li><a href="#portlet_tab2" data-toggle="tab"
-									id="statistics_amounts_tab"> Base </a></li>
-								<li class="active"><a href="#portlet_tab1"
-									data-toggle="tab"> Synopsis </a></li>
+								<li><a href="#portlet_tab2" data-toggle="tab" id="statistics_amounts_tab"> Base </a></li>
+								<li class="active"><a href="#portlet_tab1" data-toggle="tab"> 줄거리 </a></li>
 							</ul>
 						</div>
 						<div class="portlet-body">
@@ -593,13 +592,13 @@ License: You must have a valid license purchased only from themeforest(the above
 									<font face=Verdana>&nbsp;${n.synopsis}</font>
 								</div>
 								<div class="tab-pane" id="portlet_tab2">
-									<div id="statistics_2" class="chart"></div>
+									<div id="statistics_2" class="chart">ㅇㄴㅁ</div>
 								</div>
 							</div>
 							<div class="margin-top-20 no-margin no-border">
 								<div class="row">
 									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
-										<span class="label label-success uppercase"> Role </span>
+										<span class="label label-success uppercase"> 배우 </span>
 									</div>
 								</div>
 								<br>
@@ -661,7 +660,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div>
                     <div class="portlet light">
                         <div class="alert alert-info">
-                            <strong>이 영화가 마음에 드신다면..</strong> 다음 영화들을 추천드려요
+                        	<strong>이 영화가 마음에 드신다면..</strong> 다음 영화들을 추천드려요 
                         </div>
                         <div>
                             <%
