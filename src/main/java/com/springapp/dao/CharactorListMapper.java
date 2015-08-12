@@ -14,4 +14,6 @@ public interface CharactorListMapper {
 	List<CharactorsList> selectBetweenRoleByMovieId(@Param("id") int id);
 	@Select("select * from charactors where movie_id=#{id} and degreeRole=1")
 	List<CharactorsList> selectDegreeRoleByMovieId(@Param("id") int id);
+	@Select("slect * from charactors where id = #{id}")
+	CharactorsList selectById(@Param("id") int id);
 }

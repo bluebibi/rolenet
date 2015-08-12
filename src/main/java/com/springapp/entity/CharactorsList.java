@@ -7,6 +7,16 @@ public class CharactorsList {
 	int betweenRole;
 	int degreeRole;
 	int naverRole;
+	String charactorsURL;
+
+	public String getCharactorsURL() {
+		return charactorsURL;
+	}
+
+	public void setCharactorsURL(String charactorsURL) {
+		this.charactorsURL = charactorsURL;
+	}
+
 	public int getId() {
 		return id;
 	}
