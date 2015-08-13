@@ -8,6 +8,19 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8"/>
+    
+    <style>
+		@import url(http://fonts.googleapis.com/css?family=Orbitron:700,900);
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+		#mainTitle{
+			font-family: 'Orbitron', sans-serif;
+			font-weight: 900;
+		}
+		.koreanStyle{
+			font-family:'Nanum Gothic',sans-serif !important;
+			font-size: 50px;
+		}
+	</style>
     <style type="text/css">
         .Text {
             font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
