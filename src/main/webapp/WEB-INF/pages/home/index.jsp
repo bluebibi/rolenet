@@ -10,6 +10,8 @@
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
+
+
     <meta charset="utf-8" />
 
     <title>Movietween | LINK 9th | Koreatech</title>
@@ -18,7 +20,13 @@
     <meta content="" name="description">
     <meta content="" name="author">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-
+	<style>
+		@import url(http://fonts.googleapis.com/css?family=Orbitron:700,900);
+		#mainTitle{
+			font-family: 'Orbitron', sans-serif;
+			font-weight: 900;
+		}
+	</style>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="http://218.150.181.131/assets/global/scroll/js/image.css"
           rel="stylesheet" type="text/css">
@@ -104,9 +112,10 @@
             <!-- BEGIN PAGE TITLE -->
             <div id="head-back" class="homebox">
                 <br> <br> <br> <br>
-                <h1 align="center">
-                    MOVIETWEEN <small></small>
+                <h1 id="mainTitle" align="center">
+                    MOVIETWEEN 
                 </h1>
+                <br/><br/><br/>
                 <div class="container">
                     <form class="search-form" action="search.do" method="POST">
                         <div class="input-group">
