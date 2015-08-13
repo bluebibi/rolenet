@@ -67,10 +67,7 @@ public class HelloController {
 		return "home/index.jsp";
 	}
 
-	@RequestMapping("/haha")
-	public String printWelcomez(ModelMap model) {
-		return "movie/test.jsp";
-	}
+
 
 	@RequestMapping(value = "/movietween/addContact.do", method = RequestMethod.POST)
 	public ModelAndView addContact(

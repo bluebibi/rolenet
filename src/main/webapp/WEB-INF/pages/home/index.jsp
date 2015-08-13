@@ -121,16 +121,15 @@
 				<div id="head-back" class="homebox">
 					<br> <br> <br> <br>
 					<h1 id="mainTitle" align="center">MOVIETWEEN</h1>
-					<br />
-					<br />
-					<br />
+					<br /> <br /> <br />
 					<div class="container">
 						<form class="search-form" action="search.do" method="POST">
 							<div class="input-group">
-								<input type="text" id="movieName" class="form-control" placeholder="영화 검색하기" name="query"/> 
-									<span class="input-group-btn">
+								<input type="text" id="movieName" class="form-control"
+									placeholder="영화 검색하기" name="query" /> <span
+									class="input-group-btn">
 									<button type="submit" class="icon-magnifier"></button>
-									</span> 
+								</span>
 							</div>
 						</form>
 						<br> <br> <br> <br>
@@ -159,16 +158,15 @@
 									<c:if test="${status.index < 12}">
 										<div id="${m.id}"
 											class="col-md-3 col-sm-4 insertimg mix infinite-item">
-											<img class='img-responsive'
-												src='http://218.150.181.131/poster/${m.id}p.png' alt=''
-												width='270pt'>
+											<img class='img-responsive' src='http://218.150.181.131/poster/${m.id}p.png' alt='' width='270pt'>
 											<div class="mix-details">
 												<h4>Cascusamus et iusto odio</h4>
-												<a class="mix-link"> <i class="fa fa-link"></i>
-												</a> <a class='mix-preview fancybox-button'
-													href='http://218.150.181.131/poster/${m.id}p.png'
-													title='Project Name' data-rel='fancybox-button'> <i
-													class='fa fa-search'></i>
+												<a class="mix-link"> 
+													<i class="fa fa-link"></i>
+												</a> 
+												<a class='mix-preview fancybox-button' href='http://218.150.181.131/poster/${m.id}p.png'
+													title='Project Name' data-rel='fancybox-button'> 
+													<i class='fa fa-search'></i>
 												</a>
 											</div>
 										</div>
