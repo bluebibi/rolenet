@@ -3,9 +3,6 @@ var TableAdvanced = function () {
     var initTable4 = function () {
         var table = $('#sample_4');
 
-
-  
-
         var oTable = table.dataTable({
             "columnDefs": [{
                 "orderable": false,
