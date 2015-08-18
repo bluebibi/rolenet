@@ -1,9 +1,6 @@
 package com.springapp.controller;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.List;
 import java.util.Map;
 
@@ -259,6 +256,8 @@ public class HelloController {
 
 	@RequestMapping(value = "/upload.do")
 	public String fileupload(ModelMap model) {
+
+		model.addAttribute("path",this.getClass().getResource("").getPath());
 		return "movie/fileForm.jsp";
 	}
 
@@ -269,20 +268,18 @@ public class HelloController {
 	//		return "movie/fileForm.jsp";
 	//	}
 
-	@RequestMapping(value = "/file.do", method = RequestMethod.GET)
-	public ModelAndView fileForm() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("fileForm");
-		return mv;
-	}
 
 	@RequestMapping(value = "/file.do", method = RequestMethod.POST)
 	public String fileSubmit(FileDTO dto, HttpServletRequest request) throws IOException {
-		String path = request.getSession().getServletContext().getRealPath("/");
-		int index = path.indexOf("/target");
+
+		System.out.println("file.do start");
+		String path = this.getClass().getResource("").getPath();
+		System.out.println("path : " + path);
+		int index = path.indexOf("/classes");
 		path = path.substring(0, index);
-		System.out.println(request.getSession().getServletContext().getRealPath("/") + "," + index + "," + path);
-		path += "/src/main/webapp/WEB-INF/resources/scenario/";
+		///Users/kth/rolenet/src/main/webapp/WEB-INF/resources/scenario/finall.py
+		System.out.println(this.getClass().getResource("").getPath() + "," + index + "," + path);
+		path += "/resources/scenario/";
 		int topnum = userMovieListService.topNum();
 		topnum = topnum + 1;
 		System.out.println("file upload");

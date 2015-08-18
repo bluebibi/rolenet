@@ -101,6 +101,7 @@
 	<div class="page-content">
 		<div class="container">
 			<div class="portlet light">
+				<h3>프로젝트 경로는 : ${path}</h3>
 			<form name="formName"method="post">
 			<table>
 				<tr>
