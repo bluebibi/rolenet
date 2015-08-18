@@ -161,6 +161,15 @@ License: You must have a valid license purchased only from themeforest(the above
 	href="http://218.150.181.131/assets/global/plugins/uniform/css/uniform.default.css"
 	rel="stylesheet" type="text/css">
 <!-- END GLOBAL MANDATORY STYLES -->
+
+<!-- BEGIN PAGE LEVEL STYLES -->
+
+<link
+	href="http://218.150.181.131/assets/global/plugins/fancybox/source/jquery.fancybox.css"
+	rel="stylesheet" type="text/css" />
+<link href="http://218.150.181.131/assets/admin/pages/css/portfolio.css"
+	rel="stylesheet" type="text/css" />
+<!-- END PAGE LEVEL STYLES -->
 <!-- BEGIN THEME STYLES -->
 <link href="http://218.150.181.131/assets/global/css/components.css"
 	rel="stylesheet" type="text/css">
@@ -336,8 +345,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="tab-content">
 										<div class="tab-pane active" id="portlet_tab1">
 											<div class="chart">
-												<font face=Verdana>
-												<embed src="http://serviceapi.rmcnmv.naver.com//resources/ko/flash/NVP_web_player_core.swf?version=1.5.0.2"
+												<font face=Verdana> <embed
+														src="http://serviceapi.rmcnmv.naver.com//resources/ko/flash/NVP_web_player_core.swf?version=1.5.0.2"
 														quality="high" wmode="window"
 														flashvars="playapi=http%3A%2F%2Fplay.rmcnmv.naver.com%2Fvod%2Fplay%2F5D7DA31834CAA94619330FC3B833223888E9%3Fskn%3Ddefault%26key%3DV122d52362fcb77de80d70f16e8ffd728c46f9f111c8331a5cbcef3e33a5b1c6937900f16e8ffd728c46f%26doct%3Dxml%26devt%3Dflash%26cpt%3Dttml%26sid%3D2003%26pid%3DrmcPlayer_1439916166552902&amp;vid=5D7DA31834CAA94619330FC3B833223888E9&amp;inKey=V122d52362fcb77de80d70f16e8ffd728c46f9f111c8331a5cbcef3e33a5b1c6937900f16e8ffd728c46f&amp;likeit=false&amp;wmode=window&amp;wmode_outkey=transparent&amp;isAutoPlay=true&amp;api=http%3A//serviceapi.rmcnmv.naver.com/flash&amp;skinURL=http%3A//serviceapi.rmcnmv.naver.com//resources/ko/flash/NVP_web_player_skin_big_black.swf%3Fversion%3D1.8.1&amp;skinName=default&amp;coverImageURL=http%3A//imgmovie.naver.net/multimedia/MOVIECLIP/TRAILER/18405_20120809112758.jpg&amp;__flashID=rmcPlayer_1439916166552902&amp;cassiodServiceID=2003&amp;controlBarMovable=false&amp;autoLocale=false&amp;locale=ko&amp;canLikeIt=false&amp;contentInfo=%5Bobject%20Object%5D&amp;showSocialPlugIn=false&amp;socialInfoData=%5Bobject%20Object%5D&amp;"
 														bgcolor="#000000" width="100%" height="100%"
@@ -377,15 +386,15 @@ License: You must have a valid license purchased only from themeforest(the above
 													<tr>
 														<th width="10%">Naver</th>
 														<%
-                                                    int count2 = 0;
-                                                %>
+															int count2 = 0;
+														%>
 														<c:forEach var="m" items="${naverRole}">
 
 															<th width="5%" onmouseover="show(<%=count2%>)"
 																onmouseout="toolTip()">${m.name}</th>
 															<%
-                                                count2++;
-                                                %>
+																count2++;
+															%>
 														</c:forEach>
 													</tr>
 												</thead>
@@ -398,45 +407,189 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 					<!-- End: life time stats -->
 				</div>
-				<div></div>
-				<div>
-					<div class="portlet light">
-						<div class="alert alert-info">
-							<strong>이 영화가 마음에 드신다면..</strong> 다음 영화들을 추천드려요
-						</div>
-						<div>
-							<%
-                                int cnt = 0;
-                            %>
-							<table>
-								<tr>
-									<c:forEach var="m" items="${recommend}">
-										<td><img class='img-responsive'
-											src='http://218.150.181.131/poster/${m.movie_id}p.png'
-											width="270pt" height="100pt"
-											onclick="document.location = 'Tab_movielistdetail?id=${m.movie_id}';">
-										</td>
-										<%
-                                    if(cnt > 2){
-                                %>
-									
-								</tr>
-								<tr>
-									<%
-                                        cnt = 0;
-                                    } else {
-                                            cnt++;
-                                            System.out.println("cnt = " + cnt);
-                                        }
-                                %>
-
-									</c:forEach>
-								</tr>
-							</table>
+				<!-- BEGIN JANGWON SLIDER -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="tabbable tabbable-custom tabbable-noborder">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<a href="#tab_1" data-toggle="tab">영화 추천 탭 </a>
+								</li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="tab_1">
+									<!-- BEGIN FILTER -->
+									<div class="margin-top-10">
+										<ul class="mix-filter">
+											<li class="filter" data-filter="all">k-means 알고리즘 추천</li>
+											<li class="filter" data-filter="category_1">같은 감독의 영화 추천</li>
+											<li class="filter" data-filter="category_2">같은 배우가 출연한영화 추천</li>
+											<li class="filter" data-filter="category_3">같은 장르의 영화 추천</li>
+										</ul>
+										<div class="row mix-grid">
+											<div class="col-md-3 col-sm-4 mix category_1">
+												<div class="mix-inner">
+													<img class="img-responsive"
+														src="http://218.150.181.131/poster/1p.png" alt="">
+													<div class="mix-details">
+														<h4>Cascusamus et iusto odio</h4>
+														<a class="mix-link"> <i class="fa fa-link"></i></a> 
+														<a class="mix-preview fancybox-button"
+															href="../../assets/admin/pages/media/works/img2.jpg"
+															title="Project Name" data-rel="fancybox-button"> 
+															<i class="fa fa-search"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 mix category_2">
+												<div class="mix-inner">
+													<img class="img-responsive"
+														src="http://218.150.181.131/poster/1p.png" alt="">
+													<div class="mix-details">
+														<h4>Cascusamus et iusto accusamus</h4>
+														<a class="mix-link"> <i class="fa fa-link"></i>
+														</a> <a class="mix-preview fancybox-button"
+															href="../../assets/admin/pages/media/works/img2.jpg"
+															title="Project Name" data-rel="fancybox-button"> <i
+															class="fa fa-search"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 mix category_3">
+												<div class="mix-inner">
+													<img class="img-responsive"
+														src="http://218.150.181.131/poster/1p.png" alt="">
+													<div class="mix-details">
+														<h4>Cascusamus et iusto accusamus</h4>
+														<a class="mix-link"> <i class="fa fa-link"></i>
+														</a> <a class="mix-preview fancybox-button"
+															href="../../assets/admin/pages/media/works/img3.jpg"
+															title="Project Name" data-rel="fancybox-button"> <i
+															class="fa fa-search"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 mix category_1 category_2">
+												<div class="mix-inner">
+													<img class="img-responsive"
+														src="http://218.150.181.131/poster/1p.png" alt="">
+													<div class="mix-details">
+														<h4>Cascusamus et iusto accusamus</h4>
+														<a class="mix-link"> <i class="fa fa-link"></i>
+														</a> <a class="mix-preview fancybox-button"
+															href="../../assets/admin/pages/media/works/img4.jpg"
+															title="Project Name" data-rel="fancybox-button"> <i
+															class="fa fa-search"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 mix category_2 category_1">
+												<div class="mix-inner">
+													<img class="img-responsive"
+														src="http://218.150.181.131/poster/1p.png" alt="">
+													<div class="mix-details">
+														<h4>Cascusamus et iusto accusamus</h4>
+														<a class="mix-link"> <i class="fa fa-link"></i>
+														</a> <a class="mix-preview fancybox-button"
+															href="../../assets/admin/pages/media/works/img5.jpg"
+															title="Project Name" data-rel="fancybox-button"> <i
+															class="fa fa-search"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 mix category_1 category_2">
+												<div class="mix-inner">
+													<img class="img-responsive"
+														src="http://218.150.181.131/poster/1p.png" alt="">
+													<div class="mix-details">
+														<h4>Cascusamus et iusto accusamus</h4>
+														<a class="mix-link"> <i class="fa fa-link"></i>
+														</a> <a class="mix-preview fancybox-button"
+															href="../../assets/admin/pages/media/works/img6.jpg"
+															title="Project Name" data-rel="fancybox-button"> <i
+															class="fa fa-search"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 mix category_2 category_3">
+												<div class="mix-inner">
+													<img class="img-responsive"
+														src="http://218.150.181.131/poster/1p.png" alt="">
+													<div class="mix-details">
+														<h4>Cascusamus et iusto accusamus</h4>
+														<a class="mix-link"> <i class="fa fa-link"></i>
+														</a> <a class="mix-preview fancybox-button"
+															href="../../assets/admin/pages/media/works/img1.jpg"
+															title="Project Name" data-rel="fancybox-button"> <i
+															class="fa fa-search"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 mix category_1 category_2">
+												<div class="mix-inner">
+													<img class="img-responsive"
+														src="http://218.150.181.131/poster/1p.png" alt="">
+													<div class="mix-details">
+														<h4>Cascusamus et iusto accusamus</h4>
+														<a class="mix-link"> <i class="fa fa-link"></i>
+														</a> <a class="mix-preview fancybox-button"
+															href="../../assets/admin/pages/media/works/img2.jpg"
+															title="Project Name" data-rel="fancybox-button"> <i
+															class="fa fa-search"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 mix category_3">
+												<div class="mix-inner">
+													<img class="img-responsive"
+														src="http://218.150.181.131/poster/1p.png" alt="">
+													<div class="mix-details">
+														<h4>Cascusamus et iusto accusamus</h4>
+														<a class="mix-link"> <i class="fa fa-link"></i>
+														</a> <a class="mix-preview fancybox-button"
+															href="../../assets/admin/pages/media/works/img4.jpg"
+															title="Project Name" data-rel="fancybox-button"> <i
+															class="fa fa-search"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 mix category_1">
+												<div class="mix-inner">
+													<img class="img-responsive"
+														src="http://218.150.181.131/poster/1p.png" alt="">
+													<div class="mix-details">
+														<h4>Cascusamus et iusto accusamus</h4>
+														<a class="mix-link"> <i class="fa fa-link"></i>
+														</a> <a class="mix-preview fancybox-button"
+															href="../../assets/admin/pages/media/works/img3.jpg"
+															title="Project Name" data-rel="fancybox-button"> <i
+															class="fa fa-search"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- END FILTER -->
+								</div>
+								
+							
+							</div>
 						</div>
 					</div>
-
 				</div>
+
+				<!-- END JANGWON SLIDER -->
+
 				<!-- END PAGE CONTENT INNER -->
 			</div>
 		</div>
@@ -722,6 +875,12 @@ License: You must have a valid license purchased only from themeforest(the above
 </script>
 	<!-- END SIGMA SCRIPTS -->
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/jquery-migrate.min.js"></script>
+
+	<!-- END PAGE LEVEL PLUGINS -->
+	<!-- BEGIN PAGE LEVEL PLUGINS -->
 	<script
 		src="http://218.150.181.131/assets/global/plugins/flot/jquery.flot.js"
 		type="text/javascript"></script>
@@ -732,6 +891,28 @@ License: You must have a valid license purchased only from themeforest(the above
 		src="http://218.150.181.131/assets/global/plugins/flot/jquery.flot.categories.js"
 		type="text/javascript"></script>
 	<!-- END PAGE LEVEL PLUGINS -->
+	<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+	<script
+		src="http://218.150.181.131/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/jquery.blockui.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/jquery.cokie.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/uniform/jquery.uniform.min.js"></script>
+	<!-- END CORE PLUGINS -->
+
+	<script
+		src="http://218.150.181.131/assets/global/plugins/jquery-mixitup/jquery.mixitup.min.js"></script>
+	<script
+		src="http://218.150.181.131/assets/global/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 	<script src="http://218.150.181.131/assets/global/scripts/metronic.js"
 		type="text/javascript"></script>
@@ -742,6 +923,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js"
 		type="text/javascript"></script>
 	<script
+		src="http://218.150.181.131/assets/admin/pages/scripts/portfolio.js"></script>
+	<script
 		src="http://218.150.181.131/assets/admin/pages/scripts/ecommerce-index.js"></script>
 	<!-- END PAGE LEVEL SCRIPTS -->
 	<script>
@@ -749,7 +932,7 @@ License: You must have a valid license purchased only from themeforest(the above
         Metronic.init(); // init metronic core components
         Layout.init(); // init current layout
         Demo.init(); // init demo features
-        EcommerceIndex.init();
+        Portfolio.init();
     });
 </script>
 	<!-- END JAVASCRIPTS -->
