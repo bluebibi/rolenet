@@ -178,7 +178,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <style type="text/css">
 .sigma-parent {
 	position: relative;
-	height: 400px;
+	height: 460px;
 }
 
 .sigma-expand {
@@ -292,7 +292,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!-- Begin: life time stats -->
 					<div class="row">
 					<div class="col-md-6">
-					<div class="portlet light" >
+					<div class="portlet light">
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="icon-bar-chart font-green-sharp"></i> <span
