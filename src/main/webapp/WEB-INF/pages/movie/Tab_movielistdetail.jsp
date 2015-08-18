@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%@ page import="com.springapp.entity.CharactorsList" %>
-<%@ page import="java.util.List" %>
-<%@ page import="org.springframework.beans.factory.annotation.Autowired" %>
-<%@ page import="com.springapp.service.CharactorsListService" %>
+	pageEncoding="UTF-8"%>
+<%@ page import="com.springapp.entity.CharactorsList"%>
+<%@ page import="java.util.List"%>
+<%@ page import="org.springframework.beans.factory.annotation.Autowired"%>
+<%@ page import="com.springapp.service.CharactorsListService"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <!-- 
@@ -24,26 +24,26 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-    <style type="text/css">
-        .Text {
-            font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
-            font-size: 8pt;
-            font-weight: normal;
-            font-style: normal;
-            color: #333333;
-            text-decoration: none;
-        }
+<style type="text/css">
+.Text {
+	font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
+	font-size: 8pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #333333;
+	text-decoration: none;
+}
 
-        .toolTip {
-            font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
-            font-size: 8pt;
-            filter: alpha(opacity=80);
-            -moz-opacity: 0.8;
-            opacity: 0.8;
-            /* comment the above 3 line if you don't want transparency*/
-        }
-    </style>
-    <script>
+.toolTip {
+	font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
+	font-size: 8pt;
+	filter: alpha(opacity = 80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	/* comment the above 3 line if you don't want transparency*/
+}
+</style>
+<script>
         var agt = navigator.userAgent.toLowerCase();
         var is_major = parseInt(navigator.appVersion);
         var is_minor = parseFloat(navigator.appVersion);
@@ -178,7 +178,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <style type="text/css">
 .sigma-parent {
 	position: relative;
-	height: 460px;
+	height: 510px;
 }
 
 .sigma-expand {
@@ -193,9 +193,9 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
 <body onload="initToolTips()">
-<%@include file="../includes/headerMenu.jsp"%>
-<div id="toolTipLayer"
-    style="position: absolute; visibility: hidden; left: 0; right: 0; z-index: 5;"></div>
+	<%@include file="../includes/headerMenu.jsp"%>
+	<div id="toolTipLayer"
+		style="position: absolute; visibility: hidden; left: 0; right: 0; z-index: 5;"></div>
 	<!-- END HEADER -->
 	<!-- BEGIN PAGE CONTAINER -->
 	<div class="page-container">
@@ -244,8 +244,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- BEGIN PAGE BREADCRUMB -->
 				<ul class="page-breadcrumb breadcrumb">
 					<li><a href="/">홈화면</a><i class="fa fa-circle"></i></li>
-					<li><a href="/Tab_movielist">영화리스트</a> <i
-						class="fa fa-circle"></i></li>
+					<li><a href="/Tab_movielist">영화리스트</a> <i class="fa fa-circle"></i></li>
 					<li class="active">영화 자세히보기</li>
 				</ul>
 				<!-- END PAGE BREADCRUMB -->
@@ -258,7 +257,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<i class="fa fa-briefcase fa-icon-medium"></i>
 							</div>
 							<div class="details">
-								<div class="number">감&nbsp;&nbsp;독 : <span class="number" style="font-size:24px !important;">${n.director}</span></div>
+								<div class="number">
+									감&nbsp;&nbsp;독 : <span class="number"
+										style="font-size: 24px !important;">${n.director}</span>
+								</div>
 								<div class="desc">${n.year}</div>
 							</div>
 						</a>
@@ -291,120 +293,136 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div>
 					<!-- Begin: life time stats -->
 					<div class="row">
-					<div class="col-md-6">
-					<div class="portlet light">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="icon-bar-chart font-green-sharp"></i> <span
-									class="caption-subject font-green-sharp bold uppercase">영화 내 인물 네트워크</span>
-						
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse"> </a> <a
-									href="#portlet-config" data-toggle="modal" class="config">
-								</a> <a onclick="javascript:;" class="reload"></a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<!-- sigmagraph-container-->
-							<div class="sigma-parent">
-								<div class="sigma-expand" id="sigma-jang"></div>
-							</div>
-						</div>
-					</div>
-					</div>
-					<!-- End: life time stats -->
-					<!-- Begin: life time stats -->
-					<div class="col-md-6">
-					<div class="portlet light">
-						<div class="portlet-title tabbable-line">
-							<div class="caption">
-								<i class="icon-share font-red-sunglo"></i> 
-								<span class="caption-subject font-red-sunglo bold uppercase">영화정보</span>
-							</div>
-							<ul class="nav nav-tabs">
-								<li><a href="#portlet_tab2" data-toggle="tab" id="statistics_amounts_tab"> Base </a></li>
-								<li class="active"><a href="#portlet_tab1" data-toggle="tab"> 줄거리 </a></li>
-							</ul>
-						</div>
-						<div class="portlet-body">
-							<div class="tab-content">
-								<div class="tab-pane active" id="portlet_tab1">
-									<font face=Verdana>&nbsp;${n.synopsis}</font>
-								</div>
-								<div class="tab-pane" id="portlet_tab2">
-									<div id="statistics_2" class="chart">ㅇㄴㅁ</div>
-								</div>
-							</div>
-							<div class="margin-top-20 no-margin no-border">
-								<div class="row">
-									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
-										<span class="label label-success uppercase"> 배우 </span>
+						<div class="col-md-6">
+							<div class="portlet light">
+								<div class="portlet-title">
+									<div class="caption">
+										<i class="icon-bar-chart font-green-sharp"></i> <span
+											class="caption-subject font-green-sharp bold uppercase">영화
+											내 인물 네트워크</span>
+
+									</div>
+									<div class="tools">
+										<a href="javascript:;" class="collapse"> </a> <a
+											href="#portlet-config" data-toggle="modal" class="config">
+										</a> <a onclick="javascript:;" class="reload"></a>
 									</div>
 								</div>
-								<br>
-								<div>
-									<table class="table table-striped table-bordered table-hover">
-										<thead>
-											<tr>
-												<th width="10%">Between</th>
-												<c:forEach var="m" items="${betweenRole}">
-													<th width="5%">${m.name}</th>
-												</c:forEach>
-											</tr>
-											<tr>
-												<th width="10%">Degree</th>
-												<c:forEach var="m" items="${degreeRole}">
-													<th width="5%">${m.name}</th>
-												</c:forEach>
-											</tr>
-											<tr>
-												<th width="10%">Naver</th>
-                                                <%
+								<div class="portlet-body">
+									<!-- sigmagraph-container-->
+									<div class="sigma-parent">
+										<div class="sigma-expand" id="sigma-jang"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End: life time stats -->
+						<!-- Begin: life time stats -->
+						<div class="col-md-6">
+							<div class="portlet light">
+								<div class="portlet-title tabbable-line">
+									<div class="caption">
+										<i class="icon-share font-red-sunglo"></i> <span
+											class="caption-subject font-red-sunglo bold uppercase">영화정보</span>
+									</div>
+									<ul class="nav nav-tabs">
+										<li><a href="#portlet_tab2" data-toggle="tab"
+											id="statistics_amounts_tab"> 줄거리 </a></li>
+										<li class="active"><a href="#portlet_tab1"
+											data-toggle="tab"> 메인 예고편 </a></li>
+									</ul>
+								</div>
+								<div class="portlet-body">
+									<div class="tab-content">
+										<div class="tab-pane active" id="portlet_tab1">
+											<div class="chart">
+												<font face=Verdana>
+												<embed src="http://serviceapi.rmcnmv.naver.com//resources/ko/flash/NVP_web_player_core.swf?version=1.5.0.2"
+														quality="high" wmode="window"
+														flashvars="playapi=http%3A%2F%2Fplay.rmcnmv.naver.com%2Fvod%2Fplay%2F5D7DA31834CAA94619330FC3B833223888E9%3Fskn%3Ddefault%26key%3DV122d52362fcb77de80d70f16e8ffd728c46f9f111c8331a5cbcef3e33a5b1c6937900f16e8ffd728c46f%26doct%3Dxml%26devt%3Dflash%26cpt%3Dttml%26sid%3D2003%26pid%3DrmcPlayer_1439916166552902&amp;vid=5D7DA31834CAA94619330FC3B833223888E9&amp;inKey=V122d52362fcb77de80d70f16e8ffd728c46f9f111c8331a5cbcef3e33a5b1c6937900f16e8ffd728c46f&amp;likeit=false&amp;wmode=window&amp;wmode_outkey=transparent&amp;isAutoPlay=true&amp;api=http%3A//serviceapi.rmcnmv.naver.com/flash&amp;skinURL=http%3A//serviceapi.rmcnmv.naver.com//resources/ko/flash/NVP_web_player_skin_big_black.swf%3Fversion%3D1.8.1&amp;skinName=default&amp;coverImageURL=http%3A//imgmovie.naver.net/multimedia/MOVIECLIP/TRAILER/18405_20120809112758.jpg&amp;__flashID=rmcPlayer_1439916166552902&amp;cassiodServiceID=2003&amp;controlBarMovable=false&amp;autoLocale=false&amp;locale=ko&amp;canLikeIt=false&amp;contentInfo=%5Bobject%20Object%5D&amp;showSocialPlugIn=false&amp;socialInfoData=%5Bobject%20Object%5D&amp;"
+														bgcolor="#000000" width="100%" height="100%"
+														id="rmcPlayer_1439916166552902"
+														name="rmcPlayer_1439916166552902" align="middle"
+														allowscriptaccess="always" allowfullscreen="true"
+														type="application/x-shockwave-flash"
+														pluginspage="http://www.macromedia.com/go/getflashplayer"></font>
+											</div>
+										</div>
+										<div class="tab-pane" id="portlet_tab2">
+											<div id="statistics_2" class="chart">&nbsp;${n.synopsis}</div>
+										</div>
+									</div>
+									<div class="margin-top-20 no-margin no-border">
+										<div class="row">
+											<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+												<span class="label label-success uppercase"> 배우 </span>
+											</div>
+										</div>
+										<br>
+										<div>
+											<table class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														<th width="10%">Between</th>
+														<c:forEach var="m" items="${betweenRole}">
+															<th width="5%">${m.name}</th>
+														</c:forEach>
+													</tr>
+													<tr>
+														<th width="10%">Degree</th>
+														<c:forEach var="m" items="${degreeRole}">
+															<th width="5%">${m.name}</th>
+														</c:forEach>
+													</tr>
+													<tr>
+														<th width="10%">Naver</th>
+														<%
                                                     int count2 = 0;
                                                 %>
-												<c:forEach var="m" items="${naverRole}">
+														<c:forEach var="m" items="${naverRole}">
 
-													<th width="5%" onmouseover="show(<%=count2%>)" onmouseout="toolTip()">${m.name}</th>
-                                                <%
+															<th width="5%" onmouseover="show(<%=count2%>)"
+																onmouseout="toolTip()">${m.name}</th>
+															<%
                                                 count2++;
                                                 %>
-												</c:forEach>
-											</tr>
-										</thead>
-									</table>
+														</c:forEach>
+													</tr>
+												</thead>
+											</table>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					</div>
-					</div>
 					<!-- End: life time stats -->
 				</div>
+				<div></div>
 				<div>
-					
-				</div>
-                <div>
-                    <div class="portlet light">
-                        <div class="alert alert-info">
-                        	<strong>이 영화가 마음에 드신다면..</strong> 다음 영화들을 추천드려요 
-                        </div>
-                        <div>
-                            <%
+					<div class="portlet light">
+						<div class="alert alert-info">
+							<strong>이 영화가 마음에 드신다면..</strong> 다음 영화들을 추천드려요
+						</div>
+						<div>
+							<%
                                 int cnt = 0;
                             %>
-                            <table>
-                                <tr>
-                            <c:forEach var="m" items="${recommend}">
-                                <td>
-                                <img class='img-responsive' src='http://218.150.181.131/poster/${m.movie_id}p.png' width="270pt" height="100pt" onclick="document.location = 'Tab_movielistdetail?id=${m.movie_id}';">
-                                </td>
-                                <%
+							<table>
+								<tr>
+									<c:forEach var="m" items="${recommend}">
+										<td><img class='img-responsive'
+											src='http://218.150.181.131/poster/${m.movie_id}p.png'
+											width="270pt" height="100pt"
+											onclick="document.location = 'Tab_movielistdetail?id=${m.movie_id}';">
+										</td>
+										<%
                                     if(cnt > 2){
                                 %>
-                                </tr>
-                                <tr>
-                                <%
+									
+								</tr>
+								<tr>
+									<%
                                         cnt = 0;
                                     } else {
                                             cnt++;
@@ -412,13 +430,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                         }
                                 %>
 
-                             </c:forEach>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
+									</c:forEach>
+								</tr>
+							</table>
+						</div>
+					</div>
 
-                </div>
+				</div>
 				<!-- END PAGE CONTENT INNER -->
 			</div>
 		</div>
@@ -430,10 +448,8 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- END FOOTER -->
 	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 	<%@include file="../includes/footer.jsp"%>
-	
+
 	<script>
-
-
 	function commify(n) {
 	  var reg = /(^[+-]?\d+)(\d{3})/;   // 정규식
 	  n += '';                          // 숫자를 문자열로 변환
@@ -446,17 +462,15 @@ License: You must have a valid license purchased only from themeforest(the above
 	
 	var spec_number = $("#spec_number").text();
 	$("#spec_number").text(commify(spec_number));
-	console.log("ahaha : "+commify(spec_number));
 	</script>
-	
-	
+
+
 	<!-- BEGIN SIGMA SCRIPTS -->
-	<script
-								src="http://218.150.181.131/sigmajsGraph/jquery-2.1.1.min.js"></script>
-							<script src="http://218.150.181.131/sigmajsGraph/sigma.min.js"></script>
-							<script src="http://218.150.181.131/sigmajsGraph/parseGexf.js"></script>
-							<script src="http://218.150.181.131/sigmajsGraph/scroll.min.js"></script>
-							<script>
+	<script src="http://218.150.181.131/sigmajsGraph/jquery-2.1.1.min.js"></script>
+	<script src="http://218.150.181.131/sigmajsGraph/sigma.min.js"></script>
+	<script src="http://218.150.181.131/sigmajsGraph/parseGexf.js"></script>
+	<script src="http://218.150.181.131/sigmajsGraph/scroll.min.js"></script>
+	<script>
 	var id=${n.id};
 	console.log("id : "+id);
 	var url_prefix='http://218.150.181.131/assets/gexf/';
