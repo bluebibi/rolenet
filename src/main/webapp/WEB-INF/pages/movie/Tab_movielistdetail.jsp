@@ -178,7 +178,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <style type="text/css">
 .sigma-parent {
 	position: relative;
-	height: 540px;
+	height: 400px;
 }
 
 .sigma-expand {
@@ -290,15 +290,14 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 				<div>
 					<!-- Begin: life time stats -->
-					<div class="portlet light">
+					<div class="row">
+					<div class="col-md-6">
+					<div class="portlet light" >
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="icon-bar-chart font-green-sharp"></i> <span
 									class="caption-subject font-green-sharp bold uppercase">영화 내 인물 네트워크</span>
-								&nbsp;
-								<button class="btn default purple-stripe"
-									onclick="openPopup('/Tab_compare?movie1=${n.id}')">다른영화와 비교
-								</button>
+						
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse"> </a> <a
@@ -311,8 +310,129 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="sigma-parent">
 								<div class="sigma-expand" id="sigma-jang"></div>
 							</div>
+						</div>
+					</div>
+					</div>
+					<!-- End: life time stats -->
+					<!-- Begin: life time stats -->
+					<div class="col-md-6">
+					<div class="portlet light">
+						<div class="portlet-title tabbable-line">
+							<div class="caption">
+								<i class="icon-share font-red-sunglo"></i> 
+								<span class="caption-subject font-red-sunglo bold uppercase">영화정보</span>
+							</div>
+							<ul class="nav nav-tabs">
+								<li><a href="#portlet_tab2" data-toggle="tab" id="statistics_amounts_tab"> Base </a></li>
+								<li class="active"><a href="#portlet_tab1" data-toggle="tab"> 줄거리 </a></li>
+							</ul>
+						</div>
+						<div class="portlet-body">
+							<div class="tab-content">
+								<div class="tab-pane active" id="portlet_tab1">
+									<font face=Verdana>&nbsp;${n.synopsis}</font>
+								</div>
+								<div class="tab-pane" id="portlet_tab2">
+									<div id="statistics_2" class="chart">ㅇㄴㅁ</div>
+								</div>
+							</div>
+							<div class="margin-top-20 no-margin no-border">
+								<div class="row">
+									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+										<span class="label label-success uppercase"> 배우 </span>
+									</div>
+								</div>
+								<br>
+								<div>
+									<table class="table table-striped table-bordered table-hover">
+										<thead>
+											<tr>
+												<th width="10%">Between</th>
+												<c:forEach var="m" items="${betweenRole}">
+													<th width="5%">${m.name}</th>
+												</c:forEach>
+											</tr>
+											<tr>
+												<th width="10%">Degree</th>
+												<c:forEach var="m" items="${degreeRole}">
+													<th width="5%">${m.name}</th>
+												</c:forEach>
+											</tr>
+											<tr>
+												<th width="10%">Naver</th>
+                                                <%
+                                                    int count2 = 0;
+                                                %>
+												<c:forEach var="m" items="${naverRole}">
 
-							<script
+													<th width="5%" onmouseover="show(<%=count2%>)" onmouseout="toolTip()">${m.name}</th>
+                                                <%
+                                                count2++;
+                                                %>
+												</c:forEach>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+					</div>
+					<!-- End: life time stats -->
+				</div>
+				<div>
+					
+				</div>
+                <div>
+                    <div class="portlet light">
+                        <div class="alert alert-info">
+                        	<strong>이 영화가 마음에 드신다면..</strong> 다음 영화들을 추천드려요 
+                        </div>
+                        <div>
+                            <%
+                                int cnt = 0;
+                            %>
+                            <table>
+                                <tr>
+                            <c:forEach var="m" items="${recommend}">
+                                <td>
+                                <img class='img-responsive' src='http://218.150.181.131/poster/${m.movie_id}p.png' width="270pt" height="100pt" onclick="document.location = 'Tab_movielistdetail?id=${m.movie_id}';">
+                                </td>
+                                <%
+                                    if(cnt > 2){
+                                %>
+                                </tr>
+                                <tr>
+                                <%
+                                        cnt = 0;
+                                    } else {
+                                            cnt++;
+                                            System.out.println("cnt = " + cnt);
+                                        }
+                                %>
+
+                             </c:forEach>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+				<!-- END PAGE CONTENT INNER -->
+			</div>
+		</div>
+		<!-- END PAGE CONTENT -->
+	</div>
+	<!-- END PAGE CONTAINER -->
+	<!-- BEGIN FOOTER -->
+	<%@include file="../includes/footMenu.jsp"%>
+	<!-- END FOOTER -->
+	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+	<%@include file="../includes/footer.jsp"%>
+	
+	<!-- BEGIN SIGMA SCRIPTS -->
+	<script
 								src="http://218.150.181.131/sigmajsGraph/jquery-2.1.1.min.js"></script>
 							<script src="http://218.150.181.131/sigmajsGraph/sigma.min.js"></script>
 							<script src="http://218.150.181.131/sigmajsGraph/parseGexf.js"></script>
@@ -567,142 +687,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     $('#sigma-jang').css('background-color','white');
 </script>
-
-
-						</div>
-					</div>
-					<!-- End: life time stats -->
-				</div>
-				<div>
-					<!-- Begin: life time stats -->
-					<div class="portlet light">
-						<div class="portlet-title tabbable-line">
-							<div class="caption">
-								<i class="icon-share font-red-sunglo"></i> 
-								<span class="caption-subject font-red-sunglo bold uppercase">영화정보</span>
-							</div>
-							<ul class="nav nav-tabs">
-								<li><a href="#portlet_tab2" data-toggle="tab" id="statistics_amounts_tab"> Base </a></li>
-								<li class="active"><a href="#portlet_tab1" data-toggle="tab"> 줄거리 </a></li>
-							</ul>
-						</div>
-						<div class="portlet-body">
-							<div class="tab-content">
-								<div class="tab-pane active" id="portlet_tab1">
-									<font face=Verdana>&nbsp;${n.synopsis}</font>
-								</div>
-								<div class="tab-pane" id="portlet_tab2">
-									<div id="statistics_2" class="chart">ㅇㄴㅁ</div>
-								</div>
-							</div>
-							<div class="margin-top-20 no-margin no-border">
-								<div class="row">
-									<div class="col-md-3 col-sm-3 col-xs-6 text-stat">
-										<span class="label label-success uppercase"> 배우 </span>
-									</div>
-								</div>
-								<br>
-								<div>
-									<table class="table table-striped table-bordered table-hover">
-										<thead>
-											<tr>
-												<th width="10%">Between</th>
-												<c:forEach var="m" items="${betweenRole}">
-													<th width="5%">${m.name}</th>
-												</c:forEach>
-											</tr>
-											<tr>
-												<th width="10%">Degree</th>
-												<c:forEach var="m" items="${degreeRole}">
-													<th width="5%">${m.name}</th>
-												</c:forEach>
-											</tr>
-											<tr>
-												<th width="10%">Naver</th>
-                                                <%
-                                                    int count2 = 0;
-                                                %>
-												<c:forEach var="m" items="${naverRole}">
-
-													<th width="5%" onmouseover="show(<%=count2%>)" onmouseout="toolTip()">${m.name}</th>
-                                                <%
-                                                count2++;
-                                                %>
-												</c:forEach>
-											</tr>
-										</thead>
-
-										<%-- <tbody>
-                                <c:forEach var="m" items="${list2}">
-                                    <tr onMouseOver="show(${m.id})" onMouseOut="toolTip()"
-                                        onclick="document.location = 'Tab_movielistdetail?id=${m.id}';">
-                                        <td id="id">${m.id}</td>
-
-                                        <td>${m.name}</td>
-                                        <td>${m.year}</td>
-                                        <td>${m.director}</td>
-                                        <td>${m.spectators}</td>
-                                        <td>${m.diameter}</td>
-                                        <td>${m.pathlength}</td>
-                                        <td>${m.clustering}</td>
-                                        <td>${m.density}</td>
-                                    </tr>
-                                </c:forEach>
-                                </tbody> --%>
-
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- End: life time stats -->
-				</div>
-                <div>
-                    <div class="portlet light">
-                        <div class="alert alert-info">
-                        	<strong>이 영화가 마음에 드신다면..</strong> 다음 영화들을 추천드려요 
-                        </div>
-                        <div>
-                            <%
-                                int cnt = 0;
-                            %>
-                            <table>
-                                <tr>
-                            <c:forEach var="m" items="${recommend}">
-                                <td>
-                                <img class='img-responsive' src='http://218.150.181.131/poster/${m.movie_id}p.png' width="270pt" height="100pt" onclick="document.location = 'Tab_movielistdetail?id=${m.movie_id}';">
-                                </td>
-                                <%
-                                    if(cnt > 2){
-                                %>
-                                </tr>
-                                <tr>
-                                <%
-                                        cnt = 0;
-                                    } else {
-                                            cnt++;
-                                            System.out.println("cnt = " + cnt);
-                                        }
-                                %>
-
-                             </c:forEach>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-				<!-- END PAGE CONTENT INNER -->
-			</div>
-		</div>
-		<!-- END PAGE CONTENT -->
-	</div>
-	<!-- END PAGE CONTAINER -->
-	<!-- BEGIN FOOTER -->
-	<%@include file="../includes/footMenu.jsp"%>
-	<!-- END FOOTER -->
-	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-	<%@include file="../includes/footer.jsp"%>
+	<!-- END SIGMA SCRIPTS -->
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
 	<script
 		src="http://218.150.181.131/assets/global/plugins/flot/jquery.flot.js"

@@ -89,7 +89,7 @@ public class HelloController {
 	public String SearchMovie(ModelMap model, HttpServletRequest request) {
 		movieListService.addHitByName(request.getParameter("query"));
 		MovieList movieList = movieListService.selectMovieByName(request.getParameter("query"));
-		System.out.println(request.getParameter("query"));
+		System.out.println(request.getParameter("query")+"");
 		model.addAttribute("n", movieList);
 		model.addAttribute("naverRole", charactorsListService.selectNaverRoleByMovieId(movieList.getId()));
 		model.addAttribute("degreeRole", charactorsListService.selectDegreeRoleByMovieId(movieList.getId()));

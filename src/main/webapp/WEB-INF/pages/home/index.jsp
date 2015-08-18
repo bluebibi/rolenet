@@ -34,6 +34,7 @@
 	font-family: 'Nanum Gothic', sans-serif !important;
 	font-size: 50px;
 }
+
 </style>
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
 <link href="http://218.150.181.131/assets/global/scroll/js/image.css"
@@ -125,11 +126,16 @@
 					<div class="container">
 						<form class="search-form" action="search.do" method="POST">
 							<div class="input-group">
-								<input type="text" id="movieName" class="form-control"
-									placeholder="영화 검색하기" name="query" /> <span
-									class="input-group-btn">
+							<!--  
+								<input type="text" id="movieName" class="form-control" placeholder="영화 검색하기" name="query" /> 
+								<span class="input-group-btn">
 									<button type="submit" class="icon-magnifier"></button>
-								</span>
+								</span>--> 
+								
+								<div class="input-icon right" style="display:block !important; left: 900px !important;">
+									<i class="fa fa-film"></i>
+									<input type="text" id="movieName" class="form-control" placeholder="영화를 검색하세요" placeholder="영화 검색하기" name="query">
+								</div>
 							</div>
 						</form>
 						<br> <br> <br> <br>
@@ -274,6 +280,7 @@
         }
     });
 </script>
+
 
 
 
