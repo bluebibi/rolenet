@@ -282,7 +282,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<i class="fa fa-group fa-icon-medium"></i>
 							</div>
 							<div class="details">
-								<div class="number">${n.spectators}</div>
+								<div id="spec_number" class="number">${n.spectators}</div>
 								<div class="desc">관객 수</div>
 							</div>
 						</a>
@@ -430,6 +430,25 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- END FOOTER -->
 	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 	<%@include file="../includes/footer.jsp"%>
+	
+	<script>
+
+
+	function commify(n) {
+	  var reg = /(^[+-]?\d+)(\d{3})/;   // 정규식
+	  n += '';                          // 숫자를 문자열로 변환
+
+	  while (reg.test(n))
+	    n = n.replace(reg, '$1' + ',' + '$2');
+
+	  return n;
+	}
+	
+	var spec_number = $("#spec_number").text();
+	$("#spec_number").text(commify(spec_number));
+	console.log("ahaha : "+commify(spec_number));
+	</script>
+	
 	
 	<!-- BEGIN SIGMA SCRIPTS -->
 	<script
