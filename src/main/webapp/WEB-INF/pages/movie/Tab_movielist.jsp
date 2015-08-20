@@ -209,7 +209,7 @@
 			<div class="container">
 				<!-- BEGIN PAGE TITLE -->
 				<div class="page-title">
-					<h1 class="koreanStyle">영화 목록aaaaaaaaaaaaaaaaaa</h1>
+					<h1 class="koreanStyle">영화 목록</h1>
 				</div>
 				<!-- END PAGE TITLE -->
 				<!-- BEGIN PAGE TOOLBAR -->
