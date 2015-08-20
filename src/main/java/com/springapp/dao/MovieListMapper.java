@@ -17,6 +17,9 @@ public interface MovieListMapper {
 	@Select("SELECT * FROM movies WHERE id >= #{id_1} AND id < #{id_2}")
 	public List<MovieList> list_jangwon(@Param("id_1") int id_1, @Param("id_2") int id_2);
 	
+	@Select("SELECT * FROM movies LIMIT #{idx}, #{offset}")
+	public List<MovieList> list_limit(@Param("idx") int idx, @Param("offset") int offset);
+	
 
 	@Select("SELECT * FROM movies WHERE id = #{id}")
 	MovieList selectMovieContentsByID(@Param("id") int id);

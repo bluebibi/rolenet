@@ -34,7 +34,6 @@
 	font-family: 'Nanum Gothic', sans-serif !important;
 	font-size: 50px;
 }
-
 </style>
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
 <link href="http://218.150.181.131/assets/global/scroll/js/image.css"
@@ -126,15 +125,11 @@
 					<div class="container">
 						<form class="search-form" action="search.do" method="POST">
 							<div class="input-group">
-							<!--  
-								<input type="text" id="movieName" class="form-control" placeholder="영화 검색하기" name="query" /> 
-								<span class="input-group-btn">
-									<button type="submit" class="icon-magnifier"></button>
-								</span>--> 
-								
-								<div class="input-icon right" style="display:block !important; left: 900px !important;">
-									<i class="fa fa-film"></i>
-									<input type="text" id="movieName" class="form-control" placeholder="영화를 검색하세요" placeholder="영화 검색하기" name="query">
+								<div class="input-icon right"
+									style="display: block !important; left: 900px !important;">
+									<i class="fa fa-film"></i> <input type="text" id="movieName"
+										class="form-control" placeholder="영화를 검색하세요"
+										placeholder="영화 검색하기" name="query">
 								</div>
 							</div>
 						</form>
@@ -152,40 +147,38 @@
 	<div class="page-content">
 		<div class="container">
 			<!-- BEGIN PAGE CONTENT INNER -->
-			<div class="row">
-				<div class="col-md-12">
-
-					<!-- BEGIN FILTER -->
-					<div class="margin-top-10">
-						<div class="row mix-grid">
-							<div id="postwrapper" class="infinite-container">
-								<c:set var="lastIndex" value="0" />
-								<c:forEach var="m" items="${listAll_jangwon}" varStatus="status">
-									<c:if test="${status.index < 12}">
-										<div id="${m.id}"
-											class="col-md-3 col-sm-4 insertimg mix infinite-item">
-											<img class='img-responsive' src='http://218.150.181.131/poster/${m.id}p.png' alt='' width='270pt'>
-											<div class="mix-details">
-												<h4>Cascusamus et iusto odio</h4>
-												<a class="mix-link"> 
-													<i class="fa fa-link"></i>
-												</a> 
-												<a class='mix-preview fancybox-button' href='http://218.150.181.131/poster/${m.id}p.png'
-													title='Project Name' data-rel='fancybox-button'> 
-													<i class='fa fa-search'></i>
-												</a>
-											</div>
-										</div>
-									</c:if>
-									<c:set var="lastIndex" value="${m.id}" />
-								</c:forEach>
-							</div>
+			<div class="infinite-container" id="postwrapper">
+			<c:set var="lastIndex" value="0" />
+			<c:forEach var="m" items="${list12_jangwon}" varStatus="status">
+				<c:if test="${status.first}" >
+				<div class="row mix-grid " id="1.0">
+				</c:if>
+					<div id="${m.id}"
+						class="col-md-3 col-sm-4 insertimg mix infinite-item">
+						<img class='img-responsive'
+							src='http://218.150.181.131/poster/${m.id}p.png' alt=''
+							width='270pt'>
+						<div class="mix-details">
+							<h4>Cascusamus et iusto odio</h4>
+							<a class="mix-link"> <i class="fa fa-link"></i>
+							</a> <a class='mix-preview fancybox-button'
+								href='http://218.150.181.131/poster/${m.id}p.png'
+								title='Project Name' data-rel='fancybox-button'> <i
+								class='fa fa-search'></i>
+							</a>
 						</div>
 					</div>
-					<!-- END FILTER -->
-
+					<c:set var="lastIndex" value="${m.id}" />
+				<c:if test="${status.count % 4 == 0 && !status.last}">
 				</div>
+				<div class="row mix-grid" id="${status.count / 4 + 1}">
+				</c:if>
+				<c:if test="${status.last}"></div></c:if>
+				
+			</c:forEach>
 			</div>
+	
+
 			<div class="row">
 				<div class="col-md-12">
 					<div id="loadmoreajaxloader" style="background-color: green">더
@@ -267,8 +260,10 @@
     $(window).scroll(function() {
         if($(window).scrollTop() == $(document).height() - $(window).height()) {
             $('div#loadmoreajaxloader').show('slow');
-            var lastIndex = $('.infinite-item:last').attr("id");
-            $.get("/pages?id_1=" + lastIndex, function(html) {
+            //var lastIndex = $('.infinite-item:last').attr("id");
+            var id = $( ".mix-grid" ).last().attr("id");
+            var lastIndex = Math.floor( id )+1;
+            $.get("/pages?idx=" + lastIndex, function(html) {
                     if(html) {
                         $("#postwrapper").append(html);
                         $('div#loadmoreajaxloader').hide();

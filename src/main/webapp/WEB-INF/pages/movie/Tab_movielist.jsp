@@ -270,14 +270,14 @@
 										<ul class="dropdown-menu pull-right"
 											id="sample_4_column_toggler">
 
-											<li><label><input type="checkbox" checked
-													data-column="6"/>diameter</label></li>
-											<li><label><input type="checkbox" checked
-													data-column="7"/>pathlength</label></li>
-											<li><label><input type="checkbox" checked
-													data-column="8"/>clustering</label></li>
-											<li><label><input type="checkbox" checked
-													data-column="9"/>density</label></li>
+											<li><label><input type="checkbox" 
+													data-column="5"/>diameter</label></li>
+											<li><label><input type="checkbox" 
+													data-column="6"/>pathlength</label></li>
+											<li><label><input type="checkbox" 
+													data-column="7"/>clustering</label></li>
+											<li><label><input type="checkbox" 
+													data-column="8"/>density</label></li>
 										</ul>
 									</div>
 								</div>

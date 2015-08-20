@@ -24,4 +24,5 @@ public interface MovieListService {
 	public List<MovieList> selectMovieByDirector(String director);
 	public List<MovieList> LastList15bySpectators();
 	public List<MovieList> list_jangwon(int id_1, int id_2);
+	public List<MovieList> list_limit(int idx, int offset);
 }

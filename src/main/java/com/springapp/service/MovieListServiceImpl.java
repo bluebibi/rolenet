@@ -101,4 +101,10 @@ public class MovieListServiceImpl implements MovieListService {
 		return movieListMapper.list_jangwon(id_1, id_2);
 	}
 
+	@Override
+	public List<MovieList> list_limit(int idx, int offset) {
+		// TODO Auto-generated method stub
+		return movieListMapper.list_limit(idx, offset);
+	}
+
 }

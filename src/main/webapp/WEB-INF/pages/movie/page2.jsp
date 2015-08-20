@@ -1,8 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<div class="row mix-grid">
+<div class="row mix-grid" id="${idx}">
 <c:forEach var="m" items="${list2_jangwon}" varStatus="status">
 		<div id="${m.id}" class="col-md-3 col-sm-4 mix insertimg infinite-item" style="display:block !important; opacity:1 !important;">
 			<img class='img-responsive' src='http://218.150.181.131/poster/${m.id}p.png' alt=''>
