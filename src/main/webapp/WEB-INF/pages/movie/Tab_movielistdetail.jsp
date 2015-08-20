@@ -259,6 +259,18 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- END PAGE BREADCRUMB -->
 				<!-- BEGIN PAGE CONTENT INNER -->
 				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<a class="dashboard-stat dashboard-stat-light red-intense"
+						   href="javascript:;">
+							<div class="visual">
+								<i class="fa fa-shopping-cart"></i>
+							</div>
+							<div class="details">
+								<div class="number">${n.name}</div>
+								<div class="desc">영화 제목</div>
+							</div>
+						</a>
+					</div>
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-bottom-10">
 						<a class="dashboard-stat dashboard-stat-light blue-madison"
 							href="javascript:;">
@@ -271,18 +283,6 @@ License: You must have a valid license purchased only from themeforest(the above
 										style="font-size: 24px !important;">${n.director}</span>
 								</div>
 								<div class="desc">${n.year}</div>
-							</div>
-						</a>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<a class="dashboard-stat dashboard-stat-light red-intense"
-							href="javascript:;">
-							<div class="visual">
-								<i class="fa fa-shopping-cart"></i>
-							</div>
-							<div class="details">
-								<div class="number">${n.name}</div>
-								<div class="desc">영화 제목</div>
 							</div>
 						</a>
 					</div>
