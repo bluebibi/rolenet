@@ -345,16 +345,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="tab-content">
 										<div class="tab-pane active" id="portlet_tab1">
 											<div class="chart">
-												<font face=Verdana> <embed
-														src="http://serviceapi.rmcnmv.naver.com//resources/ko/flash/NVP_web_player_core.swf?version=1.5.0.2"
-														quality="high" wmode="window"
-														flashvars="playapi=http%3A%2F%2Fplay.rmcnmv.naver.com%2Fvod%2Fplay%2F5D7DA31834CAA94619330FC3B833223888E9%3Fskn%3Ddefault%26key%3DV122d52362fcb77de80d70f16e8ffd728c46f9f111c8331a5cbcef3e33a5b1c6937900f16e8ffd728c46f%26doct%3Dxml%26devt%3Dflash%26cpt%3Dttml%26sid%3D2003%26pid%3DrmcPlayer_1439916166552902&amp;vid=5D7DA31834CAA94619330FC3B833223888E9&amp;inKey=V122d52362fcb77de80d70f16e8ffd728c46f9f111c8331a5cbcef3e33a5b1c6937900f16e8ffd728c46f&amp;likeit=false&amp;wmode=window&amp;wmode_outkey=transparent&amp;isAutoPlay=true&amp;api=http%3A//serviceapi.rmcnmv.naver.com/flash&amp;skinURL=http%3A//serviceapi.rmcnmv.naver.com//resources/ko/flash/NVP_web_player_skin_big_black.swf%3Fversion%3D1.8.1&amp;skinName=default&amp;coverImageURL=http%3A//imgmovie.naver.net/multimedia/MOVIECLIP/TRAILER/18405_20120809112758.jpg&amp;__flashID=rmcPlayer_1439916166552902&amp;cassiodServiceID=2003&amp;controlBarMovable=false&amp;autoLocale=false&amp;locale=ko&amp;canLikeIt=false&amp;contentInfo=%5Bobject%20Object%5D&amp;showSocialPlugIn=false&amp;socialInfoData=%5Bobject%20Object%5D&amp;"
-														bgcolor="#000000" width="100%" height="100%"
-														id="rmcPlayer_1439916166552902"
-														name="rmcPlayer_1439916166552902" align="middle"
-														allowscriptaccess="always" allowfullscreen="true"
-														type="application/x-shockwave-flash"
-														pluginspage="http://www.macromedia.com/go/getflashplayer"></font>
+                                                <iframe width="640" height="360" src="ttps://www.youtube.com/embed/1BLIZy-pHLg" frameborder="0" allowfullscreen></iframe>
 											</div>
 										</div>
 										<div class="tab-pane" id="portlet_tab2">
