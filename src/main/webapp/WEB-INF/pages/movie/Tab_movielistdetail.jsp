@@ -363,25 +363,33 @@ License: You must have a valid license purchased only from themeforest(the above
 											<table class="table table-striped table-bordered table-hover">
 												<thead>
 													<tr>
-														<th width="10%">Between</th>
+														<th width="10">Between</th>
 														<c:forEach var="m" items="${betweenRole}">
-															<th width="5%">${m.name}</th>
+															<th width="5">${m.name}</th>
 														</c:forEach>
 													</tr>
+												</thead>
+											</table>
+											<table class="table table-striped table-bordered table-hover">
+												<thead>
 													<tr>
-														<th width="10%">Degree</th>
+														<th width="10">Degree</th>
 														<c:forEach var="m" items="${degreeRole}">
-															<th width="5%">${m.name}</th>
+															<th width="5">${m.name}</th>
 														</c:forEach>
 													</tr>
+												</thead>
+											</table>
+											<table class="table table-striped table-bordered table-hover">
+												<thead>
 													<tr>
-														<th width="10%">Naver</th>
+														<th width="10">Naver</th>
 														<%
 															int count2 = 0;
 														%>
 														<c:forEach var="m" items="${naverRole}">
 
-															<th width="5%" onmouseover="show(<%=count2%>)"
+															<th width="5" onmouseover="show(<%=count2%>)"
 																onmouseout="toolTip()">${m.name}</th>
 															<%
 																count2++;
