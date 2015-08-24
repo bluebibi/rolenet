@@ -345,7 +345,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="tab-content">
 										<div class="tab-pane active" id="portlet_tab1">
 											<div class="chart">
-                                                <iframe width="640" height="360" src="ttps://www.youtube.com/embed/1BLIZy-pHLg" frameborder="0" allowfullscreen></iframe>
+                                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1BLIZy-pHLg" frameborder="0" allowfullscreen></iframe>
 											</div>
 										</div>
 										<div class="tab-pane" id="portlet_tab2">

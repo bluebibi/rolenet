@@ -4,7 +4,9 @@
 <div class="row mix-grid" id="${idx}">
 <c:forEach var="m" items="${list2_jangwon}" varStatus="status">
 		<div id="${m.id}" class="col-md-3 col-sm-4 mix insertimg infinite-item" style="display:block !important; opacity:1 !important;">
-			<img class='img-responsive' src='http://218.150.181.131/poster/${m.id}p.png' alt=''>
+			<a href="Tab_movielistdetail?id=${m.id}">
+			<img class='img-responsive' src='http://218.150.181.131/poster/${m.id}p.png' alt=''></a>
+			<!--
 			<div class="mix-details">
 				<h4>Cascusamus et iusto odio</h4>
 				<a class="mix-link"> <i class="fa fa-link"></i>
@@ -13,6 +15,7 @@
 					<i class='fa fa-search'></i>
 				</a>
 			</div>
+			-->
 		</div>
 </c:forEach>
 </div>

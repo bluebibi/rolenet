@@ -155,18 +155,19 @@
 				</c:if>
 					<div id="${m.id}"
 						class="col-md-3 col-sm-4 insertimg mix infinite-item">
+						<a href="Tab_movielistdetail?id=${m.id}">
 						<img class='img-responsive'
 							src='http://218.150.181.131/poster/${m.id}p.png' alt=''
-							width='270pt'>
+							width='270pt'></a>
+						<!--
 						<div class="mix-details">
-							<h4>Cascusamus et iusto odio</h4>
-							<a class="mix-link"> <i class="fa fa-link"></i>
-							</a> <a class='mix-preview fancybox-button'
+							<h4>${m.name}</h4>
+							<a class='mix-preview fancybox-button'
 								href='http://218.150.181.131/poster/${m.id}p.png'
 								title='Project Name' data-rel='fancybox-button'> <i
-								class='fa fa-search'></i>
+								class='fa fa-search'> 영화 정보 보기</i>
 							</a>
-						</div>
+						</div>-->
 					</div>
 					<c:set var="lastIndex" value="${m.id}" />
 				<c:if test="${status.count % 4 == 0 && !status.last}">
