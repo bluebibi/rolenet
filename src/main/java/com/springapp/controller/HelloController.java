@@ -159,6 +159,7 @@ public class HelloController {
 
 	@RequestMapping(value = "/Tab_movielistdetail")
 	public String MovieListDetail(ModelMap model, int id) {
+
 		movieListService.addHit(id);
 		MovieList movieList = movieListService.selectMovieById(id);
 		Recommend recommend = recommendMovieService.selectMovieContentsByID(id);
@@ -166,10 +167,12 @@ public class HelloController {
 		model.addAttribute("n", movieList);
 		model.addAttribute("naverRole", charactorsListService.selectNaverRoleByMovieId(id));
 		model.addAttribute("degreeRole", charactorsListService.selectDegreeRoleByMovieId(id));
-		model.addAttribute("betweenRole", charactorsListService.selectBetweenRoleByMovieId(id));
+		//model.addAttribute("betweenRole", charactorsListService.selectBetweenRoleByMovieId(id));
 		cluster = recommend.getCluster();
 		System.out.println(cluster);
 		model.addAttribute("recommend",recommendMovieService.list(id,cluster));
+		String director = movieList.getDirector();
+		model.addAttribute("directorMovies",movieListService.selectMovieByDirector(director));
 		return "movie/Tab_movielistdetail.jsp";
 	}
 

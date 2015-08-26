@@ -363,7 +363,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													</tr>
 												</thead>
 											</table>
-											<span class="btn blue"> 실제 주인공  </span><br><br>
+											<span class="label label-primary"> 실제 주인공  </span><br><br>
 											<table class="table table-striped table-bordered table-hover">
 												<thead>
 													<tr>
@@ -392,180 +392,83 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- BEGIN JANGWON SLIDER -->
 				<div class="row">
 					<div class="col-md-12">
-						<div class="tabbable tabbable-custom tabbable-noborder">
-							<ul class="nav nav-tabs">
-								<li class="active">
-									<a href="#tab_1" data-toggle="tab">영화 추천 탭 </a>
-								</li>
-							</ul>
-							<div class="tab-content">
-								<div class="tab-pane active" id="tab_1">
-									<!-- BEGIN FILTER -->
-									<div class="margin-top-10">
-										<ul class="mix-filter">
-											<li class="filter" data-filter="all">k-means 알고리즘 추천</li>
-											<li class="filter" data-filter="category_1">같은 감독의 영화 추천</li>
-											<li class="filter" data-filter="category_2">같은 배우가 출연한영화 추천</li>
-											<li class="filter" data-filter="category_3">같은 장르의 영화 추천</li>
-										</ul>
-										<div class="row mix-grid">
-											<div class="col-md-3 col-sm-4 mix category_1">
-												<div class="mix-inner">
-													<img class="img-responsive"
-														src="http://218.150.181.131/poster/1p.png" alt="">
-													<div class="mix-details">
-														<h4>Cascusamus et iusto odio</h4>
-														<a class="mix-link"> <i class="fa fa-link"></i></a> 
-														<a class="mix-preview fancybox-button"
-															href="../../assets/admin/pages/media/works/img2.jpg"
-															title="Project Name" data-rel="fancybox-button"> 
-															<i class="fa fa-search"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-3 col-sm-4 mix category_2">
-												<div class="mix-inner">
-													<img class="img-responsive"
-														src="http://218.150.181.131/poster/1p.png" alt="">
-													<div class="mix-details">
-														<h4>Cascusamus et iusto accusamus</h4>
-														<a class="mix-link"> <i class="fa fa-link"></i>
-														</a> <a class="mix-preview fancybox-button"
-															href="../../assets/admin/pages/media/works/img2.jpg"
-															title="Project Name" data-rel="fancybox-button"> <i
-															class="fa fa-search"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-3 col-sm-4 mix category_3">
-												<div class="mix-inner">
-													<img class="img-responsive"
-														src="http://218.150.181.131/poster/1p.png" alt="">
-													<div class="mix-details">
-														<h4>Cascusamus et iusto accusamus</h4>
-														<a class="mix-link"> <i class="fa fa-link"></i>
-														</a> <a class="mix-preview fancybox-button"
-															href="../../assets/admin/pages/media/works/img3.jpg"
-															title="Project Name" data-rel="fancybox-button"> <i
-															class="fa fa-search"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-3 col-sm-4 mix category_1 category_2">
-												<div class="mix-inner">
-													<img class="img-responsive"
-														src="http://218.150.181.131/poster/1p.png" alt="">
-													<div class="mix-details">
-														<h4>Cascusamus et iusto accusamus</h4>
-														<a class="mix-link"> <i class="fa fa-link"></i>
-														</a> <a class="mix-preview fancybox-button"
-															href="../../assets/admin/pages/media/works/img4.jpg"
-															title="Project Name" data-rel="fancybox-button"> <i
-															class="fa fa-search"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-3 col-sm-4 mix category_2 category_1">
-												<div class="mix-inner">
-													<img class="img-responsive"
-														src="http://218.150.181.131/poster/1p.png" alt="">
-													<div class="mix-details">
-														<h4>Cascusamus et iusto accusamus</h4>
-														<a class="mix-link"> <i class="fa fa-link"></i>
-														</a> <a class="mix-preview fancybox-button"
-															href="../../assets/admin/pages/media/works/img5.jpg"
-															title="Project Name" data-rel="fancybox-button"> <i
-															class="fa fa-search"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-3 col-sm-4 mix category_1 category_2">
-												<div class="mix-inner">
-													<img class="img-responsive"
-														src="http://218.150.181.131/poster/1p.png" alt="">
-													<div class="mix-details">
-														<h4>Cascusamus et iusto accusamus</h4>
-														<a class="mix-link"> <i class="fa fa-link"></i>
-														</a> <a class="mix-preview fancybox-button"
-															href="../../assets/admin/pages/media/works/img6.jpg"
-															title="Project Name" data-rel="fancybox-button"> <i
-															class="fa fa-search"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-3 col-sm-4 mix category_2 category_3">
-												<div class="mix-inner">
-													<img class="img-responsive"
-														src="http://218.150.181.131/poster/1p.png" alt="">
-													<div class="mix-details">
-														<h4>Cascusamus et iusto accusamus</h4>
-														<a class="mix-link"> <i class="fa fa-link"></i>
-														</a> <a class="mix-preview fancybox-button"
-															href="../../assets/admin/pages/media/works/img1.jpg"
-															title="Project Name" data-rel="fancybox-button"> <i
-															class="fa fa-search"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-3 col-sm-4 mix category_1 category_2">
-												<div class="mix-inner">
-													<img class="img-responsive"
-														src="http://218.150.181.131/poster/1p.png" alt="">
-													<div class="mix-details">
-														<h4>Cascusamus et iusto accusamus</h4>
-														<a class="mix-link"> <i class="fa fa-link"></i>
-														</a> <a class="mix-preview fancybox-button"
-															href="../../assets/admin/pages/media/works/img2.jpg"
-															title="Project Name" data-rel="fancybox-button"> <i
-															class="fa fa-search"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-3 col-sm-4 mix category_3">
-												<div class="mix-inner">
-													<img class="img-responsive"
-														src="http://218.150.181.131/poster/1p.png" alt="">
-													<div class="mix-details">
-														<h4>Cascusamus et iusto accusamus</h4>
-														<a class="mix-link"> <i class="fa fa-link"></i>
-														</a> <a class="mix-preview fancybox-button"
-															href="../../assets/admin/pages/media/works/img4.jpg"
-															title="Project Name" data-rel="fancybox-button"> <i
-															class="fa fa-search"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-3 col-sm-4 mix category_1">
-												<div class="mix-inner">
-													<img class="img-responsive"
-														src="http://218.150.181.131/poster/1p.png" alt="">
-													<div class="mix-details">
-														<h4>Cascusamus et iusto accusamus</h4>
-														<a class="mix-link"> <i class="fa fa-link"></i>
-														</a> <a class="mix-preview fancybox-button"
-															href="../../assets/admin/pages/media/works/img3.jpg"
-															title="Project Name" data-rel="fancybox-button"> <i
-															class="fa fa-search"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- END FILTER -->
+						<div class="portlet light">
+							<div class="portlet-title">
+								<div class="caption">
+									<i class="icon-basket font-green-sharp"></i>
+								<span class="caption-subject font-green-sharp bold uppercase">
+								영화 추천</span>
 								</div>
+							</div>
+							<div class="portlet-body">
+							<div class="tabbable">
+									<!-- BEGIN FILTER -->
+										<ul class="nav nav-tabs nav-tabs-lg">
+											<li class="active"><a href="#tab_1" data-toggle="tab">
+												사회관계망 분석을 통한 알고리즘 추천 </a></li>
+											<li class=""><a href="#tab_2" data-toggle="tab">같은 감독의 영화 추천</a></li>
+											<li><a href="#tab_3" data-toggle="tab">같은 배우가 출연한영화 추천</a></li>
+										</ul>
+										<div class="tab-content">
+											<div class="tab-pane active" id="tab_1">
+												<div>
+													<%
+														int cnt = 0;
+													%>
+													<table>
+														<tr>
+															<c:forEach var="m" items="${recommend}">
+															<td><img class='img-responsive'
+																	 src='http://218.150.181.131/poster/${m.movie_id}p.png'
+																	 width="270pt" height="100pt"
+																	 onclick="document.location = 'Tab_movielistdetail?id=${m.movie_id}';">
+															</td>
+															<%
+																if(cnt > 2){
+															%>
+
+														</tr>
+														<tr>
+															<%
+																	cnt = 0;
+																} else {
+																	cnt++;
+																	System.out.println("cnt = " + cnt);
+																}
+															%>
+
+															</c:forEach>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div class="tab-pane" id="tab_2">
+												<%--<div>--%>
+													<%--<table>--%>
+														<%--<tr>--%>
+															<%--<c:forEach var="m" items="${directorMovies}">--%>
+															<%--<td><img class='img-responsive'--%>
+																	 <%--src='http://218.150.181.131/poster/${m.movie_id}p.png'--%>
+																	 <%--width="270pt" height="100pt"--%>
+																	 <%--onclick="document.location = 'Tab_movielistdetail?id=${m.movie_id}';">--%>
+															<%--</td>--%>
+														<%--</tr>--%>
+														<%--<tr>--%>
+															<%--</c:forEach>--%>
+														<%--</tr>--%>
+													<%--</table>--%>
+												<%--</div>--%>
+											</div>
+											<div class="tab-pane" id="tab_3">c</div>
+
+										</div>
+
+									<!-- END FILTER -->
+
 								
 							
 							</div>
+						   </div>
 						</div>
 					</div>
 				</div>
