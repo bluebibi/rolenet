@@ -443,21 +443,36 @@ License: You must have a valid license purchased only from themeforest(the above
 												</div>
 											</div>
 											<div class="tab-pane" id="tab_2">
-												<%--<div>--%>
-													<%--<table>--%>
-														<%--<tr>--%>
-															<%--<c:forEach var="m" items="${directorMovies}">--%>
-															<%--<td><img class='img-responsive'--%>
-																	 <%--src='http://218.150.181.131/poster/${m.movie_id}p.png'--%>
-																	 <%--width="270pt" height="100pt"--%>
-																	 <%--onclick="document.location = 'Tab_movielistdetail?id=${m.movie_id}';">--%>
-															<%--</td>--%>
-														<%--</tr>--%>
-														<%--<tr>--%>
-															<%--</c:forEach>--%>
-														<%--</tr>--%>
-													<%--</table>--%>
-												<%--</div>--%>
+												<div>
+													<%
+														int cnt1 = 0;
+													%>
+													<table>
+														<tr>
+															<c:forEach var="m" items="${directorMovies}">
+															<td><img class='img-responsive'
+																	 src='http://218.150.181.131/poster/${m.id}p.png'
+																	 width="270pt" height="100pt"
+																	 onclick="document.location = 'Tab_movielistdetail?id=${m.id}';">
+															</td>
+															<%
+																if(cnt1 > 2){
+															%>
+
+														</tr>
+														<tr>
+															<%
+																	cnt1 = 0;
+																} else {
+																	cnt++;
+																	System.out.println("cnt1 = " + cnt1);
+																}
+															%>
+
+															</c:forEach>
+														</tr>
+													</table>
+												</div>
 											</div>
 											<div class="tab-pane" id="tab_3">c</div>
 

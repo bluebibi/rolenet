@@ -1,7 +1,6 @@
 package com.springapp.service;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -91,6 +90,11 @@ public class MovieListServiceImpl implements MovieListService {
 	}
 
 	@Override
+	public List<MovieList> selectMovieByDirector(String director, int id) {
+		return movieListMapper.selectMovieByDirector(director,id);
+	}
+
+	@Override
 	public List<MovieList> LastList15bySpectators() {
 		return movieListMapper.LastList15bySpectators();
 	}
@@ -106,5 +110,6 @@ public class MovieListServiceImpl implements MovieListService {
 		// TODO Auto-generated method stub
 		return movieListMapper.list_limit(idx, offset);
 	}
+
 
 }

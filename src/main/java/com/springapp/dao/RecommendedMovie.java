@@ -15,6 +15,6 @@ public interface RecommendedMovie {
     @Select("SELECT * FROM recommendedMovie WHERE movie_id = #{id}")
     Recommend selectMovieContentsByID(@Param("id") int id);
 
-    @Select("SELECT * FROM recommendedMovie WHERE id != #{id} and cluster = #{cluster}")
+    @Select("SELECT * FROM recommendedMovie WHERE movie_id != #{id} and cluster = #{cluster}")
     List<Recommend> list(@Param("id") int id, @Param("cluster") int cluster);
 }
