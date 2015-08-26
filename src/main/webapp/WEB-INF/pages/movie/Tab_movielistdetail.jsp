@@ -406,7 +406,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<ul class="nav nav-tabs nav-tabs-lg">
 											<li class="active"><a href="#tab_1" data-toggle="tab">
 												사회관계망 분석을 통한 알고리즘 추천 </a></li>
-											<li class=""><a href="#tab_2" data-toggle="tab">같은 감독의 영화 추천</a></li>
+											<li class=""><a href="#tab_2" data-toggle="tab">${n.director} 감독이 만든 작품</a></li>
 											<li><a href="#tab_3" data-toggle="tab">같은 배우가 출연한영화 추천</a></li>
 										</ul>
 										<div class="tab-content">
