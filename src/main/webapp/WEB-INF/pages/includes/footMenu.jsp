@@ -27,14 +27,10 @@
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-						<h2>Follow Us On</h2>
+						<h2>깃 허브</h2>
 						<ul class="social-icons">
-							<li><a href="javascript:;" data-original-title="rss"
-								class="rss"></a></li>
-							<li><a href="javascript:;" data-original-title="facebook"
-								class="facebook"></a></li>
-							<li><a href="javascript:;" data-original-title="youtube"
-								class="youtube"></a></li>
+							<li><a href="https://github.com/bluebibi/rolenet.git" data-original-title="github"
+								class="github"></a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
