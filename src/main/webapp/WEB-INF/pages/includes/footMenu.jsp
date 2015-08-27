@@ -10,8 +10,8 @@
 						<p>Korea University of Technology and Education (KoreaTech),
 							Department of Computer Science & Engineering, The LINK lab.</p>-->
 						<h2>만든이</h2>
-						<p>한국기술교육대학교(Koreatech) LINK lab. <br/>
-						충남 천안시 병천면 가전리</p>
+						<p>한국기술교육대학교 LINK Lab.9기 난닝구 <br/>
+						영화 소셜 네트워크 분석 연구</p>
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs12 footer-block">
 						<h2>메일 보내기</h2>
@@ -34,10 +34,10 @@
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-						<h2>연락처</h2>
+						<h2>찾아오시는길</h2>
 						<address class="margin-bottom-40">
-							전화번호: 800 123 3456<br> 이메일: <a
-								href="mailto:info@metronic.com">info@link.com</a>
+							위치 : 4공학관 b103a호<br> LINK lab: <a
+								href="http://link.koreatech.ac.kr/">link.koreatech.ac.kr</a>
 						</address>
 					</div>
 				</div>
