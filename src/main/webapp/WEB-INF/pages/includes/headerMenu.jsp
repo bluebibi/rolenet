@@ -1,6 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<link
+	href="http://218.150.181.131/assets/global/plugins/fancybox/source/jquery.fancybox.css"
+	rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link
+	href="http://218.150.181.131/assets/global/plugins/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<link
+	href="http://218.150.181.131/assets/global/plugins/simple-line-icons/simple-line-icons.min.css"
+	rel="stylesheet" type="text/css">
 <!-- BEGIN HEADER MENU -->
 
 

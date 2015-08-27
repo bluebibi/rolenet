@@ -1,6 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
+
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+<link href="http://218.150.181.131/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://218.150.181.131/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
+<link href="http://218.150.181.131/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="http://218.150.181.131/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN THEME STYLES -->
+<link href="http://218.150.181.131/assets/global/css/components.css" rel="stylesheet" type="text/css">
+<link href="http://218.150.181.131/assets/global/css/plugins.css" rel="stylesheet" type="text/css">
+<link href="http://218.150.181.131/assets/admin/layout3/css/layout.css" rel="stylesheet" type="text/css">
+<link href="http://218.150.181.131/assets/admin/layout3/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color">
+<link href="http://218.150.181.131/assets/admin/layout3/css/custom.css" rel="stylesheet" type="text/css">
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico">
 <!-- BEGIN PRE-FOOTER -->
 		<div class="page-prefooter">
 			<div class="container">
@@ -36,8 +54,9 @@
 					<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
 						<h2>찾아오시는길</h2>
 						<address class="margin-bottom-40">
-							위치 : 4공학관 b103a호<br> LINK lab: <a
-								href="http://link.koreatech.ac.kr/">link.koreatech.ac.kr</a>
+							위치 : 4공학관 b103a호 <a href="https://www.google.co.kr/maps/place/%EC%B2%9C%EC%95%88%EC%8B%9C+%EB%B3%91%EC%B2%9C%EB%A9%B4+%ED%95%9C%EA%B5%AD%EA%B8%B0%EC%88%A0%EA%B5%90%EC%9C%A1%EB%8C%80%ED%95%99%EA%B5%90+%EA%B3%B5%ED%95%994%EA%B4%80/@36.7616937,127.2803515,17z/data=!4m2!3m1!1s0x357b2ac0a5190d0f:0x24cddeffd416ef74"><i class="fa fa-cab"></i>
+							</a><br> 
+							LINK lab: <a href="http://link.koreatech.ac.kr/">link.koreatech.ac.kr</a>
 						</address>
 					</div>
 				</div>
