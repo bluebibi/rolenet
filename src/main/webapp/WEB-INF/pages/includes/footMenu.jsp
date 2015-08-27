@@ -2,23 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-
-
-<!-- BEGIN GLOBAL MANDATORY STYLES -->
-
-<link href="http://218.150.181.131/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link href="http://218.150.181.131/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
-<link href="http://218.150.181.131/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="http://218.150.181.131/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
-<!-- END GLOBAL MANDATORY STYLES -->
-<!-- BEGIN THEME STYLES -->
-<link href="http://218.150.181.131/assets/global/css/components.css" rel="stylesheet" type="text/css">
-<link href="http://218.150.181.131/assets/global/css/plugins.css" rel="stylesheet" type="text/css">
-<link href="http://218.150.181.131/assets/admin/layout3/css/layout.css" rel="stylesheet" type="text/css">
-<link href="http://218.150.181.131/assets/admin/layout3/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color">
-<link href="http://218.150.181.131/assets/admin/layout3/css/custom.css" rel="stylesheet" type="text/css">
-<!-- END THEME STYLES -->
-<link rel="shortcut icon" href="favicon.ico">
 <!-- BEGIN PRE-FOOTER -->
 		<div class="page-prefooter">
 			<div class="container">
