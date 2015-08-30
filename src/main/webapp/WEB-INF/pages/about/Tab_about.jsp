@@ -89,18 +89,6 @@
 									<a data-toggle="tab" href="#tab_3">
 										<i class="fa fa-leaf"></i> 관련 정보 </a>
 								</li>
-								<li>
-									<a data-toggle="tab" href="#tab_1">
-										<i class="fa fa-info-circle"></i> License Terms </a>
-								</li>
-								<li>
-									<a data-toggle="tab" href="#tab_2">
-										<i class="fa fa-tint"></i> Payment Rules </a>
-								</li>
-								<li>
-									<a data-toggle="tab" href="#tab_3">
-										<i class="fa fa-plus"></i> Other Questions </a>
-								</li>
 							</ul>
 						</div>
 						<div class="col-md-9">
@@ -111,12 +99,13 @@
 											<div class="panel-heading">
 												<h4 class="panel-title">
 													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_1">
-														1. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ? </a>
+														1. ‘MOVIETWEEN’ 이 무슨 뜻인가요 ? </a>
 												</h4>
 											</div>
 											<div id="accordion1_1" class="panel-collapse collapse in">
 												<div class="panel-body">
-													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+													MOVIETWEEN은 movie와 between을 합친 용어로 영화들의 관계를 의미합니다.<br>
+													웹사이트가 주로 사회관계망 분석기법과 그 지표들을 활용한 컨텐츠를 다루고 있기 때문에 영화와 영화들 사이의 관계를 생각하며 살펴보시면 더욱 유익한 시간이 될 수 있습니다.
 												</div>
 											</div>
 										</div>
@@ -124,12 +113,14 @@
 											<div class="panel-heading">
 												<h4 class="panel-title">
 													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_2">
-														2. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ? </a>
+														2. 영화 시나리오는 어떻게 분석하나요 ?</a>
 												</h4>
 											</div>
 											<div id="accordion1_2" class="panel-collapse collapse">
 												<div class="panel-body">
-													Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+													시나리오는 첫 번째, 모든 등장인물을 카운트하고 각 등장인물이 총 몇 번 등장했는지를 카운트합니다.
+													두 번째, 각 장면(Scene)별로 나누어 첫 번째 과정을 한 번 더 진행합니다.<br>
+													위 정보들을 토대로 등장인물들을 기준으로 등장인물의 등장 횟수가 많을수록 노드의 가중치를 주고, 같은 장면에 함께 등장한 등장인물마다 가중치를 주어 노드들간의 엣지를 정해 각 등장인물들 간의 사회관계망을 구성합니다.
 												</div>
 											</div>
 										</div>
@@ -137,12 +128,12 @@
 											<div class="panel-heading">
 												<h4 class="panel-title">
 													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_3">
-														3. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor ? </a>
+														3. 사회관계망 분석 기법이란 무엇인가요 ?</a>
 												</h4>
 											</div>
 											<div id="accordion1_3" class="panel-collapse collapse">
 												<div class="panel-body">
-													Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+													사람, 그룹, 조직, 컴퓨터 및 데이터 등 모든 객체 간의 관계 및 네트워크의 특성과 구조를 분석하고 그 결과를 시각화하는 첨단 분석기법입니다.<br> 저희는 이 분석 기법을 영화 시나리오에 적용해 시나리오만으로 여러 가지 관계, 특성 등을 연구, 분석하고 있습니다.
 												</div>
 											</div>
 										</div>
@@ -150,12 +141,13 @@
 											<div class="panel-heading">
 												<h4 class="panel-title">
 													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_4">
-														4. Wolf moon officia aute, non cupidatat skateboard dolor brunch ? </a>
+														4. 그래프에 대해서 알려주세요. </a>
 												</h4>
 											</div>
 											<div id="accordion1_4" class="panel-collapse collapse">
 												<div class="panel-body">
-													3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+													- 사회관계망 분석 기법을 통한 분석 자료를 이용해 그래프를 그렸습니다. 그래프는 Gephi라는 툴을 이용해 그렸으며 확장자 gexf의 파일로 만들어 데이터베이스화 하여 이용, 보관하고 있습니다.<br><br>
+													- 그래프 등장인물들 간의 색깔은 Modularity를 구한 것으로 커뮤니티 알고리즘인 Louvain Community Detection Algorithm을 이용했습니다. <br>Gephi 툴에서 제공되는 기능으로 등장인물들이 얼마나 가까운 관계인지를 나타내는 척도로 사용되고 있습니다.
 												</div>
 											</div>
 										</div>
@@ -163,12 +155,13 @@
 											<div class="panel-heading">
 												<h4 class="panel-title">
 													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_5">
-														5. Leggings occaecat craft beer farm-to-table, raw denim aesthetic ? </a>
+														5. 주인공 검출에 대해 알려주세요. </a>
 												</h4>
 											</div>
 											<div id="accordion1_5" class="panel-collapse collapse">
 												<div class="panel-body">
-													3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
+													가중치 매개 중심도와 가중치 연결 중심도 두 가지를 활용, 비교해 주인공 검출을 했습니다.
+													그 결과 네이버 영화의 주인공과 약 95퍼 이상 일치함을 알 수 있었습니다.
 												</div>
 											</div>
 										</div>
@@ -176,12 +169,13 @@
 											<div class="panel-heading">
 												<h4 class="panel-title">
 													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_6">
-														6. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth ? </a>
+														6. 영화 추천에 대해 알려주세요. </a>
 												</h4>
 											</div>
 											<div id="accordion1_6" class="panel-collapse collapse">
 												<div class="panel-body">
-													3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
+													클러스터링 기법 중 K-Means 알고리즘을 사용해 시나리오 구조의 특성을 이용해 영화를 추천했습니다.<br>
+													보통 다른 영화 추천 서비스의 별점이나 장르 등의 추천도 있지만, 시나리오만을 가지고 비슷한 구조의 영화를 추천함으로써 좀 더 색다르고 의미 있는 추천을 했습니다.
 												</div>
 											</div>
 										</div>
@@ -206,16 +200,19 @@
 											<div class="panel-heading">
 												<h4 class="panel-title">
 													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#accordion2_1">
-														1. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ? </a>
+														1. 팀 소개 </a>
 												</h4>
 											</div>
 											<div id="accordion2_1" class="panel-collapse collapse in">
 												<div class="panel-body">
 													<p>
-														Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+														-  팀 명 : 난닝구 (I'm Link 9th)<br><br>
 													</p>
 													<p>
-														Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+														- 서장원 #10학번 #팀장<br><br>
+														- 김태형 #10학번 #<br><br>
+														- 허주성 #10학번 #<br><br>
+														- 이예영 #12학번 #<br><br>
 													</p>
 												</div>
 											</div>
