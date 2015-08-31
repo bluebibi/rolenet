@@ -173,7 +173,7 @@ public class HelloController {
 		System.out.println(cluster);
 		model.addAttribute("recommend",recommendMovieService.list(id,cluster));
 		model.addAttribute("directorMovies", movieListService.selectMovieByDirector(director,id));
-		System.out.println(movieListService.selectMovieByDirector(director));
+		System.out.println(movieListService.selectMovieByDirector(director,id));
 		return "movie/Tab_movielistdetail.jsp";
 	}
 
@@ -248,13 +248,13 @@ public class HelloController {
 	}
 
 	@RequestMapping(value = "/Tab_DirectorDetail", method = RequestMethod.GET)
-	public String DirectorDetail(ModelMap model, String director) {
+	public String DirectorDetail(ModelMap model, int id) {
 		//director = ;
 		//MovieList movieList = movieListService.selectMovieByDirector(director);
 		//model.addAttribute("dlist2", movieList);
-		System.out.println(director);
+		System.out.println(id);
 		//model.addAttribute("dist", movieListService.dist());
-		model.addAttribute("dist2", movieListService.selectMovieByDirector(director));
+		model.addAttribute("dist2", movieListService.selectMovieByDirector2(id));
 		return "movie/Tab_DirectorDetail.jsp";
 	}
 

@@ -60,11 +60,11 @@ public interface MovieListMapper {
 	@Update("UPDATE movies SET hit= hit + 1 where name = #{name}")
 	void addHitByName(@Param("name") String name);
 
-	@Select("SELECT director, count(director) as count,sum(spectators) as sumS, avg(diameter) as avgD, avg(pathlength) as avgP, avg(clustering) as avgC, avg(density) as avgDE FROM 9th.movies group by director order BY movies.director asc")
+	@Select("SELECT id, director, count(director) as count,sum(spectators) as sumS, avg(diameter) as avgD, avg(pathlength) as avgP, avg(clustering) as avgC, avg(density) as avgDE FROM 9th.movies group by director order BY movies.director asc")
 	List<MovieList> dist();
 
-	@Select("SELECT * from movies where director = #{director}")
-	List<MovieList> selectMovieByDirector(@Param("director") String director);
+	@Select("SELECT * from 9th.movies where director = (SELECT director from 9th.movies where id=#{id})")
+	List<MovieList> selectMovieByDirector2(@Param("id") int id);
 
 	@Select("SELECT * from movies where director = #{director} and id != #{id}")
 	List<MovieList> selectMovieByDirector(@Param("director") String director, @Param("id") int id);

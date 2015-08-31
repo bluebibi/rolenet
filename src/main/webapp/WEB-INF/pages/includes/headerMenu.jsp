@@ -45,72 +45,11 @@
 			<div class="hor-menu font-family">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="/">홈</a></li>
-					<li class="menu-dropdown mega-menu-dropdown "><a
-						data-hover="megamenu-dropdown" data-close-others="true"
-						data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
-							영화 <i class="fa fa-angle-down"></i>
-					</a>
-						<ul class="dropdown-menu" style="min-width: 710px">
-							<li>
-								<div class="mega-menu-content">
-									<div class="row">
-										<div class="col-md-4">
-											<ul class="mega-menu-submenu">
-												<li>
-													<h3>:: 영화 ::</h3>
-												</li>
-												<li><a href="/Tab_movielist" class="iconify"> <i
-														class="icon-home"></i> 영화 목록
-												</a></li>
-											</ul>
-										</div>
-										<div class="col-md-4">
-											<ul class="mega-menu-submenu">
-												<li>
-													<h3>:: 감독 ::</h3>
-												</li>
-												<li><a href="/Tab_Director" class="iconify"> <i
-														class="icon-speech"></i> 감독 목록
-												</a></li>
-
-											</ul>
-										</div>
-										<div class="col-md-4">
-											<ul class="mega-menu-submenu">
-												<li>
-													<h3>:: 분석 ::</h3>
-												</li>
-												<li><a href="/Tab_charts?flag=0&flag2=0"
-													class="iconify"> <i class="icon-speech"></i> 차트
-												</a></li>
-
-											</ul>
-										</div>
-										<div class="col-md-4">
-											<ul class="mega-menu-submenu">
-												<li>
-													<h3>나의 영화</h3>
-												</li>
-												<li><a href="/upload.do" class="iconify"> <i
-														class="icon-speech"></i> 업로드
-												</a></li>
-											
-
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul></li>
-
-					<!--<li>
-                        <a href="/Tab_boardlist">Board </a>
-                    </li>
-
-                    <li>
-                        <a href="/Tab_mypage">MyPage</a>
-                    </li>-->
-					<li><a href="/Tab_about">더보기</a></li>
+					<li><a href="/Tab_movielist">영화</a></li>
+					<li><a href="/Tab_Director">감독</a></li>
+					<li><a href="Tab_charts?flag=0&flag2=0">분석차트</a></li>
+					<li><a href="/upload.do">시나리오 업로드</a></li>
+					<li><a href="/Tab_about">About Us</a></li>
 				</ul>
 
 			</div>

@@ -85,8 +85,8 @@ public class MovieListServiceImpl implements MovieListService {
 	}
 
 	@Override
-	public List<MovieList> selectMovieByDirector(String director) {
-		return movieListMapper.selectMovieByDirector(director);
+	public List<MovieList> selectMovieByDirector2(int id) {
+		return movieListMapper.selectMovieByDirector2(id);
 	}
 
 	@Override

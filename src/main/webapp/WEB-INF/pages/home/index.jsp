@@ -121,7 +121,6 @@
 				<div id="head-back" class="homebox">
 					<br> <br> <br> <br>
 					<h1 id="mainTitle" align="center">MOVIETWEEN</h1>
-					<br /> <br /> <br />
 					<div class="container">
 						<form class="search-form" action="search.do" method="POST">
 							<div class="input-group">
