@@ -9,6 +9,7 @@ public class MovieList {
     String synopsis;
     int spectators;
 	int diameter;
+	String trailer;
     double pathlength;
     double clustering;
     double density;
@@ -92,7 +93,12 @@ public class MovieList {
 	public void setHit(int hit) {
 		this.hit = hit;
 	}
- 
+	public String getTrailer() {
+		return trailer;
+	}
+	public void setTrailer(String trailer) {
+		this.trailer = trailer;
+	}
     
 
 	public int getCount() {		return count;	}

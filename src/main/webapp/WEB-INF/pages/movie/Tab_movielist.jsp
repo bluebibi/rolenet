@@ -244,11 +244,6 @@
 				<!-- /.modal -->
 				<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
 				<!-- BEGIN PAGE BREADCRUMB -->
-				<ul class="page-breadcrumb breadcrumb">
-					<li><a href="#">홈</a><i class="fa fa-circle"></i></li>
-					<li>영화 <i class="fa fa-circle"></i></li>
-					<li class="active">영화 목록</li>
-				</ul>
 				<!-- END PAGE BREADCRUMB -->
 				<!-- BEGIN PAGE CONTENT INNER -->
 				<div class="row">

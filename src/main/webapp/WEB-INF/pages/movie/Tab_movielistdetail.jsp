@@ -278,20 +278,22 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="details">
 								<div class="number">
-									 <span class="number" style="font-size: 24px !important;">${n.director}</span>
+									<span class="number" style="font-size: 24px !important;">${n.director}</span>
 								</div>
 								<div class="desc">${n.year}</div>
 							</div>
 						</a>
 					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-bottom-10 ">
 						<a class="dashboard-stat dashboard-stat-light green-haze"
 							href="javascript:;">
 							<div class="visual">
 								<i class="fa fa-group fa-icon-medium"></i>
 							</div>
 							<div class="details">
-								<div id="spec_number" class="number">${n.spectators}</div>
+								<div class="number"> </div>
+								<span id="spec_number" class="number" style="font-size: 24px !important;">${n.spectators}</span>
+								<!-- <div id="spec_number" class="number">${n.spectators} </div> -->
 								<div class="desc">관객 수</div>
 							</div>
 						</a>
@@ -342,7 +344,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="tab-content">
 										<div class="tab-pane active" id="portlet_tab1">
 											<div class="chart">
-                                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1BLIZy-pHLg" frameborder="0" allowfullscreen></iframe>
+												 ${n.trailer}
+													 <!--<iframe width="100%" height="100%" src="https://www.youtube.com/embed/1BLIZy-pHLg" frameborder="0" allowfullscreen></iframe> -->
 											</div>
 										</div>
 										<div class="tab-pane" id="portlet_tab2">
@@ -404,9 +407,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!-- BEGIN FILTER -->
 										<ul class="nav nav-tabs nav-tabs-lg">
 											<li class="active"><a href="#tab_1" data-toggle="tab">
-												사회관계망 분석을 통한 알고리즘 추천 </a></li>
+												시나리오 기반 사회관계망분석 영화 추천 </a></li>
 											<li class=""><a href="#tab_2" data-toggle="tab">${n.director} 감독이 만든 작품</a></li>
-											<li><a href="#tab_3" data-toggle="tab">같은 배우가 출연한영화 추천</a></li>
+											<li><a href="#tab_3" data-toggle="tab">같은 배우가 출연한 영화</a></li>
 										</ul>
 										<div class="tab-content">
 											<div class="tab-pane active" id="tab_1">
@@ -433,6 +436,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																} else {
 																	cnt++;
 																	System.out.println("cnt = " + cnt);
+
 																}
 															%>
 
