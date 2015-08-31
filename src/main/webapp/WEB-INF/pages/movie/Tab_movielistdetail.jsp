@@ -305,8 +305,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="portlet-title">
 									<div class="caption">
 										<i class="icon-bar-chart font-green-sharp"></i> <span
-											class="caption-subject font-green-sharp bold uppercase">영화
-											내 인물 네트워크</span>
+											class="caption-subject font-green-sharp bold uppercase">등장인물 네트워크</span>
 
 									</div>
 									<div class="tools">
