@@ -273,7 +273,6 @@
                       <th width="10%">평균 Clustering</th>
                       <th width="10%">평균 Density</th>
                       <th width="10%">영화 개수</th>
-
                     </tr>
                   </thead>
 
@@ -330,7 +329,7 @@
 <script
         src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js"
         type="text/javascript"></script>
-<script src="/resources/js/table-advanced.js"></script>
+<script src="/resources/js/table-advanced2.js"></script>
 <script>
   jQuery(document).ready(function () {
     Metronic.init(); // init metronic core components

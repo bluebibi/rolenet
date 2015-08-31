@@ -201,6 +201,7 @@
                   <thead>
                   <tr>
                     <!-- <th width="15%">그래프</th>-->
+                    <th width="5%">No.</th>
                     <th width="10%">제목</th>
                     <th width="10%">연도</th>
                     <th width="10%">관객 수</th>
@@ -210,6 +211,7 @@
                   <tbody>
                   <c:forEach var="m" items="${dist2}">
                     <tr onclick="document.location = 'Tab_movielistdetail?id=${m.id}';" >
+                      <td id="id">${m.id}</td>
                       <td>${m.name}</td>
                       <td>${m.year}</td>
                       <td>${m.spectators}</td>
@@ -250,7 +252,7 @@
 <script src="http://218.150.181.131/assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
 <script src="http://218.150.181.131/assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
-<script src="/resources/js/table-advanced.js"></script>
+<script src="/resources/js/table-advanced2.js"></script>
 <script>
   jQuery(document).ready(function () {
     Metronic.init(); // init metronic core components
