@@ -20,7 +20,7 @@ public interface MovieListService {
 	List<MovieList> year2005();
 	List<MovieList> year2010();
 	List<MovieList> year2015();
-	List<MovieList> Dlist();
+	List<MovieList> dist();
 	List<MovieList> selectMovieByDirector(String director);
 	List<MovieList> selectMovieByDirector(String director, int id);
 	List<MovieList> LastList15bySpectators();

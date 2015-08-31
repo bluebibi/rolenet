@@ -54,7 +54,7 @@ public class HelloController {
 	public String printWelcome(ModelMap model) {
 		model.addAttribute("hit", movieListMapper.selectMovieByHit());
 		model.addAttribute("last", movieListService.LastList());
-		model.addAttribute("count", movieListMapper.movieCount());
+		//model.addAttribute("count", movieListMapper.movieCount());
 		model.addAttribute("scroll_movie", movieListService.list());
 
 		
@@ -201,7 +201,7 @@ public class HelloController {
 		model.addAttribute("list2005", movieListService.year2005());
 		model.addAttribute("list2010", movieListService.year2010());
 		model.addAttribute("list2015", movieListService.year2015());
-		model.addAttribute("Spactators", movieListService.LastList15bySpectators());
+		model.addAttribute("Spectators", movieListService.LastList15bySpectators());
 		return "movie/Tab_charts.jsp";
 	}
 
@@ -242,7 +242,7 @@ public class HelloController {
 
 	@RequestMapping(value = "/Tab_Director", method = RequestMethod.GET)
 	public String Director(ModelMap model, String director) {
-		model.addAttribute("dlist", movieListService.Dlist());
+		model.addAttribute("dist", movieListService.dist());
 		//model.addAttribute("dlist2",movieListService.selectMovieByDirector(director));
 		return "movie/Tab_Director.jsp";
 	}
@@ -253,7 +253,8 @@ public class HelloController {
 		//MovieList movieList = movieListService.selectMovieByDirector(director);
 		//model.addAttribute("dlist2", movieList);
 		System.out.println(director);
-		model.addAttribute("dlist2", movieListService.selectMovieByDirector(director));
+		//model.addAttribute("dist", movieListService.dist());
+		model.addAttribute("dist2", movieListService.selectMovieByDirector(director));
 		return "movie/Tab_DirectorDetail.jsp";
 	}
 

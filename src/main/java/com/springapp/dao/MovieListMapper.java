@@ -61,7 +61,7 @@ public interface MovieListMapper {
 	void addHitByName(@Param("name") String name);
 
 	@Select("SELECT director, count(director) as count,sum(spectators) as sumS, avg(diameter) as avgD, avg(pathlength) as avgP, avg(clustering) as avgC, avg(density) as avgDE FROM 9th.movies group by director order BY movies.director asc")
-	List<MovieList> Dlist();
+	List<MovieList> dist();
 
 	@Select("SELECT * from movies where director = #{director}")
 	List<MovieList> selectMovieByDirector(@Param("director") String director);

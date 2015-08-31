@@ -80,8 +80,8 @@ public class MovieListServiceImpl implements MovieListService {
 	}
 
 	@Override
-	public List<MovieList> Dlist() {
-		return movieListMapper.Dlist();
+	public List<MovieList> dist() {
+		return movieListMapper.dist();
 	}
 
 	@Override
