@@ -224,7 +224,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!-- End: life time stats -->
 						<!-- Begin: life time stats -->
 						<div class="col-md-6">
-							<div class="portlet light">
+							<div class="portlet light" style="height: 433pt; !important;">
 								<div class="portlet-title tabbable-line">
 									<div class="caption">
 										<i class="icon-share font-red-sunglo"></i> <span
