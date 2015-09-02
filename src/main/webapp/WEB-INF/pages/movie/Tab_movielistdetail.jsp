@@ -354,42 +354,56 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="margin-top-20 no-margin no-border">
 
-										<div>
-											<span class="label label-success uppercase"> 알고리즘에 의한 주인공 검출 </span><br><br>
-											<table class="table table-striped table-bordered table-hover">
-												<thead>
-													<tr>
-														<c:forEach var="m" items="${degreeRole}">
-															<th width="5">${m.name}</th>
-														</c:forEach>
-													</tr>
-												</thead>
-											</table>
-											<span class="label label-primary"> 실제 주인공  </span><br><br>
-											<table class="table table-striped table-bordered table-hover">
-												<thead>
-													<tr>
-														<%
-															int count2 = 0;
-														%>
-														<c:forEach var="m" items="${naverRole}">
 
-															<th width="5" onmouseover="show(<%=count2%>)"
-																onmouseout="toolTip()">${m.name}</th>
-															<%
-																count2++;
-															%>
-														</c:forEach>
-													</tr>
-												</thead>
-											</table>
-										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- End: life time stats -->
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="portlet light">
+							<div>
+								<span class="label label-success uppercase"> 알고리즘에 의한 주인공 검출 </span><br><br>
+								<table class="table table-striped table-bordered table-hover">
+									<thead>
+									<tr>
+										<c:forEach var="m" items="${degreeRole}">
+											<th width="5">${m.name}</th>
+										</c:forEach>
+									</tr>
+									</thead>
+								</table>
+								<span class="label label-primary"> 실제 주인공  </span><br><br>
+								<table class="table table-striped table-bordered table-hover">
+									<thead>
+									<tr>
+										<%
+											int count2 = 0;
+										%>
+										<c:forEach var="m" items="${naverRole}">
+
+											<th width="5" onmouseover="show(<%=count2%>)"
+												onmouseout="toolTip()">${m.name}</th>
+											<%
+												count2++;
+											%>
+										</c:forEach>
+									</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="portlet light">
+							ㅋㅋ
+						</div>
+					</div>
 				</div>
 				<!-- BEGIN JANGWON SLIDER -->
 				<div class="row">
