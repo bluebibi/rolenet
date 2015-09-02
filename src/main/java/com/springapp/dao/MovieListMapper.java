@@ -66,7 +66,7 @@ public interface MovieListMapper {
 	@Select("SELECT * from 9th.movies where director = (SELECT director from 9th.movies where id=#{id})")
 	List<MovieList> selectMovieByDirector2(@Param("id") int id);
 
-	@Select("SELECT * from movies where director = #{director} and id != #{id}")
-	List<MovieList> selectMovieByDirector(@Param("director") String director, @Param("id") int id);
+	@Select("SELECT * from movies where director = #{director}")
+	List<MovieList> selectMovieByDirector(@Param("director") String director);
 	
 }

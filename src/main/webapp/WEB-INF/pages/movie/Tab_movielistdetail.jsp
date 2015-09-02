@@ -408,7 +408,7 @@ License: You must have a valid license purchased only from themeforest(the above
 															<%
 																	cnt1 = 0;
 																} else {
-																	cnt++;
+																	cnt1++;
 																	System.out.println("cnt1 = " + cnt1);
 																}
 															%>

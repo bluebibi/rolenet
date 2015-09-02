@@ -172,8 +172,8 @@ public class HelloController {
 		cluster = recommend.getCluster();
 		System.out.println(cluster);
 		model.addAttribute("recommend",recommendMovieService.list(id,cluster));
-		model.addAttribute("directorMovies", movieListService.selectMovieByDirector(director,id));
-		System.out.println(movieListService.selectMovieByDirector(director,id));
+		model.addAttribute("directorMovies", movieListService.selectMovieByDirector(director));
+		System.out.println(movieListService.selectMovieByDirector(director));
 		return "movie/Tab_movielistdetail.jsp";
 	}
 
