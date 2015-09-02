@@ -8,6 +8,15 @@ public class CharactorsList {
 	int degreeRole;
 	int naverRole;
 	String charactorsURL;
+	String actor;
+
+	public String getActor() {
+		return actor;
+	}
+
+	public void setActor(String actor) {
+		this.actor = actor;
+	}
 
 	public String getCharactorsURL() {
 		return charactorsURL;

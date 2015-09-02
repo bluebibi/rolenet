@@ -24,119 +24,18 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-<style type="text/css">
-.Text {
-	font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
-	font-size: 8pt;
-	font-weight: normal;
-	font-style: normal;
-	color: #333333;
-	text-decoration: none;
-}
-
-.toolTip {
-	font-family: Verdana, Arial, Sans-serif, 'Times New Roman';
-	font-size: 8pt;
-	filter: alpha(opacity = 80);
-	-moz-opacity: 0.8;
-	opacity: 0.8;
-	/* comment the above 3 line if you don't want transparency*/
-}
-</style>
-<script>
-        var agt = navigator.userAgent.toLowerCase();
-        var is_major = parseInt(navigator.appVersion);
-        var is_minor = parseFloat(navigator.appVersion);
-
-        var is_nav = ((agt.indexOf('mozilla') != -1)
-        && (agt.indexOf('spoofer') == -1)
-        && (agt.indexOf('compatible') == -1)
-        && (agt.indexOf('opera') == -1) && (agt.indexOf('webtv') == -1) && (agt
-                .indexOf('hotjava') == -1));
-        var is_nav4 = (is_nav && (is_major == 4));
-        var is_nav6 = (is_nav && (is_major == 5));
-        var is_nav6up = (is_nav && (is_major >= 5));
-        var is_ie = ((agt.indexOf("msie") != -1) && (agt.indexOf("opera") == -1));
-
-        //tooltip Position
-        var offsetX = 0;
-        var offsetY = 5;
-        var opacity = 100;
-        var toolTipSTYLE;
-
-        function initToolTips() {
-            if (document.getElementById) {
-                toolTipSTYLE = document.getElementById("toolTipLayer").style;
-            }
-            if (is_ie || is_nav6up) {
-                toolTipSTYLE.visibility = "visible";
-                toolTipSTYLE.display = "none";
-                document.onmousemove = moveToMousePos;
-            }
-        }
-        function moveToMousePos(e) {
-            if (!is_ie) {
-                x = e.pageX;
-                y = e.pageY;
-            } else {
-                x = event.x + document.body.scrollLeft;
-                y = event.y + document.body.scrollTop;
-            }
-
-            toolTipSTYLE.left = x + offsetX + 'px';
-            toolTipSTYLE.top = y + offsetY + 'px';
-            return true;
-        }
-
-        function toolTip(msg, fg, bg) {
-
-            if (toolTip.arguments.length < 1) // if no arguments are passed then hide the tootip
-            {
-                if (is_nav4)
-                    toolTipSTYLE.visibility = "hidden";
-                else
-                    toolTipSTYLE.display = "none";
-            } else // show
-            {
-                if (!fg)
-                    fg = "#777777";
-                if (!bg)
-                    bg = "#ffffe5";
-                var content = '<table border="0" cellspacing="0" cellpadding="0" class="toolTip"><tr><td bgcolor="' + fg + '">'
-                        + '<table border="0" cellspacing="1" cellpadding="0"<tr><td bgcolor="' + bg + '">'
-                        + '<font face="sans-serif" color="' + fg + '" size="-2">'
-                        + msg + '</font></td></tr></table>' + '</td></tr></table>';
-                if (is_nav4) {
-                    toolTipSTYLE.document.write(content);
-                    toolTipSTYLE.document.close();
-                    toolTipSTYLE.visibility = "visible";
-                }
-
-                else if (is_ie || is_nav6up) {
-                    document.getElementById("toolTipLayer").innerHTML = content;
-                    toolTipSTYLE.display = 'block'
-                }
-            }
-
-        }
-
-
-        function show(d) {
-            /* you have mis placed the following 4 lines elsewhere inside the toolTip function */
-            var url = new Array();
-            <c:forEach items="${naverRole}" var="item">
-            url.push("${item.charactorsURL}");
-            </c:forEach>
-
-            var s = '<table width="20%" cellspacing="2" cellpadding="0" border="0">';
-            s += '<tr><td><img src=';
-            s += String(url[d]);
-            s += ' width="200" height="200" border="0"/></td></tr>';
-            s += '</table>';
-
-            toolTip(s)
-        }
-    </script>
+	<style>
+		#actor {
+			display: inline-block;
+			border: green;
+			!important;
+		}
+		#actor2{
+			display: inline-block;
+			border:cornflowerblue;
+			!important;
+		}
+	</style>
 <meta charset="utf-8" />
 <title>Movietween | LINK 9th | Koreatech</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -201,10 +100,8 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN BODY -->
 <!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
-<body onload="initToolTips()">
+<body>
 	<%@include file="../includes/headerMenu.jsp"%>
-	<div id="toolTipLayer"
-		style="position: absolute; visibility: hidden; left: 0; right: 0; z-index: 5;"></div>
 	<!-- END HEADER -->
 	<!-- BEGIN PAGE CONTAINER -->
 	<div class="page-container">
@@ -367,33 +264,63 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="portlet light">
 							<div>
 								<span class="label label-success uppercase"> 알고리즘에 의한 주인공 검출 </span><br><br>
-								<table class="table table-striped table-bordered table-hover">
-									<thead>
-									<tr>
-										<c:forEach var="m" items="${degreeRole}">
-											<th width="5">${m.name}</th>
-										</c:forEach>
-									</tr>
-									</thead>
-								</table>
+								<c:forEach var="m" items="${degreeRole}">
+								<div class="portlet light profile-sidebar-portlet" id="actor">
+									<!-- SIDEBAR USERPIC -->
+									<div class="profile-userpic">
+										<img src="${m.charactorsURL}" class="img-responsive" alt="">
+									</div>
+									<!-- END SIDEBAR USERPIC -->
+									<!-- SIDEBAR USER TITLE -->
+									<div class="profile-usertitle">
+										<div class="profile-usertitle-name">
+											${m.name}역
+										</div>
+										<div class="profile-usertitle-job">
+											${m.actor}
+										</div>
+									</div>
+									<!-- END SIDEBAR USER TITLE -->
+									<!-- SIDEBAR BUTTONS -->
+									<div class="profile-userbuttons">
+										<button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
+										<button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
+									</div>
+									<!-- END SIDEBAR BUTTONS -->
+									<!-- SIDEBAR MENU -->
+									<!-- END MENU -->
+								</div>
+								</c:forEach>
+								<br><br>
 								<span class="label label-primary"> 실제 주인공  </span><br><br>
-								<table class="table table-striped table-bordered table-hover">
-									<thead>
-									<tr>
-										<%
-											int count2 = 0;
-										%>
-										<c:forEach var="m" items="${naverRole}">
+								<c:forEach var="m" items="${naverRole}">
+									<div class="portlet light profile-sidebar-portlet" id="actor2">
+										<!-- SIDEBAR USERPIC -->
+										<div class="profile-userpic">
+											<img src="${m.charactorsURL}" class="img-responsive" alt="">
+										</div>
+										<!-- END SIDEBAR USERPIC -->
+										<!-- SIDEBAR USER TITLE -->
+										<div class="profile-usertitle">
+											<div class="profile-usertitle-name">
+													${m.name}역
+											</div>
+											<div class="profile-usertitle-job">
+													${m.actor}
+											</div>
+										</div>
+										<!-- END SIDEBAR USER TITLE -->
+										<!-- SIDEBAR BUTTONS -->
+										<div class="profile-userbuttons">
+											<button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
+											<button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
+										</div>
+										<!-- END SIDEBAR BUTTONS -->
+										<!-- SIDEBAR MENU -->
+										<!-- END MENU -->
+									</div>
+								</c:forEach>
 
-											<th width="5" onmouseover="show(<%=count2%>)"
-												onmouseout="toolTip()">${m.name}</th>
-											<%
-												count2++;
-											%>
-										</c:forEach>
-									</tr>
-									</thead>
-								</table>
 							</div>
 						</div>
 					</div>
