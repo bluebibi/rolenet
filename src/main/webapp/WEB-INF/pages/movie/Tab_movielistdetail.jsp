@@ -340,21 +340,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="caption">
 									<i class="icon-basket font-green-sharp"></i>
 								<span class="caption-subject font-green-sharp bold uppercase">
-								영화 추천</span>
+								시나리오 기반 사회관계망분석 영화 추천</span>
 								</div>
 							</div>
 							<div class="portlet-body">
-							<div class="tabbable">
-									<!-- BEGIN FILTER -->
-										<ul class="nav nav-tabs nav-tabs-lg">
-											<li class="active"><a href="#tab_1" data-toggle="tab">
-												시나리오 기반 사회관계망분석 영화 추천 </a></li>
-											<li class=""><a href="#tab_2" data-toggle="tab">${n.director} 감독이 만든 작품</a></li>
-											<li><a href="#tab_3" data-toggle="tab">같은 배우가 출연한 영화</a></li>
-										</ul>
-										<div class="tab-content">
-											<div class="tab-pane active" id="tab_1">
-												<div>
 													<%
 														int cnt = 0;
 													%>
@@ -384,50 +373,97 @@ License: You must have a valid license purchased only from themeforest(the above
 															</c:forEach>
 														</tr>
 													</table>
-												</div>
-											</div>
-											<div class="tab-pane" id="tab_2">
-												<div>
-													<%
-														int cnt1 = 0;
-													%>
-													<table>
-														<tr>
-															<c:forEach var="m" items="${directorMovies}">
-															<td><img class='img-responsive'
-																	 src='http://218.150.181.131/poster/${m.id}p.png'
-																	 width="270pt" height="100pt"
-																	 onclick="document.location = 'Tab_movielistdetail?id=${m.id}';">
-															</td>
-															<%
-																if(cnt1 > 2){
-															%>
 
-														</tr>
-														<tr>
-															<%
-																	cnt1 = 0;
-																} else {
-																	cnt1++;
-																	System.out.println("cnt1 = " + cnt1);
-																}
-															%>
 
-															</c:forEach>
-														</tr>
-													</table>
-												</div>
-											</div>
-											<div class="tab-pane" id="tab_3">c</div>
-
-										</div>
-
-									<!-- END FILTER -->
-
-								
-							
-							</div>
 						   </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="portlet light">
+								<div class="portlet-title">
+									<div class="caption">
+										<i class="icon-basket font-green-sharp"></i>
+								<span class="caption-subject font-green-sharp bold uppercase">
+								${n.director} 감독이 만든 작품</span>
+									</div>
+								</div>
+									<div class="portlet-body">
+										<%
+											int cnt1 = 0;
+										%>
+										<table>
+											<tr>
+												<c:forEach var="m" items="${directorMovies}">
+												<td><img class='img-responsive'
+														 src='http://218.150.181.131/poster/${m.id}p.png'
+														 width="270pt" height="100pt"
+														 onclick="document.location = 'Tab_movielistdetail?id=${m.id}';">
+												</td>
+												<%
+													if(cnt1 > 2){
+												%>
+
+											</tr>
+											<tr>
+												<%
+														cnt1 = 0;
+													} else {
+														cnt1++;
+														System.out.println("cnt1 = " + cnt1);
+
+													}
+												%>
+
+												</c:forEach>
+											</tr>
+										</table>
+									</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="portlet light">
+								<div class="portlet-title">
+									<div class="caption">
+										<i class="icon-basket font-green-sharp"></i>
+								<span class="caption-subject font-green-sharp bold uppercase">
+								배우별 출연 영화</span>
+									</div>
+								</div>
+								<div class="portlet-body">
+									<%
+										int cnt2 = 0;
+									%>
+									<table>
+										<tr>
+											<c:forEach var="m" items="${directorMovies}">
+											<td><img class='img-responsive'
+													 src='http://218.150.181.131/poster/${m.id}p.png'
+													 width="270pt" height="100pt"
+													 onclick="document.location = 'Tab_movielistdetail?id=${m.id}';">
+											</td>
+											<%
+												if(cnt2 > 2){
+											%>
+
+										</tr>
+										<tr>
+											<%
+													cnt2 = 0;
+												} else {
+													cnt2++;
+													System.out.println("cnt2 = " + cnt2);
+
+												}
+											%>
+
+											</c:forEach>
+										</tr>
+									</table>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
