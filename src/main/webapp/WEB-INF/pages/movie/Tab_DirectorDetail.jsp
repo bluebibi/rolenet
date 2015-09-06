@@ -135,10 +135,11 @@
     <div class="container">
       <!-- BEGIN PAGE TITLE -->
       <div class="page-title">
-        <h1>
-          감독 목록
+        <h1s>
+        ${n.director} 감독 영화
+
           <small></small>
-        </h1>
+        </h1s>
       </div>
       <!-- END PAGE TITLE -->
       <!-- BEGIN PAGE TOOLBAR -->
@@ -174,27 +175,11 @@
       </div>
       <!-- /.modal -->
       <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-      <!-- BEGIN PAGE BREADCRUMB -->
-      <ul class="page-breadcrumb breadcrumb">
-        <li><a href="#">Home</a><i class="fa fa-circle"></i></li>
-        <li>Movie <i
-                class="fa fa-circle"></i></li>
-        <li class="active"><a href="Tab_Director">Director list</a></li>
-      </ul>
-      <!-- END PAGE BREADCRUMB -->
-      <!-- BEGIN PAGE CONTENT INNER -->
+       <!-- BEGIN PAGE CONTENT INNER -->
       <div class="row">
         <div class="col-md-12">
           <!-- BEGIN EXAMPLE TABLE PORTLET-->
           <div class="portlet light">
-            <div class="portlet-title" style="z-index: 1;">
-              <div class="caption">
-                <i class="fa fa-cogs font-green-sharp"></i> <span
-                      class="caption-subject font-green-sharp bold uppercase">Director
-										List</span>
-              </div>
-            </div>
-
             <div class="portlet-body">
 
               <table class="table table-striped table-bordered table-hover" id="sample_4">

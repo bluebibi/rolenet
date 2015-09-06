@@ -252,6 +252,8 @@ public class HelloController {
 		//director = ;
 		//MovieList movieList = movieListService.selectMovieByDirector(director);
 		//model.addAttribute("dlist2", movieList);
+		MovieList movieList = movieListService.selectMovieById(id);
+		model.addAttribute("n", movieList);
 		System.out.println(id);
 		//model.addAttribute("dist", movieListService.dist());
 		model.addAttribute("dist2", movieListService.selectMovieByDirector2(id));
