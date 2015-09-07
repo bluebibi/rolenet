@@ -135,11 +135,10 @@
     <div class="container">
       <!-- BEGIN PAGE TITLE -->
       <div class="page-title">
-        <h1s>
+        <h1>
         ${n.director} 감독 영화
 
-          <small></small>
-        </h1s>
+        </h1>
       </div>
       <!-- END PAGE TITLE -->
       <!-- BEGIN PAGE TOOLBAR -->

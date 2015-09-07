@@ -44,12 +44,11 @@
 			<!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the dropdown opening on mouse hover -->
 			<div class="hor-menu font-family">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="/">홈</a></li>
+					<li><a href="/">홈</a></li>
 					<li><a href="/Tab_movielist">영화</a></li>
 					<li><a href="/Tab_Director">감독</a></li>
 					<li><a href="Tab_charts?flag=0&flag2=0">분석차트</a></li>
-					<li><a href="/upload.do">시나리오 업로드</a></li>
-					<li><a href="/Tab_about">About Us</a></li>
+					<li><a href="/Tab_about">Movietween이란?</a></li>
 				</ul>
 
 			</div>

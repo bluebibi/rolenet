@@ -147,13 +147,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!-- /.modal-dialog -->
 				</div>
 				<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-				<!-- BEGIN PAGE BREADCRUMB -->
-				<ul class="page-breadcrumb breadcrumb">
-					<li><a href="/">홈화면</a><i class="fa fa-circle"></i></li>
-					<li><a href="/Tab_movielist">영화리스트</a> <i class="fa fa-circle"></i></li>
-					<li class="active">영화 자세히보기</li>
-				</ul>
-				<!-- END PAGE BREADCRUMB -->
+
 				<!-- BEGIN PAGE CONTENT INNER -->
 				<div class="row">
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -204,13 +198,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="portlet-title">
 									<div class="caption">
 										<i class="icon-bar-chart font-green-sharp"></i> <span
-											class="caption-subject font-green-sharp bold uppercase">등장인물 네트워크</span>
+											class="caption-subject font-green-sharp bold uppercase">시나리오 기반 등장인물 네트워크</span>
 
-									</div>
-									<div class="tools">
-										<a href="javascript:;" class="collapse"> </a> <a
-											href="#portlet-config" data-toggle="modal" class="config">
-										</a> <a onclick="javascript:;" class="reload"></a>
 									</div>
 								</div>
 								<div class="portlet-body">
@@ -259,72 +248,84 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 					<!-- End: life time stats -->
 				</div>
+
+
+
 				<div class="row">
 					<div class="col-md-12">
 						<div class="portlet light">
-							<div>
-								<span class="label label-success uppercase"> 알고리즘에 의한 주인공 검출 </span>&nbsp;
-								<button type="button" class="btn btn-circle green-haze btn-sm">
-									<a href="http://linkkut.synology.me:5000/fbsharing/2r4PeWOW">
-									관련 논문 PDF</a></button>
-								<button type="button" class="btn btn-circle green-haze btn-sm">관련 발표 PDF</button><br><br>
-								<c:forEach var="m" items="${degreeRole}">
-								<div class="portlet light profile-sidebar-portlet" id="actor">
-									<!-- SIDEBAR USERPIC -->
-									<div class="profile-userpic">
-										<img src="${m.charactorsURL}" class="img-responsive" alt="">
-									</div>
-									<!-- END SIDEBAR USERPIC -->
-									<!-- SIDEBAR USER TITLE -->
-									<div class="profile-usertitle">
-										<div class="profile-usertitle-name">
-											${m.name}역
-										</div>
-										<div class="profile-usertitle-job">
-											${m.actor}
-										</div>
-									</div>
-									<!-- END SIDEBAR USER TITLE -->
-									<!-- SIDEBAR BUTTONS -->
-									<div class="profile-userbuttons">
-										<button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
-										<button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
-									</div>
-									<!-- END SIDEBAR BUTTONS -->
-									<!-- SIDEBAR MENU -->
-									<!-- END MENU -->
+							<div class="portlet-title">
+								<div class="caption">
+									<i class="icon-basket font-green-sharp"></i>
+								<span class="caption-subject font-green-sharp bold uppercase">
+								시나리오 기반 주인공 검출</span>
 								</div>
-								</c:forEach>
-								<br><br>
-								<span class="label label-primary"> 실제 주인공  </span><br><br>
-								<c:forEach var="m" items="${naverRole}">
-									<div class="portlet light profile-sidebar-portlet" id="actor2">
-										<!-- SIDEBAR USERPIC -->
-										<div class="profile-userpic">
-											<img src="${m.charactorsURL}" class="img-responsive" alt="">
-										</div>
-										<!-- END SIDEBAR USERPIC -->
-										<!-- SIDEBAR USER TITLE -->
-										<div class="profile-usertitle">
-											<div class="profile-usertitle-name">
-													${m.name}역
+							</div>
+							<div class="portlet-body">
+								<div>
+									<span class="label label-success uppercase">알고리즘에 의한 주인공 검출 </span>&nbsp;
+									<button type="button" class="btn btn-circle green-haze btn-sm">
+										<a href="http://linkkut.synology.me:5000/fbsharing/2r4PeWOW">
+											게재 논문 PDF</a></button>
+									<br><br>
+									<c:forEach var="m" items="${degreeRole}">
+										<div class="portlet light profile-sidebar-portlet" id="actor">
+											<!-- SIDEBAR USERPIC -->
+											<div class="profile-userpic">
+												<img src="${m.charactorsURL}" class="img-responsive" alt="">
 											</div>
-											<div class="profile-usertitle-job">
-													${m.actor}
+											<!-- END SIDEBAR USERPIC -->
+											<!-- SIDEBAR USER TITLE -->
+											<div class="profile-usertitle">
+												<div class="profile-usertitle-name">
+														${m.name}역
+												</div>
+												<div class="profile-usertitle-job">
+														${m.actor}
+												</div>
 											</div>
+											<!-- END SIDEBAR USER TITLE -->
+											<!-- SIDEBAR BUTTONS -->
+											<div class="profile-userbuttons">
+												<button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
+												<button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
+											</div>
+											<!-- END SIDEBAR BUTTONS -->
+											<!-- SIDEBAR MENU -->
+											<!-- END MENU -->
 										</div>
-										<!-- END SIDEBAR USER TITLE -->
-										<!-- SIDEBAR BUTTONS -->
-										<div class="profile-userbuttons">
-											<button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
-											<button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
+									</c:forEach>
+									<br><br>
+									<span class="label label-primary"> 실제 주인공  </span>&nbsp; 출처 : 네이버 <br><br>
+									<c:forEach var="m" items="${naverRole}">
+										<div class="portlet light profile-sidebar-portlet" id="actor2">
+											<!-- SIDEBAR USERPIC -->
+											<div class="profile-userpic">
+												<img src="${m.charactorsURL}" class="img-responsive" alt="">
+											</div>
+											<!-- END SIDEBAR USERPIC -->
+											<!-- SIDEBAR USER TITLE -->
+											<div class="profile-usertitle">
+												<div class="profile-usertitle-name">
+														${m.name}역
+												</div>
+												<div class="profile-usertitle-job">
+														${m.actor}
+												</div>
+											</div>
+											<!-- END SIDEBAR USER TITLE -->
+											<!-- SIDEBAR BUTTONS -->
+											<div class="profile-userbuttons">
+												<button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
+												<button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
+											</div>
+											<!-- END SIDEBAR BUTTONS -->
+											<!-- SIDEBAR MENU -->
+											<!-- END MENU -->
 										</div>
-										<!-- END SIDEBAR BUTTONS -->
-										<!-- SIDEBAR MENU -->
-										<!-- END MENU -->
-									</div>
-								</c:forEach>
+									</c:forEach>
 
+								</div>
 							</div>
 						</div>
 					</div>
@@ -345,6 +346,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									<i class="icon-basket font-green-sharp"></i>
 								<span class="caption-subject font-green-sharp bold uppercase">
 								시나리오 기반 사회관계망분석 영화 추천</span>
+									<button type="button" class="btn btn-circle green-haze btn-sm">
+										<a href="http://linkkut.synology.me:5000/fbsharing/2r4PeWOW">
+											게재 논문 PDF</a></button>
+
 								</div>
 							</div>
 							<div class="portlet-body">
@@ -354,7 +359,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<table>
 														<tr>
 															<c:forEach var="m" items="${recommend}">
-															<td><img class='img-responsive'
+															<td><img class='img-responsive' style="cursor:pointer"
 																	 src='http://218.150.181.131/poster/${m.movie_id}p.png'
 																	 width="270pt" height="100pt"
 																	 onclick="document.location = 'Tab_movielistdetail?id=${m.movie_id}';">

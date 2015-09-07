@@ -91,17 +91,7 @@
 				<!-- /.modal-dialog -->
 			</div>
 			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-			<!-- BEGIN PAGE BREADCRUMB -->
-			<ul class="page-breadcrumb breadcrumb">
-				<li>
-					<a href="/">Home</a><i class="fa fa-circle"></i>
-				</li>
-				<li>
-					<a href="Tab_charts">Analysis</a>
-					<i class="fa fa-circle"></i>
-				</li>
-			</ul>
-			<!-- END PAGE BREADCRUMB -->
+
 			<!-- BEGIN PAGE CONTENT INNER -->
 			<!-- BEGIN CHART PORTLETS-->
 			<div class="row">
@@ -112,7 +102,7 @@
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="fa fa-cogs font-green-sharp"></i>
-								<span class="caption-subject font-green-sharp bold uppercase">Analysis movie about year</span>
+								<span class="caption-subject font-green-sharp bold uppercase">시나리오 기반 연도별 영화분석</span>
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -139,7 +129,7 @@
 							<div class="portlet-title">
 								<div class="caption">
 									<i class="icon-bar-chart font-green-haze"></i>
-									<span class="caption-subject bold uppercase font-green-haze"> 3D Chart</span>
+									<span class="caption-subject bold uppercase font-green-haze"> 입체 그래프 </span>
 									&nbsp;
 									<select id="seledtBox" onchange="reload(this.value)" name="select">
 									<option id="0" value="0" ${flag eq "0" ? "selected" :""}>clustering</option>

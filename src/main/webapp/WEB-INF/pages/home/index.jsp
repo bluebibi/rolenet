@@ -119,7 +119,7 @@
 			<div class="homeview">
 				<!-- BEGIN PAGE TITLE -->
 				<div id="head-back" class="homebox">
-					<br> <br> <br>
+					<br> <br>
 					<h1 id="mainTitle" align="center">MOVIETWEEN</h1>
 					<div class="container">
 						<form class="search-form" action="search.do" method="POST">
@@ -132,8 +132,8 @@
 								</div>
 							</div>
 						</form>
-						<br> <br>
 					</div>
+					<br>
 				</div>
 				<!-- END PAGE TITLE -->
 			</div>
