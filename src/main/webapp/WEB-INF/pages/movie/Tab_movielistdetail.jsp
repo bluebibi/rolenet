@@ -263,7 +263,11 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="col-md-12">
 						<div class="portlet light">
 							<div>
-								<span class="label label-success uppercase"> 알고리즘에 의한 주인공 검출 </span><br><br>
+								<span class="label label-success uppercase"> 알고리즘에 의한 주인공 검출 </span>&nbsp;
+								<button type="button" class="btn btn-circle green-haze btn-sm">
+									<a href="http://linkkut.synology.me:5000/fbsharing/2r4PeWOW">
+									관련 논문 PDF</a></button>
+								<button type="button" class="btn btn-circle green-haze btn-sm">관련 발표 PDF</button><br><br>
 								<c:forEach var="m" items="${degreeRole}">
 								<div class="portlet light profile-sidebar-portlet" id="actor">
 									<!-- SIDEBAR USERPIC -->
