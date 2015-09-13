@@ -237,6 +237,11 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="tab-pane" id="portlet_tab2">
 											<div id="statistics_2" class="chart">&nbsp;${n.synopsis}</div>
 										</div>
+									</div><br><br>
+									<div>
+										<a href="#" onClick="window.open('${n.purchase}', 'CLIENT_WINDOW','resizable=yes scrollbars=yes')">
+										<button type="button" class="btn green" >영화 다시 보기</button>
+										</a>
 									</div>
 									<div class="margin-top-20 no-margin no-border">
 
@@ -330,13 +335,6 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="portlet light">
-							ㅋㅋ
-						</div>
-					</div>
-				</div>
 				<!-- BEGIN JANGWON SLIDER -->
 				<div class="row">
 					<div class="col-md-12">
@@ -385,6 +383,13 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 						   </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="portlet light">
+								ㅋㅋ
+							</div>
 						</div>
 					</div>
 					<div class="row">

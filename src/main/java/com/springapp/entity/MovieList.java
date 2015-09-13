@@ -21,6 +21,16 @@ public class MovieList {
 	double avgC;
 	double avgDE;
 	int ordernum;
+	String purchase;
+
+	public String getPurchase() {
+		return purchase;
+	}
+
+	public void setPurchase(String purchase) {
+		this.purchase = purchase;
+	}
+
 	public void setOrdernum(int ordernum) {
 		this.ordernum = ordernum;
 	}
