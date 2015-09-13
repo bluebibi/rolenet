@@ -24,7 +24,7 @@ public interface MovieListMapper {
 	@Select("SELECT * FROM movies WHERE id = #{id}")
 	MovieList selectMovieContentsByID(@Param("id") int id);
 
-	@Select("SELECT * FROM movies WHERE name = #{name}")
+	@Select("SELECT * FROM movies WHERE name like CONCAT('%', #{name}, '%')")
 	MovieList selectMovieByName(@Param("name") String name);
 
 	@Select("SELECT * FROM movies ORDER BY year DESC LIMIT 5")

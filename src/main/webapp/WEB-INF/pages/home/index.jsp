@@ -121,18 +121,6 @@
 				<div id="head-back" class="homebox">
 					<br> <br>
 					<h1 id="mainTitle" align="center">MOVIETWEEN</h1>
-					<div class="container">
-						<form class="search-form" action="search.do" method="POST">
-							<div class="input-group">
-								<div class="input-icon right"
-									style="display: block !important; left: 900px !important;">
-									<i class="fa fa-film"></i> <input type="text" id="movieName"
-										class="form-control" placeholder="영화를 검색하세요"
-										placeholder="영화 검색하기" name="query">
-								</div>
-							</div>
-						</form>
-					</div>
 					<br>
 				</div>
 				<!-- END PAGE TITLE -->

@@ -158,6 +158,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="details">
 								<div class="number">${n.name}</div>
+								<div class="desc">${n.year}</div>
 							</div>
 						</a>
 					</div>
@@ -170,8 +171,10 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="details">
 								<div class="number">
 									<span class="number" style="font-size: 24px !important;">${n.director}</span>
+									<div class="desc">감독</div>
+
 								</div>
-								<div class="desc">${n.year}</div>
+
 							</div>
 						</a>
 					</div>
