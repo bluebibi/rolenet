@@ -7,7 +7,8 @@ import org.apache.ibatis.annotations.Param;
 import com.springapp.entity.CharactorsList;
 
 public interface CharactorsListService {
-	List<CharactorsList> selectNaverRoleByMovieId(@Param("id") int id);
-	List<CharactorsList> selectBetweenRoleByMovieId(@Param("id") int id);
-	List<CharactorsList> selectDegreeRoleByMovieId(@Param("id") int id);
+	List<CharactorsList> selectNaverRoleByMovieId(int id);
+	List<CharactorsList> selectBetweenRoleByMovieId(int id);
+	List<CharactorsList> selectDegreeRoleByMovieId(int id);
+	List<CharactorsList> selectHeroByActor(String actor);
 }

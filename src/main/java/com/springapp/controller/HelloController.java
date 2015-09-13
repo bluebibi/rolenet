@@ -7,8 +7,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.springapp.entity.Recommend;
-import com.springapp.entity.UserMovieList;
+import com.springapp.entity.*;
 import com.springapp.service.*;
 
 import org.apache.ibatis.jdbc.Null;
@@ -29,8 +28,6 @@ import com.springapp.dao.BoardListMapper;
 import com.springapp.dao.CharactorListMapper;
 import com.springapp.dao.FileDTO;
 import com.springapp.dao.MovieListMapper;
-import com.springapp.entity.BoardList;
-import com.springapp.entity.MovieList;
 import sun.swing.StringUIClientPropertyKey;
 
 @Controller
@@ -182,6 +179,12 @@ public class HelloController {
 		int cluster;
 		model.addAttribute("n", movieList);
 		model.addAttribute("naverRole", charactorsListService.selectNaverRoleByMovieId(id));
+		List<CharactorsList> actorList = charactorsListService.selectNaverRoleByMovieId(id);
+		model.addAttribute("movielistiSize",actorList.size());
+		for(int i=0;i<actorList.size();i++){
+			model.addAttribute("movielist"+i, charactorsListService.selectHeroByActor(actorList.get(i).getActor()));
+		}
+
 		model.addAttribute("degreeRole", charactorsListService.selectDegreeRoleByMovieId(id));
 		//model.addAttribute("betweenRole", charactorsListService.selectBetweenRoleByMovieId(id));
 		cluster = recommend.getCluster();

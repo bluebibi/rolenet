@@ -442,35 +442,20 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 								<div class="portlet-body">
-									<%
-										int cnt2 = 0;
-									%>
-									<table>
-										<tr>
-											<c:forEach var="m" items="${directorMovies}">
-											<td><img class='img-responsive'
-													 src='http://218.150.181.131/poster/${m.id}p.png'
-													 width="270pt" height="100pt"
-													 onclick="document.location = 'Tab_movielistdetail?id=${m.id}';">
-											</td>
-											<%
-												if(cnt2 > 2){
-											%>
 
-										</tr>
-										<tr>
-											<%
-													cnt2 = 0;
-												} else {
-													cnt2++;
-													System.out.println("cnt2 = " + cnt2);
+										<div class="row">
+											<c:forEach var="size" items="${movielist1}" varStatus="status">
+												<%--test="${status.count}"--%>
+												<%--<p>eee</p>--%>
 
-												}
-											%>
+												<%--<c:forEach var="m" items="${movielist+1}">--%>
+													<%--<div class="col-md-3">--%>
 
+
+													<%--</div>--%>
+												<%--</c:forEach>--%>
 											</c:forEach>
-										</tr>
-									</table>
+									</div>
 								</div>
 							</div>
 						</div>

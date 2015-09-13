@@ -28,4 +28,9 @@ public class CharactorsListServiceImpl implements CharactorsListService {
 		return charactorListMapper.selectDegreeRoleByMovieId(id);
 	}
 
+	@Override
+	public List<CharactorsList> selectHeroByActor(String actor) {
+		return charactorListMapper.selectHeroByActor(actor);
+	}
+
 }
