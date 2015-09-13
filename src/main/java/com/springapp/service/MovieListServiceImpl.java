@@ -30,6 +30,11 @@ public class MovieListServiceImpl implements MovieListService {
 	}
 
 	@Override
+	public int countByName(String name) {
+		return movieListMapper.countByName(name);
+	}
+
+	@Override
 	public List<MovieList> LastList() {
 		return movieListMapper.LastList();
 	}

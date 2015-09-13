@@ -10,6 +10,7 @@ public interface MovieListService {
 	List<MovieList> list();
 	MovieList selectMovieById(int id);
 	MovieList selectMovieByName(String name);
+	int countByName(String name);
 	List<MovieList> LastList();
 	List<MovieList> LastList15();
 	int movieCount();

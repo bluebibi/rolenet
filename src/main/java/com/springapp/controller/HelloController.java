@@ -11,9 +11,11 @@ import com.springapp.entity.Recommend;
 import com.springapp.entity.UserMovieList;
 import com.springapp.service.*;
 
+import org.apache.ibatis.jdbc.Null;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +31,7 @@ import com.springapp.dao.FileDTO;
 import com.springapp.dao.MovieListMapper;
 import com.springapp.entity.BoardList;
 import com.springapp.entity.MovieList;
+import sun.swing.StringUIClientPropertyKey;
 
 @Controller
 public class HelloController {
@@ -87,8 +90,20 @@ public class HelloController {
 
 	/* search for movie */
 	@RequestMapping(value = "/search.do", method = RequestMethod.POST)
-	public String SearchMovie(ModelMap model, HttpServletRequest request) {
+	public String SearchMovie(ModelMap model, HttpServletRequest request,HttpServletResponse response) throws IOException {
 		movieListService.addHitByName(request.getParameter("query"));
+
+		int count = movieListService.countByName(request.getParameter("query"));
+		String url = request.getRequestURL().toString();
+		int index = url.indexOf("/search.do");
+		url = url.substring(0, index);
+		if (count == 0 || count > 1){
+			System.out.println("검색어 없음" + url);
+			response.sendRedirect(url);
+			return null;
+		}
+
+
 		MovieList movieList = movieListService.selectMovieByName(request.getParameter("query"));
 		System.out.println(request.getParameter("query")+"");
 		model.addAttribute("n", movieList);

@@ -16,6 +16,7 @@ public interface UserMovieListService {
 
     public UserMovieList selectMovieByName(String name);
 
+
     public int movieCount();
 
     public void insertUserMovie(int id,String director, String synopsis,String name);

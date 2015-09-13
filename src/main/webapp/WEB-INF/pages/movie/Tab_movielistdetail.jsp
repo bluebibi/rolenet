@@ -294,10 +294,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<!-- END SIDEBAR USER TITLE -->
 											<!-- SIDEBAR BUTTONS -->
-											<div class="profile-userbuttons">
-												<button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
-												<button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
-											</div>
 											<!-- END SIDEBAR BUTTONS -->
 											<!-- SIDEBAR MENU -->
 											<!-- END MENU -->
@@ -323,10 +319,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											</div>
 											<!-- END SIDEBAR USER TITLE -->
 											<!-- SIDEBAR BUTTONS -->
-											<div class="profile-userbuttons">
-												<button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
-												<button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
-											</div>
 											<!-- END SIDEBAR BUTTONS -->
 											<!-- SIDEBAR MENU -->
 											<!-- END MENU -->

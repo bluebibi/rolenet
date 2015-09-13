@@ -27,6 +27,9 @@ public interface MovieListMapper {
 	@Select("SELECT * FROM movies WHERE name like CONCAT('%', #{name}, '%')")
 	MovieList selectMovieByName(@Param("name") String name);
 
+	@Select("SELECT COUNT(id) FROM 9th.movies WHERE name like CONCAT('%', #{name}, '%')")
+	int countByName(@Param("name") String name);
+
 	@Select("SELECT * FROM movies ORDER BY year DESC LIMIT 5")
 	List<MovieList> LastList();
 	
