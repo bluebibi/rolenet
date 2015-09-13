@@ -271,7 +271,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="portlet-body">
 								<div>
-									<span class="label label-success uppercase">알고리즘에 의한 주인공 검출 </span>&nbsp;
+									<span class="label label-success uppercase">시나리오기반 의한 주인공 검출 </span>&nbsp;
 									<button type="button" class="btn btn-circle green-haze btn-sm">
 										<a href="http://linkkut.synology.me:5000/fbsharing/2r4PeWOW">
 											게재 논문 PDF</a></button>
