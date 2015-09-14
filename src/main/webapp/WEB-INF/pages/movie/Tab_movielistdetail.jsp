@@ -468,6 +468,38 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 					</div>
+<<<<<<< HEAD
+=======
+					<div class="row">
+						<div class="col-md-12">
+							<div class="portlet light">
+								<div class="portlet-title">
+									<div class="caption">
+										<i class="icon-basket font-green-sharp"></i>
+								<span class="caption-subject font-green-sharp bold uppercase">
+								배우별 출연 영화</span>
+									</div>
+								</div>
+								<div class="portlet-body">
+
+										<div class="row">
+											<c:forEach var="size" items="${movielist1}" varStatus="status">
+												<%--test="${status.count}"--%>
+												<%--<p>eee</p>--%>
+
+												<%--<c:forEach var="m" items="${movielist+1}">--%>
+													<%--<div class="col-md-3">--%>
+
+
+													<%--</div>--%>
+												<%--</c:forEach>--%>
+											</c:forEach>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+>>>>>>> dbb4e4388db0443d2523185f04d64bf5ba9a8aea
 				</div>
 
 				<!-- END JANGWON SLIDER -->
