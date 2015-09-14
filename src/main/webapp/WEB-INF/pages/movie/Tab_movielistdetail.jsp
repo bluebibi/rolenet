@@ -105,6 +105,24 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN BODY -->
 <!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
+<script>
+	$(function($){
+		alert("함수~!");
+		for(var i=0; i<${movielistiSize}; i++){
+			alert(i);
+			var string1 = "<div class='portlet light profile-sidebar-portlet' id='actor3'>";
+			string1 += "<div class='profile-userpic'>";
+			string1 += "<img src='";
+			string1 += ${naverRole[i].charactorsURL};
+			string1 += "class='img-responsive'> </div> <div class='profile-usertitle'> <div class='profile-usertitle-name'>";
+			string1 += ${naverRole[i].name};
+			string1 += "역 </div> <div class='profile-usertitle-job'>";
+			string1 += ${naverRole[i].actor};
+			string1 += "</div> </div> </div>";
+			$("#actorEn").append(string1);
+		}
+	});
+</script>
 <body>
 	<%@include file="../includes/headerMenu.jsp"%>
 	<!-- END HEADER -->
@@ -468,8 +486,6 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 					</div>
-<<<<<<< HEAD
-=======
 					<div class="row">
 						<div class="col-md-12">
 							<div class="portlet light">
@@ -480,26 +496,25 @@ License: You must have a valid license purchased only from themeforest(the above
 								배우별 출연 영화</span>
 									</div>
 								</div>
-								<div class="portlet-body">
+								<div class="portlet-body" id="actorEn">
 
-										<div class="row">
-											<c:forEach var="size" items="${movielist1}" varStatus="status">
-												<%--test="${status.count}"--%>
-												<%--<p>eee</p>--%>
+										<%--<div class="row">--%>
+											<%--<c:forEach var="size" items="${movielist1}" varStatus="status">--%>
+												<%--&lt;%&ndash;test="${status.count}"&ndash;%&gt;--%>
+												<%--&lt;%&ndash;<p>eee</p>&ndash;%&gt;--%>
 
-												<%--<c:forEach var="m" items="${movielist+1}">--%>
-													<%--<div class="col-md-3">--%>
+												<%--&lt;%&ndash;<c:forEach var="m" items="${movielist+1}">&ndash;%&gt;--%>
+													<%--&lt;%&ndash;<div class="col-md-3">&ndash;%&gt;--%>
 
 
-													<%--</div>--%>
-												<%--</c:forEach>--%>
-											</c:forEach>
+													<%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+												<%--&lt;%&ndash;</c:forEach>&ndash;%&gt;--%>
+											<%--</c:forEach>--%>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
->>>>>>> dbb4e4388db0443d2523185f04d64bf5ba9a8aea
 				</div>
 
 				<!-- END JANGWON SLIDER -->

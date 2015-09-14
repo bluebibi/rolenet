@@ -192,12 +192,6 @@ public class HelloController {
 		int cluster;
 		model.addAttribute("n", movieList);
 		model.addAttribute("naverRole", charactorsListService.selectNaverRoleByMovieId(id));
-		List<CharactorsList> actorList = charactorsListService.selectNaverRoleByMovieId(id);
-		model.addAttribute("movielistiSize",actorList.size());
-		for(int i=0;i<actorList.size();i++){
-			model.addAttribute("movielist"+i, charactorsListService.selectHeroByActor(actorList.get(i).getActor()));
-		}
-
 		model.addAttribute("degreeRole", charactorsListService.selectDegreeRoleByMovieId(id));
 		//model.addAttribute("betweenRole", charactorsListService.selectBetweenRoleByMovieId(id));
 		cluster = recommend.getCluster();

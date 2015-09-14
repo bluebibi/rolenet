@@ -29,7 +29,7 @@ public class CharactorsListServiceImpl implements CharactorsListService {
 	}
 
 	@Override
-<<<<<<< HEAD
+
 	public int maxCluster(int id) {
 		return charactorListMapper.maxCluster(id);
 	}
@@ -39,14 +39,13 @@ public class CharactorsListServiceImpl implements CharactorsListService {
 		return charactorListMapper.selectClusterCharactors(cluster,id);
 	}
 	@Override
-=======
->>>>>>> dbb4e4388db0443d2523185f04d64bf5ba9a8aea
+
+
 	public List<CharactorsList> selectHeroByActor(String actor) {
 		return charactorListMapper.selectHeroByActor(actor);
 	}
 
-<<<<<<< HEAD
 
-=======
->>>>>>> dbb4e4388db0443d2523185f04d64bf5ba9a8aea
+
+
 }
