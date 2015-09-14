@@ -35,6 +35,11 @@ License: You must have a valid license purchased only from themeforest(the above
 			border:cornflowerblue;
 			!important;
 		}
+		#actor3{
+			display: inline-block;
+			border:cornflowerblue;
+		!important;
+		}
 	</style>
 <meta charset="utf-8" />
 <title>Movietween | LINK 9th | Koreatech</title>
@@ -277,7 +282,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											게재 논문 PDF</a></button>
 									<br><br>
 									<c:forEach var="m" items="${degreeRole}">
-										<div class="portlet light profile-sidebar-portlet" id="actor">
+										<div class="portlet light profile-sidebar-portlet" id="actor3">
 											<!-- SIDEBAR USERPIC -->
 											<div class="profile-userpic">
 												<img src="${m.charactorsURL}" class="img-responsive" alt="">
@@ -383,7 +388,39 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="row">
 						<div class="col-md-12">
 							<div class="portlet light">
-								ㅋㅋ
+								<div class="portlet-title">
+									<div class="caption">
+										<i class="icon-basket font-green-sharp"></i>
+								<span class="caption-subject font-green-sharp bold uppercase">
+								Cluster</span>
+									</div>
+								</div>
+								<div class="portlet-body">
+									<span class="label label-primary">cluster 0</span><br><br>
+									<c:forEach var="m" items="${cluster0}">
+										<div class="portlet light profile-sidebar-portlet" id="actor2">
+											<!-- SIDEBAR USERPIC -->
+											<div class="profile-userpic">
+												<img src="${m.charactorsURL}" class="img-responsive" alt="">
+											</div>
+											<!-- END SIDEBAR USERPIC -->
+											<!-- SIDEBAR USER TITLE -->
+											<div class="profile-usertitle">
+												<div class="profile-usertitle-name">
+														${m.name}역
+												</div>
+												<div class="profile-usertitle-job">
+														${m.actor}
+												</div>
+											</div>
+											<!-- END SIDEBAR USER TITLE -->
+											<!-- SIDEBAR BUTTONS -->
+											<!-- END SIDEBAR BUTTONS -->
+											<!-- SIDEBAR MENU -->
+											<!-- END MENU -->
+										</div>
+									</c:forEach>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -428,50 +465,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											</tr>
 										</table>
 									</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="portlet light">
-								<div class="portlet-title">
-									<div class="caption">
-										<i class="icon-basket font-green-sharp"></i>
-								<span class="caption-subject font-green-sharp bold uppercase">
-								배우별 출연 영화</span>
-									</div>
-								</div>
-								<div class="portlet-body">
-									<%
-										int cnt2 = 0;
-									%>
-									<table>
-										<tr>
-											<c:forEach var="m" items="${directorMovies}">
-											<td><img class='img-responsive'
-													 src='http://218.150.181.131/poster/${m.id}p.png'
-													 width="270pt" height="100pt"
-													 onclick="document.location = 'Tab_movielistdetail?id=${m.id}';">
-											</td>
-											<%
-												if(cnt2 > 2){
-											%>
-
-										</tr>
-										<tr>
-											<%
-													cnt2 = 0;
-												} else {
-													cnt2++;
-													System.out.println("cnt2 = " + cnt2);
-
-												}
-											%>
-
-											</c:forEach>
-										</tr>
-									</table>
-								</div>
 							</div>
 						</div>
 					</div>

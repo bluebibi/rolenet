@@ -28,4 +28,19 @@ public class CharactorsListServiceImpl implements CharactorsListService {
 		return charactorListMapper.selectDegreeRoleByMovieId(id);
 	}
 
+	@Override
+	public int maxCluster(int id) {
+		return charactorListMapper.maxCluster(id);
+	}
+
+	@Override
+	public List<CharactorsList> selectClusterCharactors(int cluster, int id) {
+		return charactorListMapper.selectClusterCharactors(cluster,id);
+	}
+	@Override
+	public List<CharactorsList> selectHeroByActor(String actor) {
+		return charactorListMapper.selectHeroByActor(actor);
+	}
+
+
 }

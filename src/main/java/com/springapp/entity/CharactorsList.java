@@ -9,6 +9,15 @@ public class CharactorsList {
 	int naverRole;
 	String charactorsURL;
 	String actor;
+	int cluster;
+
+	public int getCluster() {
+		return cluster;
+	}
+
+	public void setCluster(int cluster) {
+		this.cluster = cluster;
+	}
 
 	public String getActor() {
 		return actor;
