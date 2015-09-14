@@ -100,15 +100,15 @@ License: You must have a valid license purchased only from themeforest(the above
 	height: 100%;
 }
 </style>
-</head>
-<!-- END HEAD -->
-<!-- BEGIN BODY -->
-<!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
-<!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
-<script>
-	$(function($){
-		alert("함수~!");
-		for(var i=0; i<${movielistiSize}; i++){
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			alert('ojtiger.com');
+		});
+		var count1 = new Array();
+		count1.push("${movielistiSize}");
+		alert(count1[0] + "dd");
+		for(var i=0; i<count1[0]; i++){
 			alert(i);
 			var string1 = "<div class='portlet light profile-sidebar-portlet' id='actor3'>";
 			string1 += "<div class='profile-userpic'>";
@@ -121,8 +121,13 @@ License: You must have a valid license purchased only from themeforest(the above
 			string1 += "</div> </div> </div>";
 			$("#actorEn").append(string1);
 		}
-	});
-</script>
+	</script>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
+<!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
+
 <body>
 	<%@include file="../includes/headerMenu.jsp"%>
 	<!-- END HEADER -->
