@@ -100,7 +100,6 @@ License: You must have a valid license purchased only from themeforest(the above
 	height: 100%;
 }
 </style>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			alert('ojtiger.com');
@@ -418,7 +417,27 @@ License: You must have a valid license purchased only from themeforest(the above
 								Cluster</span>
 									</div>
 								</div>
-								<div class="portlet-body">
+								<div class="portlet-body" id="cluster">
+									<script>
+										for(i = 0; i <${maxCluster}; i++) {
+											var string = "<span class='label label-primary'>cluster ";
+											string += i;
+											string += "</span><br><br>";
+											string += "<c:forEach var='m' items='";
+											string += "${cluster0}";
+											string += "'>";
+											string += "<div class='portlet light profile-sidebar-portlet' id='actor2'>";
+											string += "<div class='profile-userpic'>";
+											string += "<img src='${m.charactorsURL}' class='img-responsive'></div>";
+											string += "<div class='profile-usertitle'><div class='profile-usertitle-name'>${m.name}역 </div> <div class='profile-usertitle-job'>${m.actor} </div> </div> </div></c:forEach>";
+											alert(string);
+											document.write(string);
+
+
+										}
+
+									</script>
+
 									<span class="label label-primary">cluster 0</span><br><br>
 									<c:forEach var="m" items="${cluster0}">
 										<div class="portlet light profile-sidebar-portlet" id="actor2">
@@ -426,8 +445,6 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="profile-userpic">
 												<img src="${m.charactorsURL}" class="img-responsive" alt="">
 											</div>
-											<!-- END SIDEBAR USERPIC -->
-											<!-- SIDEBAR USER TITLE -->
 											<div class="profile-usertitle">
 												<div class="profile-usertitle-name">
 														${m.name}역
@@ -436,11 +453,6 @@ License: You must have a valid license purchased only from themeforest(the above
 														${m.actor}
 												</div>
 											</div>
-											<!-- END SIDEBAR USER TITLE -->
-											<!-- SIDEBAR BUTTONS -->
-											<!-- END SIDEBAR BUTTONS -->
-											<!-- SIDEBAR MENU -->
-											<!-- END MENU -->
 										</div>
 									</c:forEach>
 								</div>
