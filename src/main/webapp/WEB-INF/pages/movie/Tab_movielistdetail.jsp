@@ -420,18 +420,18 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="portlet-body" id="cluster">
 									<script>
 										for(i = 0; i <${maxCluster}; i++) {
-											var string = "<span class='label label-primary'>cluster ";
-											string += i;
-											string += "</span><br><br>";
-											string += "<c:forEach var='m' items='";
-											string += "${cluster0}";
-											string += "'>";
-											string += "<div class='portlet light profile-sidebar-portlet' id='actor2'>";
-											string += "<div class='profile-userpic'>";
-											string += "<img src='${m.charactorsURL}' class='img-responsive'></div>";
-											string += "<div class='profile-usertitle'><div class='profile-usertitle-name'>${m.name}역 </div> <div class='profile-usertitle-job'>${m.actor} </div> </div> </div></c:forEach>";
-											alert(string);
-											document.write(string);
+											<%--var string = "<span class='label label-primary'>cluster ";--%>
+											<%--string += i;--%>
+											<%--string += "</span><br><br>";--%>
+											<%--string += "<c:forEach var='m' items='";--%>
+											<%--string += "${cluster0}";--%>
+											<%--string += "'>";--%>
+											<%--string += "<div class='portlet light profile-sidebar-portlet' id='actor2'>";--%>
+											<%--string += "<div class='profile-userpic'>";--%>
+											<%--string += "<img src='${m.charactorsURL}' class='img-responsive'></div>";--%>
+											<%--string += "<div class='profile-usertitle'><div class='profile-usertitle-name'>${m.name}역 </div> <div class='profile-usertitle-job'>${m.actor} </div> </div> </div></c:forEach>";--%>
+											<%--alert(string);--%>
+											<%--document.write(string);--%>
 
 
 										}
