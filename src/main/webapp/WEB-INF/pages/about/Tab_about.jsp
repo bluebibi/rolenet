@@ -179,19 +179,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_7">
-														7. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft ? </a>
-												</h4>
-											</div>
-											<div id="accordion1_7" class="panel-collapse collapse">
-												<div class="panel-body">
-													3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
-												</div>
-											</div>
-										</div>
+
 									</div>
 								</div>
 								<div id="tab_2" class="tab-pane">
@@ -206,13 +194,22 @@
 											<div id="accordion2_1" class="panel-collapse collapse in">
 												<div class="panel-body">
 													<p>
-														-  팀 명 : 난닝구 (I'm Link 9th)<br><br>
+														<h3>  팀 명 : 난닝구 (I'm Link 9th)</h3><br>
 													</p>
 													<p>
-														- 서장원 #10학번 #팀장<br><br>
-														- 김태형 #10학번 #<br><br>
-														- 허주성 #10학번 #<br><br>
-														- 이예영 #12학번 #<br><br>
+														<h4>- 서장원 #10학번 #팀장 #웹_개발 #시나리오_분석</h4><br>
+
+														<br>
+														<h4>- 김태형 #10학번 #웹_개발 #시나리오_분석</h4><br>
+
+														<br>
+														<h4>- 허주성 #10학번 #서버 #데이터베이스 #사회관계망분석 #취미는 #자전거</h4><br>
+															<img src="http://218.150.181.131/Explain/joo1.jpeg" width="300" height="200">
+															<img src="http://218.150.181.131/Explain/joo2.jpeg" width="300" height="200">
+														<br>
+														<h4>- 이예영 #12학번 #디자인 #자료수집</h4><br>
+
+														<br>
 													</p>
 												</div>
 											</div>
@@ -221,80 +218,48 @@
 											<div class="panel-heading">
 												<h4 class="panel-title">
 													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#accordion2_2">
-														2. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ? </a>
+														2. Link Lab 소개 </a>
 												</h4>
 											</div>
 											<div id="accordion2_2" class="panel-collapse collapse">
 												<div class="panel-body">
-													Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+													<h3>Laboratory of Intelligent Networks at Koreatech </h3> <br>
+
+													“Information is not knowledge. Knowledge is not wisdom.”<br><br>
+
+
+													<h4>Future Internet</h4><br>
+													- Software-defined Networks (SDN)<br>
+													- LTE/EPC Core Networks<br>
+													- Mobility Management<br><br>
+
+
+													<h4>Internet of Things</h4><br>
+													- Web of Everything<br>
+													- Web-scale IT<br>
+													- IoT Cloud Platform<br>
+													- CoAP Protocol<br><br>
+
+													<h4>Social Network Analysis</h4><br>
+													- Node Centrality Analysis<br>
+													- Information Diffusion Modeling<br>
+													- Movie Charactor Networks<br><br>
+
+													<h4>Big Data Analysis</h4><br>
+													- Hadoop and Spark<br>
+													- Supervised Learning<br>
+													- Unsupervised Learning<br>
+													- Classification and Grouping<br><br>
+
+													<a href="http://link.koreatech.ac.kr">http://link.koreatech.ac.kr</a>
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-success">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#accordion2_3">
-														3. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor ? </a>
-												</h4>
-											</div>
-											<div id="accordion2_3" class="panel-collapse collapse">
-												<div class="panel-body">
-													Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-												</div>
-											</div>
-										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#accordion2_4">
-														4. Wolf moon officia aute, non cupidatat skateboard dolor brunch ? </a>
-												</h4>
-											</div>
-											<div id="accordion2_4" class="panel-collapse collapse">
-												<div class="panel-body">
-													3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-												</div>
-											</div>
-										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#accordion2_5">
-														5. Leggings occaecat craft beer farm-to-table, raw denim aesthetic ? </a>
-												</h4>
-											</div>
-											<div id="accordion2_5" class="panel-collapse collapse">
-												<div class="panel-body">
-													3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
-												</div>
-											</div>
-										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#accordion2_6">
-														6. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth ? </a>
-												</h4>
-											</div>
-											<div id="accordion2_6" class="panel-collapse collapse">
-												<div class="panel-body">
-													3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
-												</div>
-											</div>
-										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#accordion2_7">
-														7. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft ? </a>
-												</h4>
-											</div>
-											<div id="accordion2_7" class="panel-collapse collapse">
-												<div class="panel-body">
-													3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
-												</div>
-											</div>
-										</div>
+
+
+
+
+
 									</div>
 								</div>
 								<div id="tab_3" class="tab-pane">
@@ -303,20 +268,26 @@
 											<div class="panel-heading">
 												<h4 class="panel-title">
 													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#accordion3_1">
-														1. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ? </a>
+														1. 사회관계망 분석 기법 관련 정보 </a>
 												</h4>
 											</div>
 											<div id="accordion3_1" class="panel-collapse collapse in">
 												<div class="panel-body">
 													<p>
-														Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-													</p>
+														<h4>- Lei Tang and Huan Liu, "Community Detection and Mining in Social Media," Synthesis Lectures on Data Mining and Knowledge Discovery, Vol.2, No.1, 2010.</h4>
+													</p><br>
 													<p>
-														Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-													</p>
+													<h4>- 신수진, 김용환, 김찬명, 한연희, "사회관계망에서 매개 중심도 추정을 위한 효율적인 알고리즘," 정보처리학회논문지, Vol.4, No.1, pp.37-44, 2015.</h4>
+													</p><br>
 													<p>
-														Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-													</p>
+													<h4>- S Gil, L Kuenzel, S Caroline, “Extraction and Analysis of Character Interaction Networks from Plays and Movies,” Standford, 2011</h4>
+													</p><br>
+													<p>
+													<h4>- Chung-Yi Weng, Wei-Ta Chu, and Ja-Ling Wu, “Rolenet: Movie Analysis from The Perspective of Social Networks,“ IEEE Transactions on Multimedia, vol. 11, No. 2, pp. 256–271, 2009.</h4>
+													</p><br>
+													<p>
+													<h4>- Vincent D. Blondel, Jean-Loup Guillaume, Renaud Lambiotte, Etienne Lefebvre, "Fast unfolding of communities in large networks"</h4>
+													</p><br>
 												</div>
 											</div>
 										</div>
@@ -324,80 +295,33 @@
 											<div class="panel-heading">
 												<h4 class="panel-title">
 													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#accordion3_2">
-														2. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ? </a>
+														2. 개발 환경 및 개발 툴 </a>
 												</h4>
 											</div>
 											<div id="accordion3_2" class="panel-collapse collapse">
 												<div class="panel-body">
-													Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+													<p>
+													<h4>- 개발 언어 </h4>
+													  Python, Javascript(Jquery, sigma js), HTML
+													</p><br>
+													<p>
+													<h4>- 개발 툴 </h4>
+													  Intelli J, STS, Mysql Workbench, Gephi, SourceTree(GitHub)
+													</p><br>
+													<p>
+													<h4>- 개발 서버 </h4>
+													  Synology NAS, AWS(Amazon Web Service), Apache - Tomcat 7
+													</p><br>
+													<p>
+													<h4>- 개발 프레임워크 </h4>
+													  Spring 3 MVC
+													</p><br>
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#accordion3_3">
-														3. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor ? </a>
-												</h4>
-											</div>
-											<div id="accordion3_3" class="panel-collapse collapse">
-												<div class="panel-body">
-													Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-												</div>
-											</div>
-										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#accordion3_4">
-														4. Wolf moon officia aute, non cupidatat skateboard dolor brunch ? </a>
-												</h4>
-											</div>
-											<div id="accordion3_4" class="panel-collapse collapse">
-												<div class="panel-body">
-													3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-												</div>
-											</div>
-										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#accordion3_5">
-														5. Leggings occaecat craft beer farm-to-table, raw denim aesthetic ? </a>
-												</h4>
-											</div>
-											<div id="accordion3_5" class="panel-collapse collapse">
-												<div class="panel-body">
-													3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
-												</div>
-											</div>
-										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#accordion3_6">
-														6. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth ? </a>
-												</h4>
-											</div>
-											<div id="accordion3_6" class="panel-collapse collapse">
-												<div class="panel-body">
-													3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
-												</div>
-											</div>
-										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#accordion3_7">
-														7. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft ? </a>
-												</h4>
-											</div>
-											<div id="accordion3_7" class="panel-collapse collapse">
-												<div class="panel-body">
-													3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et
-												</div>
-											</div>
-										</div>
+
+
+
 									</div>
 								</div>
 							</div>

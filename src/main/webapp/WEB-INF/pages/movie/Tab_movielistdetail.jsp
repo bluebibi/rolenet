@@ -340,7 +340,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<span class="caption-subject font-green-sharp bold uppercase">
 								시나리오 기반 사회관계망분석 영화 추천</span>
 									<button type="button" class="btn btn-circle green-haze btn-sm">
-										<a href="http://linkkut.synology.me:5000/fbsharing/2r4PeWOW">
+										<a href="http://linkkut.synology.me:5000/fbsharing/p1xsqUKe">
 											게재 논문 PDF</a></button>
 
 								</div>
