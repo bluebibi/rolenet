@@ -35,6 +35,11 @@ License: You must have a valid license purchased only from themeforest(the above
 			border:cornflowerblue;
 			!important;
 		}
+		#actor3{
+			display: inline-block;
+			border:cornflowerblue;
+		!important;
+		}
 	</style>
 <meta charset="utf-8" />
 <title>Movietween | LINK 9th | Koreatech</title>
@@ -95,11 +100,33 @@ License: You must have a valid license purchased only from themeforest(the above
 	height: 100%;
 }
 </style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			alert('ojtiger.com');
+		});
+		var count1 = new Array();
+		count1.push("${movielistiSize}");
+		alert(count1[0] + "dd");
+		for(var i=0; i<count1[0]; i++){
+			alert(i);
+			var string1 = "<div class='portlet light profile-sidebar-portlet' id='actor3'>";
+			string1 += "<div class='profile-userpic'>";
+			string1 += "<img src='";
+			string1 += ${naverRole[i].charactorsURL};
+			string1 += "class='img-responsive'> </div> <div class='profile-usertitle'> <div class='profile-usertitle-name'>";
+			string1 += ${naverRole[i].name};
+			string1 += "역 </div> <div class='profile-usertitle-job'>";
+			string1 += ${naverRole[i].actor};
+			string1 += "</div> </div> </div>";
+			$("#actorEn").append(string1);
+		}
+	</script>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
 <!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
 <!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
+
 <body>
 	<%@include file="../includes/headerMenu.jsp"%>
 	<!-- END HEADER -->
@@ -277,7 +304,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											게재 논문 PDF</a></button>
 									<br><br>
 									<c:forEach var="m" items="${degreeRole}">
-										<div class="portlet light profile-sidebar-portlet" id="actor">
+										<div class="portlet light profile-sidebar-portlet" id="actor3">
 											<!-- SIDEBAR USERPIC -->
 											<div class="profile-userpic">
 												<img src="${m.charactorsURL}" class="img-responsive" alt="">
@@ -383,7 +410,52 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="row">
 						<div class="col-md-12">
 							<div class="portlet light">
-								ㅋㅋ
+								<div class="portlet-title">
+									<div class="caption">
+										<i class="icon-basket font-green-sharp"></i>
+								<span class="caption-subject font-green-sharp bold uppercase">
+								Cluster</span>
+									</div>
+								</div>
+								<div class="portlet-body" id="cluster">
+									<script>
+										for(i = 0; i <${maxCluster}; i++) {
+											<%--var string = "<span class='label label-primary'>cluster ";--%>
+											<%--string += i;--%>
+											<%--string += "</span><br><br>";--%>
+											<%--string += "<c:forEach var='m' items='";--%>
+											<%--string += "${cluster0}";--%>
+											<%--string += "'>";--%>
+											<%--string += "<div class='portlet light profile-sidebar-portlet' id='actor2'>";--%>
+											<%--string += "<div class='profile-userpic'>";--%>
+											<%--string += "<img src='${m.charactorsURL}' class='img-responsive'></div>";--%>
+											<%--string += "<div class='profile-usertitle'><div class='profile-usertitle-name'>${m.name}역 </div> <div class='profile-usertitle-job'>${m.actor} </div> </div> </div></c:forEach>";--%>
+											<%--alert(string);--%>
+											<%--document.write(string);--%>
+
+
+										}
+
+									</script>
+
+									<span class="label label-primary">cluster 0</span><br><br>
+									<c:forEach var="m" items="${cluster0}">
+										<div class="portlet light profile-sidebar-portlet" id="actor2">
+											<!-- SIDEBAR USERPIC -->
+											<div class="profile-userpic">
+												<img src="${m.charactorsURL}" class="img-responsive" alt="">
+											</div>
+											<div class="profile-usertitle">
+												<div class="profile-usertitle-name">
+														${m.name}역
+												</div>
+												<div class="profile-usertitle-job">
+														${m.actor}
+												</div>
+											</div>
+										</div>
+									</c:forEach>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -441,36 +513,21 @@ License: You must have a valid license purchased only from themeforest(the above
 								배우별 출연 영화</span>
 									</div>
 								</div>
-								<div class="portlet-body">
-									<%
-										int cnt2 = 0;
-									%>
-									<table>
-										<tr>
-											<c:forEach var="m" items="${directorMovies}">
-											<td><img class='img-responsive'
-													 src='http://218.150.181.131/poster/${m.id}p.png'
-													 width="270pt" height="100pt"
-													 onclick="document.location = 'Tab_movielistdetail?id=${m.id}';">
-											</td>
-											<%
-												if(cnt2 > 2){
-											%>
+								<div class="portlet-body" id="actorEn">
 
-										</tr>
-										<tr>
-											<%
-													cnt2 = 0;
-												} else {
-													cnt2++;
-													System.out.println("cnt2 = " + cnt2);
+										<%--<div class="row">--%>
+											<%--<c:forEach var="size" items="${movielist1}" varStatus="status">--%>
+												<%--&lt;%&ndash;test="${status.count}"&ndash;%&gt;--%>
+												<%--&lt;%&ndash;<p>eee</p>&ndash;%&gt;--%>
 
-												}
-											%>
+												<%--&lt;%&ndash;<c:forEach var="m" items="${movielist+1}">&ndash;%&gt;--%>
+													<%--&lt;%&ndash;<div class="col-md-3">&ndash;%&gt;--%>
 
-											</c:forEach>
-										</tr>
-									</table>
+
+													<%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+												<%--&lt;%&ndash;</c:forEach>&ndash;%&gt;--%>
+											<%--</c:forEach>--%>
+									</div>
 								</div>
 							</div>
 						</div>

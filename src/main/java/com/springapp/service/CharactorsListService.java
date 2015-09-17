@@ -2,12 +2,16 @@ package com.springapp.service;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
 
 import com.springapp.entity.CharactorsList;
 
 public interface CharactorsListService {
-	List<CharactorsList> selectNaverRoleByMovieId(@Param("id") int id);
-	List<CharactorsList> selectBetweenRoleByMovieId(@Param("id") int id);
-	List<CharactorsList> selectDegreeRoleByMovieId(@Param("id") int id);
+	List<CharactorsList> selectNaverRoleByMovieId(int id);
+	List<CharactorsList> selectBetweenRoleByMovieId(int id);
+	List<CharactorsList> selectDegreeRoleByMovieId(int id);
+
+	int maxCluster(int id);
+	List<CharactorsList> selectClusterCharactors(int cluster, int id);
+	List<CharactorsList> selectHeroByActor(String actor);
+
 }

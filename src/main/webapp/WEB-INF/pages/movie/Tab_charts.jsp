@@ -266,8 +266,9 @@ var ChartsAmcharts = function() {
 		name.push("${item.name}");
 		</c:forEach>
 	} else{
-		<c:forEach items="${Spactators}" var="item">
+		<c:forEach items="${Spectators}" var="item">
 		name.push("${item.name}");
+        //alert(name[0]);
 		</c:forEach>
 	}
 	

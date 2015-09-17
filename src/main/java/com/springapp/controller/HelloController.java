@@ -7,8 +7,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.springapp.entity.Recommend;
-import com.springapp.entity.UserMovieList;
+import com.springapp.entity.*;
 import com.springapp.service.*;
 
 import org.apache.ibatis.jdbc.Null;
@@ -29,8 +28,6 @@ import com.springapp.dao.BoardListMapper;
 import com.springapp.dao.CharactorListMapper;
 import com.springapp.dao.FileDTO;
 import com.springapp.dao.MovieListMapper;
-import com.springapp.entity.BoardList;
-import com.springapp.entity.MovieList;
 import sun.swing.StringUIClientPropertyKey;
 
 @Controller
@@ -105,11 +102,13 @@ public class HelloController {
 
 
 		MovieList movieList = movieListService.selectMovieByName(request.getParameter("query"));
-		System.out.println(request.getParameter("query")+"");
+		System.out.println(request.getParameter("query") + "");
 		model.addAttribute("n", movieList);
 		model.addAttribute("naverRole", charactorsListService.selectNaverRoleByMovieId(movieList.getId()));
 		model.addAttribute("degreeRole", charactorsListService.selectDegreeRoleByMovieId(movieList.getId()));
 		model.addAttribute("betweenRole", charactorsListService.selectBetweenRoleByMovieId(movieList.getId()));
+
+
 		return "movie/Tab_movielistdetail.jsp";
 	}
 
@@ -174,6 +173,17 @@ public class HelloController {
 
 	@RequestMapping(value = "/Tab_movielistdetail")
 	public String MovieListDetail(ModelMap model, int id) {
+		int maxCluster = charactorsListService.maxCluster(id);
+		model.addAttribute("maxCluster",maxCluster);
+		List<CharactorsList> actorList = charactorsListService.selectNaverRoleByMovieId(id);
+		model.addAttribute("movielistiSize",actorList.size());
+		for(int i=0;i<actorList.size();i++){
+			model.addAttribute("movielist"+i, charactorsListService.selectHeroByActor(actorList.get(i).getActor()));
+		}
+
+		for(int i = 0; i < maxCluster; i++){
+			model.addAttribute("cluster" + i, charactorsListService.selectClusterCharactors(i,id));
+		}
 		movieListService.addHit(id);
 		MovieList movieList = movieListService.selectMovieById(id);
 		String director = movieList.getDirector();
@@ -189,6 +199,8 @@ public class HelloController {
 		model.addAttribute("recommend",recommendMovieService.list(id,cluster));
 		model.addAttribute("directorMovies", movieListService.selectMovieByDirector(director));
 		System.out.println(movieListService.selectMovieByDirector(director));
+
+
 		return "movie/Tab_movielistdetail.jsp";
 	}
 

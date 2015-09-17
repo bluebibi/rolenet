@@ -16,4 +16,10 @@ public interface CharactorListMapper {
 	List<CharactorsList> selectDegreeRoleByMovieId(@Param("id") int id);
 	@Select("slect * from charactors where id = #{id}")
 	CharactorsList selectById(@Param("id") int id);
+	@Select("SELECT max(cluster) FROM   9th.charactors WHERE  cluster=(SELECT MAX(cluster) FROM 9th.charactors WHERE movie_id = #{id}) and movie_id = #{id};")
+	int maxCluster(@Param("id") int id);
+	@Select("SELECT * FROM charactors where cluster = #{cluster} and movie_id = #{id}")
+	List<CharactorsList> selectClusterCharactors(@Param("cluster") int cluster, @Param("id") int id);
+	@Select("SELECT * FROM charactors WHERE actor=#{actor}")
+	List<CharactorsList> selectHeroByActor(@Param("actor") String actor);
 }
