@@ -24,7 +24,7 @@
 			<div class="page-logo">
 				<a href="/"><img
 					src="http://218.150.181.131/assets/img/logo-default2.png"
-					alt="logo" class="logo-default"></a>
+					alt="logo" class="logo-default" alt="movietween"></a>
 			</div>
 			<!-- END LOGO -->
 			<!-- BEGIN RESPONSIVE MENU TOGGLER -->

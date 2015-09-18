@@ -13,7 +13,8 @@
 
 
 <meta charset="utf-8" />
-
+	<meta name="keywords" content="영화 무비트윈 영화추천 추천" />
+	<meta name="description" content="영화를 추천하는 사이트" />
 <title>Movietween | LINK 9th | Koreatech</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1" name="viewport">
