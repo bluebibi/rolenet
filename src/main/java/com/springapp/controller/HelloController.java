@@ -175,12 +175,6 @@ public class HelloController {
 	public String MovieListDetail(ModelMap model, int id) {
 		int maxCluster = charactorsListService.maxCluster(id);
 		model.addAttribute("maxCluster",maxCluster);
-		List<CharactorsList> actorList = charactorsListService.selectNaverRoleByMovieId(id);
-		model.addAttribute("movielistiSize",actorList.size());
-		for(int i=0;i<actorList.size();i++){
-			model.addAttribute("movielist"+i, charactorsListService.selectHeroByActor(actorList.get(i).getActor()));
-		}
-
 		for(int i = 0; i <= maxCluster; i++){
 			model.addAttribute("cluster" + i, charactorsListService.selectClusterCharactors(i,id));
 		}

@@ -412,6 +412,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						   </div>
 						</div>
 					</div>
+				</div>
 					<div class="row">
 						<div class="col-md-12">
 							<div class="portlet light">
@@ -846,36 +847,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="portlet light">
-								<div class="portlet-title">
-									<div class="caption">
-										<i class="icon-basket font-green-sharp"></i>
-								<span class="caption-subject font-green-sharp bold uppercase">
-								배우별 출연 영화</span>
-									</div>
-								</div>
-								<div class="portlet-body" id="actorEn">
-
-										<%--<div class="row">--%>
-											<%--<c:forEach var="size" items="${movielist1}" varStatus="status">--%>
-												<%--&lt;%&ndash;test="${status.count}"&ndash;%&gt;--%>
-												<%--&lt;%&ndash;<p>eee</p>&ndash;%&gt;--%>
-
-												<%--&lt;%&ndash;<c:forEach var="m" items="${movielist+1}">&ndash;%&gt;--%>
-													<%--&lt;%&ndash;<div class="col-md-3">&ndash;%&gt;--%>
 
 
-													<%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-												<%--&lt;%&ndash;</c:forEach>&ndash;%&gt;--%>
-											<%--</c:forEach>--%>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
 				<!-- END JANGWON SLIDER -->
 
