@@ -100,27 +100,27 @@ License: You must have a valid license purchased only from themeforest(the above
 	height: 100%;
 }
 </style>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			alert('ojtiger.com');
-		});
-		var count1 = new Array();
-		count1.push("${movielistiSize}");
-		alert(count1[0] + "dd");
-		for(var i=0; i<count1[0]; i++){
-			alert(i);
-			var string1 = "<div class='portlet light profile-sidebar-portlet' id='actor3'>";
-			string1 += "<div class='profile-userpic'>";
-			string1 += "<img src='";
-			string1 += ${naverRole[i].charactorsURL};
-			string1 += "class='img-responsive'> </div> <div class='profile-usertitle'> <div class='profile-usertitle-name'>";
-			string1 += ${naverRole[i].name};
-			string1 += "역 </div> <div class='profile-usertitle-job'>";
-			string1 += ${naverRole[i].actor};
-			string1 += "</div> </div> </div>";
-			$("#actorEn").append(string1);
-		}
-	</script>
+	<%--<script type="text/javascript">--%>
+		<%--$(document).ready(function(){--%>
+			<%--alert('ojtiger.com');--%>
+		<%--});--%>
+		<%--var count1 = new Array();--%>
+		<%--count1.push("${movielistiSize}");--%>
+		<%--alert(count1[0] + "dd");--%>
+		<%--for(var i=0; i<count1[0]; i++){--%>
+			<%--alert(i);--%>
+			<%--var string1 = "<div class='portlet light profile-sidebar-portlet' id='actor3'>";--%>
+			<%--string1 += "<div class='profile-userpic'>";--%>
+			<%--string1 += "<img src='";--%>
+			<%--string1 += ${naverRole[i].charactorsURL};--%>
+			<%--string1 += "class='img-responsive'> </div> <div class='profile-usertitle'> <div class='profile-usertitle-name'>";--%>
+			<%--string1 += ${naverRole[i].name};--%>
+			<%--string1 += "역 </div> <div class='profile-usertitle-job'>";--%>
+			<%--string1 += ${naverRole[i].actor};--%>
+			<%--string1 += "</div> </div> </div>";--%>
+			<%--$("#actorEn").append(string1);--%>
+		<%--}--%>
+	<%--</script>--%>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -375,6 +375,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="portlet-body">
 													<%
 														int cnt = 0;
+														int cnt00 = 0;
 													%>
 													<table>
 														<tr>
@@ -397,6 +398,9 @@ License: You must have a valid license purchased only from themeforest(the above
 																	System.out.println("cnt = " + cnt);
 
 																}
+																cnt00++;
+																if(cnt00 == 8)
+																	break;
 															%>
 
 															</c:forEach>
