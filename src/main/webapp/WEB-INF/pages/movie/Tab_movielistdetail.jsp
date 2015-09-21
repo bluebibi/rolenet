@@ -4,6 +4,7 @@
 <%@ page import="java.util.List"%>
 <%@ page import="org.springframework.beans.factory.annotation.Autowired"%>
 <%@ page import="com.springapp.service.CharactorsListService"%>
+<%@ page import="com.springapp.dao.CharactorListMapper" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <!-- 
@@ -422,43 +423,381 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 								<div class="portlet-body" id="cluster">
-									<script>
-										for(i = 0; i <${maxCluster}; i++) {
-											<%--var string = "<span class='label label-primary'>cluster ";--%>
-											<%--string += i;--%>
-											<%--string += "</span><br><br>";--%>
-											<%--string += "<c:forEach var='m' items='";--%>
-											<%--string += "${cluster0}";--%>
-											<%--string += "'>";--%>
-											<%--string += "<div class='portlet light profile-sidebar-portlet' id='actor2'>";--%>
-											<%--string += "<div class='profile-userpic'>";--%>
-											<%--string += "<img src='${m.charactorsURL}' class='img-responsive'></div>";--%>
-											<%--string += "<div class='profile-usertitle'><div class='profile-usertitle-name'>${m.name}역 </div> <div class='profile-usertitle-job'>${m.actor} </div> </div> </div></c:forEach>";--%>
-											<%--alert(string);--%>
-											<%--document.write(string);--%>
-
-
-										}
-
-									</script>
-
-									<span class="label label-primary">cluster 0</span><br><br>
-									<c:forEach var="m" items="${cluster0}">
-										<div class="portlet light profile-sidebar-portlet" id="actor2">
-											<!-- SIDEBAR USERPIC -->
-											<div class="profile-userpic">
-												<img src="${m.charactorsURL}" class="img-responsive" alt="">
-											</div>
-											<div class="profile-usertitle">
-												<div class="profile-usertitle-name">
-														${m.name}역
+									<c:choose>
+										<c:when test="${maxCluster eq '0'}">
+											<span class="label label-primary">cluster 0</span><br><br>
+											<c:forEach var="m" items="${cluster0}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
 												</div>
-												<div class="profile-usertitle-job">
-														${m.actor}
+											</c:forEach>
+										</c:when>
+
+										<c:when test="${maxCluster eq '1'}">
+											<span class="label label-primary">cluster 0</span><br><br>
+											<c:forEach var="m" items="${cluster0}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-									</c:forEach>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 1</span><br><br>
+											<c:forEach var="m" items="${cluster1}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach>
+										</c:when>
+
+										<c:when test="${maxCluster eq '2'}">
+											<span class="label label-primary">cluster 0</span><br><br>
+											<c:forEach var="m" items="${cluster0}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 1</span><br><br>
+											<c:forEach var="m" items="${cluster1}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 2</span><br><br>
+											<c:forEach var="m" items="${cluster2}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach>
+										</c:when>
+
+										<c:when test="${maxCluster eq '3'}">
+											<span class="label label-primary">cluster 0</span><br><br>
+											<c:forEach var="m" items="${cluster0}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 1</span><br><br>
+											<c:forEach var="m" items="${cluster1}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 2</span><br><br>
+											<c:forEach var="m" items="${cluster2}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 3</span><br><br>
+											<c:forEach var="m" items="${cluster3}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach>
+										</c:when>
+										<c:when test="${maxCluster eq '4'}">
+											<span class="label label-primary">cluster 0</span><br><br>
+											<c:forEach var="m" items="${cluster0}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 1</span><br><br>
+											<c:forEach var="m" items="${cluster1}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 2</span><br><br>
+											<c:forEach var="m" items="${cluster2}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 3</span><br><br>
+											<c:forEach var="m" items="${cluster3}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 4</span><br><br>
+											<c:forEach var="m" items="${cluster4}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach>
+										</c:when>
+										<c:otherwise>
+											<span class="label label-primary">cluster 0</span><br><br>
+											<c:forEach var="m" items="${cluster0}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 1</span><br><br>
+											<c:forEach var="m" items="${cluster1}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 2</span><br><br>
+											<c:forEach var="m" items="${cluster2}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 3</span><br><br>
+											<c:forEach var="m" items="${cluster3}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 4</span><br><br>
+											<c:forEach var="m" items="${cluster4}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach><br><br>
+											<span class="label label-primary">cluster 5</span><br><br>
+											<c:forEach var="m" items="${cluster5}">
+												<div class="portlet light profile-sidebar-portlet" id="actor2">
+													<!-- SIDEBAR USERPIC -->
+													<div class="profile-userpic">
+														<img src="${m.charactorsURL}" class="img-responsive" alt="">
+													</div>
+													<div class="profile-usertitle">
+														<div class="profile-usertitle-name">
+																${m.name}역
+														</div>
+														<div class="profile-usertitle-job">
+																${m.actor}
+														</div>
+													</div>
+												</div>
+											</c:forEach>
+										</c:otherwise>
+
+									</c:choose>
 								</div>
 							</div>
 						</div>

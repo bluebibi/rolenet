@@ -181,7 +181,7 @@ public class HelloController {
 			model.addAttribute("movielist"+i, charactorsListService.selectHeroByActor(actorList.get(i).getActor()));
 		}
 
-		for(int i = 0; i < maxCluster; i++){
+		for(int i = 0; i <= maxCluster; i++){
 			model.addAttribute("cluster" + i, charactorsListService.selectClusterCharactors(i,id));
 		}
 		movieListService.addHit(id);
